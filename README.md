@@ -3,7 +3,7 @@
 
 ![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
 
-Academic Pages is a Github Pages template for academic websites.
+Forked from: Academic Pages 
 
 
 # Getting Started
@@ -18,14 +18,17 @@ Academic Pages is a Github Pages template for academic websites.
 
 See more info at https://academicpages.github.io/
 
-## Running Locally
+## Running Locally With Jekyll (macOS - zshell)
 
+Guidance is available ![Here](https://jekyllrb.com/docs/installation/macos/)
 When you are initially working your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
 
 1. Clone the repository and made updates as detailed above.
-1. Make sure you have ruby-dev, bundler, and nodejs installed: `sudo apt install ruby-dev ruby-bundler nodejs`
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
+2. Install `chruby` and `ruby-install` with Homebrew: `brew install chruby ruby-install xz` & `ruby-install ruby 3.1.3`
+3. Configure shell to use `chruby` with `echo "source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh" >> ~/.zshrc & echo "source $(brew --prefix)/opt/chruby/share/chruby/auto.sh" >> ~/.zshrc & echo "chruby ruby-3.1.3" >> ~/.zshrc # run 'chruby' to see actual version`
+4. Relaunch Terminal and check ruby version by `ruby -v` if this steps fails, you might want to make sure the system ruby be updated to the correct version
+5. Install Jekyll `gem install jekyll`
+6. Run `bundle exec jekyll serve` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
 
 If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essentials gcc make`
 
