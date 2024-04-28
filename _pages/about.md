@@ -33,6 +33,6 @@ Greetings! I'm Sheldon, and I'm delighted to welcome you to my personal website.
   
 - **Frameworks Mastery:** I am experienced in utilizing a wide range of Core OS Layer frameworks (e.g., Core Bluetooth, TouchID) and Core Service Layer frameworks (e.g., Blocks, File-Sharing, GCD, NSOperationQueue, Contacts, Core Data, Core Location). Additionally, I have solid expertise in Cocoa Touch Layer frameworks (e.g., AirDrop, Auto Layout, Storyboard, APNS, Gesture Recognizers, MapKit, Notification Center, UIKit) and hardware-related APIs (e.g., Accelerometer, Sensor, Camera).
   
-- **Testing and Analysis:** I excel in writing comprehensive unit and automation tests. Moreover, I have a strong command of SQL big query for in-depth analysis of metrics, enabling operational excellence and informed feature rollouts.
+- **Testing and Analysis:** I excel in writing comprehensive unit and automation tests. Moreover, I have a strong command of SQL big query for in-depth analysis of metrics, enabling operational excellence and informed feature AB Tests rollouts.
   
 - **Tools of the Trade:** I am proficient in utilizing a variety of tools including Xcode, VSCode, Github, livegrep, macOS terminal, and bash scripting.

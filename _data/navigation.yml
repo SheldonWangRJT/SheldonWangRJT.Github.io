@@ -1,22 +1,32 @@
 # main links links
 main:
-  - title: "Publications"
-    url: /publications/
-
-  - title: "Talks"
-    url: /talks/    
-
-  - title: "Teaching"
-    url: /teaching/    
-    
-  - title: "Portfolio"
-    url: /portfolio/
-        
-  - title: "Blog Posts"
+  # pure tech blog
+  - title: "📔 Tech Blog Posts"
     url: /year-archive/
-    
-  - title: "CV"
+  
+  # my investment strategy and suggestions (including sneakers)
+  - title: "💸 Investment & Finances"
+    url: /investments/
+
+  # my youtube tutorials
+  - title: "👨🏻‍🏫 Tutorials"
+    url: /teaching/    
+ 
+  # real life projects
+  - title: "🏭 Industrial Projects"
+    url: /industrial-projects/
+
+  - title: "📨 Resume"
     url: /cv/
+
+  # - title: "Publications"
+  #   url: /publications/
+
+  # - title: "Talks"
+  #   url: /talks/    
     
-  - title: "Guide"
-    url: /markdown/
+  # - title: "Portfolio"
+  #   url: /portfolio/ 
+    
+  # - title: "Guide"
+  #   url: /markdown/
