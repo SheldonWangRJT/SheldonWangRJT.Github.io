@@ -21,7 +21,7 @@ repository               : "sheldonwangrjt/sheldonwangrjt.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile2.png"
   name             : "Sheldon Wang"
   pronouns         : # example: "she/her"  
   bio              : "Seasoned Veteran Engineer, TL, iOS Expert"
@@ -69,7 +69,7 @@ author:
   weibo            : # Username
   wikipedia        : # Username
   xing             : # Username
-  youtube          : # Username
+  youtube          : "iOSeTutorials" # Username
   zhihu            : # URL
 
 
