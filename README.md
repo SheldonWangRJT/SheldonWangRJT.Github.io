@@ -1,7 +1,7 @@
 
 # Academic Pages
 
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
+![pages-build-deployment](https://media.licdn.com/dms/image/C5103AQFX1Yn1EIyS5A/profile-displayphoto-shrink_400_400/0/1517505568526?e=1720051200&v=beta&t=B5oyTiuxlS6dl2jPXrtLcTMrgc3xU5W8BTbZjETc3Iw)
 
 Forked from: Academic Pages 
 

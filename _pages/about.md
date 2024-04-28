@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Welcome to My Personal Website!"
+title: "Welcome to Sheldon's Personal Website!"
 author_profile: true
 redirect_from: 
   - /about/
