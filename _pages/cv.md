@@ -15,7 +15,7 @@ redirect_from:
 [Email](mailto:sheldon.wang7@yahoo.com) | 720.498.4561
 
 ## Experience Summary
-- 10+ years of experience in designing, developing, and testing enterprise mobile apps with 400 million DAUs using a wide range of iOS native SDKs and third-party frameworks.
+- 10+ years of experience in designing, developing, and testing enterprise mobile apps with 400 million DAUs, 800 millions MAUs using a wide range of iOS native SDKs and third-party frameworks.
 - 4+ years of experience leading teams of up to 10 engineers, delivering multi-quarter projects including large codebase refactors and new flagship feature development with A/B testing, rollout core metrics analysis, and more.
 - 3+ years of experience in project planning, resource management, running standups, and managing sprints.
 - Recognized as a top 20 all-time committer to the Snapchat iOS codebase.
