@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Resume"
+title: "Xiaodan (Sheldon) Wang"
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -8,8 +8,6 @@ redirect_from:
 ---
 
 {% include base_path %}
-
-# Xiaodan (Sheldon) Wang
 
 **Staff Software Engineer iOS**  
 [Email](mailto:sheldon.wang7@yahoo.com) | 720.498.4561
