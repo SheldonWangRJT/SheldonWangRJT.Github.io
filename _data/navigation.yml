@@ -9,8 +9,8 @@ main:
     url: /investment/
 
   # my youtube tutorials
-  - title: "👨🏻‍🏫 Tutorials"
-    url: /teaching/    
+  # - title: "👨🏻‍🏫 Tutorials"
+  #   url: /teaching/    
  
   # real life projects
   - title: "🏭 Industrial Projects"
