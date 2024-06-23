@@ -9,7 +9,7 @@ paperurl: 'http://academicpages.github.io/files/paper3.pdf'
 citation: 'Your Name, You. (2024). &quot;Paper Title Number 3.&quot; <i>GitHub Journal of Bugs</i>. 1(3).'
 ---
 
-How much money you can lose if you buy a 70k car now. We can do a simple math.
+<!-- How much money you can lose if you buy a 70k car now. We can do a simple math.
 
 ## Make the purchase
 
@@ -112,4 +112,4 @@ $$ Difference = $116.1k - 31.5k $$
 
 $$ Difference = $84.6k $$
 
-In other words, we are losing 84.6k truely taking the opportunity cost into consideration. Please consider sharing to make the people around you making better financial decisions!
+In other words, we are losing 84.6k truely taking the opportunity cost into consideration. Please consider sharing to make the people around you making better financial decisions! -->
