@@ -11,13 +11,13 @@ main:
   # my youtube tutorials
   # - title: "👨🏻‍🏫 Tutorials"
   #   url: /teaching/    
- 
-  # real life projects
-  - title: "🏭 Industrial Projects"
-    url: /industrial-projects/
 
   - title: "📨 Resume"
     url: /cv/
+
+  # playground
+  - title: "🛝 Playground"
+    url: /playground/
 
   # - title: "Publications"
   #   url: /publications/
