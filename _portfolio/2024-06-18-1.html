@@ -1,0 +1,153 @@
+---
+title: "An Interesting Investment Comparison - The Power of Investing Early"
+excerpt: "<img src='/images/i-i2.jpeg' alt='Demo' width='200'>"
+date: 2024-06-18
+collection: portfolio
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Comparison: Early vs. Late Start</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Investment Comparison: Early vs. Late Start</h1>
+    <p>Can you guess which investment strategy will yield more by the age of 65? Let's compare two scenarios with an 8% annual return rate:</p>
+
+    <h2>Scenario 1: Invest $1200 Annually from Age 20 to 30</h2>
+    <p>In this scenario, you start investing $100 every month at the age of 20 and stop at the age of 30. You then let your investments grow without adding any more contributions until you retire at 65.</p>
+
+    <h2>Scenario 2: Invest $1200 Annually from Age 30 to 65</h2>
+    <p>In this scenario, you start investing $100 every month at the age of 30 and continue to do so until you retire at 65.</p>
+
+    <h2>Investment Growth Comparison</h2>
+    <canvas id="chart1"></canvas>
+    <script>
+        var years = [...Array(46).keys()].map(i => i + 20);
+        var valuesScenario1 = [
+            1296, 2695, 4207, 5839, 7603, 
+            9507, 11563, 13785, 16183, 18774, 
+            20276, 21898, 23650, 25542, 27586, 
+            29792, 32176, 34750, 37530, 40532, 
+            43775, 47277, 51059, 55144, 59556, 
+            64320, 69466, 75023, 81025, 87507, 
+            94508, 102068, 110234, 119053, 128577, 
+            138863, 149972, 161970, 174927, 188922, 
+            204035, 220358, 237987, 257026, 277588
+        ];
+        var valuesScenario2 = [
+            0, 0, 0, 0, 0, 
+            0, 0, 0, 0, 0, 
+            1296, 2695, 4207, 5839, 7603, 
+            9507, 11563, 13785, 16183, 18774, 
+            21572, 24594, 27857, 31382, 35189, 
+            39300, 43740, 48535, 53714, 59307, 
+            65348, 71871, 78917, 86527, 94745, 
+            103620, 113206, 123559, 134739, 146815, 
+            159856, 173940, 189152, 205580, 223322
+        ];
+        var ctx1 = document.getElementById('chart1').getContext('2d');
+        var chart1 = new Chart(ctx1, {
+            type: 'line',
+            data: {
+                labels: years,
+                datasets: [{
+                    label: 'Scenario 1 (20-30)',
+                    data: valuesScenario1,
+                    borderColor: 'blue',
+                    fill: false
+                },
+                {
+                    label: 'Scenario 2 (30-65)',
+                    data: valuesScenario2,
+                    borderColor: 'orange',
+                    fill: false
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Investment Growth Comparison at 8% Annual Return'
+                },
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Age'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Future Value ($)'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+
+    <h2>Impact of Different Annual Return Rates at Age 65</h2>
+    <p>The investment rate will heavily impacting our results, the lower the investment rate is, the smaller the head start advantage of the early investment will have.</p>
+    <canvas id="chart2"></canvas>
+    <script>
+        var ctx2 = document.getElementById('chart2').getContext('2d');
+        var chart2 = new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: ['6%', '8%', '10%'],
+                datasets: [{
+                    label: 'Scenario 1 (20-30)',
+                    data: [128864, 277588, 591202],
+                    backgroundColor: 'blue'
+                },
+                {
+                    label: 'Scenario 2 (30-65)',
+                    data: [141745, 223322, 357752],
+                    backgroundColor: 'orange'
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Age 65 Portfolio Comparison at Different Annual Return Rates'
+                }
+            }
+        });
+    </script>
+
+    <h2>Impact of Different Monthly Investment Amounts</h2>
+    <canvas id="chart3"></canvas>
+    <script>
+        var ctx3 = document.getElementById('chart3').getContext('2d');
+        var chart3 = new Chart(ctx3, {
+            type: 'bar',
+            data: {
+                labels: ['$1200 Annually', '$2400 Annually', '$3600 Annually'],
+                datasets: [{
+                    label: 'Scenario 1 (20-30)',
+                    data: [277588, 555177, 832766],
+                    backgroundColor: 'blue'
+                },
+                {
+                    label: 'Scenario 2 (30-65)',
+                    data: [223322, 446645, 669967],
+                    backgroundColor: 'orange'
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Investment Comparison for Different Monthly Amounts at 8% Annual Return'
+                }
+            }
+        });
+    </script>
+
+    <h2>Conclusion</h2>
+    <p>The power of compounding interest makes a significant difference in investment growth. Starting early, even with smaller contributions, can often lead to greater overall returns compared to starting later with higher contributions.</p>
+</body>
+</html>
