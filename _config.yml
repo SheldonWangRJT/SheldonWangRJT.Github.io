@@ -214,7 +214,9 @@ collections:
   talks:
     output: true
     permalink: /:collection/:path/
-
+  playground:
+    output: true
+    permalink: /:collection/:path/
 
 # Defaults
 defaults:
@@ -271,7 +273,14 @@ defaults:
       layout: talk
       author_profile: true
       share: true
-
+  # _playground
+  - scope:
+      path: ""
+      type: playground
+    values:
+      layout: single
+      author_profile: true
+      share: true
 
 # Sass/SCSS
 sass:

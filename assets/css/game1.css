@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+#main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#game {
+    text-align: center;
+}
+
+#board {
+    display: inline-grid;
+    grid-template-columns: repeat(8, 40px);
+    grid-gap: 1px;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 10px;
+    border: 2px solid #000;
+}
+
+#score {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+@media (max-width: 600px) {
+    #board {
+        grid-template-columns: repeat(8, 30px);
+    }
+    .candy {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.candy {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid #000;
+    transition: transform 0.3s ease; /* Add this line */
+}
+
+.candy.swapping {
+    transform: scale(1.2);
+}
+
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.candy.popping {
+    animation: pop 0.3s ease;
+}
