@@ -45,10 +45,64 @@ body {
 .candy {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
     cursor: pointer;
-    border: 1px solid #000;
-    transition: transform 0.3s ease; /* Add this line */
+    border: 2px solid #000;
+    transition: transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.candy::after {
+    content: '';
+    display: block;
+    width: 70%;
+    height: 70%;
+    background-color: currentColor; /* Add this line */
+}
+
+.candy.circle::after {
+    border-radius: 50%;
+}
+
+.candy.square::after {
+    border-radius: 0;
+}
+
+.candy.triangle::after {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 26px solid currentColor;
+    background-color: transparent;
+}
+
+.candy.diamond::after {
+    transform: rotate(45deg);
+}
+
+.candy.cross::after {
+    background: 
+        linear-gradient(45deg, transparent 40%, currentColor 40%, currentColor 60%, transparent 60%),
+        linear-gradient(-45deg, transparent 40%, currentColor 40%, currentColor 60%, transparent 60%);
+    background-color: transparent;
+}
+
+@media (max-width: 600px) {
+    .candy {
+        width: 30px;
+        height: 30px;
+    }
+    .candy::after {
+        width: 60%;
+        height: 60%;
+    }
+    .candy.triangle::after {
+        border-left-width: 10px;
+        border-right-width: 10px;
+        border-bottom-width: 17px;
+    }
 }
 
 .candy.swapping {
