@@ -1,0 +1,281 @@
+---
+title: "Simple Math Game For Kids"
+---
+
+Home made math game for kids!
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Math Challenge</title>
+    <style>
+        /* .mathgame-body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff;
+            text-align: center;
+        } */
+        .mathgame-container {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        .mathgame-difficulty-selection button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .mathgame-difficulty-selection button:hover {
+            background-color: #45a049;
+        }
+        .mathgame-game-container {
+            display: none;
+        }
+        .mathgame-question {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .mathgame-options {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .mathgame-option {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            position: relative;
+        }
+        .mathgame-option:hover {
+            background-color: #2980b9;
+        }
+        .mathgame-option.correct {
+            background-color: #2ecc71;
+        }
+        .mathgame-option.incorrect {
+            background-color: #e74c3c;
+        }
+        .mathgame-feedback {
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .mathgame-final-score {
+            display: none;
+            font-size: 24px;
+            color: #2ecc71;
+        }
+        .mathgame-celebration {
+            display: none;
+            font-size: 36px;
+            color: #f39c12;
+        }
+    </style>
+</head>
+<body class="mathgame-body">
+    <div class="mathgame-container">
+        <div class="mathgame-difficulty-selection">
+            <h1>Math Challenge!</h1>
+            <h2>Choose Your Difficulty</h2>
+            <button onclick="startGame(1)">Easy (0-10)</button>
+            <button onclick="startGame(2)">Medium (0-20)</button>
+            <button onclick="startGame(3)">Hard (0-100)</button>
+        </div>
+
+        <div class="mathgame-game-container">
+            <div class="mathgame-question" id="questionDisplay"></div>
+            <div class="mathgame-options" id="optionsContainer"></div>
+            <div class="mathgame-final-score" id="finalScore"></div>
+            <div class="mathgame-celebration" id="celebration"></div>
+        </div>
+    </div>
+
+    <script>
+        let currentDifficulty = 0;
+        let currentQuestion = 0;
+        let score = 0;
+        let questions = [];
+
+        function generateQuestion(difficulty) {
+            let max, a, b, answer, wrongOptions;
+            
+            switch(difficulty) {
+                case 1: max = 10; break;
+                case 2: max = 20; break;
+                case 3: max = 100; break;
+            }
+
+            // Randomly choose between addition and subtraction
+            const isAddition = Math.random() > 0.5;
+            
+            if (isAddition) {
+                a = Math.floor(Math.random() * (max + 1));
+                b = Math.floor(Math.random() * (max + 1 - a));
+                answer = a + b;
+                return {
+                    question: `${a} + ${b} = ?`,
+                    answer: answer,
+                    options: generateOptions(answer, max)
+                };
+            } else {
+                // Subtraction with result >= 0
+                a = Math.floor(Math.random() * (max + 1));
+                b = Math.floor(Math.random() * (a + 1));
+                answer = a - b;
+                return {
+                    question: `${a} - ${b} = ?`,
+                    answer: answer,
+                    options: generateOptions(answer, max)
+                };
+            }
+        }
+
+        function generateOptions(correctAnswer, max) {
+            const options = [correctAnswer];
+            
+            while (options.length < 3) {
+                const wrongOption = Math.floor(Math.random() * (max + 1));
+                if (!options.includes(wrongOption)) {
+                    options.push(wrongOption);
+                }
+            }
+
+            // Shuffle options
+            return options.sort(() => Math.random() - 0.5);
+        }
+
+        function startGame(difficulty) {
+            currentDifficulty = difficulty;
+            currentQuestion = 0;
+            score = 0;
+            questions = [];
+
+            // Generate 10 questions
+            for (let i = 0; i < 10; i++) {
+                questions.push(generateQuestion(difficulty));
+            }
+
+            document.querySelector('.mathgame-difficulty-selection').style.display = 'none';
+            document.querySelector('.mathgame-game-container').style.display = 'block';
+            
+            displayQuestion();
+        }
+
+        function displayQuestion() {
+            const questionEl = document.getElementById('questionDisplay');
+            const optionsContainer = document.getElementById('optionsContainer');
+
+            if (currentQuestion < 10) {
+                const currentQ = questions[currentQuestion];
+                questionEl.textContent = currentQ.question;
+
+                // Clear previous options
+                optionsContainer.innerHTML = '';
+
+                // Create option buttons
+                currentQ.options.forEach(option => {
+                    const btn = document.createElement('button');
+                    btn.textContent = option;
+                    btn.classList.add('mathgame-option');
+                    btn.onclick = () => checkAnswer(option, currentQ.answer, btn);
+                    optionsContainer.appendChild(btn);
+                });
+            } else {
+                endGame();
+            }
+        }
+
+        function checkAnswer(selectedOption, correctAnswer, buttonElement) {
+            const optionsContainer = document.getElementById('optionsContainer');
+            const buttons = optionsContainer.querySelectorAll('.mathgame-option');
+
+            // Create feedback element
+            const feedbackEl = document.createElement('div');
+            feedbackEl.classList.add('mathgame-feedback');
+            
+            buttons.forEach(btn => {
+                const btnValue = parseInt(btn.textContent);
+                btn.disabled = true;
+
+                if (btnValue === correctAnswer) {
+                    btn.classList.add('correct');
+                }
+                
+                if (btnValue === selectedOption && selectedOption !== correctAnswer) {
+                    btn.classList.add('incorrect');
+                }
+            });
+
+            if (selectedOption === correctAnswer) {
+                score++;
+                feedbackEl.textContent = '✅ Correct!';
+                feedbackEl.style.color = 'green';
+            } else {
+                feedbackEl.textContent = '❌ Oops!';
+                feedbackEl.style.color = 'red';
+            }
+
+            // Add feedback to the selected button
+            buttonElement.appendChild(feedbackEl);
+
+            // Animate feedback
+            setTimeout(() => {
+                feedbackEl.style.opacity = '1';
+            }, 10);
+
+            // Move to next question after a longer delay
+            setTimeout(() => {
+                currentQuestion++;
+                displayQuestion();
+            }, 2000);
+        }
+
+        function endGame() {
+            const finalScoreEl = document.getElementById('finalScore');
+            const celebrationEl = document.getElementById('celebration');
+            const optionsContainer = document.getElementById('optionsContainer');
+
+            // Clear options
+            optionsContainer.innerHTML = '';
+
+            finalScoreEl.textContent = `Your Score: ${score}/10`;
+            finalScoreEl.style.display = 'block';
+
+            if (score === 10) {
+                celebrationEl.textContent = '🎉 Perfect Score! 🌟\nYou\'re a Math Champion! 🏆';
+                celebrationEl.style.display = 'block';
+            } else if (score >= 7) {
+                celebrationEl.textContent = '👏 Great Job! Keep practicing! 🌈';
+                celebrationEl.style.display = 'block';
+            } else {
+                celebrationEl.textContent = '💪 You can do better next time! 📚';
+                celebrationEl.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
