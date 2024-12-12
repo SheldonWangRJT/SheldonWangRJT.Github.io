@@ -130,7 +130,7 @@ Home made math game for kids!
                 case 3: max = 100; break;
             }
 
-            // Randomly choose between addition and subtraction
+            /* Randomly choose between addition and subtraction */
             const isAddition = Math.random() > 0.5;
             
             if (isAddition) {
@@ -143,7 +143,7 @@ Home made math game for kids!
                     options: generateOptions(answer, max)
                 };
             } else {
-                // Subtraction with result >= 0
+                /* Subtraction with result >= 0 */
                 a = Math.floor(Math.random() * (max + 1));
                 b = Math.floor(Math.random() * (a + 1));
                 answer = a - b;
@@ -165,7 +165,7 @@ Home made math game for kids!
                 }
             }
 
-            // Shuffle options
+            /* Shuffle options */
             return options.sort(() => Math.random() - 0.5);
         }
 
@@ -175,7 +175,7 @@ Home made math game for kids!
             score = 0;
             questions = [];
 
-            // Generate 10 questions
+            /* Generate 10 questions */
             for (let i = 0; i < 10; i++) {
                 questions.push(generateQuestion(difficulty));
             }
@@ -194,10 +194,10 @@ Home made math game for kids!
                 const currentQ = questions[currentQuestion];
                 questionEl.textContent = currentQ.question;
 
-                // Clear previous options
+                /* Clear previous options */
                 optionsContainer.innerHTML = '';
 
-                // Create option buttons
+                /* Create option buttons */
                 currentQ.options.forEach(option => {
                     const btn = document.createElement('button');
                     btn.textContent = option;
@@ -214,7 +214,7 @@ Home made math game for kids!
             const optionsContainer = document.getElementById('optionsContainer');
             const buttons = optionsContainer.querySelectorAll('.mathgame-option');
 
-            // Create feedback element
+            /* Create feedback element */
             const feedbackEl = document.createElement('div');
             feedbackEl.classList.add('mathgame-feedback');
             
@@ -240,15 +240,15 @@ Home made math game for kids!
                 feedbackEl.style.color = 'red';
             }
 
-            // Add feedback to the selected button
+            /* Add feedback to the selected button */
             buttonElement.appendChild(feedbackEl);
 
-            // Animate feedback
+            /* Animate feedback */
             setTimeout(() => {
                 feedbackEl.style.opacity = '1';
             }, 10);
 
-            // Move to next question after a longer delay
+            /* Move to next question after a longer delay */
             setTimeout(() => {
                 currentQuestion++;
                 displayQuestion();
@@ -260,7 +260,7 @@ Home made math game for kids!
             const celebrationEl = document.getElementById('celebration');
             const optionsContainer = document.getElementById('optionsContainer');
 
-            // Clear options
+            /* Clear options */
             optionsContainer.innerHTML = '';
 
             finalScoreEl.textContent = `Your Score: ${score}/10`;
