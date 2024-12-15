@@ -84,13 +84,13 @@ Home made simple postioning logic game for kids!
     </div>
 
     <script>
-        // Array of diverse kid emojis
+        /* Array of diverse kid emojis */
         const kidEmojis = [
             '👦', '👧', '👧🏻', '👦🏽', '👧🏾', 
             '👦🏿', '👧🏼', '👦🏻', '👧🏽', '👦🏾'
         ];
 
-        // Array of kid names
+        /* Array of kid names */
         const kidNames = [
             'Emma', 'Liam', 'Sophia', 'Noah', 'Olivia', 
             'Ava', 'Ethan', 'Isabella', 'Mason', 'Mia'
@@ -105,11 +105,11 @@ Home made simple postioning logic game for kids!
         }
 
         function generateScene() {
-            // Randomly select 5 unique emojis and names
+            /* Randomly select 5 unique emojis and names */
             const selectedEmojis = shuffleArray([...kidEmojis]).slice(0, 5);
             const selectedNames = shuffleArray([...kidNames]).slice(0, 5);
 
-            // Generate question types
+            /* Generate question types */
             const possibleQuestions = [
                 { type: 'absolute', text: `Who is 1st in line?`, answer: selectedNames[0] },
                 { type: 'absolute', text: `Who is 3rd in line?`, answer: selectedNames[2] },
@@ -140,13 +140,13 @@ Home made simple postioning logic game for kids!
         function setupScene() {
             const scene = scenes[currentSceneIndex];
             
-            // Set background
+            /* Set background */
             document.body.style.backgroundColor = scene.background;
             
-            // Clear previous queue display
+            /* Clear previous queue display */
             queueDisplay.innerHTML = '';
             
-            // Create queue display with emojis and names
+            /* Create queue display with emojis and names */
             scene.emojis.forEach((emoji, index) => {
                 const personDiv = document.createElement('div');
                 personDiv.innerHTML = `
@@ -157,7 +157,7 @@ Home made simple postioning logic game for kids!
                 queueDisplay.appendChild(personDiv);
             });
 
-            // Update theme
+            /* Update theme */
             currentQuestion.textContent = 'Who is in the queue?';
             
             nextQuestion();
