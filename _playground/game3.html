@@ -1,0 +1,213 @@
+---
+title: "Simple Positioning Logic Game For Kids"
+date: 2024-12-15
+---
+
+Home made simple postioning logic game for kids!
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        #queue-display {
+            font-size: 3em;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        #queue-display > div {
+            margin: 0 10px;
+            text-align: center;
+            position: relative;
+        }
+        #queue-display .person-name {
+            font-size: 0.4em;
+            margin-top: 5px;
+        }
+        #queue-display .head-of-line {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.5em;
+        }
+        #question-area {
+            background-color: rgba(255,255,255,0.8);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            width: 80%;
+        }
+        .queue-btn {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #f0f0f0;
+            border: 2px solid #333;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .queue-btn:hover {
+            background-color: #e0e0e0;
+            transform: scale(1.05);
+        }
+        #feedback {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 1.2em;
+            height: 30px;
+        }
+        #next-scene {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <h1>Queue Positioning Emoji Game</h1>
+        
+        <div id="queue-display"></div>
+        
+        <div id="question-area">
+            <h2 id="current-question">Get Ready!</h2>
+            <div id="answer-buttons"></div>
+        </div>
+        
+        <div id="feedback"></div>
+        
+        <button id="next-scene" class="queue-btn">Play Again</button>
+    </div>
+
+    <script>
+        // Array of diverse kid emojis
+        const kidEmojis = [
+            '👦', '👧', '👧🏻', '👦🏽', '👧🏾', 
+            '👦🏿', '👧🏼', '👦🏻', '👧🏽', '👦🏾'
+        ];
+
+        // Array of kid names
+        const kidNames = [
+            'Emma', 'Liam', 'Sophia', 'Noah', 'Olivia', 
+            'Ava', 'Ethan', 'Isabella', 'Mason', 'Mia'
+        ];
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        function generateScene() {
+            // Randomly select 5 unique emojis and names
+            const selectedEmojis = shuffleArray([...kidEmojis]).slice(0, 5);
+            const selectedNames = shuffleArray([...kidNames]).slice(0, 5);
+
+            // Generate question types
+            const possibleQuestions = [
+                { type: 'absolute', text: `Who is 1st in line?`, answer: selectedNames[0] },
+                { type: 'absolute', text: `Who is 3rd in line?`, answer: selectedNames[2] },
+                { type: 'absolute', text: `Who is last in line?`, answer: selectedNames[4] },
+                { type: 'relative', text: `Who is before ${selectedNames[2]}?`, answer: selectedNames[1] },
+                { type: 'relative', text: `Who is after ${selectedNames[1]}?`, answer: selectedNames[2] }
+            ];
+
+            return {
+                background: `hsl(${Math.random() * 360}, 70%, 90%)`, // Random pastel background
+                emojis: selectedEmojis,
+                names: selectedNames,
+                questions: shuffleArray(possibleQuestions).slice(0, 4)
+            };
+        }
+
+        const scenes = Array.from({length: 3}, generateScene);
+
+        let currentSceneIndex = 0;
+        let currentQuestionIndex = 0;
+
+        const queueDisplay = document.getElementById('queue-display');
+        const currentQuestion = document.getElementById('current-question');
+        const answerButtons = document.getElementById('answer-buttons');
+        const feedbackDiv = document.getElementById('feedback');
+        const nextSceneButton = document.getElementById('next-scene');
+
+        function setupScene() {
+            const scene = scenes[currentSceneIndex];
+            
+            // Set background
+            document.body.style.backgroundColor = scene.background;
+            
+            // Clear previous queue display
+            queueDisplay.innerHTML = '';
+            
+            // Create queue display with emojis and names
+            scene.emojis.forEach((emoji, index) => {
+                const personDiv = document.createElement('div');
+                personDiv.innerHTML = `
+                    ${index === 0 ? '<span class="head-of-line">🏁</span>' : ''}
+                    ${emoji}
+                    <div class="person-name">${scene.names[index]}</div>
+                `;
+                queueDisplay.appendChild(personDiv);
+            });
+
+            // Update theme
+            currentQuestion.textContent = 'Who is in the queue?';
+            
+            nextQuestion();
+        }
+
+        function nextQuestion() {
+            const scene = scenes[currentSceneIndex];
+            
+            if (currentQuestionIndex >= scene.questions.length) {
+                currentQuestionIndex = 0;
+                feedbackDiv.textContent = 'Congratulations!! Great Job!!';
+                nextSceneButton.style.display = 'block';
+                return;
+            }
+
+            const question = scene.questions[currentQuestionIndex];
+            currentQuestion.textContent = question.text;
+            
+            answerButtons.innerHTML = '';
+            scene.names.forEach(person => {
+                const button = document.createElement('button');
+                button.textContent = person;
+                button.className = 'queue-btn';
+                button.onclick = () => checkAnswer(person);
+                answerButtons.appendChild(button);
+            });
+
+            feedbackDiv.textContent = '';
+            nextSceneButton.style.display = 'none';
+        }
+
+        function checkAnswer(selectedAnswer) {
+            const scene = scenes[currentSceneIndex];
+            const question = scene.questions[currentQuestionIndex];
+
+            if (selectedAnswer === question.answer) {
+                feedbackDiv.textContent = 'Correct! 🎉';
+                currentQuestionIndex++;
+                setTimeout(nextQuestion, 1000);
+            } else {
+                feedbackDiv.textContent = 'Try again! 🤔';
+            }
+        }
+
+        nextSceneButton.onclick = () => {
+            currentSceneIndex = (currentSceneIndex + 1) % scenes.length;
+            setupScene();
+        };
+
+        setupScene();
+    </script>
+</body>
+</html>
