@@ -323,11 +323,11 @@ Home made simple postioning logic game for kids!
             const question = scene.questions[currentQuestionIndex];
             currentQuestion.textContent = `🤔 ${question.text}`;
             
-            // Reset feedback
+            /* Reset feedback */
             feedbackDiv.className = '';
             feedbackDiv.textContent = '';
             
-            // Reset and create answer buttons
+            /* Reset and create answer buttons */
             answerButtons.innerHTML = '';
             scene.names.forEach(person => {
                 const button = document.createElement('button');
