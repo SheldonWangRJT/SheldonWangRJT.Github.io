@@ -170,16 +170,32 @@ Home made simple postioning logic game for kids!
     </div>
 
     <script>
-        /* Array of diverse kid emojis */
+        /* Array of diverse kid emojis 
         const kidEmojis = [
             '👦', '👧', '👧🏻', '👦🏽', '👧🏾', 
             '👦🏿', '👧🏼', '👦🏻', '👧🏽', '👦🏾'
-        ];
+        ]; */
 
         /* Array of kid names */
         const kidNames = [
             'Emma', 'Liam', 'Sophia', 'Noah', 'Olivia', 
             'Ava', 'Ethan', 'Isabella', 'Mason', 'Mia'
+        ];
+
+        /* Replace the kidEmojis array with themed sets */
+        const emojiSets = [
+            /* Set 1: Transportation/Biking (all facing left) */
+            [
+                '🚴', '🚴‍♂️', '🚴‍♀️', '🛵', '🏍️'
+            ],
+            /* Set 2: Vehicles (all facing left) */
+            [
+                '🚌', '🚎', '🚐', '🚗', '🚙'
+            ],
+            /* Set 3: Running/Walking (all facing left) */
+            [
+                '🏃', '🏃‍♂️', '🏃‍♀️', '🚶', '🚶‍♂️'
+            ]
         ];
 
         /* Improved shuffle function using Fisher-Yates algorithm with better randomization */
@@ -197,22 +213,18 @@ Home made simple postioning logic game for kids!
         let previousNames = [];
         let previousColors = [];
 
-        function generateScene() {
-            /* Ensure different emoji selections between scenes */
-            let selectedEmojis;
-            do {
-                selectedEmojis = shuffleArray([...kidEmojis]).slice(0, 5);
-            } while (arraysAreSimilar(selectedEmojis, previousEmojis));
-            previousEmojis = selectedEmojis;
+        let currentSceneIndex = 0;
+        let currentQuestionIndex = 0;
 
-            /* Ensure different name selections between scenes */
+        function generateScene() {
+            const currentEmojiSet = shuffleArray([...emojiSets[currentSceneIndex]]);
+            
             let selectedNames;
             do {
                 selectedNames = shuffleArray([...kidNames]).slice(0, 5);
             } while (arraysAreSimilar(selectedNames, previousNames));
             previousNames = selectedNames;
 
-            /* Generate a random background color that's different from previous */
             let backgroundColor;
             do {
                 backgroundColor = `hsl(${Math.floor(Math.random() * 360)}, 70%, 90%)`;
@@ -221,7 +233,6 @@ Home made simple postioning logic game for kids!
             previousColors.push(backgroundColor);
             if (previousColors.length > 3) previousColors.shift();
 
-            /* Generate varied question types */
             const possibleQuestions = [
                 { type: 'absolute', text: `Who is 1st in line?`, answer: selectedNames[0] },
                 { type: 'absolute', text: `Who is 2nd in line?`, answer: selectedNames[1] },
@@ -234,7 +245,6 @@ Home made simple postioning logic game for kids!
                 { type: 'relative', text: `Who is after ${selectedNames[2]}?`, answer: selectedNames[3] }
             ];
 
-            /* Select questions ensuring mix of absolute and relative questions */
             const questions = shuffleArray(possibleQuestions)
                 .reduce((acc, question) => {
                     if (acc.length < 4 && 
@@ -246,7 +256,7 @@ Home made simple postioning logic game for kids!
 
             return {
                 background: backgroundColor,
-                emojis: selectedEmojis,
+                emojis: currentEmojiSet,
                 names: selectedNames,
                 questions: questions
             };
@@ -271,8 +281,6 @@ Home made simple postioning logic game for kids!
             scenes.push(generateScene());
         }
 
-        let currentSceneIndex = 0;
-        let currentQuestionIndex = 0;
 
         const queueDisplay = document.getElementById('queue-display');
         const currentQuestion = document.getElementById('current-question');
