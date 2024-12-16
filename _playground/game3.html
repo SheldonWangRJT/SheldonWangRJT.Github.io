@@ -40,7 +40,6 @@ Home made simple postioning logic game for kids!
             padding: 20px;
             border-radius: 10px;
             margin-top: 20px;
-            width: 80%;
         }
         .queue-btn {
             margin: 10px;
@@ -56,14 +55,70 @@ Home made simple postioning logic game for kids!
             background-color: #e0e0e0;
             transform: scale(1.05);
         }
+        #next-scene {
+            margin-top: 20px;
+        }
+        #current-question {
+            font-size: 1.8em;
+            color: #2c3e50;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            animation: questionPop 0.5s ease-out;
+        }
         #feedback {
             margin-top: 20px;
             font-weight: bold;
-            font-size: 1.2em;
-            height: 30px;
+            height: auto;
+            font-size: 1.5em;
+            padding: 15px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
         }
-        #next-scene {
-            margin-top: 20px;
+        .feedback-correct {
+            background: linear-gradient(45deg, #43c6ac, #91eae4);
+            color: white;
+            transform: scale(1.1);
+            animation: bounce 0.5s ease;
+        }
+        .feedback-incorrect {
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+            color: white;
+            animation: shake 0.5s ease;
+        }
+        .congratulations {
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            animation: rainbow 2s infinite;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        @keyframes questionPop {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        @keyframes bounce {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+        @keyframes rainbow {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+        .queue-btn {
+            background: linear-gradient(145deg, #ffffff, #e6e6e6);
+            box-shadow: 5px 5px 10px #d9d9d9, -5px -5px 10px #ffffff;
+            border: none;
+            font-weight: bold;
+            color: #444;
+        }
+        .queue-btn:active {
+            background: linear-gradient(145deg, #e6e6e6, #ffffff);
+            transform: scale(0.95);
         }
     </style>
 </head>
@@ -95,37 +150,94 @@ Home made simple postioning logic game for kids!
             'Ava', 'Ethan', 'Isabella', 'Mason', 'Mia'
         ];
 
+        /* Improved shuffle function using Fisher-Yates algorithm with better randomization */
         function shuffleArray(array) {
-            for (let i = array.length - 1; i > 0; i--) {
+            const newArray = [...array]; /* Create a copy to avoid modifying original */
+            for (let i = newArray.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]];
+                [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
             }
-            return array;
+            return newArray;
         }
 
-        function generateScene() {
-            /* Randomly select 5 unique emojis and names */
-            const selectedEmojis = shuffleArray([...kidEmojis]).slice(0, 5);
-            const selectedNames = shuffleArray([...kidNames]).slice(0, 5);
+        /* Keep track of previous selections to avoid repetition */
+        let previousEmojis = [];
+        let previousNames = [];
+        let previousColors = [];
 
-            /* Generate question types */
+        function generateScene() {
+            /* Ensure different emoji selections between scenes */
+            let selectedEmojis;
+            do {
+                selectedEmojis = shuffleArray([...kidEmojis]).slice(0, 5);
+            } while (arraysAreSimilar(selectedEmojis, previousEmojis));
+            previousEmojis = selectedEmojis;
+
+            /* Ensure different name selections between scenes */
+            let selectedNames;
+            do {
+                selectedNames = shuffleArray([...kidNames]).slice(0, 5);
+            } while (arraysAreSimilar(selectedNames, previousNames));
+            previousNames = selectedNames;
+
+            /* Generate a random background color that's different from previous */
+            let backgroundColor;
+            do {
+                backgroundColor = `hsl(${Math.floor(Math.random() * 360)}, 70%, 90%)`;
+            } while (previousColors.includes(backgroundColor));
+            
+            previousColors.push(backgroundColor);
+            if (previousColors.length > 3) previousColors.shift();
+
+            /* Generate varied question types */
             const possibleQuestions = [
                 { type: 'absolute', text: `Who is 1st in line?`, answer: selectedNames[0] },
+                { type: 'absolute', text: `Who is 2nd in line?`, answer: selectedNames[1] },
                 { type: 'absolute', text: `Who is 3rd in line?`, answer: selectedNames[2] },
+                { type: 'absolute', text: `Who is 4th in line?`, answer: selectedNames[3] },
                 { type: 'absolute', text: `Who is last in line?`, answer: selectedNames[4] },
                 { type: 'relative', text: `Who is before ${selectedNames[2]}?`, answer: selectedNames[1] },
-                { type: 'relative', text: `Who is after ${selectedNames[1]}?`, answer: selectedNames[2] }
+                { type: 'relative', text: `Who is after ${selectedNames[1]}?`, answer: selectedNames[2] },
+                { type: 'relative', text: `Who is before ${selectedNames[3]}?`, answer: selectedNames[2] },
+                { type: 'relative', text: `Who is after ${selectedNames[2]}?`, answer: selectedNames[3] }
             ];
 
+            /* Select questions ensuring mix of absolute and relative questions */
+            const questions = shuffleArray(possibleQuestions)
+                .reduce((acc, question) => {
+                    if (acc.length < 4 && 
+                        acc.filter(q => q.type === question.type).length < 2) {
+                        acc.push(question);
+                    }
+                    return acc;
+                }, []);
+
             return {
-                background: `hsl(${Math.random() * 360}, 70%, 90%)`, /* Random pastel background */
+                background: backgroundColor,
                 emojis: selectedEmojis,
                 names: selectedNames,
-                questions: shuffleArray(possibleQuestions).slice(0, 4)
+                questions: questions
             };
         }
 
-        const scenes = Array.from({length: 3}, generateScene);
+        /* Helper function to check if arrays are too similar */
+        function arraysAreSimilar(arr1, arr2) {
+            if (!arr2.length) return false;
+            const similarityThreshold = 3; /* Adjust this value to control similarity tolerance */
+            let similarities = 0;
+            
+            arr1.forEach((item, index) => {
+                if (arr2[index] === item) similarities++;
+            });
+            
+            return similarities >= similarityThreshold;
+        }
+
+        /* Generate scenes with better variety */
+        const scenes = [];
+        for (let i = 0; i < 3; i++) {
+            scenes.push(generateScene());
+        }
 
         let currentSceneIndex = 0;
         let currentQuestionIndex = 0;
@@ -167,14 +279,20 @@ Home made simple postioning logic game for kids!
             
             if (currentQuestionIndex >= scene.questions.length) {
                 currentQuestionIndex = 0;
-                feedbackDiv.textContent = 'Congratulations!! Great Job!!';
+                feedbackDiv.textContent = '🎉 Congratulations!! Great Job!! 🎉';
+                feedbackDiv.className = 'congratulations';
                 nextSceneButton.style.display = 'block';
                 return;
             }
 
             const question = scene.questions[currentQuestionIndex];
-            currentQuestion.textContent = question.text;
+            currentQuestion.textContent = `🤔 ${question.text}`;
             
+            // Reset feedback
+            feedbackDiv.className = '';
+            feedbackDiv.textContent = '';
+            
+            // Reset and create answer buttons
             answerButtons.innerHTML = '';
             scene.names.forEach(person => {
                 const button = document.createElement('button');
@@ -184,7 +302,6 @@ Home made simple postioning logic game for kids!
                 answerButtons.appendChild(button);
             });
 
-            feedbackDiv.textContent = '';
             nextSceneButton.style.display = 'none';
         }
 
@@ -193,11 +310,13 @@ Home made simple postioning logic game for kids!
             const question = scene.questions[currentQuestionIndex];
 
             if (selectedAnswer === question.answer) {
-                feedbackDiv.textContent = 'Correct! 🎉';
+                feedbackDiv.textContent = '✨ Correct! You are Amazing! 🎉';
+                feedbackDiv.className = 'feedback-correct';
                 currentQuestionIndex++;
-                setTimeout(nextQuestion, 1000);
+                setTimeout(nextQuestion, 1500);
             } else {
-                feedbackDiv.textContent = 'Try again! 🤔';
+                feedbackDiv.textContent = '💫 Try again! You can do it! 💫';
+                feedbackDiv.className = 'feedback-incorrect';
             }
         }
 
