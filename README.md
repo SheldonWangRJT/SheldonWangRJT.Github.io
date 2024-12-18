@@ -75,6 +75,17 @@ Many people use a git client to create files on their local computer and then pu
 Example: editing a markdown file for a talk
 ![Editing a markdown file for a talk](/images/editing-talk.png)
 
+Example Syntax for Mermaid Diagram, current deploy pipeline has to include `;` at the end of each line different from a lot of examples online, although without `;` will display correctly in local server.
+```
+{% mermaid %}
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+{% endmermaid %}
+```
+
 For more info
 ------
 More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
