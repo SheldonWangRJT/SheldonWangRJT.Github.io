@@ -349,4 +349,4 @@ compress_html:
     envs: development
 
 mermaid:
-  src: 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js'
+  src: 'https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js'
