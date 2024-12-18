@@ -1,0 +1,73 @@
+/* Playground Grid layout styles */
+.playground-grid__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 2em;
+    margin-top: 2em;
+  }
+  
+  .playground-grid__item {
+    position: relative;
+    margin-bottom: 2em;
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+  
+  .playground__item-teaser-placeholder {
+    position: relative;
+    padding-bottom: 100%; /* Creates a square aspect ratio */
+    background: linear-gradient(45deg, #FF6B6B, #4ECDC4); /* Cheerful coral to turquoise */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px; /* Optional: adds rounded corners */
+    transition: transform 0.2s ease;
+    
+    /* Randomly assign different gradients to items */
+    &:nth-child(3n) {
+      background: linear-gradient(45deg, #FFE66D, #FF6B6B); /* Yellow to coral */
+    }
+    &:nth-child(3n+1) {
+      background: linear-gradient(45deg, #7FB800, #4ECDC4); /* Green to turquoise */
+    }
+    &:nth-child(3n+2) {
+      background: linear-gradient(45deg, #FF8CC3, #9B89B3); /* Pink to purple */
+    }
+    
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+  
+  .playground__item-title-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%; /* Prevent text from touching edges */
+    color: white;
+    padding: 1em;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  }
+  
+  .playground__item-title-overlay a {
+    color: white;
+    text-decoration: none;
+    &:hover {
+      color: #FFE66D; /* Light yellow on hover */
+      text-shadow: 0 0 10px rgba(255,255,255,0.5);
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media screen and (max-width: 600px) {
+    .playground-grid__wrapper {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-gap: 1em;
+    }
+  }
+  
+  
