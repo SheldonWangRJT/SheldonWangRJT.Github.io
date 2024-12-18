@@ -46,6 +46,7 @@ jobs:
         run: |
           gem install jekyll
           gem install jekyll-mermaid
+          npm install -g @mermaid-js/mermaid-cli
           bundle install
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
