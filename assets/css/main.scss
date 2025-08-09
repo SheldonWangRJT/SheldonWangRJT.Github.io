@@ -230,6 +230,18 @@ thead th {
   border-radius: 12px;
 }
 
+/* Archive (posts list) spacing: title vs container */
+.archive {
+  /* Ensure the archive container has inner padding per design */
+  padding-top: clamp(12px, 2.5vw, 24px);
+}
+
+.archive .page__title,
+.archive h1.page__title {
+  /* Add transparent spacing beneath the page title so it breathes from the list */
+  margin-bottom: clamp(12px, 2.5vw, 28px);
+}
+
 /* Fallback for browsers without backdrop-filter: use more opaque bg */
 @supports not ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
   .masthead,
