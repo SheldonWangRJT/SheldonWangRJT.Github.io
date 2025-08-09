@@ -301,3 +301,30 @@ thead th {
   border-radius: 10px;
 }
 
+/* Sidebar: sticky + transparent on non-mobile */
+@media screen and (min-width: 768px) {
+  .sidebar {
+    position: sticky;
+    top: 24px; /* keeps it below masthead */
+    background-color: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+}
+
+/* Masthead menu: clear background on non-mobile */
+@media screen and (min-width: 768px) {
+  .masthead__menu,
+  .greedy-nav,
+  .nav__list,
+  .site-nav {
+    background-color: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+}
+
