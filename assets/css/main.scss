@@ -328,3 +328,48 @@ thead th {
   }
 }
 
+/* Nav links: visual enhancements (pills, spacing, hover) */
+@media screen and (min-width: 768px) {
+  .greedy-nav .visible-links > li {
+    margin-inline: 4px;
+  }
+
+  .greedy-nav a,
+  .masthead__menu-item a,
+  .nav__list a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5ch; /* space between emoji/icon and text */
+    padding: 8px 12px;
+    border-radius: 12px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    color: rgba(245, 247, 250, 0.92);
+    text-decoration: none;
+    transition: color .2s ease, background-color .2s ease, box-shadow .2s ease, transform .15s ease;
+  }
+
+  .greedy-nav a:hover,
+  .masthead__menu-item a:hover,
+  .nav__list a:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #b3c8ff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    transform: translateY(-1px);
+  }
+
+  .greedy-nav a:active,
+  .masthead__menu-item a:active,
+  .nav__list a:active {
+    transform: translateY(0);
+  }
+
+  /* Active/current page state */
+  .masthead__menu-item--active > a,
+  .nav__list .current > a,
+  .greedy-nav .active > a {
+    background-color: rgba(138, 180, 255, 0.12);
+    color: #8ab4ff;
+  }
+}
+
