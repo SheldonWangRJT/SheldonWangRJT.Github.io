@@ -367,6 +367,16 @@ thead th {
   border-radius: 10px;
 }
 
+/* Sidebar icons: only adjust building (company) and GitHub icons */
+.sidebar .author__urls .fa-building-columns,
+.sidebar .social-icons .fa-github {
+  color: rgba(245, 247, 250, 0.92) !important;
+}
+
+.sidebar .social-icons a:hover .fa-github {
+  color: #b3c8ff !important;
+}
+
 /* Sidebar: sticky + transparent on non-mobile */
 @media screen and (min-width: 768px) {
   .sidebar {
