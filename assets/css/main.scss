@@ -301,20 +301,3 @@ thead th {
   border-radius: 10px;
 }
 
-/*
- * Ensure gap between article content and sticky sidebar on wide screens
- * Mobile layout remains unchanged
- */
-@media screen and (min-width: 1200px) {
-  .page__content {
-    position: relative;
-    margin-inline-end: clamp(20px, 2.5vw, 40px);
-  }
-
-  .sidebar {
-    position: relative;
-    z-index: 2; /* avoid accidental underlap when sticky */
-    margin-inline-start: clamp(20px, 2.5vw, 40px);
-  }
-}
-
