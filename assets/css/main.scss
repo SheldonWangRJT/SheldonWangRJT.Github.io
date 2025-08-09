@@ -235,6 +235,27 @@ pre, code, kbd, samp {
   border-color: rgba(255, 255, 255, 0.1);
 }
 
+/* Increase contrast for inline code in paragraphs and lists */
+.page__content p code,
+.page__content li code,
+.archive .teaser p code,
+.archive .list__item p code,
+.archive .list__item li code {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #0b1020;
+  font-weight: 600;
+  padding: 0.15em 0.35em;
+  border-radius: 6px;
+}
+
+/* Ensure fenced code blocks stay high-contrast */
+.page__content pre,
+.page__content pre code,
+.archive .teaser pre,
+.archive .teaser pre code {
+  color: #e9eefc;
+}
+
 /* Tables */
 table {
   background-color: rgba(255, 255, 255, 0.04);
