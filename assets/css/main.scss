@@ -126,6 +126,15 @@ html, body {
   background: transparent !important;
 }
 
+/* Global sizing variables */
+:root {
+  --masthead-offset: 64px; /* approximate masthead height on desktop */
+}
+
+@media screen and (min-width: 1024px) {
+  :root { --masthead-offset: 72px; }
+}
+
 /* Animated gradient background */
 body::before {
   content: "";
@@ -228,12 +237,23 @@ thead th {
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
+  /* add breathing gap between items */
+  margin-block: clamp(8px, 1.5vw, 16px);
 }
 
-/* Archive (posts list) spacing: title vs container */
+/* Avoid extra bottom space after the last item */
+.archive .list__item:last-child,
+.archive .grid__item:last-child,
+.archive .teaser:last-child {
+  margin-bottom: 0;
+}
+
+/* Archive (posts list) spacing: title vs container and side padding */
 .archive {
   /* Ensure the archive container has inner padding per design */
   padding-top: clamp(12px, 2.5vw, 24px);
+  /* Add symmetric horizontal padding so items don't touch right edge */
+  padding-inline: clamp(12px, 3vw, 28px);
 }
 
 .archive .page__title,
@@ -317,7 +337,7 @@ thead th {
 @media screen and (min-width: 768px) {
   .sidebar {
     position: sticky;
-    top: 24px; /* keeps it below masthead */
+    top: calc(var(--masthead-offset) + env(safe-area-inset-top) + 8px);
     background-color: transparent !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
