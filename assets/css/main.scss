@@ -275,11 +275,9 @@ thead th {
   margin-block: clamp(8px, 1.5vw, 16px);
 }
 
-/* Avoid extra bottom space after the last item */
-.archive .list__item:last-child,
-.archive .grid__item:last-child,
-.archive .teaser:last-child {
-  margin-bottom: 0;
+/* Add comfortable bottom space below the last item */
+.archive {
+  padding-bottom: clamp(16px, 4vw, 40px);
 }
 
 /* Archive (posts list) spacing: title vs container and side padding */
@@ -447,5 +445,70 @@ thead th {
     background-color: rgba(138, 180, 255, 0.12);
     color: #8ab4ff;
   }
+}
+
+/* Footer: cleaner, minimal, glass-friendly */
+.page__footer {
+  position: relative;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: clamp(16px, 3vw, 28px) clamp(16px, 4vw, 36px);
+  margin-top: clamp(16px, 4vw, 40px);
+}
+
+.page__footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+}
+
+.page__footer-follow {
+  display: flex;
+  justify-content: center;
+  margin-bottom: clamp(8px, 2vw, 16px);
+}
+
+.page__footer-follow .social-icons {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  padding: 0;
+  margin: 0;
+}
+
+.page__footer-follow strong { display: none; }
+
+.page__footer-follow .social-icons a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  color: rgba(245, 247, 250, 0.85);
+  background-color: rgba(255, 255, 255, 0.06);
+  text-decoration: none;
+  transition: color .2s ease, background-color .2s ease, box-shadow .2s ease, transform .15s ease;
+}
+
+.page__footer-follow .social-icons a:hover {
+  color: #b3c8ff;
+  background-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  transform: translateY(-1px);
+}
+
+.page__footer-follow .social-icons i,
+.page__footer-follow .social-icons svg { color: currentColor; fill: currentColor; }
+
+.page__footer-copyright {
+  text-align: center;
+  color: rgba(245, 247, 250, 0.6);
+  font-size: 0.92rem;
 }
 
