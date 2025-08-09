@@ -325,8 +325,19 @@ thead th {
  */
 .page__inner-wrap,
 .page__content {
-  padding-inline: clamp(16px, 4vw, 36px);
+  padding-inline: clamp(24px, 4.5vw, 36px);
   padding-block: clamp(16px, 3vw, 28px);
+}
+
+/* Override Susy grid constraints to make page use more width */
+@media screen and (min-width: 64em) {
+  .page {
+    width: calc(100% - 300px) !important; /* Reserve space for sidebar */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 }
 
 .archive .list__item,
@@ -506,16 +517,26 @@ thead th {
 @media screen and (max-width: 767px) {
   /* Minimal Mistakes uses a large menu item as the title on mobile */
   .masthead__menu .masthead__menu-item--lg > a {
-    font-size: clamp(18px, 6vw, 24px);
+    font-size: clamp(14px, 4vw, 20px);
     font-weight: 800;
     letter-spacing: 0.3px;
     color: #eaf2ff !important;
     text-decoration: none;
     text-shadow: 0 2px 16px rgba(138, 180, 255, 0.35), 0 0 6px rgba(180, 200, 255, 0.25);
+    line-height: 1.2;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
   }
 
   /* Ensure title occupies space so it doesn't collide with toggle */
-  .masthead__menu .masthead__menu-item--lg { flex: 1 1 auto; min-width: 0; }
+  .masthead__menu .masthead__menu-item--lg { 
+    flex: 1 1 auto; 
+    min-width: 0; 
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
 }
 
 /* Footer: cleaner, minimal, glass-friendly */
