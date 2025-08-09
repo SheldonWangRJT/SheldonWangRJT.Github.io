@@ -300,7 +300,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
-  - jekyll-feed
+  # - jekyll-feed  # Temporarily disabled due to version compatibility issues
   - jekyll-redirect-from
   - jekyll-mermaid
 # mimic GitHub Pages with --safe
@@ -308,7 +308,7 @@ whitelist:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
-  - jekyll-feed
+  # - jekyll-feed  # Temporarily disabled due to version compatibility issues
   - jemoji
 
 
