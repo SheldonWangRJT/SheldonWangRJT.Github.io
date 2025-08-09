@@ -18,19 +18,25 @@ Forked from: Academic Pages
 
 See more info at https://academicpages.github.io/
 
-## Running Locally With Jekyll (macOS - zshell)
+## Running Locally With Jekyll (recommended)
 
-Guidance is available ![Here](https://jekyllrb.com/docs/installation/macos/)
-When you are initially working your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
+Quick start (no Ruby version manager required):
 
-1. Clone the repository and made updates as detailed above.
-2. Install `chruby` and `ruby-install` with Homebrew: `brew install chruby ruby-install xz` & `ruby-install ruby 3.1.3`
-3. Configure shell to use `chruby` with `echo "source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh" >> ~/.zshrc & echo "source $(brew --prefix)/opt/chruby/share/chruby/auto.sh" >> ~/.zshrc & echo "chruby ruby-3.1.3" >> ~/.zshrc # run 'chruby' to see actual version`
-4. Relaunch Terminal and check ruby version by `ruby -v` if this steps fails, you might want to make sure the system ruby be updated to the correct version
-5. Install Jekyll `gem install jekyll`
-6. Run `bundle exec jekyll serve` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
+1. Install Bundler if needed: `gem install bundler`
+2. From the repo root:
+   - `bundle config set path 'vendor/bundle'`
+   - `bundle install`
+3. Serve with live reload:
+   - `JEKYLL_ENV=development bundle exec jekyll serve --host 127.0.0.1 --port 4000 --livereload --livereload-ignore assets/**`
 
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essentials gcc make`
+Notes:
+- Live server will rebuild and refresh on change.
+- If port 4000 is busy, change `--port`.
+
+Optional Ruby setup (macOS): If you prefer pinning a Ruby version, see Jekyll’s macOS guide: `https://jekyllrb.com/docs/installation/macos/`.
+If you use `chruby`, install via Homebrew and select a Ruby version, then run the same Bundler steps above.
+
+Linux prerequisites: `sudo apt install build-essential gcc make`
 
 # Maintenance 
 
@@ -89,3 +95,26 @@ graph TD;
 For more info
 ------
 More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+
+
+## Theme customizations (2025)
+
+- Glass + gradient background (lock-screen style): see `assets/css/main.scss` for layered radial gradients and breathing animation.
+- Transparent containers and spacing:
+  - `.page__inner-wrap` is transparent
+  - Responsive padding for `.page__content`, archive lists, and sidebar
+  - Bottom padding for `.archive` to avoid last-item collision
+- Navigation:
+  - Desktop: pill-style nav links with hover/active states
+  - Mobile: navbar title emphasized; `.masthead__menu` and `.greedy-nav` backgrounds are transparent
+- Sidebar:
+  - Sticky and transparent on non-mobile; offset controlled by `--masthead-offset` (in `:root`)
+  - Company (building) and GitHub icons forced to light color; other icons inherit as before
+- Typography:
+  - Inline code in lists/paragraphs uses a higher-contrast pill; block code remains high-contrast
+- Footer:
+  - Social items styled as compact pills; optional Sitemap button added
+
+## Deploy
+
+Pushing to `master` triggers GitHub Pages to rebuild and deploy. You can view commit history on GitHub and the Pages build status under the repository’s Actions tab.
