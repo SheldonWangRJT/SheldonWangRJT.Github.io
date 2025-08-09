@@ -246,3 +246,58 @@ thead th {
   }
 }
 
+/* Make inner wrap transparent (no blur/glass) */
+.page__inner-wrap {
+  background-color: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/*
+ * Content breathing room
+ * Add safe, responsive padding so text never touches container edges
+ */
+.page__inner-wrap,
+.page__content {
+  padding-inline: clamp(16px, 4vw, 36px);
+  padding-block: clamp(16px, 3vw, 28px);
+}
+
+.archive .list__item,
+.archive .grid__item,
+.archive .teaser {
+  padding: clamp(12px, 3vw, 22px);
+}
+
+.sidebar {
+  padding: clamp(12px, 3vw, 22px);
+}
+
+/* Ensure headings and paragraphs have comfortable spacing */
+.page__content h1,
+.page__content h2,
+.page__content h3,
+.page__content h4,
+.page__content h5,
+.page__content h6 {
+  margin-top: 1.25em;
+  margin-bottom: 0.5em;
+}
+
+.page__content p,
+.page__content ul,
+.page__content ol,
+.page__content pre,
+.page__content blockquote {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+
+/* Keep images from touching edges inside glass cards */
+.page__content img,
+.archive .teaser img {
+  border-radius: 10px;
+}
+
