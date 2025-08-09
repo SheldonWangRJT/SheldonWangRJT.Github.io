@@ -114,3 +114,135 @@
   }
 }
 
+
+/*
+ * Global curvy gradient background + frosted glass (lock screen style)
+ * - Background: animated layered radial gradients, heavy blur
+ * - Foreground: semi-transparent surfaces with backdrop-filter blur
+ */
+
+html, body {
+  min-height: 100%;
+  background: transparent !important;
+}
+
+/* Animated gradient background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(60% 50% at 10% 20%, rgba(255, 80, 160, 0.35), transparent 60%),
+    radial-gradient(55% 60% at 90% 25%, rgba(80, 160, 255, 0.35), transparent 60%),
+    radial-gradient(70% 60% at 50% 100%, rgba(80, 240, 200, 0.25), transparent 60%),
+    linear-gradient(135deg, #0e1022, #0c1428 40%, #101a2e 70%, #0a0f1c);
+  background-size: 200% 200%, 200% 200%, 200% 200%, 100% 100%;
+  animation: site-bg-move 24s ease-in-out infinite alternate;
+  filter: blur(48px) saturate(120%);
+  transform: translateZ(0);
+}
+
+@keyframes site-bg-move {
+  0% {
+    background-position: 0% 0%, 100% 0%, 50% 100%, 0 0;
+  }
+  100% {
+    background-position: 100% 100%, 0% 100%, 50% 0%, 0 0;
+  }
+}
+
+/* Optional subtle grain for texture */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity="0.035"/></svg>');
+  background-size: 240px 240px;
+}
+
+/* Glass surfaces: apply to key theme containers */
+.masthead,
+.page,
+.page__inner-wrap,
+.page__content,
+.archive,
+.sidebar,
+.footer,
+.greedy-nav, /* top nav */
+.nav__list,
+.site-nav {
+  background-color: rgba(16, 18, 28, 0.45);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Round corners where appropriate, but not for full-width bars */
+.page,
+.page__inner-wrap,
+.archive,
+.sidebar {
+  border-radius: 16px;
+}
+
+/* Make default white backgrounds transparent so the backdrop shows through */
+.page,
+.page__content,
+.archive,
+.sidebar,
+.masthead,
+.footer {
+  background-clip: padding-box;
+}
+
+/* Improve text contrast on darker glass */
+body {
+  color: rgba(245, 247, 250, 0.92);
+}
+
+a { color: #8ab4ff; }
+a:hover { color: #b3c8ff; }
+
+/* Code blocks readable on glass */
+pre, code, kbd, samp {
+  background-color: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Tables */
+table {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+thead th {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+/* Cards/teasers from theme */
+.archive .list__item,
+.archive .grid__item,
+.archive .teaser {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+}
+
+/* Fallback for browsers without backdrop-filter: use more opaque bg */
+@supports not ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
+  .masthead,
+  .page,
+  .page__inner-wrap,
+  .page__content,
+  .archive,
+  .sidebar,
+  .footer,
+  .greedy-nav,
+  .nav__list,
+  .site-nav {
+    background-color: rgba(16, 18, 28, 0.85);
+  }
+}
+
