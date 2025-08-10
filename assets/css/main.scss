@@ -260,9 +260,17 @@ pre, code, kbd, samp {
 /* Tables */
 table {
   background-color: rgba(255, 255, 255, 0.04);
+  color: #ffffff !important;
 }
 thead th {
   background-color: rgba(255, 255, 255, 0.06);
+  color: #ffffff !important;
+}
+tbody td {
+  color: #ffffff !important;
+}
+th, td {
+  color: #ffffff !important;
 }
 
 /* Cards/teasers from theme */
