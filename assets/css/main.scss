@@ -147,20 +147,13 @@ body::before {
     radial-gradient(70% 60% at 50% 100%, rgba(80, 240, 200, 0.25), transparent 60%),
     linear-gradient(135deg, #0e1022, #0c1428 40%, #101a2e 70%, #0a0f1c);
   background-size: 200% 200%, 200% 200%, 200% 200%, 100% 100%;
-  /* Static background - keep initial light appearance */
-  animation: site-bg-move 24s ease-in-out infinite alternate;
+  /* Static background - no animation */
+  background-position: 0% 0%, 100% 0%, 50% 100%, 0 0;
   filter: blur(48px) saturate(120%) brightness(1.08);
   transform: translateZ(0);
 }
 
-@keyframes site-bg-move {
-  0% {
-    background-position: 0% 0%, 100% 0%, 50% 100%, 0 0;
-  }
-  100% {
-    background-position: 100% 100%, 0% 100%, 50% 0%, 0 0;
-  }
-}
+/* Removed site-bg-move animation - background is now completely static */
 
 /* Removed breathing animation - keeping static light appearance */
 
