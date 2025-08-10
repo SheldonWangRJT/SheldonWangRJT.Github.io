@@ -85,11 +85,10 @@ I do not recommend “anti-gray” antioxidant stacks (e.g., catalase tablets, m
 - Rapid-onset diffuse graying, eyebrow/eyelash depigmentation, other autoimmune signs, or symptoms of thyroid/pernicious anemia.
 
 ## References (selected)
-- Picard M, et al. Quantitative mapping of human hair graying and reversal in relation to life stress. eLife. 2021.
-- Zhang B, et al. Hyperactivation of sympathetic nerves drives depletion of melanocyte stem cells. Nature. 2020.
-- Hsu YC lab. Melanocyte stem cell immobility and hair graying. Nature. 2023.
-- Schallreuter KU, et al. Hydrogen peroxide-mediated oxidative stress in the pathogenesis of human hair graying. FASEB Journal. 2009.
-- Associations of premature canities with vitamin B12, vitamin D, iron/ferritin, copper; and with thyroid dysfunction and smoking: multiple cross‑sectional studies (2010–2023). Consult clinician-guided testing before supplementation.
+- Picard M, et al. Quantitative mapping of human hair graying and reversal in relation to life stress. eLife. 2021. [Link](https://elifesciences.org/articles/67437)
+- Zhang B, et al. Hyperactivation of sympathetic nerves drives depletion of melanocyte stem cells. Nature. 2020. [Link](https://www.nature.com/articles/s41586-020-1935-3)
+- Schallreuter KU, et al. Hydrogen peroxide‑mediated oxidative stress in the pathogenesis of human hair graying. FASEB Journal. 2009. [PubMed](https://pubmed.ncbi.nlm.nih.gov/19104757/)
+- Premature graying associations (B12, D, iron/ferritin, copper, thyroid, smoking). Review 2024. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11444426/)
 
 ---
 
