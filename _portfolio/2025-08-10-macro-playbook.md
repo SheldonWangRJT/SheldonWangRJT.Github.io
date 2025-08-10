@@ -1,9 +1,9 @@
 ---
 title: "Tariffs, Jobs Revisions, and a Likely September Rate Cut: A 2025 Playbook for Investors"
+excerpt: "How tariffs, BLS jobs revisions, and a potential Sep 2025 rate cut shape a practical portfolio playbook."
 date: 2025-08-10
-categories: [investment, finance]
+collection: portfolio
 tags: [tariffs, inflation, labor-market, fed, strategy, portfolio]
-author_profile: true
 ---
 
 ### Executive summary
