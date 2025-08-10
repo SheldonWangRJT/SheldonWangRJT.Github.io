@@ -1,38 +1,46 @@
 ---
 permalink: /
-title: "Welcome to Sheldon's Personal Website!"
+title: "👋 Hey there! Welcome to The Sheldon Wang Site"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-Greetings! I'm Sheldon, and I'm delighted to welcome you to my personal website. Here, I'll be sharing a blend of technical blogs, personal interests, gaming, sports, investment opinions, and more!
+Welcome to my corner of the internet! 🌐 I'm Sheldon – Staff iOS Engineer at Meta, former Snapchat architect, and your friendly neighborhood tech enthusiast who believes life's too short for boring code and bad coffee. ☕️
 
-## About Me
+## 🗺️ What You'll Find Here
 
-### Experience Summary
+### 📔 **Tech Blog Posts** 
+Deep dives into iOS development, system design, and the art of building apps that millions love. From Swift concurrency patterns to performance optimization tips that actually work. Perfect for when you want to level up your mobile game!
 
-- **10+ years of industrial experience:** I've spent ten plus years designing, developing, and testing enterprise mobile apps. These apps have collectively reached an impressive 800 million mothly active users (DAU), utilizing a diverse array of iOS native SDKs and third-party frameworks.
-  
-- **Leadership Experience:** With four years of leadership experience, I've successfully led teams of up to ten engineers. Together, we've delivered multi-quarter projects, including substantial codebase refactors that have significantly enhanced our development foundation. Additionally, we've spearheaded the development of new flagship features, complete with AB testing rollouts and in-depth core metrics analysis.
-  
-- **Project Management Skills:** Over three years, I've honed my skills in project planning, resource management, facilitating stand-ups, and overseeing sprints.
-  
-- **Contributions to Snapchat iOS Codebase:** I've had the honor of being recognized as a top-ten all-time committer to the Snapchat iOS codebase.
-  
-- **Leading by Example:** I firmly believe in leading by example, setting the standard for excellence in all aspects of my work.
+### 💸 **Investment & Finance** 
+My thoughts on markets, money, and making sense of the economic chaos around us. Expect data-driven analysis mixed with just enough skepticism to keep things interesting. Warning: may contain unpopular opinions about crypto. 😏
 
-### Tech Stack
+### 🎮 **Life & Interests**
+The fun stuff! Productivity hacks that don't suck, life experiments worth trying, and whatever random rabbit holes I've fallen down lately. Think of it as the place where professional meets personal (and occasionally weird).
 
-- **Proficient in Multiple Languages:** My expertise spans Swift, Objective-C, and TypeScript.
-  
-- **Programming Paradigms:** I am well-versed in various programming paradigms, including Objective-Oriented Programming, Protocol-Oriented Programming, and Functional Programming.
-  
-- **Architecture and Dependency Injection:** I possess a deep understanding of software architecture principles and have practical experience in proper dependency injection techniques.
-  
-- **Frameworks Mastery:** I am experienced in utilizing a wide range of Core OS Layer frameworks (e.g., Core Bluetooth, TouchID) and Core Service Layer frameworks (e.g., Blocks, File-Sharing, GCD, NSOperationQueue, Contacts, Core Data, Core Location). Additionally, I have solid expertise in Cocoa Touch Layer frameworks (e.g., AirDrop, Auto Layout, Storyboard, APNS, Gesture Recognizers, MapKit, Notification Center, UIKit) and hardware-related APIs (e.g., Accelerometer, Sensor, Camera).
-  
-- **Testing and Analysis:** I excel in writing comprehensive unit and automation tests. Moreover, I have a strong command of SQL big query for in-depth analysis of metrics, enabling operational excellence and informed feature AB Tests rollouts.
-  
-- **Tools of the Trade:** I am proficient in utilizing a variety of tools including Xcode, VSCode, Github, livegrep, macOS terminal, and bash scripting.
+### 🛝 **Playground**
+Interactive demos and experiments – because sometimes you need to see code in action rather than just read about it. Come here when you want to break things in a safe environment.
+
+## 🎯 Who Am I?
+
+**In the professional world:** I build mobile experiences that reach hundreds of millions of users. At Meta, I work on Facebook's ads and AI systems. Before that, I was deep in Snapchat's iOS codebase (fun fact: I'm a top-20 all-time committer there 🏆).
+
+**In the real world:** I'm the guy who gets genuinely excited about elegant code architecture, spends too much time optimizing workflows, and thinks the best conversations happen over good food and bad puns.
+
+**My superpower:** Taking complex technical concepts and making them actually understandable. Whether that's explaining iOS memory management or why your portfolio allocation might be all wrong.
+
+## 🚀 Latest & Greatest
+
+Recently shipped: Evidence-based guide to slowing hair graying (because apparently stress *does* cause gray hair, and I have the papers to prove it), deep dives into Swift concurrency patterns, and some questionable takes on market dynamics.
+
+## 💬 Let's Connect
+
+Found something useful? Disagree with my investment thesis? Built something cool inspired by a post? I'd love to hear about it! Check out my [resume](/cv/) for the formal stuff, or just browse around and see what catches your eye.
+
+Thanks for stopping by – enjoy exploring! 🎉
+
+---
+
+*P.S. If you're wondering about the emojis everywhere: life's more fun with a little visual flair. Fight me. 😄*
