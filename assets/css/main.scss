@@ -147,7 +147,8 @@ body::before {
     radial-gradient(70% 60% at 50% 100%, rgba(80, 240, 200, 0.25), transparent 60%),
     linear-gradient(135deg, #0e1022, #0c1428 40%, #101a2e 70%, #0a0f1c);
   background-size: 200% 200%, 200% 200%, 200% 200%, 100% 100%;
-  animation: site-bg-move 24s ease-in-out infinite alternate, site-bg-breathe 8s ease-in-out infinite;
+  /* 3x faster breathing and movement */
+  animation: site-bg-move 8s ease-in-out infinite alternate, site-bg-breathe 2.666s ease-in-out infinite;
   filter: blur(48px) saturate(120%) brightness(1.02);
   transform: translateZ(0);
 }
