@@ -21,9 +21,9 @@ Mechanics in plain English:
 
 What the literature says (selected quotes): 📚
 - “Tariffs are almost entirely passed through to domestic prices, implying that the incidence of the tariffs falls largely on the United States.” — Amiti, Redding, Weinstein (QJE/NBER).  
-  Source: https://www.nber.org/papers/w25672
+  Source: [NBER](https://www.nber.org/papers/w25672){:target="_blank" rel="noopener"}
 - “Tariffs function as a tax on imports; they tend to raise consumer prices and can weigh on GDP over time.” — Congressional Budget Office (overview).  
-  Source: https://www.cbo.gov/
+  Source: [CBO](https://www.cbo.gov/){:target="_blank" rel="noopener"}
 
 Sectoral transmission (who likely feels what) 🔀
 - Pressured: import-heavy retail/apparel, consumer electronics, low-margin discretionary without pricing power, capital goods with deep China inputs.
@@ -42,7 +42,7 @@ What happened and why it matters
 
 Authoritative note on revisions:
 - “Monthly estimates are revised as additional reports are received; revisions can be sizable when response rates and seasonal patterns shift.” — BLS CES methodology.  
-  Source: https://www.bls.gov/ces/cesrevinfo.htm • Latest release: https://www.bls.gov/news.release/empsit.nr0.htm
+  Source: [BLS CES Revisions](https://www.bls.gov/ces/cesrevinfo.htm){:target="_blank" rel="noopener"} • Latest release: [Employment Situation](https://www.bls.gov/news.release/empsit.nr0.htm){:target="_blank" rel="noopener"}
 
 Implication for the Fed 🏛️
 - Revisions that keep payrolls positive (or less negative) plus cooling inflation reinforces a base case for a measured cut rather than emergency easing.
@@ -51,7 +51,7 @@ Implication for the Fed 🏛️
 
 ### 3) Fed: odds favor a September cut—how far and how fast? ✂️📉
 - Market-implied probabilities (CME FedWatch) have reflected elevated odds of a September 2025 cut, consistent with moderating inflation and uneven growth momentum.  
-  Source: https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html
+  Source: [CME FedWatch Tool](https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html){:target="_blank" rel="noopener"}
 
 How tariffs change the calculus 🧮
 - If tariffs re-accelerate goods inflation, the Fed may proceed with a trim (25–50 bp) but keep a shallow path until goods pressure clears. The asymmetry: they’ll cut to insure against growth risk but won’t pre-commit to a long cycle if inflation proves sticky.
@@ -97,19 +97,19 @@ Scenario guardrails (how we’d pivot) 🧱
 Macro context you can refresh anytime (live FRED images):
 
 - Headline CPI (CPIAUCSL):  
-  ![CPI](https://fred.stlouisfed.org/graph/fredgraph.png?id=CPIAUCSL)
+  [![CPI](https://fred.stlouisfed.org/graph/fredgraph.png?id=CPIAUCSL)](https://fred.stlouisfed.org/series/CPIAUCSL){:target="_blank" rel="noopener"}
 
 - Core CPI (CPILFESL):  
-  ![Core CPI](https://fred.stlouisfed.org/graph/fredgraph.png?id=CPILFESL)
+  [![Core CPI](https://fred.stlouisfed.org/graph/fredgraph.png?id=CPILFESL)](https://fred.stlouisfed.org/series/CPILFESL){:target="_blank" rel="noopener"}
 
 - Nonfarm Payrolls (PAYEMS):  
-  ![PAYEMS](https://fred.stlouisfed.org/graph/fredgraph.png?id=PAYEMS)
+  [![PAYEMS](https://fred.stlouisfed.org/graph/fredgraph.png?id=PAYEMS)](https://fred.stlouisfed.org/series/PAYEMS){:target="_blank" rel="noopener"}
 
 - Unemployment Rate (UNRATE):  
-  ![UNRATE](https://fred.stlouisfed.org/graph/fredgraph.png?id=UNRATE)
+  [![UNRATE](https://fred.stlouisfed.org/graph/fredgraph.png?id=UNRATE)](https://fred.stlouisfed.org/series/UNRATE){:target="_blank" rel="noopener"}
 
 - Effective Fed Funds Rate (FEDFUNDS):  
-  ![Fed Funds](https://fred.stlouisfed.org/graph/fredgraph.png?id=FEDFUNDS)
+  [![Fed Funds](https://fred.stlouisfed.org/graph/fredgraph.png?id=FEDFUNDS)](https://fred.stlouisfed.org/series/FEDFUNDS){:target="_blank" rel="noopener"}
 
 Tip: Click any chart to open on FRED and customize date ranges.
 
@@ -117,14 +117,14 @@ Tip: Click any chart to open on FRED and customize date ranges.
 
 ### Selected references 🔗
 - Amiti, Redding, Weinstein. “The Impact of the 2018 Tariffs on Prices and Welfare.” QJE/NBER.  
-  Source: https://www.nber.org/papers/w25672
+  Source: [NBER](https://www.nber.org/papers/w25672){:target="_blank" rel="noopener"}
 - Congressional Budget Office — Tariff analyses (overview).  
-  Source: https://www.cbo.gov/
+  Source: [CBO](https://www.cbo.gov/){:target="_blank" rel="noopener"}
 - Bureau of Labor Statistics — CES Revisions; Employment Situation.  
-  Sources: https://www.bls.gov/ces/cesrevinfo.htm • https://www.bls.gov/news.release/empsit.nr0.htm
+  Sources: [BLS CES Revisions](https://www.bls.gov/ces/cesrevinfo.htm){:target="_blank" rel="noopener"} • [Employment Situation](https://www.bls.gov/news.release/empsit.nr0.htm){:target="_blank" rel="noopener"}
 - CME FedWatch Tool — Market-implied policy probabilities.  
-  Source: https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html
+  Source: [CME FedWatch](https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html){:target="_blank" rel="noopener"}
 - FRED (St. Louis Fed) — CPIAUCSL • CPILFESL • PAYEMS • UNRATE • FEDFUNDS.  
-  Source: https://fred.stlouisfed.org/
+  Source: [FRED](https://fred.stlouisfed.org/){:target="_blank" rel="noopener"}
 
 
