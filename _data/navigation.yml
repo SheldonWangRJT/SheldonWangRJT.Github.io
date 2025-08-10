@@ -8,6 +8,10 @@ main:
   - title: "💸 Investment & Finance"
     url: /portfolio/
 
+  # life tricks, games, sports etc
+  - title: "🎮 Life & Interests"
+    url: /life/
+
   # my youtube tutorials
   # - title: "👨🏻‍🏫 Tutorials"
   #   url: /teaching/    

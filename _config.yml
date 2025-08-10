@@ -29,7 +29,7 @@ author:
   pronouns         : # example: "she/her"  
   bio              : "Seasoned iOS Veteran, Mentor"
   location         : "US"
-  employer         : "Snap Inc"
+  employer         : "Meta"
   uri              : # URL
   email            : "sheldon.wang7@yahoo.com" 
 
@@ -217,6 +217,9 @@ collections:
   playground:
     output: true
     permalink: /:collection/:path/
+  life:
+    output: true
+    permalink: /:collection/:path/
 
 # Defaults
 defaults:
@@ -281,6 +284,15 @@ defaults:
       layout: single
       author_profile: true
       share: true
+  # _life
+  - scope:
+      path: ""
+      type: life
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
 
 # Sass/SCSS
 sass:
@@ -300,7 +312,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
-  # - jekyll-feed  # Temporarily disabled due to version compatibility issues
+  - jekyll-feed
   - jekyll-redirect-from
   - jekyll-mermaid
 # mimic GitHub Pages with --safe
@@ -308,7 +320,7 @@ whitelist:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
-  # - jekyll-feed  # Temporarily disabled due to version compatibility issues
+  - jekyll-feed
   - jemoji
 
 
