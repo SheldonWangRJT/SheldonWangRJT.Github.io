@@ -28,7 +28,12 @@ redirect_from:
 
 ## Professional Experience
 
-### Snap Inc. | March 2019 - Present
+### Meta | June 2025 - Present
+
+#### Facebook Pillar - iOS Engineer
+Ads and AI Development
+
+### Snap Inc. | March 2019 - June 2025
 **Snapchat iOS app**  
 [Snapchat on iTunes](https://apps.apple.com/us/app/snapchat/id447188370)
 
