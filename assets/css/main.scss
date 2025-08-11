@@ -320,9 +320,9 @@ th, td {
   padding-block: clamp(16px, 3vw, 28px);
 }
 
-/* Mobile: maximize width by removing horizontal padding */
+/* Mobile: remove page__inner-wrap padding for detail pages to maximize width */
 @media screen and (max-width: 767px) {
-  .page__content {
+  .page__inner-wrap {
     padding-inline: 0 !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
