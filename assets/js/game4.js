@@ -61,6 +61,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function handleCardClick(event) {
         const clickedCard = event.currentTarget;
 
+        if (clickedCard.classList.contains('matched')) {
+            return; // a matched card should not be clickable
+        }
+
         if (flippedCards.length < 2 && !clickedCard.classList.contains('flipped')) {
             flipCard(clickedCard);
             flippedCards.push(clickedCard);

@@ -66,21 +66,8 @@ h1 {
     transform: rotateY(180deg);
 }
 
-.card.matched {
-    animation: bounceOut 0.5s forwards;
-}
-
-@keyframes bounceOut {
-    20% {
-        transform: scale(1.1);
-    }
-    50% {
-        transform: scale(0.9);
-    }
-    100% {
-        transform: scale(0);
-        visibility: hidden;
-    }
+.card.matched .card-back {
+    border: 3px solid #2ecc71; /* green border for matched cards */
 }
 
 
