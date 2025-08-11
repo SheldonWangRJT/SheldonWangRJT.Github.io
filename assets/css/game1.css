@@ -38,6 +38,7 @@ body {
     max-width: 500px;
     aspect-ratio: 1;
     box-sizing: border-box;
+    margin: 0 auto;
 }
 
 #score {
