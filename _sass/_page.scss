@@ -399,3 +399,39 @@
   font-size: $type-size-6;
   text-transform: uppercase;
 }
+
+/*
+   Donation
+   ========================================================================== */
+
+.page__donation {
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid $border-color;
+  text-align: center;
+}
+
+.donation-title {
+  margin-bottom: 0.5em;
+  font-size: $type-size-5;
+  font-weight: bold;
+  color: #fff;
+}
+
+.donation-text {
+  margin-bottom: 1em;
+  font-size: $type-size-6;
+  color: #fff;
+  line-height: 1.4;
+}
+
+#donate-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+}
+
+#donate-button {
+  display: inline-block;
+}
