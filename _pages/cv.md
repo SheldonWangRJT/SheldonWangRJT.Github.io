@@ -31,7 +31,13 @@ redirect_from:
 ### Meta | June 2025 - Present
 
 #### Facebook Pillar - iOS Engineer
-Ads and AI Development
+**Facebook iOS app**  
+[FB on iTunes](https://apps.apple.com/us/app/facebook/id284882215)
+**Instagram iOS app**  
+[IG on iTunes](https://apps.apple.com/us/app/instagram/id389801252)
+
+Feed Ads and Development Efficiency with AI and Xplat
+
 
 ### Snap Inc. | March 2019 - June 2025
 **Snapchat iOS app**  
