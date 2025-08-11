@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+body {
+    background-color: #a7d7c5; /* A light, friendly green */
+    font-family: 'Fredoka One', cursive;
+}
+
+#main-content {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    color: #5d5d5d;
+}
+
+h1 {
+    color: #f67280; /* A playful pink */
+    text-shadow: 2px 2px #f8b195;
+}
+
+#maze-container {
+    display: grid;
+    border: 5px solid #f8b195; /* A soft orange border */
+    background-color: #c06c84; /* A darker pink for the maze background */
+    margin: 20px auto;
+    width: fit-content;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.cell {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.wall-north { border-top: 3px solid #6c5b7b; }
+.wall-south { border-bottom: 3px solid #6c5b7b; }
+.wall-east { border-right: 3px solid #6c5b7b; }
+.wall-west { border-left: 3px solid #6c5b7b; }
+
+.start {
+    background-color: #a7d7c5;
+    border-radius: 5px;
+}
+.end {
+    background-color: #f67280;
+    border-radius: 5px;
+}
+
+.player {
+    font-size: 25px; /* Adjust size of emoji */
+    position: absolute;
+    transition: all 0.2s linear;
+    text-align: center;
+}
+
+#controls {
+    margin-top: 20px;
+}
+
+.d-pad-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.d-pad-btn {
+    width: 60px;
+    height: 60px;
+    font-size: 2.5em;
+    margin: 5px;
+    border: none;
+    background-color: #f8b195;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 5px #c06c84;
+    transition: all 0.1s ease-in-out;
+}
+
+.d-pad-btn:active {
+    transform: translateY(5px);
+    box-shadow: 0 0 #c06c84;
+}
+
+#win-message {
+    font-size: 2.5em;
+    color: #f67280;
+    text-shadow: 2px 2px white;
+}
+
+.hidden {
+    display: none;
+}
+
+#restart-maze-btn, #change-difficulty-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: #f67280;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-shadow: 0 4px #c06c84;
+    transition: all 0.1s ease-in-out;
+}
+#restart-maze-btn:active, #change-difficulty-btn:active {
+    transform: translateY(4px);
+    box-shadow: 0 0 #c06c84;
+}
+
+
+#difficulty-selection {
+    margin-top: 50px;
+}
+
+.difficulty-btn {
+    padding: 15px 30px;
+    font-size: 1.5em;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 15px;
+    border: none;
+    background-color: #f8b195;
+    color: white;
+    font-family: 'Fredoka One', cursive;
+    box-shadow: 0 5px #c06c84;
+    transition: all 0.1s ease-in-out;
+}
+
+.difficulty-btn:active {
+    transform: translateY(5px);
+    box-shadow: 0 0 #c06c84;
+}
