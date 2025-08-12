@@ -42,6 +42,42 @@ Note: Some details are “reported” not “team-official.” Always check for 
 
 For quick comparisons and trend queries, StatMuse is great for prompts like “Nuggets net rating with Jokic on off 2024-25” — try it: `https://www.statmuse.com/nba`.
 
+## What The Trades Change — Tactics + Data 🔎
+
+- **Cam Johnson vs. MPJ profile**
+  - Johnson brings more reliable POA/wing defense and quick-trigger catch-and-shoots (see 3PA rate and corner 3 share on his [BBR Shooting](https://www.basketball-reference.com/players/j/johnsca02.html#shooting) tab). In DHO actions with Jokić, quicker releases force top-locks and open back-cuts — perfect for Gordon’s dunker-spot seams.
+  - MPJ was elite at difficult shot-making and high release over contests. Swapping for Johnson tilts shot diet toward “cleaner looks” and improves defensive scheme versatility (switch/peel/help). Outcome: higher lineup floor, slightly lower usage volatility.
+
+- **Non-Jokić minutes stabilization (Valančiūnas)**
+  - Bench stretches cratered when Jokić sat. A traditional 5 with elite defensive rebounding rate and foul-drawing keeps second units out of transition-defense nightmares. Check Valančiūnas’ TRB%/DRB% on his [Advanced](https://www.basketball-reference.com/players/v/valanjo01.html#all_advanced) card.
+  - Offensively: more second-chance points and set offense; defensively: more single-possession trips. That stabilizes game flow on the road and on back-to-backs.
+
+- **Bench creation + spacing (THJ + Brown)**
+  - THJ’s gravity as a movement shooter widens gaps for Brown short-roll reads. Brown’s history in Denver screening for guards can revive a second-unit identity: defend, run, shoot, repeat. Usage: stagger Murray/Johnson to ensure one primary creator on floor at all times.
+
+- **Lineup fit around Jokić**
+  - With Johnson/Gordon flanking, you can play “5-out” principles (weakside 45 cuts, Spain PnR, Chicago action) without sacrificing size. Expect better corner-3 volume and fewer late-clock ISOs.
+
+## Jokić: Five-Year Dominance (regular season) 📚
+
+Quick season-by-season links (Per Game + Advanced), so you can verify and dive deep:
+
+- 2020–21: [Per Game](https://www.basketball-reference.com/players/j/jokicni01.html#per_game) • [Advanced](https://www.basketball-reference.com/players/j/jokicni01.html#all_advanced)
+- 2021–22: [Per Game](https://www.basketball-reference.com/players/j/jokicni01.html#per_game) • [Advanced](https://www.basketball-reference.com/players/j/jokicni01.html#all_advanced)
+- 2022–23: [Per Game](https://www.basketball-reference.com/players/j/jokicni01.html#per_game) • [Advanced](https://www.basketball-reference.com/players/j/jokicni01.html#all_advanced)
+- 2023–24: [Per Game](https://www.basketball-reference.com/players/j/jokicni01.html#per_game) • [Advanced](https://www.basketball-reference.com/players/j/jokicni01.html#all_advanced)
+- 2024–25: [Per Game](https://www.basketball-reference.com/players/j/jokicni01.html#per_game) • [Advanced](https://www.basketball-reference.com/players/j/jokicni01.html#all_advanced)
+
+What it shows (high-level, all verifiable on BBR):
+
+- Sustained elite box-creation: top-tier in **BPM** and **VORP** each year; massive **WS/48** and **On-Off** impact.
+- Counting lines that bend defenses every night: points + rebounds + assists stacks that routinely flirt with triple-double baselines; steals rates hold up given usage.
+- Translation to playoffs: half-court efficiency and shot quality don’t fall off a cliff — the rare heliocentric hub who improves decision quality under pressure.
+
+If you track modern all-in-ones like **LEBRON** (BBall Index) or **EPM** (DunksAndThrees), Jokić grades out in the very top band annually. Those dashboards are subscription sites, but they corroborate what BBR’s public metrics show.
+
+> Tip: Want exact numbers at a glance? Open the “Per Game” tab for each season above (PTS/REB/AST/STL), then switch to “Advanced” for **BPM**, **VORP**, **WS/48**, **TS%**. For quick Q&A-style queries (e.g., “Jokic last 5 seasons per game”), try StatMuse: `https://www.statmuse.com/nba`.
+
 ## Bench Depth Check ✅
 
 - Second unit identity: **defend, run, and shoot**. Brown at the point-of-attack, THJ sprinting the lanes, Valančiūnas cleaning the glass, plus one of Murray/Johnson staggering to keep shot creation afloat. KYP = Keep Your Pace.
