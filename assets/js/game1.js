@@ -241,10 +241,20 @@ function dropTiles() {
     
     console.log('dropTiles called'); // Debug
     
-    // First, completely clear all removing candies (including any lingering classes)
+    // First, identify and clear only the truly empty positions (removed candies)
     let removedCount = 0;
-    candies.forEach(candy => {
-        if (candy.classList.contains('removing') || candy.classList.contains('popping')) {
+    const emptyPositions = new Set();
+    
+    candies.forEach((candy, index) => {
+        if (candy.classList.contains('removing') || 
+            candy.classList.contains('popping') || 
+            !candy.dataset.typeIndex || 
+            candy.dataset.typeIndex === '') {
+            
+            // Mark this position as empty
+            emptyPositions.add(index);
+            
+            // Clear the candy
             candy.style.color = '';
             candy.className = 'candy';
             candy.dataset.typeIndex = '';
@@ -254,61 +264,70 @@ function dropTiles() {
         }
     });
     
-    console.log('Cleared', removedCount, 'removing/popping candies'); // Debug
+    console.log('Found', removedCount, 'empty positions'); // Debug
     
-    // Process each column from bottom to top
+    if (removedCount === 0) {
+        console.log('No empty positions, nothing to drop');
+        return false;
+    }
+    
+    // Process each column to handle gravity
     for (let col = 0; col < boardSize; col++) {
-        // Collect all non-empty candies in this column
-        let columnCandies = [];
+        // Get all candies in this column from bottom to top
+        const columnIndices = [];
+        for (let row = boardSize - 1; row >= 0; row--) {
+            columnIndices.push(row * boardSize + col);
+        }
         
-        for (let row = 0; row < boardSize; row++) {
-            const index = row * boardSize + col;
-            const candy = candies[index];
-            
-            if (candy.dataset.typeIndex && candy.dataset.typeIndex !== '') {
-                columnCandies.push({
-                    typeIndex: candy.dataset.typeIndex,
-                    color: candy.style.color,
-                    className: candy.className
-                });
+        // Separate valid candies from empty positions in this column
+        const validCandies = [];
+        let emptyCount = 0;
+        
+        for (const index of columnIndices) {
+            if (emptyPositions.has(index)) {
+                emptyCount++;
+            } else {
+                const candy = candies[index];
+                if (candy.dataset.typeIndex && candy.dataset.typeIndex !== '') {
+                    validCandies.push({
+                        typeIndex: candy.dataset.typeIndex,
+                        color: candy.style.color,
+                        className: candy.className
+                    });
+                } else {
+                    emptyCount++;
+                }
             }
         }
         
-        // Clear the entire column
-        for (let row = 0; row < boardSize; row++) {
-            const index = row * boardSize + col;
-            const candy = candies[index];
-            candy.style.color = '';
-            candy.className = 'candy';
-            candy.dataset.typeIndex = '';
-        }
-        
-        // Place existing candies at the bottom of the column
-        let placementRow = boardSize - 1;
-        for (let i = columnCandies.length - 1; i >= 0; i--) {
-            const index = placementRow * boardSize + col;
-            const candy = candies[index];
-            const candyData = columnCandies[i];
-            
-            candy.style.color = candyData.color;
-            candy.className = candyData.className;
-            candy.dataset.typeIndex = candyData.typeIndex;
-            candy.style.opacity = '1';
-            
-            placementRow--;
-        }
-        
-        // Calculate how many new candies we need
-        const emptySpaces = boardSize - columnCandies.length;
-        
-        if (emptySpaces > 0) {
+        if (emptyCount > 0) {
             hasDropped = true;
             
-            // Add new candies to fill the top empty spaces
-            for (let i = 0; i < emptySpaces; i++) {
-                const row = i;
-                const index = row * boardSize + col;
+            // Clear the entire column
+            for (const index of columnIndices) {
                 const candy = candies[index];
+                candy.style.color = '';
+                candy.className = 'candy';
+                candy.dataset.typeIndex = '';
+                candy.style.opacity = '1';
+            }
+            
+            // Place valid candies at the bottom
+            for (let i = 0; i < validCandies.length; i++) {
+                const bottomIndex = columnIndices[i]; // Start from bottom
+                const candy = candies[bottomIndex];
+                const candyData = validCandies[i];
+                
+                candy.style.color = candyData.color;
+                candy.className = candyData.className;
+                candy.dataset.typeIndex = candyData.typeIndex;
+                candy.style.opacity = '1';
+            }
+            
+            // Add new candies to fill the top
+            for (let i = 0; i < emptyCount; i++) {
+                const topIndex = columnIndices[validCandies.length + i];
+                const candy = candies[topIndex];
                 
                 // Create new candy
                 const typeIndex = Math.floor(Math.random() * candyTypes.length);
@@ -317,20 +336,20 @@ function dropTiles() {
                 candy.className = `candy ${newType.shape}`;
                 candy.dataset.typeIndex = typeIndex;
                 
-                // Start from above the board and animate down
+                // Start from above and animate down
                 candy.style.transform = 'translateY(-100px)';
                 candy.style.opacity = '0';
                 candy.style.transition = 'none';
                 candy.classList.add('dropping');
                 
                 setTimeout(() => {
-                    candy.style.transition = 'all 0.4s ease';
+                    candy.style.transition = 'all 0.3s ease';
                     candy.style.transform = 'translateY(0)';
                     candy.style.opacity = '1';
                     setTimeout(() => {
                         candy.classList.remove('dropping');
-                    }, 400);
-                }, i * 100);
+                    }, 300);
+                }, i * 50); // Faster stagger
             }
         }
     }
@@ -397,8 +416,8 @@ function checkMatches() {
         
         if (sounds.combo && combo > 1) sounds.combo();
         
-        // Phase 1: Wait for both popping (600ms) and removing (400ms) animations to complete
-        // Popping: 600ms, then removing: 400ms = total 1000ms
+        // Phase 1: Wait for removal animations to complete
+        // Removing animation is 0.4s = 400ms, wait just a bit longer
         setTimeout(() => {
             // Phase 2: Now drop tiles as a separate animation
             console.log('Starting dropTiles after removal animations'); // Debug
@@ -417,8 +436,8 @@ function checkMatches() {
                     comboElement.textContent = combo;
                     isAnimating = false;
                 }
-            }, 800);
-        }, 1050); // Slightly reduced: 600ms popping + 400ms removing + 50ms buffer
+            }, 600);
+        }, 500); // Reduced timing: 400ms removing + 100ms buffer
     } else {
         combo = 0;
         comboElement.textContent = combo;
