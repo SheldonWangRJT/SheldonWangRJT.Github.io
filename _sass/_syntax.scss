@@ -34,11 +34,38 @@ div.highlighter-rouge, figure.highlight {
     font-family: $monospace;
     font-size: $type-size-6;
     line-height: 1.8;
+    background: transparent !important;
   }
 }
 
-.highlight table td { padding: 5px; }
-.highlight table pre { margin: 0; }
+.highlight table td { 
+  padding: 5px; 
+  background: transparent !important;
+}
+.highlight table pre { 
+  margin: 0; 
+  background: transparent !important;
+}
+
+/* Ensure all nested highlight elements have consistent background */
+.highlight,
+.highlight pre,
+.highlight code,
+.highlight table,
+.highlight tbody,
+.highlight tr,
+.highlight td {
+  background: transparent !important;
+}
+
+/* Line numbers styling if present */
+.highlight .lineno {
+  background: transparent !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  padding-right: 8px;
+  margin-right: 8px;
+  color: rgba(255, 255, 255, 0.5);
+}
 
 
 /*
