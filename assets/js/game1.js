@@ -227,74 +227,105 @@ function animateAndReplaceCandy(candy) {
     }, 400);
 }
 
+function resetCandyTransforms() {
+    const candies = Array.from(board.children);
+    candies.forEach(candy => {
+        candy.style.transform = '';
+        candy.style.transition = '';
+    });
+}
+
 function dropTiles() {
     const candies = Array.from(board.children);
     let hasDropped = false;
     
+    // First, completely clear all removing candies
+    candies.forEach(candy => {
+        if (candy.classList.contains('removing')) {
+            candy.style.color = '';
+            candy.className = 'candy';
+            candy.dataset.typeIndex = '';
+            candy.classList.remove('removing');
+            candy.style.opacity = '0';
+        }
+    });
+    
     // Process each column from bottom to top
     for (let col = 0; col < boardSize; col++) {
-        let emptySpaces = 0;
+        // Collect all non-empty candies in this column
+        let columnCandies = [];
         
-        // Start from the bottom row and work upwards
-        for (let row = boardSize - 1; row >= 0; row--) {
+        for (let row = 0; row < boardSize; row++) {
             const index = row * boardSize + col;
             const candy = candies[index];
             
-            if (candy.classList.contains('removing')) {
-                // This candy is being removed, count as empty space
-                emptySpaces++;
-            } else if (emptySpaces > 0) {
-                // Move this candy down by emptySpaces positions
-                const newRow = row + emptySpaces;
-                if (newRow < boardSize) {
-                    const newIndex = newRow * boardSize + col;
-                    const targetCandy = candies[newIndex];
-                    
-                    // Swap the candy data (type, color, etc.)
-                    const tempTypeIndex = candy.dataset.typeIndex;
-                    const tempType = candyTypes[tempTypeIndex];
-                    
-                    candy.style.color = targetCandy.style.color;
-                    candy.className = `candy ${candyTypes[targetCandy.dataset.typeIndex].shape}`;
-                    candy.dataset.typeIndex = targetCandy.dataset.typeIndex;
-                    
-                    targetCandy.style.color = tempType.color;
-                    targetCandy.className = `candy ${tempType.shape}`;
-                    targetCandy.dataset.typeIndex = tempTypeIndex;
-                    
-                    hasDropped = true;
-                }
+            if (candy.dataset.typeIndex && candy.dataset.typeIndex !== '') {
+                columnCandies.push({
+                    typeIndex: candy.dataset.typeIndex,
+                    color: candy.style.color,
+                    className: candy.className
+                });
             }
         }
         
-        // Fill empty spaces at the top with new candies
-        for (let i = 0; i < emptySpaces; i++) {
-            const row = i;
+        // Clear the entire column
+        for (let row = 0; row < boardSize; row++) {
             const index = row * boardSize + col;
             const candy = candies[index];
+            candy.style.color = '';
+            candy.className = 'candy';
+            candy.dataset.typeIndex = '';
+        }
+        
+        // Place existing candies at the bottom of the column
+        let placementRow = boardSize - 1;
+        for (let i = columnCandies.length - 1; i >= 0; i--) {
+            const index = placementRow * boardSize + col;
+            const candy = candies[index];
+            const candyData = columnCandies[i];
             
-            // Create new candy
-            const typeIndex = Math.floor(Math.random() * candyTypes.length);
-            const newType = candyTypes[typeIndex];
-            candy.style.color = newType.color;
-            candy.className = `candy ${newType.shape}`;
-            candy.dataset.typeIndex = typeIndex;
-            candy.classList.remove('removing');
+            candy.style.color = candyData.color;
+            candy.className = candyData.className;
+            candy.dataset.typeIndex = candyData.typeIndex;
+            candy.style.opacity = '1';
             
-            // Add drop-in animation
-            candy.style.transform = 'translateY(-100px)';
-            candy.style.opacity = '0';
-            candy.style.transition = 'none';
-            candy.classList.add('dropping');
+            placementRow--;
+        }
+        
+        // Calculate how many new candies we need
+        const emptySpaces = boardSize - columnCandies.length;
+        
+        if (emptySpaces > 0) {
+            hasDropped = true;
             
-            setTimeout(() => {
-                candy.style.transition = 'all 0.4s ease';
-                candy.style.transform = 'translateY(0)';
-                candy.style.opacity = '1';
+            // Add new candies to fill the top empty spaces
+            for (let i = 0; i < emptySpaces; i++) {
+                const row = i;
+                const index = row * boardSize + col;
+                const candy = candies[index];
+                
+                // Create new candy
+                const typeIndex = Math.floor(Math.random() * candyTypes.length);
+                const newType = candyTypes[typeIndex];
+                candy.style.color = newType.color;
+                candy.className = `candy ${newType.shape}`;
+                candy.dataset.typeIndex = typeIndex;
+                
+                // Start from above the board and animate down
+                candy.style.transform = 'translateY(-100px)';
+                candy.style.opacity = '0';
+                candy.style.transition = 'none';
+                candy.classList.add('dropping');
+                
                 setTimeout(() => {
-                    candy.classList.remove('dropping');
-                }, 400);
-            }, i * 100);
+                    candy.style.transition = 'all 0.4s ease';
+                    candy.style.transform = 'translateY(0)';
+                    candy.style.opacity = '1';
+                    setTimeout(() => {
+                        candy.classList.remove('dropping');
+                    }, 400);
+                }, i * 100);
+            }
         }
     }
     
@@ -359,12 +390,16 @@ function checkMatches() {
         
         if (sounds.combo && combo > 1) sounds.combo();
         
-        // Wait for animations to complete, then drop tiles
+        // Phase 1: Wait for removal animations to complete (400ms)
         setTimeout(() => {
+            // Phase 2: Now drop tiles as a separate animation
             const hasDropped = dropTiles();
             
             // Wait for drop animations to complete, then check for new matches
             setTimeout(() => {
+                // Reset transforms after dropping animation
+                resetCandyTransforms();
+                
                 if (hasDropped) {
                     checkMatches(); // Check for new matches after dropping
                 } else {
@@ -373,7 +408,7 @@ function checkMatches() {
                     isAnimating = false;
                 }
             }, 800);
-        }, 600);
+        }, 500); // Increased from 600ms to 500ms to ensure removal is complete
     } else {
         combo = 0;
         comboElement.textContent = combo;

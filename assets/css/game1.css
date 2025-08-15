@@ -204,6 +204,7 @@ body {
 .candy.removing {
     animation: remove 0.4s ease forwards;
     pointer-events: none;
+    z-index: 1;
 }
 
 @keyframes remove {
@@ -235,6 +236,7 @@ body {
 
 .candy.dropping {
     animation: dropIn 0.3s ease;
+    z-index: 2;
 }
 
 /* Subtle bounce effect for dropping candies */
@@ -255,6 +257,7 @@ body {
 
 .candy.dropping {
     animation: dropBounce 0.4s ease;
+    z-index: 2;
 }
 
 /* Combo animation */
