@@ -239,27 +239,22 @@ function dropTiles() {
     const candies = Array.from(board.children);
     let hasDropped = false;
     
-    // Check if any candies are still animating removal - if so, wait a bit more
-    const stillRemoving = candies.some(candy => 
-        candy.classList.contains('removing') || candy.classList.contains('popping')
-    );
+    console.log('dropTiles called'); // Debug
     
-    if (stillRemoving) {
-        // If animations are still running, wait a bit more
-        setTimeout(() => dropTiles(), 100);
-        return false;
-    }
-    
-    // First, completely clear all removing candies
+    // First, completely clear all removing candies (including any lingering classes)
+    let removedCount = 0;
     candies.forEach(candy => {
-        if (candy.classList.contains('removing')) {
+        if (candy.classList.contains('removing') || candy.classList.contains('popping')) {
             candy.style.color = '';
             candy.className = 'candy';
             candy.dataset.typeIndex = '';
-            candy.classList.remove('removing');
+            candy.classList.remove('removing', 'popping');
             candy.style.opacity = '0';
+            removedCount++;
         }
     });
+    
+    console.log('Cleared', removedCount, 'removing/popping candies'); // Debug
     
     // Process each column from bottom to top
     for (let col = 0; col < boardSize; col++) {
@@ -340,6 +335,7 @@ function dropTiles() {
         }
     }
     
+    console.log('dropTiles finished, hasDropped:', hasDropped); // Debug
     return hasDropped;
 }
 
@@ -405,7 +401,9 @@ function checkMatches() {
         // Popping: 600ms, then removing: 400ms = total 1000ms
         setTimeout(() => {
             // Phase 2: Now drop tiles as a separate animation
+            console.log('Starting dropTiles after removal animations'); // Debug
             const hasDropped = dropTiles();
+            console.log('dropTiles returned:', hasDropped); // Debug
             
             // Wait for drop animations to complete, then check for new matches
             setTimeout(() => {
@@ -420,7 +418,7 @@ function checkMatches() {
                     isAnimating = false;
                 }
             }, 800);
-        }, 1100); // Wait for full removal sequence: 600ms popping + 400ms removing + 100ms buffer
+        }, 1050); // Slightly reduced: 600ms popping + 400ms removing + 50ms buffer
     } else {
         combo = 0;
         comboElement.textContent = combo;
