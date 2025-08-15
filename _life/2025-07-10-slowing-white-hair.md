@@ -1,7 +1,7 @@
 ---
 title: "🧬 Slowing White Hair: What Science Says (Actionable Guide)"
 excerpt: "A science-backed plan to slow hair graying: stress reduction that actually matters, sleep targets, labs worth checking, and when supplements help."
-date: 2025-08-10
+date: 2025-07-10
 permalink: /life/slow-white-hair-2025/
 tags:
   - Life
