@@ -1,7 +1,7 @@
 ---
 title: "iOS Background Processing Mastery: Tasks, Limits, and Real-World Patterns"
 date: 2025-06-22
-permalink: /posts/2024/09/ios-background-processing/
+permalink: /posts/2025/06/ios-background-processing/
 tags:
   - iOS
   - BackgroundTasks
