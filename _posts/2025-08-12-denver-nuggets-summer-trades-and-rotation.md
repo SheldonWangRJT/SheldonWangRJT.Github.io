@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: single
 title: "Denver Nuggets Summer Shake-Up: Trades, Rotation, and Title Odds 🤠🏀"
 date: 2025-08-12
 permalink: /posts/2025/08/nuggets-summer-trades/
