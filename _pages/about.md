@@ -11,17 +11,20 @@ Welcome to my corner of the internet! 🌐 I'm Sheldon – Staff iOS Engineer at
 
 ## 🗺️ What You'll Find Here
 
-### 📔 **Tech Blog Posts** 
+### 📔 [**Tech Blog Posts**](/year-archive/) 
 Deep dives into iOS development, system design, and the art of building apps that millions love. From Swift concurrency patterns to performance optimization tips that actually work. Perfect for when you want to level up your mobile game!
 
-### 💸 **Investment & Finance** 
+### 💸 [**Investment & Finance**](/portfolio/) 
 My thoughts on markets, money, and making sense of the economic chaos around us. Expect data-driven analysis mixed with just enough skepticism to keep things interesting. Warning: may contain unpopular opinions about crypto. 😏
 
-### 🎮 **Life & Interests**
+### 🎮 [**Life & Interests**](/life/)
 The fun stuff! Productivity hacks that don't suck, life experiments worth trying, and whatever random rabbit holes I've fallen down lately. Think of it as the place where professional meets personal (and occasionally weird).
 
-### 🛝 **Playground**
+### 🛝 [**Playground**](/playground/)
 Interactive demos and experiments – because sometimes you need to see code in action rather than just read about it. Come here when you want to break things in a safe environment.
+
+### 🏷️ [**Browse Posts by Tags**](/tags/)
+Explore all content organized by topics and themes. Perfect for finding posts on specific subjects like iOS development, finance strategies, or productivity tips.
 
 ## 🎯 Who Am I?
 
