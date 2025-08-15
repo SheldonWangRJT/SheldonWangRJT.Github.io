@@ -239,6 +239,17 @@ function dropTiles() {
     const candies = Array.from(board.children);
     let hasDropped = false;
     
+    // Check if any candies are still animating removal - if so, wait a bit more
+    const stillRemoving = candies.some(candy => 
+        candy.classList.contains('removing') || candy.classList.contains('popping')
+    );
+    
+    if (stillRemoving) {
+        // If animations are still running, wait a bit more
+        setTimeout(() => dropTiles(), 100);
+        return false;
+    }
+    
     // First, completely clear all removing candies
     candies.forEach(candy => {
         if (candy.classList.contains('removing')) {
@@ -390,7 +401,8 @@ function checkMatches() {
         
         if (sounds.combo && combo > 1) sounds.combo();
         
-        // Phase 1: Wait for removal animations to complete (400ms)
+        // Phase 1: Wait for both popping (600ms) and removing (400ms) animations to complete
+        // Popping: 600ms, then removing: 400ms = total 1000ms
         setTimeout(() => {
             // Phase 2: Now drop tiles as a separate animation
             const hasDropped = dropTiles();
@@ -408,7 +420,7 @@ function checkMatches() {
                     isAnimating = false;
                 }
             }, 800);
-        }, 500); // Increased from 600ms to 500ms to ensure removal is complete
+        }, 1100); // Wait for full removal sequence: 600ms popping + 400ms removing + 100ms buffer
     } else {
         combo = 0;
         comboElement.textContent = combo;
