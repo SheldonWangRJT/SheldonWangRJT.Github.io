@@ -26,8 +26,8 @@ Building a side project? Tired of database setup complexity and surprise bills? 
 ## Why Neon Wins for Smaller Projects 🎯
 
 ### **1. No Infrastructure Headaches**
-```bash
-# Traditional setup
+
+**Traditional PostgreSQL Setup:**
 1. Provision a server
 2. Install PostgreSQL  
 3. Configure security groups
@@ -35,11 +35,10 @@ Building a side project? Tired of database setup complexity and surprise bills? 
 5. Monitor resources
 6. Handle updates
 
-# Neon setup
+**Neon Setup:**
 1. Click "Create Database"
 2. Copy connection string
 3. Start coding
-```
 
 ### **2. Generous Free Tier**
 - **0.5 GB storage** - plenty for most side projects
@@ -130,21 +129,17 @@ For a typical CRUD app serving <10k requests/day, performance is indistinguishab
 
 ## Getting Started: 5-Minute Setup ⚡
 
-### **1. Create Database**
-```bash
-# Sign up at neon.tech
-# Create new project
-# Choose region closest to your users
-```
+### **Step 1: Create Database**
+Visit [neon.tech](https://neon.tech/) and sign up. Create a new project and choose the region closest to your users.
 
-### **2. Install Driver**
+### **Step 2: Install Driver**
 ```bash
 npm install @neondatabase/serverless
 # or
 npm install postgres  # works with regular drivers too
 ```
 
-### **3. Connect & Query**
+### **Step 3: Connect & Query**
 ```typescript
 import { neon } from '@neondatabase/serverless'
 
@@ -160,7 +155,7 @@ async function createUser(email: string) {
 }
 ```
 
-### **4. Deploy to Vercel**
+### **Step 4: Deploy to Vercel**
 ```bash
 vercel env add DATABASE_URL
 vercel deploy
@@ -190,21 +185,16 @@ const readPool = new Pool({
 ```
 
 ### **Time Travel**
-Neon keeps point-in-time recovery for 7 days. Accidentally deleted data? Travel back in time:
-
-```sql
--- Access your database as it was 2 hours ago
--- Perfect for "oh no" moments
-```
+Neon keeps point-in-time recovery for 7 days. Accidentally deleted data? Travel back in time to recover it.
 
 ## When NOT to Use Neon ⚠️
 
 Neon isn't perfect for everything:
 
-❌ **High-frequency, low-latency apps** - connection overhead might matter
+❌ **High-frequency, low-latency apps** - connection overhead might matter  
 ❌ **Massive databases** - storage costs add up (>10GB)  
-❌ **Complex PostgreSQL extensions** - limited extension support
-❌ **On-premise requirements** - cloud-only service
+❌ **Complex PostgreSQL extensions** - limited extension support  
+❌ **On-premise requirements** - cloud-only service  
 
 For these cases, consider self-hosted PostgreSQL or managed services like AWS RDS.
 
@@ -238,18 +228,10 @@ const client = new Client({ connectionString: process.env.DATABASE_URL })
 ```
 
 ### **2. Leverage Branches**
-```bash
-# Create branch for risky migrations
-# Test thoroughly before merging to main
-neonctl branches create --name migration-test
-```
+Create branches for risky migrations and test thoroughly before merging to main.
 
 ### **3. Monitor Usage**
-```typescript
-// Set up usage alerts
-// Neon dashboard shows compute time
-// Avoid surprise bills
-```
+Set up usage alerts in the Neon dashboard to avoid surprise bills.
 
 ### **4. Optimize for Serverless**
 ```typescript
@@ -270,7 +252,7 @@ The Vercel integration alone makes it worth trying – deploy database changes a
 
 ---
 
-**Try it yourself**: [neon.tech](https://neon.tech) (no credit card required)
-**Vercel integration**: [marketplace link](https://vercel.com/integrations/neon)
+**Try it yourself**: [neon.tech](https://neon.tech) (no credit card required)  
+**Vercel integration**: [Vercel Marketplace](https://vercel.com/integrations/neon)
 
 *Have you tried Neon? Share your experience in the comments below! 💬*
