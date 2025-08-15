@@ -1,7 +1,6 @@
 ---
 title: "The Weight Loss Revolution: Unpacking the Science and Stocks Behind GLP-1 Drugs"
 date: 2025-08-11
-author: "Name Name"
 ---
 
 ## Introduction: A Paradigm Shift in Weight Management
