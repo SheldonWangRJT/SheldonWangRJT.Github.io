@@ -13,7 +13,26 @@
               {% else %}
               {% assign domain = base_path %}
             {% endif %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+            {% comment %}<!-- Check if current page matches this nav item -->{% endcomment %}
+            {% assign nav_url = link.url | remove: "/" %}
+            {% assign page_url = page.url | remove: "/" %}
+            {% assign nav_class = "" %}
+            
+            {% comment %}<!-- Match exact URL -->{% endcomment %}
+            {% if page_url == nav_url %}
+              {% assign nav_class = "current" %}
+            {% endif %}
+            
+            {% comment %}<!-- Match collection pages -->{% endcomment %}
+            {% if page.collection == nav_url %}
+              {% assign nav_class = "current" %}
+            {% endif %}
+            
+            {% comment %}<!-- Match year-archive for posts -->{% endcomment %}
+            {% if nav_url == "year-archive" and page.url contains "/posts/" %}
+              {% assign nav_class = "current" %}
+            {% endif %}
+            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}" class="{{ nav_class }}">{{ link.title }}</a></li>
           {% endfor %}
         </ul>
         <ul class="hidden-links hidden"></ul>
