@@ -1,7 +1,7 @@
 ---
 title: "The Race for Fed Chair: Trump's 11 Candidates to Lead America's Central Bank"
 date: 2025-08-13
-permalink: /life/federal-reserve-chair-candidates/
+permalink: /portfolio/federal-reserve-chair-candidates/
 tags:
   - Finance
   - Federal Reserve

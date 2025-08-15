@@ -105,9 +105,9 @@ author_profile: true
 {% include base_path %}
 
 {% comment %}
-<!-- Combine posts from both _posts and _life collections -->
+<!-- Combine posts from _posts, _life, and _portfolio collections -->
 {% endcomment %}
-{% assign all_posts = site.posts | concat: site.life %}
+{% assign all_posts = site.posts | concat: site.life | concat: site.portfolio %}
 {% include group-by-array collection=all_posts field="tags" %}
 
 {% for tag in group_names %}
