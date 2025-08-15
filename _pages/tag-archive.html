@@ -6,7 +6,12 @@ author_profile: true
 ---
 
 {% include base_path %}
-{% include group-by-array collection=site.posts field="tags" %}
+
+{% comment %}
+<!-- Combine posts from both _posts and _life collections -->
+{% endcomment %}
+{% assign all_posts = site.posts | concat: site.life %}
+{% include group-by-array collection=all_posts field="tags" %}
 
 {% for tag in group_names %}
   {% assign posts = group_items[forloop.index0] %}
