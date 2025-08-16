@@ -1,6 +1,6 @@
 ---
 title: "Why Neon Postgres is Perfect for Your Next Side Project"
-date: 2025-08-16
+date: 2025-08-10
 permalink: /posts/2025/08/neon-postgres-small-projects/
 tags:
   - Database
