@@ -1138,4 +1138,4 @@ Remember: **Don't migrate everything at once**. Start with new features, gradual
 
 ---
 
-*Have you successfully migrated a large iOS codebase to async/await? Share your experiences and challenges in the comments below! 🚀*
+*Have you successfully migrated a large iOS codebase to async/await? I'd love to hear about your experiences and challenges - email me your thoughts! 🚀*
