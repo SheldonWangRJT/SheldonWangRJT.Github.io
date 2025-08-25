@@ -1,5 +1,6 @@
 ---
 title: "Apple M4 Air 15-inch 512GB SSD: Is It the Right Choice? Deep Dive Comparison"
+description: "Complete buying guide for Apple M4 Air 15-inch vs M3 Air and M4 Pro. Specs comparison, programming performance, and $150 discount analysis for developers."
 date: 2025-08-24
 permalink: /life/apple-m4-air-buying-guide/
 tags:

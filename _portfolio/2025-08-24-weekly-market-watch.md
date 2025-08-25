@@ -1,5 +1,6 @@
 ---
 title: "Weekly Market Watch: Navigating the Markets for August 25, 2025"
+description: "Latest market analysis and insights for August 25, 2025. Economic indicators, stock market trends, Nvidia earnings, and investment strategies for the upcoming week."
 date: 2025-08-24
 permalink: /portfolio/weekly-market-watch-august-2025/
 tags:

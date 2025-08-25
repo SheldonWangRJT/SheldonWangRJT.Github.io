@@ -1,8 +1,9 @@
 ---
 permalink: /
 title: "👋 Hey there! Welcome to The Sheldon Wang Site"
+description: "Personal site of Sheldon Wang - Staff iOS Engineer at Meta, ex-Snapchat. Tech blog posts, investment insights, and life experiences from a seasoned software engineer."
 author_profile: true
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---

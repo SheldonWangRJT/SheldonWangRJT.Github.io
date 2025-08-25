@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Allow crawling of all content
+Allow: /posts/
+Allow: /life/
+Allow: /portfolio/
+Allow: /playground/
+Allow: /about/
+Allow: /sitemap.xml
+
+# Disallow admin and sensitive areas
+Disallow: /admin/
+Disallow: /_site/
+Disallow: /node_modules/
+
+# Sitemap
+Sitemap: https://sheldonwangrjt.github.io/sitemap.xml
