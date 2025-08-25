@@ -77,4 +77,4 @@ Ultimately, the M4 Air 15-inch offers the best balance of performance, portabili
 
 ---
 
-*Have you purchased or used any of these MacBooks? Share your experience in the comments!* 📱
+*Have you purchased or used any of these MacBooks? I'd love to hear your experience - feel free to email me your thoughts!* 📱
