@@ -239,13 +239,8 @@ While the S&P 500 benefits from broad diversification across sectors, my concent
 <script>
     // Sector performance data (approximate)
     const sectorLabels = ['Technology', 'Healthcare', 'Financials', 'Consumer Discretionary', 'Energy', 'Utilities', 'Consumer Staples'];
-    const myAllocation = [70, 15, 10, 5, 0, 0, 0]; // Heavy tech concentration
     const sp500Allocation = [30, 13, 12, 11, 4, 3, 6];
     const sectorPerformance = [-4.5, -1.2, -0.8, -2.1, 3.2, 2.8, 1.5]; // Recent performance
-    
-    // Calculate weighted performance
-    const myWeightedPerformance = myAllocation.reduce((sum, alloc, i) => sum + (alloc * sectorPerformance[i] / 100), 0);
-    const sp500WeightedPerformance = sp500Allocation.reduce((sum, alloc, i) => sum + (alloc * sectorPerformance[i] / 100), 0);
     
     // Sector Chart
     const sectorCtx = document.getElementById('sectorChart').getContext('2d');
@@ -254,13 +249,6 @@ While the S&P 500 benefits from broad diversification across sectors, my concent
         data: {
             labels: sectorLabels,
             datasets: [{
-                label: 'My Allocation (%)',
-                data: myAllocation,
-                backgroundColor: '#2196F3',
-                borderColor: '#1565C0',
-                borderWidth: 1,
-                yAxisID: 'y'
-            }, {
                 label: 'S&P 500 Allocation (%)',
                 data: sp500Allocation,
                 backgroundColor: '#4CAF50',
@@ -287,7 +275,7 @@ While the S&P 500 benefits from broad diversification across sectors, my concent
                     position: 'left',
                     title: {
                         display: true,
-                        text: 'Allocation (%)'
+                        text: 'S&P 500 Allocation (%)'
                     }
                 },
                 y1: {
@@ -296,7 +284,7 @@ While the S&P 500 benefits from broad diversification across sectors, my concent
                     position: 'right',
                     title: {
                         display: true,
-                        text: 'Performance (%)'
+                        text: 'Sector Performance (%)'
                     },
                     grid: {
                         drawOnChartArea: false,
@@ -314,7 +302,7 @@ While the S&P 500 benefits from broad diversification across sectors, my concent
                 tooltip: {
                     callbacks: {
                         label: function(context) {
-                            if (context.datasetIndex === 2) {
+                            if (context.datasetIndex === 1) {
                                 return `${context.dataset.label}: ${context.parsed.y}%`;
                             }
                             return `${context.dataset.label}: ${context.parsed.y}%`;
