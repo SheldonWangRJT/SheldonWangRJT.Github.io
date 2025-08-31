@@ -37,34 +37,63 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
 
 
 <script>
-    // Wait for Chart.js to load and DOM to be ready
-    document.addEventListener('DOMContentLoaded', function() {
+    // Debug: Check if script is running
+    console.log('Chart script loaded');
+    
+    // Function to initialize charts
+    function initializeCharts() {
+        console.log('Initializing charts...');
+        
         // Check if Chart.js is loaded
         if (typeof Chart === 'undefined') {
-            console.error('Chart.js not loaded');
+            console.error('Chart.js not loaded, trying to load it...');
+            // Try to load Chart.js dynamically
+            const script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.min.js';
+            script.onload = function() {
+                console.log('Chart.js loaded dynamically');
+                initializeCharts();
+            };
+            script.onerror = function() {
+                console.error('Failed to load Chart.js dynamically');
+            };
+            document.head.appendChild(script);
             return;
         }
+        
+        console.log('Chart.js is available');
+        
+        // Check if canvas exists
+        const performanceCanvas = document.getElementById('performanceChart');
+        if (!performanceCanvas) {
+            console.error('Performance chart canvas not found');
+            return;
+        }
+        
+        console.log('Performance canvas found');
         
         // Performance data
         const dates = ['8/15', '8/18', '8/19', '8/20', '8/21', '8/22', '8/24', '8/25', '8/27', '8/28', '8/29'];
         const myPortfolio = [-0.48, 0.19, -2.11, -0.26, -0.42, 1.36, 0.02, 0.52, 0.20, 0.15, -1.84];
         const sp500 = [-0.19, 0.00, -0.60, -0.28, -0.37, 1.54, -0.42, 0.40, 0.23, 0.36, -0.58];
     
-    // Calculate cumulative returns
-    const cumulativeMyPortfolio = myPortfolio.reduce((acc, val, i) => {
-        if (i === 0) return [val];
-        acc.push(acc[i-1] + val);
-        return acc;
-    }, []);
-    
-    const cumulativeSP500 = sp500.reduce((acc, val, i) => {
-        if (i === 0) return [val];
-        acc.push(acc[i-1] + val);
-        return acc;
-    }, []);
-    
-    // Performance Chart
-    const ctx = document.getElementById('performanceChart').getContext('2d');
+        // Calculate cumulative returns
+        const cumulativeMyPortfolio = myPortfolio.reduce((acc, val, i) => {
+            if (i === 0) return [val];
+            acc.push(acc[i-1] + val);
+            return acc;
+        }, []);
+        
+        const cumulativeSP500 = sp500.reduce((acc, val, i) => {
+            if (i === 0) return [val];
+            acc.push(acc[i-1] + val);
+            return acc;
+        }, []);
+        
+        console.log('Data prepared, creating chart...');
+        
+        // Performance Chart
+        const ctx = performanceCanvas.getContext('2d');
     new Chart(ctx, {
         type: 'line',
         data: {
@@ -137,6 +166,8 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
     // Sector Chart
     const sectorCtx = document.getElementById('sectorChart');
     if (sectorCtx) {
+        console.log('Sector canvas found, creating sector chart...');
+        
         // Sector performance data (approximate)
         const sectorLabels = ['Technology', 'Healthcare', 'Financials', 'Consumer Discretionary', 'Energy', 'Utilities', 'Consumer Staples'];
         const sp500Allocation = [30, 13, 12, 11, 4, 3, 6];
@@ -210,8 +241,21 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
                 }
             }
         });
+        console.log('Sector chart created successfully');
+    } else {
+        console.error('Sector chart canvas not found');
     }
     });
+    
+    console.log('Chart initialization complete');
+    }
+    
+    // Wait for DOM to be ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initializeCharts);
+    } else {
+        initializeCharts();
+    }
 </script>
 
 ## Key Performance Metrics
