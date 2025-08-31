@@ -35,7 +35,7 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
     <canvas id="performanceChart" style="width: 100%; height: 400px;"></canvas>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.min.js"></script>
+
 <script>
     // Wait for Chart.js to load and DOM to be ready
     document.addEventListener('DOMContentLoaded', function() {
