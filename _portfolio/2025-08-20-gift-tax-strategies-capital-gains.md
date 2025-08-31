@@ -109,6 +109,25 @@ Their tax when selling: $0 (no US capital gains tax)
 Result: $450,000 in gains potentially tax-free!
 ```
 
+### ⚠️ Important: Cost Basis Inheritance
+
+**Critical point:** When you gift stock, the recipient inherits YOUR cost basis, not the current market value!
+
+```
+You bought NVDA at: $50 per share
+Current value: $500 per share
+You gift: 36 shares to family member
+
+Recipient's cost basis: $50 per share (not $500!)
+If they sell at $500: They owe capital gains tax on $450 per share
+```
+
+**This means:**
+- Recipients don't get a "step-up" in basis like heirs do at death
+- They inherit your original cost basis and holding period
+- They owe capital gains tax on the full appreciation when they sell
+- This can be a surprise if they don't understand gift tax rules
+
 ## ⚖️ Legal Compliance is Key
 
 ### ✅ What's Legal and Smart:
@@ -143,9 +162,11 @@ Donate shares directly to charity:
 ### 🏛️ Estate Planning Integration
 
 Hold until death for heirs:
-- **Step-up in basis** at death
+- **Step-up in basis** at death (heirs get current market value as cost basis)
 - **Heirs can sell immediately** without capital gains tax
 - **Effective estate tax planning**
+
+**Key difference:** Gifting = recipient inherits your cost basis, Death = heirs get step-up in basis
 
 ### 🎯 Exchange Funds
 
@@ -214,8 +235,9 @@ Gift tax strategies offer a **legal, legitimate way** to manage capital gains, b
 1. **Annual exclusion** ($18,000 per person) is your best friend
 2. **Use it or lose it** - it resets every year
 3. **International gifting** can be very tax-efficient
-4. **Documentation** is crucial
-5. **Professional advice** is essential
+4. **Recipients inherit your cost basis** - they owe taxes on full appreciation
+5. **Documentation** is crucial
+6. **Professional advice** is essential
 
 Remember: **Tax avoidance is legal, tax evasion is not!** 🎭
 
