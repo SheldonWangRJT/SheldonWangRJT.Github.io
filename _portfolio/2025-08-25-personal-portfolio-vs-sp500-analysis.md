@@ -142,30 +142,21 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
 
 ## Portfolio Composition Analysis
 
-### **Current Allocation (Tech-Heavy)**
+### **Current Allocation**
 
-1. **Technology Sector (65% allocation)**
-   - **Apple (AAPL)**: 20% of portfolio
-   - **Microsoft (MSFT)**: 18% of portfolio
-   - **NVIDIA (NVDA)**: 15% of portfolio
-   - **Alphabet (GOOGL)**: 8% of portfolio
-   - **Meta (META)**: 4% of portfolio
+My portfolio is heavily concentrated in the technology sector, with significant positions in major tech companies. This concentration has been a key factor in the recent underperformance, as the technology sector has faced headwinds from:
 
-2. **Healthcare Sector (20% allocation)**
-   - **Johnson & Johnson (JNJ)**: 12% of portfolio
-   - **UnitedHealth Group (UNH)**: 8% of portfolio
+- **Rising interest rates** affecting growth stock valuations
+- **Regulatory concerns** around big tech companies
+- **Market rotation** from growth to value stocks
+- **Valuation compression** in high-multiple tech stocks
 
-3. **Financial Sector (10% allocation)**
-   - **JPMorgan Chase (JPM)**: 6% of portfolio
-   - **Bank of America (BAC)**: 4% of portfolio
-
-4. **Consumer Discretionary (5% allocation)**
-   - **Amazon (AMZN)**: 5% of portfolio
+The S&P 500, by contrast, has much broader diversification across sectors, which has provided stability during this period of tech sector weakness.
 
 ## Why I'm Underperforming the S&P 500
 
 ### **1. Tech Sector Concentration Risk**
-My portfolio is heavily concentrated in technology stocks (65% vs ~30% in S&P 500), which have been under pressure due to:
+My portfolio is heavily concentrated in technology stocks, which have been under pressure due to:
 - Rising interest rates affecting growth stock valuations
 - Regulatory concerns around big tech
 - Rotation from growth to value stocks
@@ -192,7 +183,7 @@ While the S&P 500 benefits from broad diversification across sectors, my concent
 ## Lessons Learned
 
 ### **What's Not Working**
-- **Over-concentration in tech**: 65% allocation to technology has amplified losses during sector weakness
+- **Over-concentration in tech**: Heavy allocation to technology has amplified losses during sector weakness
 - **Timing the market**: Attempting to catch tech rebounds has led to further losses
 - **Ignoring diversification**: Lack of exposure to outperforming sectors (energy, utilities, consumer staples)
 
@@ -209,13 +200,13 @@ While the S&P 500 benefits from broad diversification across sectors, my concent
 ## Forward-Looking Strategy
 
 ### **Short Term (Next 30 Days)**
-- **Reduce tech concentration**: Gradually reduce technology allocation from 65% to 50%
+- **Reduce tech concentration**: Gradually reduce technology allocation to improve diversification
 - **Add defensive positions**: Consider adding utilities (XLU) or consumer staples (XLP) ETFs
 - **Monitor earnings**: Be prepared to adjust positions based on Q3 earnings reports
 - **Set stop-losses**: Implement 7-10% stop-losses on all tech positions
 
 ### **Medium Term (3-6 Months)**
-- **Rebalancing plan**: Target 40% technology, 20% healthcare, 15% financials, 15% defensive sectors, 10% international
+- **Rebalancing plan**: Target more balanced allocation across sectors
 - **Sector diversification**: Add exposure to energy (XLE) and utilities (XLU) sectors
 - **Value exposure**: Consider adding value ETFs (VTV) to balance growth exposure
 - **International diversification**: Add developed market ETFs (EFA) for geographic diversification
@@ -229,7 +220,7 @@ While the S&P 500 benefits from broad diversification across sectors, my concent
 ## Benchmark Comparison Insights
 
 ### **When I Underperform**
-- **Tech sector weakness**: My 65% tech allocation amplifies losses during sector selloffs
+- **Tech sector weakness**: Heavy tech allocation amplifies losses during sector selloffs
 - **Growth to value rotation**: Lack of value exposure hurts performance during style rotations
 - **Rising interest rates**: Growth stocks typically underperform when rates increase
 - **Market volatility**: Higher volatility in tech stocks leads to larger drawdowns
@@ -248,7 +239,7 @@ While the S&P 500 benefits from broad diversification across sectors, my concent
 <script>
     // Sector performance data (approximate)
     const sectorLabels = ['Technology', 'Healthcare', 'Financials', 'Consumer Discretionary', 'Energy', 'Utilities', 'Consumer Staples'];
-    const myAllocation = [65, 20, 10, 5, 0, 0, 0];
+    const myAllocation = [70, 15, 10, 5, 0, 0, 0]; // Heavy tech concentration
     const sp500Allocation = [30, 13, 12, 11, 4, 3, 6];
     const sectorPerformance = [-4.5, -1.2, -0.8, -2.1, 3.2, 2.8, 1.5]; // Recent performance
     
@@ -338,7 +329,7 @@ While the S&P 500 benefits from broad diversification across sectors, my concent
 ## Conclusion
 
 My portfolio has significantly underperformed the S&P 500 over this tracking period, primarily due to:
-1. **Over-concentration in technology** (65% vs 30% in S&P 500)
+1. **Over-concentration in technology** compared to the S&P 500's broad diversification
 2. **Sector rotation headwinds** affecting growth stocks
 3. **Higher volatility** from concentrated positions
 4. **Lack of diversification** into outperforming sectors
