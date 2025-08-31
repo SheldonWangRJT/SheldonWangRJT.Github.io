@@ -49,7 +49,7 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
             console.error('Chart.js not loaded, trying to load it...');
             // Try to load Chart.js dynamically
             const script = document.createElement('script');
-            script.src = 'https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.min.js';
+            script.src = 'https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js';
             script.onload = function() {
                 console.log('Chart.js loaded dynamically');
                 initializeCharts();
