@@ -144,19 +144,44 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
 
 ### **Current Allocation**
 
-My portfolio is heavily concentrated in the technology sector, with significant positions in major tech companies. This concentration has been a key factor in the recent underperformance, as the technology sector has faced headwinds from:
+Based on my actual portfolio holdings, here's the detailed breakdown:
 
-- **Rising interest rates** affecting growth stock valuations
+| Holding | Allocation | Category | Performance Driver |
+|---------|------------|----------|-------------------|
+| **NVDA** | 27.72% | Technology (AI/GPU) | AI chip demand, gaming |
+| **NFLX** | 16.28% | Technology (Streaming) | Subscriber growth, content |
+| **MSFT** | 12.31% | Technology (Software) | Cloud services, AI integration |
+| **FTEC** | 11.02% | Technology ETF | Broad tech sector exposure |
+| **QQQM** | 10.26% | Technology ETF (Nasdaq) | Growth tech companies |
+| **FDVV** | 8.91% | Dividend ETF | Value/dividend stocks |
+| **VOO** | 7.19% | S&P 500 ETF | Broad market exposure |
+| **META** | 1.66% | Technology (Social Media) | Digital advertising, AI |
+| **IBIT** | 4.59% | Bitcoin ETF | Cryptocurrency exposure |
+
+### **Key Portfolio Characteristics**
+
+- **Technology Concentration**: ~83% in tech-related holdings
+- **Single Stock Risk**: NVDA at 27.72% represents significant concentration risk
+- **ETF Diversification**: 37% in ETFs provides some sector diversification
+- **Growth vs Value**: Heavy tilt toward growth stocks with only FDVV providing dividend exposure
+
+### **Why This Allocation Struggled Recently**
+
+This allocation has performed well for most of the year, but the recent tech sector volatility has caused underperformance during these specific two volatile weeks due to:
+
+- **NVDA's AI bubble concerns** (27.72% position amplified losses)
+- **Tech sector rotation** from growth to value stocks
+- **Rising interest rates** affecting high-multiple tech valuations
 - **Regulatory concerns** around big tech companies
-- **Market rotation** from growth to value stocks
-- **Valuation compression** in high-multiple tech stocks
+- **Market correlation** - when tech sells off, most holdings move together
 
-The S&P 500, by contrast, has much broader diversification across sectors, which has provided stability during this period of tech sector weakness.
+The S&P 500's broad diversification across sectors provided stability during this period of tech sector weakness.
 
 ## Why I'm Underperforming the S&P 500
 
 ### **1. Tech Sector Concentration Risk**
-My portfolio is heavily concentrated in technology stocks, which have been under pressure due to:
+My portfolio is heavily concentrated in technology stocks (83% tech exposure), which have been under pressure due to:
+- **NVDA's AI bubble concerns** (27.72% position amplified losses)
 - Rising interest rates affecting growth stock valuations
 - Regulatory concerns around big tech
 - Rotation from growth to value stocks
@@ -183,7 +208,8 @@ While the S&P 500 benefits from broad diversification across sectors, my concent
 ## Lessons Learned
 
 ### **What's Not Working**
-- **Over-concentration in tech**: Heavy allocation to technology has amplified losses during sector weakness
+- **Over-concentration in tech**: 83% tech allocation has amplified losses during sector weakness
+- **NVDA concentration risk**: 27.72% position in NVDA magnified AI bubble concerns
 - **Timing the market**: Attempting to catch tech rebounds has led to further losses
 - **Ignoring diversification**: Lack of exposure to outperforming sectors (energy, utilities, consumer staples)
 
@@ -212,8 +238,8 @@ While the S&P 500 benefits from broad diversification across sectors, my concent
 - **International diversification**: Add developed market ETFs (EFA) for geographic diversification
 
 ### **Risk Management**
-- **Position sizing limits**: Reduce individual stock positions to maximum 10% of portfolio
-- **Sector limits**: Cap any single sector at 40% of portfolio
+- **Position sizing limits**: Reduce individual stock positions to maximum 10% of portfolio (currently NVDA at 27.72%)
+- **Sector limits**: Cap any single sector at 40% of portfolio (currently tech at 83%)
 - **Regular rebalancing**: Weekly monitoring, monthly rebalancing
 - **Stop-loss strategy**: 7% stop-loss on individual stocks, 15% on sector ETFs
 
