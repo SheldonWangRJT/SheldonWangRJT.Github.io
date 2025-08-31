@@ -17,17 +17,17 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
 
 | Date       | My Portfolio Daily | S&P 500 Daily | Performance vs S&P 500 |
 |------------|-------------------|---------------|----------------------|
-| 8/15/2025  | -0.48%           | -0.19%        | -0.29% (Underperformed) |
-| 8/18/2025  | +0.19%           | +0.00%        | +0.19% (Outperformed) |
-| 8/19/2025  | -2.11%           | -0.60%        | -1.51% (Underperformed) |
-| 8/20/2025  | -0.26%           | -0.28%        | +0.02% (Outperformed) |
-| 8/21/2025  | -0.42%           | -0.37%        | -0.05% (Underperformed) |
-| 8/22/2025  | +1.36%           | +1.54%        | -0.18% (Underperformed) |
-| 8/24/2025  | +0.02%           | -0.42%        | +0.44% (Outperformed) |
-| 8/25/2025  | +0.52%           | +0.40%        | +0.12% (Outperformed) |
-| 8/27/2025  | +0.20%           | +0.23%        | -0.03% (Underperformed) |
-| 8/28/2025  | +0.15%           | +0.36%        | -0.21% (Underperformed) |
-| 8/29/2025  | -1.84%           | -0.58%        | -1.26% (Underperformed) |
+| 8/15/2025  | -0.48%           | -0.19%        | <span style="color: #ff6b6b; font-weight: bold;">-0.29% (Underperformed)</span> |
+| 8/18/2025  | +0.19%           | +0.00%        | <span style="color: #51cf66; font-weight: bold;">+0.19% (Outperformed)</span> |
+| 8/19/2025  | -2.11%           | -0.60%        | <span style="color: #ff6b6b; font-weight: bold;">-1.51% (Underperformed)</span> |
+| 8/20/2025  | -0.26%           | -0.28%        | <span style="color: #51cf66; font-weight: bold;">+0.02% (Outperformed)</span> |
+| 8/21/2025  | -0.42%           | -0.37%        | <span style="color: #ff6b6b; font-weight: bold;">-0.05% (Underperformed)</span> |
+| 8/22/2025  | +1.36%           | +1.54%        | <span style="color: #ff6b6b; font-weight: bold;">-0.18% (Underperformed)</span> |
+| 8/24/2025  | +0.02%           | -0.42%        | <span style="color: #51cf66; font-weight: bold;">+0.44% (Outperformed)</span> |
+| 8/25/2025  | +0.52%           | +0.40%        | <span style="color: #51cf66; font-weight: bold;">+0.12% (Outperformed)</span> |
+| 8/27/2025  | +0.20%           | +0.23%        | <span style="color: #ff6b6b; font-weight: bold;">-0.03% (Underperformed)</span> |
+| 8/28/2025  | +0.15%           | +0.36%        | <span style="color: #ff6b6b; font-weight: bold;">-0.21% (Underperformed)</span> |
+| 8/29/2025  | -1.84%           | -0.58%        | <span style="color: #ff6b6b; font-weight: bold;">-1.26% (Underperformed)</span> |
 
 ## Interactive Performance Chart
 
