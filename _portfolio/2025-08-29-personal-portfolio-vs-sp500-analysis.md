@@ -94,7 +94,7 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
         
         // Performance Chart
         const ctx = performanceCanvas.getContext('2d');
-    new Chart(ctx, {
+        new Chart(ctx, {
         type: 'line',
         data: {
             labels: dates,
@@ -245,10 +245,9 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
     } else {
         console.error('Sector chart canvas not found');
     }
-    });
     
     console.log('Chart initialization complete');
-    }
+}
     
     // Wait for DOM to be ready
     if (document.readyState === 'loading') {
