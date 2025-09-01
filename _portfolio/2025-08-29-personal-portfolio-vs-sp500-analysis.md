@@ -37,26 +37,53 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
 
 
 <script>
-    // Performance data
-    const dates = ['8/15', '8/18', '8/19', '8/20', '8/21', '8/22', '8/24', '8/25', '8/27', '8/28', '8/29'];
-    const myPortfolio = [-0.48, 0.19, -2.11, -0.26, -0.42, 1.36, 0.02, 0.52, 0.20, 0.15, -1.84];
-    const sp500 = [-0.19, 0.00, -0.60, -0.28, -0.37, 1.54, -0.42, 0.40, 0.23, 0.36, -0.58];
+    // Wait for Chart.js to be available
+    function waitForChartJS() {
+        if (typeof Chart !== 'undefined') {
+            createCharts();
+        } else {
+            // Try to load Chart.js if it's not available
+            const script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js';
+            script.onload = createCharts;
+            script.onerror = function() {
+                console.error('Failed to load Chart.js from CDN');
+                // Try alternative CDN
+                const altScript = document.createElement('script');
+                altScript.src = 'https://unpkg.com/chart.js@3.9.1/dist/chart.min.js';
+                altScript.onload = createCharts;
+                altScript.onerror = function() {
+                    console.error('All Chart.js CDN attempts failed');
+                };
+                document.head.appendChild(altScript);
+            };
+            document.head.appendChild(script);
+        }
+    }
+    
+    function createCharts() {
+        // Performance data
+        const dates = ['8/15', '8/18', '8/19', '8/20', '8/21', '8/22', '8/24', '8/25', '8/27', '8/28', '8/29'];
+        const myPortfolio = [-0.48, 0.19, -2.11, -0.26, -0.42, 1.36, 0.02, 0.52, 0.20, 0.15, -1.84];
+        const sp500 = [-0.19, 0.00, -0.60, -0.28, -0.37, 1.54, -0.42, 0.40, 0.23, 0.36, -0.58];
 
-    // Calculate cumulative returns
-    const cumulativeMyPortfolio = myPortfolio.reduce((acc, val, i) => {
-        if (i === 0) return [val];
-        acc.push(acc[i-1] + val);
-        return acc;
-    }, []);
-    
-    const cumulativeSP500 = sp500.reduce((acc, val, i) => {
-        if (i === 0) return [val];
-        acc.push(acc[i-1] + val);
-        return acc;
-    }, []);
-    
-    // Performance Chart
-    const ctx = document.getElementById('performanceChart').getContext('2d');
+        // Calculate cumulative returns
+        const cumulativeMyPortfolio = myPortfolio.reduce((acc, val, i) => {
+            if (i === 0) return [val];
+            acc.push(acc[i-1] + val);
+            return acc;
+        }, []);
+        
+        const cumulativeSP500 = sp500.reduce((acc, val, i) => {
+            if (i === 0) return [val];
+            acc.push(acc[i-1] + val);
+            return acc;
+        }, []);
+        
+        // Performance Chart
+        const performanceCanvas = document.getElementById('performanceChart');
+        if (performanceCanvas) {
+            const ctx = performanceCanvas.getContext('2d');
         new Chart(ctx, {
         type: 'line',
         data: {
@@ -126,9 +153,14 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
         }
     });
     
-    // Sector Chart
-    const sectorCtx = document.getElementById('sectorChart').getContext('2d');
-    new Chart(sectorCtx, {
+        }
+    });
+    
+        // Sector Chart
+        const sectorCanvas = document.getElementById('sectorChart');
+        if (sectorCanvas) {
+            const sectorCtx = sectorCanvas.getContext('2d');
+            new Chart(sectorCtx, {
         type: 'bar',
         data: {
             labels: ['Technology', 'Healthcare', 'Financials', 'Consumer Discretionary', 'Energy', 'Utilities', 'Consumer Staples'],
@@ -195,7 +227,14 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
                 }
             }
         }
-    });
+    }
+    
+    // Start the chart creation process
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', waitForChartJS);
+    } else {
+        waitForChartJS();
+    }
 </script>
 
 ## Key Performance Metrics
