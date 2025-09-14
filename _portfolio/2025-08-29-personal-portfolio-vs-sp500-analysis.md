@@ -35,7 +35,7 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
     <canvas id="performanceChart" style="width: 100%; height: 400px;"></canvas>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
 <script>
     // Wait for Chart.js to load and DOM to be ready
     document.addEventListener('DOMContentLoaded', function() {
@@ -44,149 +44,72 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
             console.error('Chart.js not loaded');
             return;
         }
-        
+
         // Performance data
         const dates = ['8/15', '8/18', '8/19', '8/20', '8/21', '8/22', '8/24', '8/25', '8/27', '8/28', '8/29'];
         const myPortfolio = [-0.48, 0.19, -2.11, -0.26, -0.42, 1.36, 0.02, 0.52, 0.20, 0.15, -1.84];
         const sp500 = [-0.19, 0.00, -0.60, -0.28, -0.37, 1.54, -0.42, 0.40, 0.23, 0.36, -0.58];
-    
-    // Calculate cumulative returns
-    const cumulativeMyPortfolio = myPortfolio.reduce((acc, val, i) => {
-        if (i === 0) return [val];
-        acc.push(acc[i-1] + val);
-        return acc;
-    }, []);
-    
-    const cumulativeSP500 = sp500.reduce((acc, val, i) => {
-        if (i === 0) return [val];
-        acc.push(acc[i-1] + val);
-        return acc;
-    }, []);
-    
-    // Performance Chart
-    const ctx = document.getElementById('performanceChart').getContext('2d');
-    new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: dates,
-            datasets: [{
-                label: 'My Portfolio (Cumulative %)',
-                data: cumulativeMyPortfolio,
-                borderColor: '#2196F3',
-                backgroundColor: '#2196F320',
-                borderWidth: 3,
-                pointRadius: 4,
-                pointHoverRadius: 6,
-                tension: 0.1
-            }, {
-                label: 'S&P 500 (Cumulative %)',
-                data: cumulativeSP500,
-                borderColor: '#4CAF50',
-                backgroundColor: '#4CAF5020',
-                borderWidth: 3,
-                pointRadius: 4,
-                pointHoverRadius: 6,
-                tension: 0.1
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            interaction: {
-                intersect: false,
-                mode: 'index'
-            },
-            scales: {
-                y: {
-                    title: {
-                        display: true,
-                        text: 'Cumulative Return (%)'
-                    },
-                    grid: {
-                        color: 'rgba(255, 255, 255, 0.1)'
-                    }
-                },
-                x: {
-                    grid: {
-                        color: 'rgba(255, 255, 255, 0.1)'
-                    }
-                }
-            },
-            plugins: {
-                legend: {
-                    position: 'top',
-                    labels: {
-                        usePointStyle: true,
-                        padding: 15,
-                        font: {
-                            size: 12
-                        }
-                    }
-                },
-                tooltip: {
-                    callbacks: {
-                        label: function(context) {
-                            return `${context.dataset.label}: ${context.parsed.y.toFixed(2)}%`;
-                        }
-                    }
-                }
-            }
-        }
-    });
-    
-    // Sector Chart
-    const sectorCtx = document.getElementById('sectorChart');
-    if (sectorCtx) {
-        // Sector performance data (approximate)
-        const sectorLabels = ['Technology', 'Healthcare', 'Financials', 'Consumer Discretionary', 'Energy', 'Utilities', 'Consumer Staples'];
-        const sp500Allocation = [30, 13, 12, 11, 4, 3, 6];
-        const sectorPerformance = [-4.5, -1.2, -0.8, -2.1, 3.2, 2.8, 1.5]; // Recent performance
-        
-        new Chart(sectorCtx.getContext('2d'), {
-            type: 'bar',
+
+        // Calculate cumulative returns
+        const cumulativeMyPortfolio = myPortfolio.reduce((acc, val, i) => {
+            if (i === 0) return [val];
+            acc.push(acc[i-1] + val);
+            return acc;
+        }, []);
+
+        const cumulativeSP500 = sp500.reduce((acc, val, i) => {
+            if (i === 0) return [val];
+            acc.push(acc[i-1] + val);
+            return acc;
+        }, []);
+
+        // Performance Chart
+        const ctx = document.getElementById('performanceChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
             data: {
-                labels: sectorLabels,
+                labels: dates,
                 datasets: [{
-                    label: 'S&P 500 Allocation (%)',
-                    data: sp500Allocation,
-                    backgroundColor: '#4CAF50',
-                    borderColor: '#388E3C',
-                    borderWidth: 1,
-                    yAxisID: 'y'
+                    label: 'My Portfolio (Cumulative %)',
+                    data: cumulativeMyPortfolio,
+                    borderColor: '#2196F3',
+                    backgroundColor: '#2196F320',
+                    borderWidth: 3,
+                    pointRadius: 4,
+                    pointHoverRadius: 6,
+                    tension: 0.1
                 }, {
-                    label: 'Sector Performance (%)',
-                    data: sectorPerformance,
-                    backgroundColor: '#FF9800',
-                    borderColor: '#F57C00',
-                    borderWidth: 1,
-                    yAxisID: 'y1',
-                    type: 'line'
+                    label: 'S&P 500 (Cumulative %)',
+                    data: cumulativeSP500,
+                    borderColor: '#4CAF50',
+                    backgroundColor: '#4CAF5020',
+                    borderWidth: 3,
+                    pointRadius: 4,
+                    pointHoverRadius: 6,
+                    tension: 0.1
                 }]
             },
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
+                interaction: {
+                    intersect: false,
+                    mode: 'index'
+                },
                 scales: {
                     y: {
-                        type: 'linear',
-                        display: true,
-                        position: 'left',
                         title: {
                             display: true,
-                            text: 'S&P 500 Allocation (%)'
-                        }
-                    },
-                    y1: {
-                        type: 'linear',
-                        display: true,
-                        position: 'right',
-                        title: {
-                            display: true,
-                            text: 'Sector Performance (%)'
+                            text: 'Cumulative Return (%)'
                         },
                         grid: {
-                            drawOnChartArea: false,
-                        },
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        }
+                    },
+                    x: {
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        }
                     }
                 },
                 plugins: {
@@ -194,23 +117,100 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
                         position: 'top',
                         labels: {
                             usePointStyle: true,
-                            padding: 15
+                            padding: 15,
+                            font: {
+                                size: 12
+                            }
                         }
                     },
                     tooltip: {
                         callbacks: {
                             label: function(context) {
-                                if (context.datasetIndex === 1) {
-                                    return `${context.dataset.label}: ${context.parsed.y}%`;
-                                }
-                                return `${context.dataset.label}: ${context.parsed.y}%`;
+                                return `${context.dataset.label}: ${context.parsed.y.toFixed(2)}%`;
                             }
                         }
                     }
                 }
             }
         });
-    }
+
+        // Sector Chart
+        const sectorCtx = document.getElementById('sectorChart');
+        if (sectorCtx) {
+            // Sector performance data (approximate)
+            const sectorLabels = ['Technology', 'Healthcare', 'Financials', 'Consumer Discretionary', 'Energy', 'Utilities', 'Consumer Staples'];
+            const sp500Allocation = [30, 13, 12, 11, 4, 3, 6];
+            const sectorPerformance = [-4.5, -1.2, -0.8, -2.1, 3.2, 2.8, 1.5]; // Recent performance
+
+            new Chart(sectorCtx.getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: sectorLabels,
+                    datasets: [{
+                        label: 'S&P 500 Allocation (%)',
+                        data: sp500Allocation,
+                        backgroundColor: '#4CAF50',
+                        borderColor: '#388E3C',
+                        borderWidth: 1,
+                        yAxisID: 'y'
+                    }, {
+                        label: 'Sector Performance (%)',
+                        data: sectorPerformance,
+                        backgroundColor: '#FF9800',
+                        borderColor: '#F57C00',
+                        borderWidth: 1,
+                        yAxisID: 'y1',
+                        type: 'line'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            type: 'linear',
+                            display: true,
+                            position: 'left',
+                            title: {
+                                display: true,
+                                text: 'S&P 500 Allocation (%)'
+                            }
+                        },
+                        y1: {
+                            type: 'linear',
+                            display: true,
+                            position: 'right',
+                            title: {
+                                display: true,
+                                text: 'Sector Performance (%)'
+                            },
+                            grid: {
+                                drawOnChartArea: false,
+                            },
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                usePointStyle: true,
+                                padding: 15
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    if (context.datasetIndex === 1) {
+                                        return `${context.dataset.label}: ${context.parsed.y}%`;
+                                    }
+                                    return `${context.dataset.label}: ${context.parsed.y}%`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
     });
 </script>
 
