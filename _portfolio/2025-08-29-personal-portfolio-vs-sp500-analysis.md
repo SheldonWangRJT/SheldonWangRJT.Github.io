@@ -37,76 +37,94 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
 
 <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.45.0/dist/apexcharts.min.js"></script>
 <script>
-    // Performance data
-    const dates = ['8/15', '8/18', '8/19', '8/20', '8/21', '8/22', '8/24', '8/25', '8/27', '8/28', '8/29'];
-    const myPortfolio = [-0.48, 0.19, -2.11, -0.26, -0.42, 1.36, 0.02, 0.52, 0.20, 0.15, -1.84];
-    const sp500 = [-0.19, 0.00, -0.60, -0.28, -0.37, 1.54, -0.42, 0.40, 0.23, 0.36, -0.58];
+    // Wait for DOM to be ready and ApexCharts to load
+    document.addEventListener('DOMContentLoaded', function() {
+        // Check if ApexCharts is loaded
+        if (typeof ApexCharts === 'undefined') {
+            console.error('ApexCharts not loaded');
+            document.getElementById('performanceChart').innerHTML = '<p style="color: red; text-align: center; padding: 20px;">Chart library failed to load. Please refresh the page.</p>';
+            return;
+        }
 
-    // Calculate cumulative returns
-    const cumulativeMyPortfolio = myPortfolio.reduce((acc, val, i) => {
-        if (i === 0) return [val];
-        acc.push(acc[i-1] + val);
-        return acc;
-    }, []);
+        console.log('ApexCharts loaded successfully');
 
-    const cumulativeSP500 = sp500.reduce((acc, val, i) => {
-        if (i === 0) return [val];
-        acc.push(acc[i-1] + val);
-        return acc;
-    }, []);
+        // Performance data
+        const dates = ['8/15', '8/18', '8/19', '8/20', '8/21', '8/22', '8/24', '8/25', '8/27', '8/28', '8/29'];
+        const myPortfolio = [-0.48, 0.19, -2.11, -0.26, -0.42, 1.36, 0.02, 0.52, 0.20, 0.15, -1.84];
+        const sp500 = [-0.19, 0.00, -0.60, -0.28, -0.37, 1.54, -0.42, 0.40, 0.23, 0.36, -0.58];
 
-    // Create Performance Chart with ApexCharts
-    const performanceOptions = {
-        series: [{
-            name: 'My Portfolio (Cumulative %)',
-            data: cumulativeMyPortfolio
-        }, {
-            name: 'S&P 500 (Cumulative %)',
-            data: cumulativeSP500
-        }],
-        chart: {
-            type: 'line',
-            height: 400,
-            toolbar: {
-                show: true
-            }
-        },
-        colors: ['#2196F3', '#4CAF50'],
-        stroke: {
-            curve: 'smooth',
-            width: 3
-        },
-        markers: {
-            size: 4,
-            hover: {
-                size: 6
-            }
-        },
-        xaxis: {
-            categories: dates,
-            title: {
-                text: 'Date'
-            }
-        },
-        yaxis: {
-            title: {
-                text: 'Cumulative Return (%)'
-            }
-        },
-        legend: {
-            position: 'top'
-        },
-        tooltip: {
-            y: {
-                formatter: function (val) {
-                    return val.toFixed(2) + "%"
+        // Calculate cumulative returns
+        const cumulativeMyPortfolio = myPortfolio.reduce((acc, val, i) => {
+            if (i === 0) return [val];
+            acc.push(acc[i-1] + val);
+            return acc;
+        }, []);
+
+        const cumulativeSP500 = sp500.reduce((acc, val, i) => {
+            if (i === 0) return [val];
+            acc.push(acc[i-1] + val);
+            return acc;
+        }, []);
+
+        // Create Performance Chart with ApexCharts
+        const performanceOptions = {
+            series: [{
+                name: 'My Portfolio (Cumulative %)',
+                data: cumulativeMyPortfolio
+            }, {
+                name: 'S&P 500 (Cumulative %)',
+                data: cumulativeSP500
+            }],
+            chart: {
+                type: 'line',
+                height: 400,
+                toolbar: {
+                    show: true
+                }
+            },
+            colors: ['#2196F3', '#4CAF50'],
+            stroke: {
+                curve: 'smooth',
+                width: 3
+            },
+            markers: {
+                size: 4,
+                hover: {
+                    size: 6
+                }
+            },
+            xaxis: {
+                categories: dates,
+                title: {
+                    text: 'Date'
+                }
+            },
+            yaxis: {
+                title: {
+                    text: 'Cumulative Return (%)'
+                }
+            },
+            legend: {
+                position: 'top'
+            },
+            tooltip: {
+                y: {
+                    formatter: function (val) {
+                        return val.toFixed(2) + "%"
+                    }
                 }
             }
-        }
-    };
+        };
 
-    const performanceChart = new ApexCharts(document.querySelector("#performanceChart"), performanceOptions);
-    performanceChart.render();
+        try {
+            const performanceChart = new ApexCharts(document.querySelector("#performanceChart"), performanceOptions);
+            performanceChart.render();
+            console.log('Performance chart rendered successfully');
+        } catch (error) {
+            console.error('Error creating performance chart:', error);
+            document.getElementById('performanceChart').innerHTML = '<p style="color: red; text-align: center; padding: 20px;">Error creating chart: ' + error.message + '</p>';
+        }
+    });
 </script>
 
 ## Key Performance Metrics
@@ -247,70 +265,88 @@ This chart shows how the S&P 500's sector allocation compares to recent sector p
 </div>
 
 <script>
-    // Sector performance data
-    const sectorLabels = ['Technology', 'Healthcare', 'Financials', 'Consumer Discretionary', 'Energy', 'Utilities', 'Consumer Staples'];
-    const sp500Allocation = [30, 13, 12, 11, 4, 3, 6];
-    const sectorPerformance = [-4.5, -1.2, -0.8, -2.1, 3.2, 2.8, 1.5];
+    // Wait for DOM to be ready and ApexCharts to load
+    document.addEventListener('DOMContentLoaded', function() {
+        // Check if ApexCharts is loaded
+        if (typeof ApexCharts === 'undefined') {
+            console.error('ApexCharts not loaded for sector chart');
+            document.getElementById('sectorChart').innerHTML = '<p style="color: red; text-align: center; padding: 20px;">Chart library failed to load. Please refresh the page.</p>';
+            return;
+        }
 
-    // Create Sector Chart with ApexCharts
-    const sectorOptions = {
-        series: [{
-            name: 'S&P 500 Allocation (%)',
-            type: 'column',
-            data: sp500Allocation
-        }, {
-            name: 'Sector Performance (%)',
-            type: 'line',
-            data: sectorPerformance
-        }],
-        chart: {
-            type: 'line',
-            height: 400,
-            toolbar: {
-                show: true
-            }
-        },
-        colors: ['#4CAF50', '#FF9800'],
-        stroke: {
-            curve: 'smooth',
-            width: 3
-        },
-        markers: {
-            size: 4,
-            hover: {
-                size: 6
-            }
-        },
-        xaxis: {
-            categories: sectorLabels,
-            title: {
-                text: 'Sector'
-            }
-        },
-        yaxis: [{
-            title: {
-                text: 'S&P 500 Allocation (%)'
-            }
-        }, {
-            opposite: true,
-            title: {
-                text: 'Sector Performance (%)'
-            }
-        }],
-        legend: {
-            position: 'top'
-        },
-        tooltip: {
-            y: {
-                formatter: function (val) {
-                    return val + "%"
+        console.log('Creating sector chart...');
+
+        // Sector performance data
+        const sectorLabels = ['Technology', 'Healthcare', 'Financials', 'Consumer Discretionary', 'Energy', 'Utilities', 'Consumer Staples'];
+        const sp500Allocation = [30, 13, 12, 11, 4, 3, 6];
+        const sectorPerformance = [-4.5, -1.2, -0.8, -2.1, 3.2, 2.8, 1.5];
+
+        // Create Sector Chart with ApexCharts
+        const sectorOptions = {
+            series: [{
+                name: 'S&P 500 Allocation (%)',
+                type: 'column',
+                data: sp500Allocation
+            }, {
+                name: 'Sector Performance (%)',
+                type: 'line',
+                data: sectorPerformance
+            }],
+            chart: {
+                type: 'line',
+                height: 400,
+                toolbar: {
+                    show: true
+                }
+            },
+            colors: ['#4CAF50', '#FF9800'],
+            stroke: {
+                curve: 'smooth',
+                width: 3
+            },
+            markers: {
+                size: 4,
+                hover: {
+                    size: 6
+                }
+            },
+            xaxis: {
+                categories: sectorLabels,
+                title: {
+                    text: 'Sector'
+                }
+            },
+            yaxis: [{
+                title: {
+                    text: 'S&P 500 Allocation (%)'
+                }
+            }, {
+                opposite: true,
+                title: {
+                    text: 'Sector Performance (%)'
+                }
+            }],
+            legend: {
+                position: 'top'
+            },
+            tooltip: {
+                y: {
+                    formatter: function (val) {
+                        return val + "%"
+                    }
                 }
             }
-        }
-    };
+        };
 
-    const sectorChart = new ApexCharts(document.querySelector("#sectorChart"), sectorOptions);
-    sectorChart.render();
+        try {
+            const sectorChart = new ApexCharts(document.querySelector("#sectorChart"), sectorOptions);
+            sectorChart.render();
+            console.log('Sector chart rendered successfully');
+        } catch (error) {
+            console.error('Error creating sector chart:', error);
+            document.getElementById('sectorChart').innerHTML = '<p style="color: red; text-align: center; padding: 20px;">Error creating chart: ' + error.message + '</p>';
+        }
+    });
 </script>
 
 ## 🎯 Conclusion
