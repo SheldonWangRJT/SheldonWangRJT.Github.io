@@ -35,15 +35,59 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
     <canvas id="performanceChart" style="width: 100%; height: 400px;"></canvas>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
 <script>
-    // Wait for Chart.js to load and DOM to be ready
-    document.addEventListener('DOMContentLoaded', function() {
+    // Load Chart.js dynamically and then initialize charts
+    (function() {
+        console.log('Loading Chart.js dynamically...');
+
+        // Create script element
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js';
+        script.onload = function() {
+            console.log('Chart.js loaded successfully!');
+            initCharts();
+        };
+        script.onerror = function() {
+            console.error('Failed to load Chart.js from CDN, trying fallback...');
+            // Fallback to another CDN
+            const fallbackScript = document.createElement('script');
+            fallbackScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js';
+            fallbackScript.onload = function() {
+                console.log('Chart.js loaded from fallback CDN!');
+                initCharts();
+            };
+            fallbackScript.onerror = function() {
+                console.error('Failed to load Chart.js from all CDNs');
+                const errorCanvas = document.getElementById('performanceChart');
+                if (errorCanvas) {
+                    errorCanvas.parentNode.innerHTML = '<p style="color: red; font-weight: bold;">Failed to load Chart.js. Please refresh the page.</p>';
+                }
+            };
+            document.head.appendChild(fallbackScript);
+        };
+
+        // Append to head
+        document.head.appendChild(script);
+    })();
+
+    // Initialize charts function
+    function initCharts() {
+        console.log('Starting chart initialization...');
+        console.log('Chart object status:', typeof Chart);
+        
         // Check if Chart.js is loaded
         if (typeof Chart === 'undefined') {
-            console.error('Chart.js not loaded');
+            console.error('Chart.js is not loaded! Retrying in 500ms...');
+            const errorCanvas = document.getElementById('performanceChart');
+            if (errorCanvas) {
+                errorCanvas.parentNode.innerHTML = '<p style="color: orange; font-weight: bold;">Loading Chart.js... Please wait.</p>';
+            }
+            // Retry after a short delay
+            setTimeout(initCharts, 500);
             return;
         }
+
+        console.log('Chart.js is available, creating charts...');
 
         // Performance data
         const dates = ['8/15', '8/18', '8/19', '8/20', '8/21', '8/22', '8/24', '8/25', '8/27', '8/28', '8/29'];
@@ -64,8 +108,15 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
         }, []);
 
         // Performance Chart
-        const ctx = document.getElementById('performanceChart').getContext('2d');
-        new Chart(ctx, {
+        const ctx = document.getElementById('performanceChart');
+        if (!ctx) {
+            console.error('Performance chart canvas not found!');
+            return;
+        }
+
+        try {
+            const chartCtx = ctx.getContext('2d');
+            new Chart(chartCtx, {
             type: 'line',
             data: {
                 labels: dates,
@@ -133,6 +184,11 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
                 }
             }
         });
+        console.log('Performance chart created successfully!');
+        } catch (error) {
+            console.error('Error creating performance chart:', error);
+            ctx.parentNode.innerHTML = '<p style="color: red; font-weight: bold;">Error creating performance chart: ' + error.message + '</p>';
+        }
 
         // Sector Chart
         const sectorCtx = document.getElementById('sectorChart');
@@ -142,7 +198,8 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
             const sp500Allocation = [30, 13, 12, 11, 4, 3, 6];
             const sectorPerformance = [-4.5, -1.2, -0.8, -2.1, 3.2, 2.8, 1.5]; // Recent performance
 
-            new Chart(sectorCtx.getContext('2d'), {
+            try {
+                new Chart(sectorCtx.getContext('2d'), {
                 type: 'bar',
                 data: {
                     labels: sectorLabels,
@@ -210,8 +267,17 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
                     }
                 }
             });
+            console.log('Sector chart created successfully!');
+            } catch (error) {
+                console.error('Error creating sector chart:', error);
+                sectorCtx.parentNode.innerHTML = '<p style="color: red; font-weight: bold;">Error creating sector chart: ' + error.message + '</p>';
+            }
+        } else {
+            console.log('Sector chart canvas not found, skipping...');
         }
-    });
+
+        console.log('All charts initialization complete!');
+    }
 </script>
 
 ## Key Performance Metrics
