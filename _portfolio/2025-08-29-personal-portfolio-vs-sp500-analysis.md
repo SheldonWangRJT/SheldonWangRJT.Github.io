@@ -31,101 +31,94 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
 
 ## Interactive Performance Chart
 
-<div style="width: 100%; max-width: 800px; margin: auto;">
-    <div id="performanceChart" style="width: 100%; height: 400px;"></div>
+<div style="width: 100%; max-width: 800px; margin: auto; background: #f8f9fa; padding: 20px; border-radius: 8px;">
+    <h3 style="text-align: center; margin-bottom: 20px; color: #333;">📈 Portfolio vs S&P 500 Performance</h3>
+    
+    <!-- Performance Chart using CSS and HTML -->
+    <div style="position: relative; height: 300px; border: 1px solid #ddd; background: white; padding: 20px;">
+        <div style="display: flex; height: 100%; align-items: end; justify-content: space-between; position: relative;">
+            <!-- Y-axis labels -->
+            <div style="position: absolute; left: -40px; top: 0; height: 100%; display: flex; flex-direction: column; justify-content: space-between; font-size: 12px; color: #666;">
+                <span>2%</span>
+                <span>1%</span>
+                <span>0%</span>
+                <span>-1%</span>
+                <span>-2%</span>
+                <span>-3%</span>
+            </div>
+            
+            <!-- Chart bars for My Portfolio -->
+            <div style="display: flex; height: 100%; align-items: end; justify-content: space-between; width: 100%; padding-left: 40px;">
+                <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                    <div style="width: 8px; background: #2196F3; height: 15%; margin-bottom: 2px;" title="8/15: -0.48%"></div>
+                    <div style="width: 8px; background: #2196F3; height: 25%; margin-bottom: 2px;" title="8/18: +0.19%"></div>
+                    <div style="width: 8px; background: #2196F3; height: 85%; margin-bottom: 2px;" title="8/19: -2.11%"></div>
+                    <div style="width: 8px; background: #2196F3; height: 20%; margin-bottom: 2px;" title="8/20: -0.26%"></div>
+                    <div style="width: 8px; background: #2196F3; height: 22%; margin-bottom: 2px;" title="8/21: -0.42%"></div>
+                    <div style="width: 8px; background: #2196F3; height: 60%; margin-bottom: 2px;" title="8/22: +1.36%"></div>
+                    <div style="width: 8px; background: #2196F3; height: 15%; margin-bottom: 2px;" title="8/24: +0.02%"></div>
+                    <div style="width: 8px; background: #2196F3; height: 30%; margin-bottom: 2px;" title="8/25: +0.52%"></div>
+                    <div style="width: 8px; background: #2196F3; height: 18%; margin-bottom: 2px;" title="8/27: +0.20%"></div>
+                    <div style="width: 8px; background: #2196F3; height: 16%; margin-bottom: 2px;" title="8/28: +0.15%"></div>
+                    <div style="width: 8px; background: #2196F3; height: 80%; margin-bottom: 2px;" title="8/29: -1.84%"></div>
+                </div>
+                
+                <!-- Chart bars for S&P 500 -->
+                <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                    <div style="width: 8px; background: #4CAF50; height: 12%; margin-bottom: 2px;" title="8/15: -0.19%"></div>
+                    <div style="width: 8px; background: #4CAF50; height: 0%; margin-bottom: 2px;" title="8/18: +0.00%"></div>
+                    <div style="width: 8px; background: #4CAF50; height: 35%; margin-bottom: 2px;" title="8/19: -0.60%"></div>
+                    <div style="width: 8px; background: #4CAF50; height: 16%; margin-bottom: 2px;" title="8/20: -0.28%"></div>
+                    <div style="width: 8px; background: #4CAF50; height: 20%; margin-bottom: 2px;" title="8/21: -0.37%"></div>
+                    <div style="width: 8px; background: #4CAF50; height: 70%; margin-bottom: 2px;" title="8/22: +1.54%"></div>
+                    <div style="width: 8px; background: #4CAF50; height: 24%; margin-bottom: 2px;" title="8/24: -0.42%"></div>
+                    <div style="width: 8px; background: #4CAF50; height: 22%; margin-bottom: 2px;" title="8/25: +0.40%"></div>
+                    <div style="width: 8px; background: #4CAF50; height: 13%; margin-bottom: 2px;" title="8/27: +0.23%"></div>
+                    <div style="width: 8px; background: #4CAF50; height: 20%; margin-bottom: 2px;" title="8/28: +0.36%"></div>
+                    <div style="width: 8px; background: #4CAF50; height: 32%; margin-bottom: 2px;" title="8/29: -0.58%"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- X-axis labels -->
+        <div style="display: flex; justify-content: space-between; margin-top: 10px; padding-left: 40px; font-size: 11px; color: #666;">
+            <span>8/15</span>
+            <span>8/18</span>
+            <span>8/19</span>
+            <span>8/20</span>
+            <span>8/21</span>
+            <span>8/22</span>
+            <span>8/24</span>
+            <span>8/25</span>
+            <span>8/27</span>
+            <span>8/28</span>
+            <span>8/29</span>
+        </div>
+        
+        <!-- Legend -->
+        <div style="display: flex; justify-content: center; margin-top: 15px; gap: 20px;">
+            <div style="display: flex; align-items: center; gap: 5px;">
+                <div style="width: 12px; height: 12px; background: #2196F3;"></div>
+                <span style="font-size: 12px;">My Portfolio</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 5px;">
+                <div style="width: 12px; height: 12px; background: #4CAF50;"></div>
+                <span style="font-size: 12px;">S&P 500</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Performance Summary -->
+    <div style="margin-top: 15px; padding: 15px; background: white; border-radius: 5px; border-left: 4px solid #ff6b6b;">
+        <h4 style="margin: 0 0 10px 0; color: #333;">📊 Performance Summary</h4>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 14px;">
+            <div><strong>My Portfolio:</strong> -3.09% total</div>
+            <div><strong>S&P 500:</strong> -0.09% total</div>
+            <div><strong>Underperformance:</strong> -3.00%</div>
+            <div><strong>Volatility:</strong> 1.12% vs 0.67%</div>
+        </div>
+    </div>
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/apexcharts@3.45.0/dist/apexcharts.min.js"></script>
-<script>
-    // Wait for DOM to be ready and ApexCharts to load
-    document.addEventListener('DOMContentLoaded', function() {
-        // Check if ApexCharts is loaded
-        if (typeof ApexCharts === 'undefined') {
-            console.error('ApexCharts not loaded');
-            document.getElementById('performanceChart').innerHTML = '<p style="color: red; text-align: center; padding: 20px;">Chart library failed to load. Please refresh the page.</p>';
-            return;
-        }
-
-        console.log('ApexCharts loaded successfully');
-
-        // Performance data
-        const dates = ['8/15', '8/18', '8/19', '8/20', '8/21', '8/22', '8/24', '8/25', '8/27', '8/28', '8/29'];
-        const myPortfolio = [-0.48, 0.19, -2.11, -0.26, -0.42, 1.36, 0.02, 0.52, 0.20, 0.15, -1.84];
-        const sp500 = [-0.19, 0.00, -0.60, -0.28, -0.37, 1.54, -0.42, 0.40, 0.23, 0.36, -0.58];
-
-        // Calculate cumulative returns
-        const cumulativeMyPortfolio = myPortfolio.reduce((acc, val, i) => {
-            if (i === 0) return [val];
-            acc.push(acc[i-1] + val);
-            return acc;
-        }, []);
-
-        const cumulativeSP500 = sp500.reduce((acc, val, i) => {
-            if (i === 0) return [val];
-            acc.push(acc[i-1] + val);
-            return acc;
-        }, []);
-
-        // Create Performance Chart with ApexCharts
-        const performanceOptions = {
-            series: [{
-                name: 'My Portfolio (Cumulative %)',
-                data: cumulativeMyPortfolio
-            }, {
-                name: 'S&P 500 (Cumulative %)',
-                data: cumulativeSP500
-            }],
-            chart: {
-                type: 'line',
-                height: 400,
-                toolbar: {
-                    show: true
-                }
-            },
-            colors: ['#2196F3', '#4CAF50'],
-            stroke: {
-                curve: 'smooth',
-                width: 3
-            },
-            markers: {
-                size: 4,
-                hover: {
-                    size: 6
-                }
-            },
-            xaxis: {
-                categories: dates,
-                title: {
-                    text: 'Date'
-                }
-            },
-            yaxis: {
-                title: {
-                    text: 'Cumulative Return (%)'
-                }
-            },
-            legend: {
-                position: 'top'
-            },
-            tooltip: {
-                y: {
-                    formatter: function (val) {
-                        return val.toFixed(2) + "%"
-                    }
-                }
-            }
-        };
-
-        try {
-            const performanceChart = new ApexCharts(document.querySelector("#performanceChart"), performanceOptions);
-            performanceChart.render();
-            console.log('Performance chart rendered successfully');
-        } catch (error) {
-            console.error('Error creating performance chart:', error);
-            document.getElementById('performanceChart').innerHTML = '<p style="color: red; text-align: center; padding: 20px;">Error creating chart: ' + error.message + '</p>';
-        }
-    });
-</script>
 
 ## Key Performance Metrics
 
@@ -260,94 +253,157 @@ While the S&P 500 benefits from broad diversification across sectors, my concent
 
 This chart shows how the S&P 500's sector allocation compares to recent sector performance, highlighting why my tech-heavy portfolio struggled during this period.
 
-<div style="width: 100%; max-width: 800px; margin: auto;">
-    <div id="sectorChart" style="width: 100%; height: 400px;"></div>
+<div style="width: 100%; max-width: 800px; margin: auto; background: #f8f9fa; padding: 20px; border-radius: 8px;">
+    <h3 style="text-align: center; margin-bottom: 20px; color: #333;">📊 S&P 500 Sector Analysis</h3>
+    
+    <!-- Sector Chart using CSS and HTML -->
+    <div style="background: white; padding: 20px; border-radius: 5px; border: 1px solid #ddd;">
+        <!-- Sector Performance Table -->
+        <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+            <thead>
+                <tr style="background: #f5f5f5;">
+                    <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Sector</th>
+                    <th style="padding: 12px; text-align: center; border: 1px solid #ddd;">S&P 500 Allocation</th>
+                    <th style="padding: 12px; text-align: center; border: 1px solid #ddd;">Recent Performance</th>
+                    <th style="padding: 12px; text-align: center; border: 1px solid #ddd;">Visual</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ddd;"><strong>Technology</strong></td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #ddd;">30%</td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #ddd; color: #ff6b6b;"><strong>-4.5%</strong></td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <div style="width: 100px; height: 20px; background: #e0e0e0; border-radius: 10px; position: relative;">
+                                <div style="width: 30%; height: 100%; background: #4CAF50; border-radius: 10px;"></div>
+                            </div>
+                            <div style="width: 60px; height: 20px; background: #e0e0e0; border-radius: 10px; position: relative;">
+                                <div style="width: 45%; height: 100%; background: #ff6b6b; border-radius: 10px;"></div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ddd;"><strong>Healthcare</strong></td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #ddd;">13%</td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #ddd; color: #ff6b6b;"><strong>-1.2%</strong></td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <div style="width: 100px; height: 20px; background: #e0e0e0; border-radius: 10px; position: relative;">
+                                <div style="width: 13%; height: 100%; background: #4CAF50; border-radius: 10px;"></div>
+                            </div>
+                            <div style="width: 60px; height: 20px; background: #e0e0e0; border-radius: 10px; position: relative;">
+                                <div style="width: 12%; height: 100%; background: #ff6b6b; border-radius: 10px;"></div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ddd;"><strong>Financials</strong></td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #ddd;">12%</td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #ddd; color: #ff6b6b;"><strong>-0.8%</strong></td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <div style="width: 100px; height: 20px; background: #e0e0e0; border-radius: 10px; position: relative;">
+                                <div style="width: 12%; height: 100%; background: #4CAF50; border-radius: 10px;"></div>
+                            </div>
+                            <div style="width: 60px; height: 20px; background: #e0e0e0; border-radius: 10px; position: relative;">
+                                <div style="width: 8%; height: 100%; background: #ff6b6b; border-radius: 10px;"></div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ddd;"><strong>Consumer Discretionary</strong></td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #ddd;">11%</td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #ddd; color: #ff6b6b;"><strong>-2.1%</strong></td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <div style="width: 100px; height: 20px; background: #e0e0e0; border-radius: 10px; position: relative;">
+                                <div style="width: 11%; height: 100%; background: #4CAF50; border-radius: 10px;"></div>
+                            </div>
+                            <div style="width: 60px; height: 20px; background: #e0e0e0; border-radius: 10px; position: relative;">
+                                <div style="width: 21%; height: 100%; background: #ff6b6b; border-radius: 10px;"></div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ddd;"><strong>Energy</strong></td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #ddd;">4%</td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #ddd; color: #51cf66;"><strong>+3.2%</strong></td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <div style="width: 100px; height: 20px; background: #e0e0e0; border-radius: 10px; position: relative;">
+                                <div style="width: 4%; height: 100%; background: #4CAF50; border-radius: 10px;"></div>
+                            </div>
+                            <div style="width: 60px; height: 20px; background: #e0e0e0; border-radius: 10px; position: relative;">
+                                <div style="width: 32%; height: 100%; background: #51cf66; border-radius: 10px;"></div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ddd;"><strong>Utilities</strong></td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #ddd;">3%</td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #ddd; color: #51cf66;"><strong>+2.8%</strong></td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <div style="width: 100px; height: 20px; background: #e0e0e0; border-radius: 10px; position: relative;">
+                                <div style="width: 3%; height: 100%; background: #4CAF50; border-radius: 10px;"></div>
+                            </div>
+                            <div style="width: 60px; height: 20px; background: #e0e0e0; border-radius: 10px; position: relative;">
+                                <div style="width: 28%; height: 100%; background: #51cf66; border-radius: 10px;"></div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ddd;"><strong>Consumer Staples</strong></td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #ddd;">6%</td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #ddd; color: #51cf66;"><strong>+1.5%</strong></td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <div style="width: 100px; height: 20px; background: #e0e0e0; border-radius: 10px; position: relative;">
+                                <div style="width: 6%; height: 100%; background: #4CAF50; border-radius: 10px;"></div>
+                            </div>
+                            <div style="width: 60px; height: 20px; background: #e0e0e0; border-radius: 10px; position: relative;">
+                                <div style="width: 15%; height: 100%; background: #51cf66; border-radius: 10px;"></div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- Legend -->
+        <div style="display: flex; justify-content: center; gap: 30px; margin-top: 15px; font-size: 12px;">
+            <div style="display: flex; align-items: center; gap: 5px;">
+                <div style="width: 12px; height: 12px; background: #4CAF50; border-radius: 2px;"></div>
+                <span>S&P 500 Allocation</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 5px;">
+                <div style="width: 12px; height: 12px; background: #ff6b6b; border-radius: 2px;"></div>
+                <span>Negative Performance</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 5px;">
+                <div style="width: 12px; height: 12px; background: #51cf66; border-radius: 2px;"></div>
+                <span>Positive Performance</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Key Insights -->
+    <div style="margin-top: 15px; padding: 15px; background: white; border-radius: 5px; border-left: 4px solid #ff9800;">
+        <h4 style="margin: 0 0 10px 0; color: #333;">🔍 Key Insights</h4>
+        <ul style="margin: 0; padding-left: 20px; font-size: 14px;">
+            <li><strong>Technology (30% allocation)</strong> had the worst performance (-4.5%), explaining your portfolio's underperformance</li>
+            <li><strong>Energy (+3.2%) and Utilities (+2.8%)</strong> were the best performers but have small allocations</li>
+            <li><strong>Your 83% tech concentration</strong> amplified the sector's weakness compared to S&P 500's diversification</li>
+        </ul>
+    </div>
 </div>
-
-<script>
-    // Wait for DOM to be ready and ApexCharts to load
-    document.addEventListener('DOMContentLoaded', function() {
-        // Check if ApexCharts is loaded
-        if (typeof ApexCharts === 'undefined') {
-            console.error('ApexCharts not loaded for sector chart');
-            document.getElementById('sectorChart').innerHTML = '<p style="color: red; text-align: center; padding: 20px;">Chart library failed to load. Please refresh the page.</p>';
-            return;
-        }
-
-        console.log('Creating sector chart...');
-
-        // Sector performance data
-        const sectorLabels = ['Technology', 'Healthcare', 'Financials', 'Consumer Discretionary', 'Energy', 'Utilities', 'Consumer Staples'];
-        const sp500Allocation = [30, 13, 12, 11, 4, 3, 6];
-        const sectorPerformance = [-4.5, -1.2, -0.8, -2.1, 3.2, 2.8, 1.5];
-
-        // Create Sector Chart with ApexCharts
-        const sectorOptions = {
-            series: [{
-                name: 'S&P 500 Allocation (%)',
-                type: 'column',
-                data: sp500Allocation
-            }, {
-                name: 'Sector Performance (%)',
-                type: 'line',
-                data: sectorPerformance
-            }],
-            chart: {
-                type: 'line',
-                height: 400,
-                toolbar: {
-                    show: true
-                }
-            },
-            colors: ['#4CAF50', '#FF9800'],
-            stroke: {
-                curve: 'smooth',
-                width: 3
-            },
-            markers: {
-                size: 4,
-                hover: {
-                    size: 6
-                }
-            },
-            xaxis: {
-                categories: sectorLabels,
-                title: {
-                    text: 'Sector'
-                }
-            },
-            yaxis: [{
-                title: {
-                    text: 'S&P 500 Allocation (%)'
-                }
-            }, {
-                opposite: true,
-                title: {
-                    text: 'Sector Performance (%)'
-                }
-            }],
-            legend: {
-                position: 'top'
-            },
-            tooltip: {
-                y: {
-                    formatter: function (val) {
-                        return val + "%"
-                    }
-                }
-            }
-        };
-
-        try {
-            const sectorChart = new ApexCharts(document.querySelector("#sectorChart"), sectorOptions);
-            sectorChart.render();
-            console.log('Sector chart rendered successfully');
-        } catch (error) {
-            console.error('Error creating sector chart:', error);
-            document.getElementById('sectorChart').innerHTML = '<p style="color: red; text-align: center; padding: 20px;">Error creating chart: ' + error.message + '</p>';
-        }
-    });
-</script>
 
 ## 🎯 Conclusion
 
