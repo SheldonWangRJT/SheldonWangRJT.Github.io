@@ -32,42 +32,82 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
 ## Interactive Performance Chart
 
 <div style="width: 100%; max-width: 800px; margin: auto;">
-    <canvas id="performanceChart" style="width: 100%; height: 400px;"></canvas>
+    <div id="chartLoadingIndicator" style="text-align: center; padding: 40px; color: #666;">
+        <p>📊 Loading interactive charts...</p>
+        <p style="font-size: 0.9em;">Please wait while Chart.js loads</p>
+    </div>
+    <canvas id="performanceChart" style="width: 100%; height: 400px; display: none;"></canvas>
 </div>
 
 <script>
-    // Load Chart.js dynamically and then initialize charts
+    // Load Chart.js dynamically with multiple fallbacks
     (function() {
         console.log('Loading Chart.js dynamically...');
-
-        // Create script element
-        const script = document.createElement('script');
-        script.src = 'https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js';
-        script.onload = function() {
-            console.log('Chart.js loaded successfully!');
-            initCharts();
-        };
-        script.onerror = function() {
-            console.error('Failed to load Chart.js from CDN, trying fallback...');
-            // Fallback to another CDN
-            const fallbackScript = document.createElement('script');
-            fallbackScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js';
-            fallbackScript.onload = function() {
-                console.log('Chart.js loaded from fallback CDN!');
-                initCharts();
+        
+        const cdnUrls = [
+            'https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js',
+            'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js',
+            'https://unpkg.com/chart.js@3.9.1/dist/chart.min.js',
+            '/assets/js/chart.min.js'  // Local fallback
+        ];
+        
+        let currentIndex = 0;
+        
+        function tryLoadChartJs() {
+            if (currentIndex >= cdnUrls.length) {
+                console.error('All Chart.js loading attempts failed');
+                showError('Failed to load Chart.js from all sources. Please refresh the page.');
+                return;
+            }
+            
+            const script = document.createElement('script');
+            script.src = cdnUrls[currentIndex];
+            script.crossOrigin = 'anonymous';
+            
+            script.onload = function() {
+                console.log(`Chart.js loaded successfully from: ${cdnUrls[currentIndex]}`);
+                // Wait a bit to ensure Chart object is available
+                setTimeout(initCharts, 100);
             };
-            fallbackScript.onerror = function() {
-                console.error('Failed to load Chart.js from all CDNs');
-                const errorCanvas = document.getElementById('performanceChart');
-                if (errorCanvas) {
-                    errorCanvas.parentNode.innerHTML = '<p style="color: red; font-weight: bold;">Failed to load Chart.js. Please refresh the page.</p>';
-                }
+            
+            script.onerror = function() {
+                console.error(`Failed to load Chart.js from: ${cdnUrls[currentIndex]}`);
+                currentIndex++;
+                setTimeout(tryLoadChartJs, 500);
             };
-            document.head.appendChild(fallbackScript);
-        };
-
-        // Append to head
-        document.head.appendChild(script);
+            
+            document.head.appendChild(script);
+        }
+        
+        function showError(message) {
+            const loadingIndicator = document.getElementById('chartLoadingIndicator');
+            if (loadingIndicator) {
+                loadingIndicator.innerHTML = `<p style="color: red; font-weight: bold; text-align: center; padding: 20px;">${message}</p>`;
+            }
+        }
+        
+        function hideLoadingIndicator() {
+            const loadingIndicator = document.getElementById('chartLoadingIndicator');
+            const canvas = document.getElementById('performanceChart');
+            const sectorLoadingIndicator = document.getElementById('sectorChartLoadingIndicator');
+            const sectorCanvas = document.getElementById('sectorChart');
+            
+            if (loadingIndicator) {
+                loadingIndicator.style.display = 'none';
+            }
+            if (canvas) {
+                canvas.style.display = 'block';
+            }
+            if (sectorLoadingIndicator) {
+                sectorLoadingIndicator.style.display = 'none';
+            }
+            if (sectorCanvas) {
+                sectorCanvas.style.display = 'block';
+            }
+        }
+        
+        // Start loading
+        tryLoadChartJs();
     })();
 
     // Initialize charts function
@@ -88,6 +128,9 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
         }
 
         console.log('Chart.js is available, creating charts...');
+        
+        // Hide loading indicator and show canvas
+        hideLoadingIndicator();
 
         // Performance data
         const dates = ['8/15', '8/18', '8/19', '8/20', '8/21', '8/22', '8/24', '8/25', '8/27', '8/28', '8/29'];
@@ -414,7 +457,11 @@ While the S&P 500 benefits from broad diversification across sectors, my concent
 This chart shows how the S&P 500's sector allocation compares to recent sector performance, highlighting why my tech-heavy portfolio struggled during this period.
 
 <div style="width: 100%; max-width: 800px; margin: auto;">
-    <canvas id="sectorChart" style="width: 100%; height: 400px;"></canvas>
+    <div id="sectorChartLoadingIndicator" style="text-align: center; padding: 40px; color: #666;">
+        <p>📊 Loading sector analysis chart...</p>
+        <p style="font-size: 0.9em;">Please wait while Chart.js loads</p>
+    </div>
+    <canvas id="sectorChart" style="width: 100%; height: 400px; display: none;"></canvas>
 </div>
 
 ## 🎯 Conclusion
