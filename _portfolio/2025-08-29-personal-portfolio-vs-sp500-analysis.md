@@ -42,9 +42,10 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
 <script src="/assets/js/chart.min.js" onload="console.log('Chart.js script loaded successfully')" onerror="console.error('Chart.js script failed to load')"></script>
 
 <script>
-    console.log('Chart script block started executing');
-    
-    function hideLoadingIndicator() {
+    try {
+        console.log('Chart script block started executing');
+        
+        function hideLoadingIndicator() {
         const loadingIndicator = document.getElementById('chartLoadingIndicator');
         const canvas = document.getElementById('performanceChart');
         const sectorLoadingIndicator = document.getElementById('sectorChartLoadingIndicator');
@@ -287,6 +288,9 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
         console.log('DOMContentLoaded listener registered successfully');
     } catch (error) {
         console.error('Error registering DOMContentLoaded listener:', error);
+    }
+    } catch (error) {
+        console.error('Error in chart script block:', error);
     }
 </script>
 
