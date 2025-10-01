@@ -1,7 +1,7 @@
 ---
-title: "My Portfolio vs S&P 500: A Real Performance Comparison"
-description: "Personal stock portfolio performance analysis compared to S&P 500 benchmark. Daily tracking, performance metrics, and investment strategy insights from August 2025."
-date: 2025-08-29
+title: "My Portfolio vs S&P 500: Extended Performance Analysis"
+description: "Personal stock portfolio performance analysis compared to S&P 500 benchmark. Extended daily tracking from August to September 2025, performance metrics, and investment strategy insights."
+date: 2025-09-30
 permalink: /portfolio/personal-portfolio-vs-sp500-analysis/
 tags:
   - Portfolio Analysis
@@ -11,7 +11,7 @@ tags:
   - Personal Finance
 ---
 
-I've been tracking my personal stock portfolio performance against the S&P 500 benchmark for the past few weeks. With my portfolio heavily allocated to technology stocks, recent market conditions have been challenging. Here's a detailed comparison and analysis of how my investment strategy is performing relative to the broader market.
+I've been tracking my personal stock portfolio performance against the S&P 500 benchmark from August through September 2025. With my portfolio heavily allocated to technology stocks, market conditions have been volatile with some interesting recovery patterns. Here's an extended analysis of how my investment strategy performed relative to the broader market over this two-month period.
 
 ## Performance Tracking Data
 
@@ -28,6 +28,20 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
 | 8/27/2025  | +0.20%           | +0.23%        | <span style="color: #ff6b6b; font-weight: bold;">-0.03% (Underperformed)</span> |
 | 8/28/2025  | +0.15%           | +0.36%        | <span style="color: #ff6b6b; font-weight: bold;">-0.21% (Underperformed)</span> |
 | 8/29/2025  | -1.84%           | -0.58%        | <span style="color: #ff6b6b; font-weight: bold;">-1.26% (Underperformed)</span> |
+| 9/2/2025   | -0.70%           | -0.50%        | <span style="color: #ff6b6b; font-weight: bold;">-0.20% (Underperformed)</span> |
+| 9/3/2025   | +0.37%           | +0.47%        | <span style="color: #ff6b6b; font-weight: bold;">-0.10% (Underperformed)</span> |
+| 9/4/2025   | +0.84%           | +0.91%        | <span style="color: #ff6b6b; font-weight: bold;">-0.07% (Underperformed)</span> |
+| 9/5/2025   | -1.16%           | -0.27%        | <span style="color: #ff6b6b; font-weight: bold;">-0.89% (Underperformed)</span> |
+| 9/6/2025   | +0.47%           | +0.26%        | <span style="color: #51cf66; font-weight: bold;">+0.21% (Outperformed)</span> |
+| 9/9/2025   | +0.71%           | +0.24%        | <span style="color: #51cf66; font-weight: bold;">+0.47% (Outperformed)</span> |
+| 9/10/2025  | +1.17%           | +0.28%        | <span style="color: #51cf66; font-weight: bold;">+0.89% (Outperformed)</span> |
+| 9/11/2025  | -0.30%           | +0.80%        | <span style="color: #ff6b6b; font-weight: bold;">-1.10% (Underperformed)</span> |
+| 9/12/2025  | +0.27%           | -0.02%        | <span style="color: #51cf66; font-weight: bold;">+0.29% (Outperformed)</span> |
+| 9/15/2025  | +0.49%           | +0.52%        | <span style="color: #ff6b6b; font-weight: bold;">-0.03% (Underperformed)</span> |
+| 9/16/2025  | -0.59%           | -0.13%        | <span style="color: #ff6b6b; font-weight: bold;">-0.46% (Underperformed)</span> |
+| 9/18/2025  | +1.05%           | +0.47%        | <span style="color: #51cf66; font-weight: bold;">+0.58% (Outperformed)</span> |
+| 9/24/2025  | -1.21%           | -0.52%        | <span style="color: #ff6b6b; font-weight: bold;">-0.69% (Underperformed)</span> |
+| 9/30/2025  | +0.83%           | +0.37%        | <span style="color: #51cf66; font-weight: bold;">+0.46% (Outperformed)</span> |
 
 ## Interactive Performance Chart
 
@@ -40,20 +54,24 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
 </div>
 
 <script src="/assets/js/chart.min.js"></script>
-<script src="/assets/js/sp500-analysis-charts.js?v=1"></script>
+<script src="/assets/js/sp500-analysis-charts.js?v=2"></script>
 
 ## Key Performance Metrics
 
-### **Overall Performance (August 15-29, 2025)**
-- **My Portfolio**: -3.09% total return
-- **S&P 500**: -0.09% total return
-- **Excess Return**: -3.00% underperformance
+### **Overall Performance (August 15 - September 30, 2025)**
+- **My Portfolio**: -1.84% total return
+- **S&P 500**: +1.61% total return
+- **Excess Return**: -3.45% underperformance
+
+### **Monthly Breakdown**
+- **August 2025**: -3.09% (My Portfolio) vs -0.09% (S&P 500) = -3.00% underperformance
+- **September 2025**: +1.25% (My Portfolio) vs +1.70% (S&P 500) = -0.45% underperformance
 
 ### **Risk-Adjusted Performance**
-- **My Portfolio Volatility**: 1.12% daily average
-- **S&P 500 Volatility**: 0.67% daily average
-- **Sharpe Ratio (My Portfolio)**: -2.76
-- **Sharpe Ratio (S&P 500)**: -0.13
+- **My Portfolio Volatility**: 0.95% daily average
+- **S&P 500 Volatility**: 0.51% daily average
+- **Sharpe Ratio (My Portfolio)**: -1.94
+- **Sharpe Ratio (S&P 500)**: +3.16
 
 ## Portfolio Composition Analysis
 
@@ -80,17 +98,23 @@ Based on my actual portfolio holdings, here's the detailed breakdown:
 - **ETF Diversification**: 37% in ETFs provides some sector diversification
 - **Growth vs Value**: Heavy tilt toward growth stocks with only FDVV providing dividend exposure
 
-### **Why This Allocation Struggled Recently**
+### **Performance Analysis Over Extended Period**
 
-This allocation has performed well for most of the year, but the recent tech sector volatility has caused underperformance during these specific two volatile weeks due to:
+This allocation showed a **notable recovery pattern** over the two-month period:
 
+**August Performance (Struggled):**
 - **NVDA's AI bubble concerns** (27.72% position amplified losses)
 - **Tech sector rotation** from growth to value stocks
 - **Rising interest rates** affecting high-multiple tech valuations
 - **Regulatory concerns** around big tech companies
-- **Market correlation** - when tech sells off, most holdings move together
 
-The S&P 500's broad diversification across sectors provided stability during this period of tech sector weakness.
+**September Performance (Improved):**
+- **Tech sector stabilization** with some recovery in growth stocks
+- **Better individual stock selection** outperforming in several sessions
+- **Reduced volatility** compared to August's extreme swings
+- **Strong performance days** on 9/10 (+1.17% vs +0.28%) and 9/18 (+1.05% vs +0.47%)
+
+The S&P 500's broad diversification provided consistent stability throughout both months.
 
 ## Why I'm Underperforming the S&P 500
 
@@ -185,19 +209,26 @@ This chart shows how the S&P 500's sector allocation compares to recent sector p
 
 ## 🎯 Conclusion
 
-My portfolio has significantly underperformed the S&P 500 over this tracking period, primarily due to:
+My portfolio has underperformed the S&P 500 over this extended two-month period, but showed **notable improvement in September**:
+
+**Overall Underperformance (-3.45%)** primarily due to:
 1. **Over-concentration in technology** compared to the S&P 500's broad diversification
-2. **Sector rotation headwinds** affecting growth stocks
+2. **August's severe tech sector headwinds** that created deep underperformance
 3. **Higher volatility** from concentrated positions
 4. **Lack of diversification** into outperforming sectors
 
-This underperformance highlights the importance of:
-- **🔄 Sector diversification** to reduce concentration risk
-- **⚖️ Balanced allocation** between growth and value
-- **🛡️ Risk management** through position sizing and stop-losses
-- **⏳ Patience** during sector-specific drawdowns
+**September Recovery Signs:**
+- **Reduced underperformance** (-0.45% vs -3.00% in August)
+- **Several strong outperformance days** (9/6, 9/9, 9/10, 9/12, 9/18, 9/30)
+- **Lower volatility** compared to August's extreme swings
 
-The key lesson is that even quality companies can underperform when their sector faces headwinds. A more balanced approach with proper diversification would likely provide better risk-adjusted returns over the long term.
+**Key Lessons:**
+- **🔄 Sector diversification** remains critical for risk management
+- **⚖️ Balanced allocation** between growth and value reduces drawdowns
+- **🛡️ Risk management** through position sizing limits damage during sector weakness
+- **⏳ Patience** during sector-specific drawdowns, but active monitoring is essential
+
+The extended data shows that while tech concentration creates volatility, there are periods of strong outperformance. A more balanced approach with proper diversification would likely provide better risk-adjusted returns over the long term.
 
 **⚠️ Important Disclaimer**: Past performance does not guarantee future results. This analysis is for educational purposes only and should not be considered investment advice. Always do your own research and consider consulting with a financial advisor.
 
