@@ -39,76 +39,28 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
     <canvas id="performanceChart" style="width: 100%; height: 400px; display: none;"></canvas>
 </div>
 
+<script src="/assets/js/chart.min.js"></script>
+
 <script>
-    // Load Chart.js dynamically with multiple fallbacks
-    (function() {
-        console.log('Loading Chart.js dynamically...');
+    function hideLoadingIndicator() {
+        const loadingIndicator = document.getElementById('chartLoadingIndicator');
+        const canvas = document.getElementById('performanceChart');
+        const sectorLoadingIndicator = document.getElementById('sectorChartLoadingIndicator');
+        const sectorCanvas = document.getElementById('sectorChart');
         
-        const cdnUrls = [
-            'https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js',
-            'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js',
-            'https://unpkg.com/chart.js@3.9.1/dist/chart.min.js',
-            '/assets/js/chart.min.js'  // Local fallback
-        ];
-        
-        let currentIndex = 0;
-        
-        function tryLoadChartJs() {
-            if (currentIndex >= cdnUrls.length) {
-                console.error('All Chart.js loading attempts failed');
-                showError('Failed to load Chart.js from all sources. Please refresh the page.');
-                return;
-            }
-            
-            const script = document.createElement('script');
-            script.src = cdnUrls[currentIndex];
-            script.crossOrigin = 'anonymous';
-            
-            script.onload = function() {
-                console.log(`Chart.js loaded successfully from: ${cdnUrls[currentIndex]}`);
-                // Wait a bit to ensure Chart object is available
-                setTimeout(initCharts, 100);
-            };
-            
-            script.onerror = function() {
-                console.error(`Failed to load Chart.js from: ${cdnUrls[currentIndex]}`);
-                currentIndex++;
-                setTimeout(tryLoadChartJs, 500);
-            };
-            
-            document.head.appendChild(script);
+        if (loadingIndicator) {
+            loadingIndicator.style.display = 'none';
         }
-        
-        function showError(message) {
-            const loadingIndicator = document.getElementById('chartLoadingIndicator');
-            if (loadingIndicator) {
-                loadingIndicator.innerHTML = `<p style="color: red; font-weight: bold; text-align: center; padding: 20px;">${message}</p>`;
-            }
+        if (canvas) {
+            canvas.style.display = 'block';
         }
-        
-        function hideLoadingIndicator() {
-            const loadingIndicator = document.getElementById('chartLoadingIndicator');
-            const canvas = document.getElementById('performanceChart');
-            const sectorLoadingIndicator = document.getElementById('sectorChartLoadingIndicator');
-            const sectorCanvas = document.getElementById('sectorChart');
-            
-            if (loadingIndicator) {
-                loadingIndicator.style.display = 'none';
-            }
-            if (canvas) {
-                canvas.style.display = 'block';
-            }
-            if (sectorLoadingIndicator) {
-                sectorLoadingIndicator.style.display = 'none';
-            }
-            if (sectorCanvas) {
-                sectorCanvas.style.display = 'block';
-            }
+        if (sectorLoadingIndicator) {
+            sectorLoadingIndicator.style.display = 'none';
         }
-        
-        // Start loading
-        tryLoadChartJs();
-    })();
+        if (sectorCanvas) {
+            sectorCanvas.style.display = 'block';
+        }
+    }
 
     // Initialize charts function
     function initCharts() {
@@ -321,6 +273,11 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
 
         console.log('All charts initialization complete!');
     }
+
+    // Wait for DOM to be ready before initializing charts
+    document.addEventListener('DOMContentLoaded', function() {
+        initCharts();
+    });
 </script>
 
 ## Key Performance Metrics
