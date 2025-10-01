@@ -42,10 +42,9 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
 <script src="/assets/js/chart.min.js" onload="console.log('Chart.js script loaded successfully')" onerror="console.error('Chart.js script failed to load')"></script>
 
 <script>
-    try {
-        console.log('Chart script block started executing');
-        
-        function hideLoadingIndicator() {
+    console.log('Chart script block started executing');
+    
+    function hideLoadingIndicator() {
         const loadingIndicator = document.getElementById('chartLoadingIndicator');
         const canvas = document.getElementById('performanceChart');
         const sectorLoadingIndicator = document.getElementById('sectorChartLoadingIndicator');
@@ -278,20 +277,11 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
     }
 
     // Wait for DOM to be ready before initializing charts
-    try {
-        console.log('About to register DOMContentLoaded listener');
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('DOMContentLoaded fired');
-            console.log('Chart object status at DOMContentLoaded:', typeof Chart);
-            initCharts();
-        });
-        console.log('DOMContentLoaded listener registered successfully');
-    } catch (error) {
-        console.error('Error registering DOMContentLoaded listener:', error);
-    }
-    } catch (error) {
-        console.error('Error in chart script block:', error);
-    }
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('DOMContentLoaded fired');
+        console.log('Chart object status at DOMContentLoaded:', typeof Chart);
+        initCharts();
+    });
 </script>
 
 ## Key Performance Metrics
