@@ -40,7 +40,7 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
 </div>
 
 <script src="/assets/js/chart.min.js"></script>
-<script src="/assets/js/sp500-analysis-charts.js"></script>
+<script src="/assets/js/sp500-analysis-charts.js?v=1"></script>
 
 ## Key Performance Metrics
 
