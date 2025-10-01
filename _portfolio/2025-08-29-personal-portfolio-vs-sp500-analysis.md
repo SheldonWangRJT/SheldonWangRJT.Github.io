@@ -39,7 +39,7 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
     <canvas id="performanceChart" style="width: 100%; height: 400px; display: none;"></canvas>
 </div>
 
-<script src="/assets/js/chart.min.js"></script>
+<script src="/assets/js/chart.min.js" onload="console.log('Chart.js script loaded successfully')" onerror="console.error('Chart.js script failed to load')"></script>
 
 <script>
     function hideLoadingIndicator() {
@@ -276,6 +276,8 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
 
     // Wait for DOM to be ready before initializing charts
     document.addEventListener('DOMContentLoaded', function() {
+        console.log('DOMContentLoaded fired');
+        console.log('Chart object status at DOMContentLoaded:', typeof Chart);
         initCharts();
     });
 </script>
