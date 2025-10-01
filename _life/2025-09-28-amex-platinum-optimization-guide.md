@@ -28,7 +28,7 @@ The American Express Platinum Card has undergone massive changes in 2025, with t
 - Existing cardholders see changes at renewal on/after January 2, 2026
 - All credits reset annually from your card anniversary date
 
-![American Express Platinum Card Design](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.bloomberg.com%2Fnews%2Farticles%2F2022-01-20%2Famex-redesigns-695-a-year-platinum-card-with-mehretu-wiley-art&psig=AOvVaw2qr4AyTpesQ2zXuJquMq5u&ust=1759388698332000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCLCO9OS3gpADFQAAAAAdAAAAABAH)
+![American Express Platinum Card Design](https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iEQqGdxCUyoU/v0/-1x-1.webp)
 
 ## 💳 The Current Amex Platinum Benefits (2025)
 
