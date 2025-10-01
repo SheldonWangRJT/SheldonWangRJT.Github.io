@@ -274,17 +274,9 @@ I've been tracking my personal stock portfolio performance against the S&P 500 b
         console.log('All charts initialization complete!');
     }
 
-    // Wait for both DOM and Chart.js to be ready
-    function waitForChartJs() {
-        if (typeof Chart !== 'undefined') {
-            initCharts();
-        } else {
-            setTimeout(waitForChartJs, 100);
-        }
-    }
-
+    // Wait for DOM to be ready before initializing charts
     document.addEventListener('DOMContentLoaded', function() {
-        waitForChartJs();
+        initCharts();
     });
 </script>
 
