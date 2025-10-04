@@ -28,7 +28,7 @@ function initCharts() {
     const dec2024Data = [91.5, 530.7, 230, 36, 12.9, 851, 0];
     const aug2025Data = [65, 709.2, 285.5, 41.4, 18.6, 731.0, 0];
     const sep2025Data = [73.5, 686.4, 297.6, 43.9, 17.6, 751, 5.7];
-    const oct2025Data = [76.5, 701.7, 316.1, 42.9, 55.8, 676.3, 5.9];
+    const oct2025Data = [76.5, 701.7, 316.1, 42.9, 55.8, 737.9, 5.9];
 
     const totalDec = sum(dec2024Data);
     const totalAug = sum(aug2025Data);
