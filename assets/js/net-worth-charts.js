@@ -28,14 +28,17 @@ function initCharts() {
     const dec2024Data = [91.5, 530.7, 230, 36, 12.9, 851, 0];
     const aug2025Data = [65, 709.2, 285.5, 41.4, 18.6, 731.0, 0];
     const sep2025Data = [73.5, 686.4, 297.6, 43.9, 17.6, 751, 5.7];
+    const oct2025Data = [76.5, 701.7, 316.1, 42.9, 55.8, 676.3, 5.9];
 
     const totalDec = sum(dec2024Data);
     const totalAug = sum(aug2025Data);
     const totalSep = sum(sep2025Data);
+    const totalOct = sum(oct2025Data);
     const normalizedAug = (totalAug / totalDec) * 100;
     const normalizedSep = (totalSep / totalDec) * 100;
+    const normalizedOct = (totalOct / totalDec) * 100;
 
-    console.log('Data calculated:', { totalDec, totalAug, totalSep, normalizedAug, normalizedSep });
+    console.log('Data calculated:', { totalDec, totalAug, totalSep, totalOct, normalizedAug, normalizedSep, normalizedOct });
 
     // BAR CHART
     const barCanvas = document.getElementById('barChart');
@@ -47,12 +50,12 @@ function initCharts() {
             new Chart(barCtx, {
                 type: 'bar',
                 data: {
-                    labels: ['December 2024', 'August 2025', 'September 2025'],
+                    labels: ['December 2024', 'August 2025', 'September 2025', 'October 2025'],
                     datasets: [{
                         label: 'Net Worth Index (Dec 2024 = 100%)',
-                        data: [100, normalizedAug.toFixed(1), normalizedSep.toFixed(1)],
-                        backgroundColor: ['#4CAF50', '#2196F3', '#FF9800'],
-                        borderColor: ['#388E3C', '#1565C0', '#F57C00'],
+                        data: [100, normalizedAug.toFixed(1), normalizedSep.toFixed(1), normalizedOct.toFixed(1)],
+                        backgroundColor: ['#4CAF50', '#2196F3', '#FF9800', '#9C27B0'],
+                        borderColor: ['#388E3C', '#1565C0', '#F57C00', '#7B1FA2'],
                         borderWidth: 1,
                     }]
                 },
@@ -105,17 +108,18 @@ function initCharts() {
             const dec2024Pct = calcPercentages(dec2024Data);
             const aug2025Pct = calcPercentages(aug2025Data);
             const sep2025Pct = calcPercentages(sep2025Data);
+            const oct2025Pct = calcPercentages(oct2025Data);
 
-            console.log('Percentage data calculated:', { dec2024Pct, aug2025Pct, sep2025Pct });
+            console.log('Percentage data calculated:', { dec2024Pct, aug2025Pct, sep2025Pct, oct2025Pct });
 
             const lineCtx = lineCanvas.getContext('2d');
             new Chart(lineCtx, {
                 type: 'line',
                 data: {
-                    labels: ['December 2024', 'August 2025', 'September 2025'],
+                    labels: ['December 2024', 'August 2025', 'September 2025', 'October 2025'],
                     datasets: categories.map((category, index) => ({
                         label: category,
-                        data: [dec2024Pct[index], aug2025Pct[index], sep2025Pct[index]],
+                        data: [dec2024Pct[index], aug2025Pct[index], sep2025Pct[index], oct2025Pct[index]],
                         borderColor: ['#FFC107', '#2196F3', '#8BC34A', '#FF5722', '#9C27B0', '#3F51B5', '#FF9800'][index],
                         backgroundColor: ['#FFC107', '#2196F3', '#8BC34A', '#FF5722', '#9C27B0', '#3F51B5', '#FF9800'][index] + '20',
                         borderWidth: 3,
