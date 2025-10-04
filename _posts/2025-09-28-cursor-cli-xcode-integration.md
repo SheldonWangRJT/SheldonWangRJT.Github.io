@@ -1,4 +1,5 @@
 ---
+layout: single
 title: "🚀 Cursor CLI + Xcode: The Perfect AI-Powered iOS Development Workflow"
 description: "Discover how Cursor CLI seamlessly integrates with Xcode to revolutionize your iOS development workflow. Learn setup, advanced features, and productivity tips for AI-assisted coding."
 date: 2025-09-28 12:00:00 -0700
@@ -15,12 +16,16 @@ tags:
   - Development Tools
   - Swift
   - Productivity
+excerpt: "Discover how Cursor CLI seamlessly integrates with Xcode to revolutionize your iOS development workflow with AI-powered coding assistance."
 header:
   overlay_image: https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80
   overlay_filter: 0.5
   caption: "AI-powered development tools are revolutionizing how we write code"
-  show_overlay_excerpt: false
 ---
+
+<!--more-->
+
+## 🤖 What is Cursor CLI?
 
 As iOS developers, we're always looking for ways to streamline our workflow and boost productivity. The recent integration of **Cursor CLI** with **Xcode** has created a game-changing combination that brings AI-powered coding assistance directly into our development environment. Let me show you how this powerful duo can transform your iOS development experience.
 
