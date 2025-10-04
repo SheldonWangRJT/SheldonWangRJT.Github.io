@@ -8,12 +8,16 @@ tags:
   - Performance
   - System
   - Swift
+excerpt: "iOS background processing is crucial for apps that sync data, process media, or perform maintenance. This guide covers the modern BackgroundTasks framework, best practices from shipping billion-user apps, and debugging techniques that work in production."
 header:
   overlay_image: https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80
   overlay_filter: 0.5
   caption: "iOS background processing and system optimization for better app performance"
-  show_overlay_excerpt: false
 ---
+
+<!--more-->
+
+## Background Execution: The iOS Reality 📱
 
 iOS background processing is crucial for apps that sync data, process media, or perform maintenance. This guide covers the modern BackgroundTasks framework, best practices from shipping billion-user apps, and debugging techniques that work in production. ⏰
 

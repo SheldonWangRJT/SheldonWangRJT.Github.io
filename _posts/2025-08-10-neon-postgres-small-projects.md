@@ -8,12 +8,16 @@ tags:
   - Serverless
   - Vercel
   - Development
+excerpt: "Building a side project? Tired of database setup complexity and surprise bills? Neon Postgres might be exactly what you need."
 header:
   overlay_image: https://images.unsplash.com/photo-1544383835-bda2bc66a55d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2026&q=80
   overlay_filter: 0.5
   caption: "Serverless databases are revolutionizing modern web development"
-  show_overlay_excerpt: false
 ---
+
+<!--more-->
+
+## What is Neon Postgres? 📊
 
 Building a side project? Tired of database setup complexity and surprise bills? **Neon Postgres** might be exactly what you need. After using it across multiple projects, I'm convinced it's the sweet spot for developers who want PostgreSQL power without the operational overhead. 🚀
 
