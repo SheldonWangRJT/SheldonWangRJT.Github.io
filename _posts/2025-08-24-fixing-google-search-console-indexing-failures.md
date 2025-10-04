@@ -11,6 +11,11 @@ tags:
   - Redirects
   - Canonical URLs
   - Site Optimization
+header:
+  overlay_image: https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2015&q=80
+  overlay_filter: 0.5
+  caption: "SEO optimization and web analytics are crucial for site performance"
+  show_overlay_excerpt: false
 ---
 
 When Google Search Console started reporting indexing failures for my Next.js news aggregation site, I knew I had to dive deep into the technical details. The error was cryptic: "redirect URL issues" for both `http://news-ai.work/` and `https://www.news-ai.work/`. This is the story of how I diagnosed and fixed complex redirect chain problems that were preventing Google from properly indexing my site.

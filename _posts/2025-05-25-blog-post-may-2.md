@@ -8,6 +8,11 @@ tags:
   - Concurrency
   - Actors
   - AsyncAwait
+header:
+  overlay_image: https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80
+  overlay_filter: 0.5
+  caption: "Swift concurrency and modern asynchronous programming patterns"
+  show_overlay_excerpt: false
 ---
 
 Swift Concurrency makes async code safer and easier to reason about. This post shows practical patterns for using `async/await`, task groups, actors, and `AsyncSequence` in production iOS apps.

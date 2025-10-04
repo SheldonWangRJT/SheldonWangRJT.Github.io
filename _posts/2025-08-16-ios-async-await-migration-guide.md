@@ -10,6 +10,12 @@ tags:
   - Objective-C
   - Migration
   - Performance
+excerpt: "Complete guide to migrating iOS Swift code to async/await, covering legacy sync functions and Objective-C interoperability challenges."
+header:
+  overlay_image: https://images.unsplash.com/photo-1516116216624-53e697fedbea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2026&q=80
+  overlay_filter: 0.5
+  caption: "Modern iOS development with Swift concurrency and async/await patterns"
+  show_overlay_excerpt: false
 ---
 
 After 10+ years of iOS development, I've seen the evolution from NSOperationQueue to GCD, then to DispatchQueue, and now to Swift's structured concurrency with async/await. The migration to async/await isn't just about replacing completion handlers—it's a fundamental shift in how we think about concurrency, especially when dealing with legacy codebases that have deep Objective-C roots and synchronous APIs that assume main thread execution.

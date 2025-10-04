@@ -8,6 +8,11 @@ tags:
   - Instruments
   - Profiling
   - Memory
+header:
+  overlay_image: https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2025&q=80
+  overlay_filter: 0.5
+  caption: "Performance optimization and profiling tools for iOS development"
+  show_overlay_excerpt: false
 ---
 
 Achieving smooth, energy‑efficient iOS apps requires a disciplined performance workflow. This guide focuses on practical techniques with Xcode Instruments, Time Profiler, Memory Graph, and OSLog signposts to find and fix hot paths, leaks, and excessive allocations.

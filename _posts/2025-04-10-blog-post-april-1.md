@@ -9,6 +9,11 @@ tags:
   - Messaging
   - WebSocket
   - Push Notifications
+header:
+  overlay_image: https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80
+  overlay_filter: 0.5
+  caption: "Real-time messaging systems and modern communication architecture"
+  show_overlay_excerpt: false
 ---
 
 Building a real-time messaging system within an iOS app requires careful consideration of network connectivity, message delivery, offline support, and user experience. This guide explores the architecture and implementation of a robust messaging system that handles real-time communication, message persistence, and seamless user interactions.

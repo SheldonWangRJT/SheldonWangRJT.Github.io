@@ -8,6 +8,11 @@ tags:
   - GPU
   - Performance
   - ImageProcessing
+header:
+  overlay_image: https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2025&q=80
+  overlay_filter: 0.5
+  caption: "GPU acceleration and parallel processing power modern mobile applications"
+  show_overlay_excerpt: false
 ---
 
 Metal Performance Shaders (MPS) transforms iOS apps by offloading computation to the GPU. This guide shows production patterns for real-time image processing, ML inference, and compute shaders—delivering 10x+ performance gains over CPU-only approaches. 🚀
