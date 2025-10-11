@@ -51,7 +51,9 @@
 .playground-intro {
   text-align: center;
   margin-bottom: 2em;
-  padding: 1.5em clamp(16px, 4vw, 36px) 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 1.5em clamp(16px, 4vw, 36px) 0 clamp(16px, 4vw, 36px);
   
   p {
     font-size: 1.1em;
