@@ -14,11 +14,10 @@ header:
 {% include base_path %}
 
 # Staff Software Engineer - iOS
-[Email](mailto:sheldon.wang7@yahoo.com) | 720.772.9666
 
 ## 🎯 Executive Summary
 
-**Senior iOS engineer with 10+ years building apps that reach 800M+ users globally.** Proven track record leading large-scale technical initiatives, managing cross-functional teams, and delivering measurable business impact through code excellence.
+**iOS veteran with 10+ years building apps that reach 4+ Billions users globally.** Proven track record leading large-scale technical initiatives, managing cross-functional teams, and delivering measurable business impact through code excellence.
 
 ### **Key Achievements:**
 - 🏆 **Technical Excellence Award** winner at Snap Inc. (company-wide recognition)
@@ -61,10 +60,10 @@ header:
 
 ## 💼 Professional Experience
 
-### 🏢 Meta (Facebook) | June 2025 - Present
+### <i class="fab fa-meta" style="color: #0081FB;"></i> Meta (Facebook) | June 2025 - Present
 **Staff iOS Engineer** - Facebook & Instagram
 
-[Facebook iOS](https://apps.apple.com/us/app/facebook/id284882215), [Instagram iOS](https://apps.apple.com/us/app/instagram/id389801252) (3+ Billion MAU)
+[Facebook iOS](https://apps.apple.com/us/app/facebook/id284882215), [Instagram iOS](https://apps.apple.com/us/app/instagram/id389801252) (4+ Billion MAU)
 
 **Focus Areas:** Feed Ads, AI-Enhanced Development Efficiency, Cross-platform Engineering
 
@@ -77,7 +76,7 @@ header:
 ---
 
 
-### 📸 Snap Inc. | March 2019 - June 2025
+### <i class="fab fa-snapchat" style="color: #FFFC00;"></i> Snap Inc. | March 2019 - June 2025
 **iOS Tech Lead** - Snapchat
 
 [Snapchat iOS](https://apps.apple.com/us/app/snapchat/id447188370) (400M DAU, 800M MAU)
@@ -128,7 +127,7 @@ header:
 
 ---
 
-### 🚗 BMW Technology Corporation | May 2017 - March 2019
+### <i class="fas fa-car" style="color: #1C69D4;"></i> BMW Technology Corporation | May 2017 - March 2019
 **Senior iOS Engineer** - BMWConnected & MINIConnected Apps
 
 **Connected Car Platform:**
@@ -150,7 +149,7 @@ header:
 
 ---
 
-### 🏦 Citigroup | April 2016 - May 2017
+### <i class="fas fa-building-columns" style="color: #003C71;"></i> Citigroup | April 2016 - May 2017
 **Senior iOS Engineer** - Citi Mobile
 
 **App:** [Citi Mobile on iTunes](https://itunes.apple.com/us/app/citi-mobile/id301724680)
