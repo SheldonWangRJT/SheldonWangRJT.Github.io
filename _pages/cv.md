@@ -21,7 +21,7 @@ header:
 
 ### **Key Achievements:**
 - 🏆 **Technical Excellence Award** winner at Snap Inc. (company-wide recognition)
-- 📊 **Top 20 all-time** committer to Snapchat iOS codebase (out of 100+ iOS engineers)
+- 📊 **Top 20 all-time** committer to Snapchat iOS codebase (out of 1000+ iOS engineers)
 - ⚡ **60% latency reduction** in Snapchat video playback (4B monthly views)
 - 🏗️ **200K+ lines** architecture refactor lead (Matcha project, 10 engineers, 30+ teams)
 - 👥 **100M daily users** served by features under my ownership
