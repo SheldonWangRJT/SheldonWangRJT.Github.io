@@ -134,7 +134,7 @@ Catch falling stars with your basket! Don't let them fall!
         
         <div class="stars-info">
             <div>Score: <span class="stars-score" id="stars-score">0</span></div>
-            <div>Lives: <span class="stars-lives" id="stars-lives">❤️❤️❤️</span></div>
+            <div>Lives: <span class="stars-lives" id="stars-lives">❤️❤️❤️❤️❤️</span></div>
         </div>
         
         <canvas class="stars-canvas" id="stars-canvas" width="600" height="500"></canvas>
@@ -163,11 +163,11 @@ Catch falling stars with your basket! Don't let them fall!
         
         let gameRunning = false;
         let score = 0;
-        let lives = 3;
+        let lives = 5;  // Increased from 3 to 5
         let basketX = canvas.width / 2;
-        let basketWidth = 80;
-        let basketHeight = 20;
-        let basketSpeed = 8;
+        let basketWidth = 100;  // Increased from 80 to 100 (bigger basket)
+        let basketHeight = 25;  // Increased from 20 to 25
+        let basketSpeed = 10;  // Increased from 8 to 10 (faster movement)
         let stars = [];
         let particles = [];
         let keys = {};
@@ -181,7 +181,8 @@ Catch falling stars with your basket! Don't let them fall!
                 this.x = Math.random() * (canvas.width - 30) + 15;
                 this.y = -30;
                 this.size = 20 + Math.random() * 15;
-                this.speed = 2 + Math.random() * 3 + (score / 100);
+                // Slower falling speed: was 2-5, now 1.5-3, gradual difficulty increase
+                this.speed = 1.5 + Math.random() * 1.5 + (score / 500);
                 this.rotation = Math.random() * Math.PI * 2;
                 this.rotationSpeed = (Math.random() - 0.5) * 0.1;
                 this.color = this.getRandomStarColor();
@@ -331,8 +332,9 @@ Catch falling stars with your basket! Don't let them fall!
             
             drawBasket();
             
-            // Update and draw stars
-            if (Math.random() < 0.02 + score / 5000) {
+            // Update and draw stars - spawn less frequently
+            // Was 0.02, now 0.012 (about half as many stars)
+            if (Math.random() < 0.012 + score / 10000) {
                 stars.push(new Star());
             }
             
@@ -381,7 +383,7 @@ Catch falling stars with your basket! Don't let them fall!
         function startGame() {
             gameRunning = true;
             score = 0;
-            lives = 3;
+            lives = 5;  // Start with 5 lives
             stars = [];
             particles = [];
             basketX = canvas.width / 2;
