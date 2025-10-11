@@ -12,32 +12,36 @@ Simon Says style memory game! Watch the pattern and repeat it!
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color Sequence Game</title>
     <style>
-        body {
+        .colorseq-wrapper {
             font-family: 'Comic Sans MS', cursive, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            margin: 0;
+            min-height: 70vh;
+            padding: 20px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            margin: 20px auto;
+            max-width: 600px;
         }
         
-        #game-container {
+        .colorseq-container {
             text-align: center;
             background: white;
             padding: 30px;
             border-radius: 20px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-            max-width: 500px;
+            width: 100%;
         }
         
-        h1 {
+        .colorseq-title {
             color: #667eea;
             margin: 0 0 20px 0;
-            font-size: 2em;
+            font-size: 1.8em;
+            font-weight: bold;
         }
         
-        #info-panel {
+        .colorseq-info-panel {
             display: flex;
             justify-content: space-around;
             margin: 20px 0;
@@ -45,15 +49,15 @@ Simon Says style memory game! Watch the pattern and repeat it!
             font-weight: bold;
         }
         
-        #level {
+        .colorseq-level {
             color: #f093fb;
         }
         
-        #score {
+        .colorseq-score {
             color: #43e97b;
         }
         
-        #color-grid {
+        .colorseq-grid {
             display: grid;
             grid-template-columns: repeat(2, 150px);
             grid-template-rows: repeat(2, 150px);
@@ -62,7 +66,7 @@ Simon Says style memory game! Watch the pattern and repeat it!
             margin: 30px 0;
         }
         
-        .color-button {
+        .colorseq-button {
             border: none;
             border-radius: 15px;
             cursor: pointer;
@@ -72,25 +76,25 @@ Simon Says style memory game! Watch the pattern and repeat it!
             overflow: hidden;
         }
         
-        .color-button:active {
+        .colorseq-button:active {
             transform: scale(0.95);
         }
         
-        .color-button.active {
+        .colorseq-button.active {
             transform: scale(1.05);
             box-shadow: 0 0 30px rgba(255,255,255,0.8);
         }
         
-        #red { background-color: #ff4757; }
-        #green { background-color: #2ed573; }
-        #blue { background-color: #1e90ff; }
-        #yellow { background-color: #ffa502; }
+        .colorseq-red { background-color: #ff4757; }
+        .colorseq-green { background-color: #2ed573; }
+        .colorseq-blue { background-color: #1e90ff; }
+        .colorseq-yellow { background-color: #ffa502; }
         
-        .color-button.dim {
+        .colorseq-button.dim {
             filter: brightness(0.6);
         }
         
-        #start-btn, #restart-btn {
+        .colorseq-btn {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border: none;
@@ -104,67 +108,69 @@ Simon Says style memory game! Watch the pattern and repeat it!
             margin: 10px;
         }
         
-        #start-btn:hover, #restart-btn:hover {
+        .colorseq-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(0,0,0,0.3);
         }
         
-        #message {
+        .colorseq-message {
             font-size: 1.3em;
             font-weight: bold;
             margin: 20px 0;
             min-height: 30px;
         }
         
-        .success {
+        .colorseq-success {
             color: #2ed573;
         }
         
-        .error {
+        .colorseq-error {
             color: #ff4757;
         }
         
-        .info {
+        .colorseq-info {
             color: #667eea;
         }
         
-        #restart-btn {
+        .colorseq-restart {
             display: none;
         }
         
         @media (max-width: 600px) {
-            #color-grid {
+            .colorseq-grid {
                 grid-template-columns: repeat(2, 120px);
                 grid-template-rows: repeat(2, 120px);
                 gap: 10px;
             }
             
-            #game-container {
+            .colorseq-container {
                 padding: 20px;
             }
         }
     </style>
 </head>
 <body>
-    <div id="game-container">
-        <h1>🌈 Color Sequence Game 🎨</h1>
-        
-        <div id="info-panel">
-            <div>Level: <span id="level">1</span></div>
-            <div>Score: <span id="score">0</span></div>
+    <div class="colorseq-wrapper">
+        <div class="colorseq-container">
+            <div class="colorseq-title">🌈 Color Sequence Game 🎨</div>
+            
+            <div class="colorseq-info-panel">
+                <div>Level: <span class="colorseq-level" id="colorseq-level">1</span></div>
+                <div>Score: <span class="colorseq-score" id="colorseq-score">0</span></div>
+            </div>
+            
+            <div class="colorseq-grid">
+                <button class="colorseq-button colorseq-red dim" id="colorseq-red" data-color="red"></button>
+                <button class="colorseq-button colorseq-green dim" id="colorseq-green" data-color="green"></button>
+                <button class="colorseq-button colorseq-blue dim" id="colorseq-blue" data-color="blue"></button>
+                <button class="colorseq-button colorseq-yellow dim" id="colorseq-yellow" data-color="yellow"></button>
+            </div>
+            
+            <div class="colorseq-message colorseq-info" id="colorseq-message">Watch and remember the pattern!</div>
+            
+            <button class="colorseq-btn" id="colorseq-start">Start Game</button>
+            <button class="colorseq-btn colorseq-restart" id="colorseq-restart">Play Again</button>
         </div>
-        
-        <div id="color-grid">
-            <button class="color-button dim" id="red" data-color="red"></button>
-            <button class="color-button dim" id="green" data-color="green"></button>
-            <button class="color-button dim" id="blue" data-color="blue"></button>
-            <button class="color-button dim" id="yellow" data-color="yellow"></button>
-        </div>
-        
-        <div id="message" class="info">Watch and remember the pattern!</div>
-        
-        <button id="start-btn">Start Game</button>
-        <button id="restart-btn">Play Again</button>
     </div>
 
     <script>
@@ -176,12 +182,12 @@ Simon Says style memory game! Watch the pattern and repeat it!
         let isShowingSequence = false;
         
         const colors = ['red', 'green', 'blue', 'yellow'];
-        const buttons = document.querySelectorAll('.color-button');
-        const startBtn = document.getElementById('start-btn');
-        const restartBtn = document.getElementById('restart-btn');
-        const messageEl = document.getElementById('message');
-        const levelEl = document.getElementById('level');
-        const scoreEl = document.getElementById('score');
+        const buttons = document.querySelectorAll('.colorseq-button');
+        const startBtn = document.getElementById('colorseq-start');
+        const restartBtn = document.getElementById('colorseq-restart');
+        const messageEl = document.getElementById('colorseq-message');
+        const levelEl = document.getElementById('colorseq-level');
+        const scoreEl = document.getElementById('colorseq-score');
         
         // Sound effects using Web Audio API
         const audioContext = new (window.AudioContext || window.webkitAudioContext)();
@@ -211,7 +217,7 @@ Simon Says style memory game! Watch the pattern and repeat it!
         }
         
         function flashButton(color) {
-            const button = document.getElementById(color);
+            const button = document.getElementById('colorseq-' + color);
             button.classList.remove('dim');
             button.classList.add('active');
             playSound(color);
@@ -225,7 +231,7 @@ Simon Says style memory game! Watch the pattern and repeat it!
         function showSequence() {
             isShowingSequence = true;
             messageEl.textContent = '👀 Watch carefully!';
-            messageEl.className = 'info';
+            messageEl.className = 'colorseq-message colorseq-info';
             disableButtons();
             
             let i = 0;
@@ -272,7 +278,7 @@ Simon Says style memory game! Watch the pattern and repeat it!
             score += level * 10;
             scoreEl.textContent = score;
             messageEl.textContent = `🎉 Level ${level} Complete!`;
-            messageEl.className = 'success';
+            messageEl.className = 'colorseq-message colorseq-success';
             
             setTimeout(() => {
                 level++;
@@ -284,7 +290,7 @@ Simon Says style memory game! Watch the pattern and repeat it!
         function gameOver() {
             isPlaying = false;
             messageEl.textContent = `💔 Game Over! Final Score: ${score}`;
-            messageEl.className = 'error';
+            messageEl.className = 'colorseq-message colorseq-error';
             
             buttons.forEach(btn => {
                 btn.classList.add('dim');
