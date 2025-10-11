@@ -14,11 +14,7 @@ header:
 {% include base_path %}
 
 # Staff Software Engineer - iOS
-
-📧 [sheldon.wang7@yahoo.com](mailto:sheldon.wang7@yahoo.com) | 📱 720.772.9666  
-💼 [LinkedIn](https://linkedin.com/in/sheldonengineering) | 💻 [GitHub](https://github.com/sheldonwangrjt) | 🎥 [YouTube](https://www.youtube.com/@iOSeTutorials)
-
----
+[Email](mailto:sheldon.wang7@yahoo.com) | 720.772.9666
 
 ## 🎯 Executive Summary
 
@@ -68,7 +64,7 @@ header:
 ### 🏢 Meta (Facebook) | June 2025 - Present
 **Staff iOS Engineer** - Facebook & Instagram
 
-**Apps:** [Facebook iOS](https://apps.apple.com/us/app/facebook/id284882215) | [Instagram iOS](https://apps.apple.com/us/app/instagram/id389801252)
+[Facebook iOS](https://apps.apple.com/us/app/facebook/id284882215), [Instagram iOS](https://apps.apple.com/us/app/instagram/id389801252) (3+ Billion MAU)
 
 **Focus Areas:** Feed Ads, AI-Enhanced Development Efficiency, Cross-platform Engineering
 
@@ -84,9 +80,9 @@ header:
 ### 📸 Snap Inc. | March 2019 - June 2025
 **iOS Tech Lead** - Snapchat
 
-**App:** [Snapchat iOS](https://apps.apple.com/us/app/snapchat/id447188370) (400M DAU, 800M MAU)
+[Snapchat iOS](https://apps.apple.com/us/app/snapchat/id447188370) (400M DAU, 800M MAU)
 
-#### 🏆 Memories Team iOS Lead | March 2020 - June 2025
+🏆 Memories Team iOS Lead | March 2020 - June 2025
 
 **Leadership & Impact:**
 - 👥 Led iOS team for Memories, serving **100M daily users**
@@ -117,7 +113,7 @@ header:
 - 🔄 Refactored 10K+ lines to use latest platform frameworks
 - ✨ Significantly improved user experience through code modernization
 
-#### 🕶️ Spectacles Team iOS | March 2019 - March 2020
+🕶️ Spectacles Team iOS | March 2019 - March 2020
 
 **Hardware Integration:**
 - 🚁 Launched **Pixy** (Snapchat flying drone camera)
@@ -200,7 +196,13 @@ Tech moves fast. I stay ahead by constantly learning – evident from this blog 
 
 ## 📄 Download Resume
 
-**Interested in working together?** Download my full resume or reach out directly:
+**Interested in working together?**
+
+<a href="/files/Sheldon_Wang_Resume_2025.docx" class="btn btn--primary btn--large" download>
+  📥 Download Full Resume (DOCX)
+</a>
+
+**Or reach out directly:**
 
 📧 **Email:** [sheldon.wang7@yahoo.com](mailto:sheldon.wang7@yahoo.com)  
 📱 **Phone:** 720.772.9666  

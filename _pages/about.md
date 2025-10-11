@@ -92,7 +92,7 @@ Found something useful? Disagree with my investment thesis? Built something cool
 - 💼 LinkedIn: [linkedin.com/in/sheldonengineering](https://linkedin.com/in/sheldonengineering)
 - 💻 GitHub: [github.com/sheldonwangrjt](https://github.com/sheldonwangrjt)
 - 🎥 YouTube: [@iOSeTutorials](https://www.youtube.com/@iOSeTutorials)
-- 📄 [Full Resume/CV](/cv/) - All the formal details
+- 📄 [Full Resume/CV](/cv/) or <a href="/files/Sheldon_Wang_Resume_2025.docx" download>download DOCX</a>
 
 ## 📊 By The Numbers
 
