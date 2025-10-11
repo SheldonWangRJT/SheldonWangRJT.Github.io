@@ -1,7 +1,7 @@
 ---
 title: "Political Turmoil & Market Volatility: Investment Strategy for Uncertain Times"
 description: "With FBI Director indictments and DOJ controversies making headlines, learn how political instability affects markets and actionable strategies to protect and grow your portfolio in volatile times."
-date: 2025-10-11
+date: 2025-10-10
 permalink: /portfolio/political-turmoil-investment-strategy/
 tags:
   - Investment Strategy

@@ -2,7 +2,7 @@
 layout: single
 title: "⚛️ Princeton's AI Breakthrough: Solving Fusion Energy's Biggest Challenge"
 description: "Princeton University's revolutionary AI system can predict and stabilize plasma disruptions in fusion reactors, bringing us closer to unlimited clean energy. Here's how artificial intelligence is making fusion power a reality."
-date: 2025-10-11 14:00:00 -0700
+date: 2025-10-10 14:00:00 -0700
 categories:
   - Technology
   - Energy

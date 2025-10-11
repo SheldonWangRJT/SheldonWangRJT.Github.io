@@ -1,7 +1,7 @@
 ---
 title: "October 2025 Market Outlook: Hidden Opportunities in Market Corrections"
 description: "Deep dive into October 2025 market trends, sector opportunities, and smart investment strategies. Discover where to find value as markets digest political uncertainty and economic data."
-date: 2025-10-11
+date: 2025-10-10
 permalink: /portfolio/october-2025-market-outlook/
 tags:
   - Market Analysis

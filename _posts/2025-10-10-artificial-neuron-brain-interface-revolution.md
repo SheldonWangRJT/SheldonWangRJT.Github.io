@@ -2,7 +2,7 @@
 layout: single
 title: "🧠 Artificial Neurons That Speak the Brain's Language: The Future of Neural Computing"
 description: "Scientists have created revolutionary artificial neurons using bacterial protein nanowires that communicate like real brain cells. Discover how this breakthrough is reshaping brain-computer interfaces and neuromorphic computing."
-date: 2025-10-11 10:00:00 -0700
+date: 2025-10-10 10:00:00 -0700
 categories:
   - Technology
   - Neuroscience
