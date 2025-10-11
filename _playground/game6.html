@@ -1,0 +1,349 @@
+---
+title: "🌈 Color Sequence Game! 🎨"
+date: 2025-10-10
+---
+
+Simon Says style memory game! Watch the pattern and repeat it!
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Sequence Game</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        #game-container {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            max-width: 500px;
+        }
+        
+        h1 {
+            color: #667eea;
+            margin: 0 0 20px 0;
+            font-size: 2em;
+        }
+        
+        #info-panel {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        
+        #level {
+            color: #f093fb;
+        }
+        
+        #score {
+            color: #43e97b;
+        }
+        
+        #color-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 150px);
+            grid-template-rows: repeat(2, 150px);
+            gap: 15px;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        
+        .color-button {
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .color-button:active {
+            transform: scale(0.95);
+        }
+        
+        .color-button.active {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(255,255,255,0.8);
+        }
+        
+        #red { background-color: #ff4757; }
+        #green { background-color: #2ed573; }
+        #blue { background-color: #1e90ff; }
+        #yellow { background-color: #ffa502; }
+        
+        .color-button.dim {
+            filter: brightness(0.6);
+        }
+        
+        #start-btn, #restart-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2em;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+            margin: 10px;
+        }
+        
+        #start-btn:hover, #restart-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        #message {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin: 20px 0;
+            min-height: 30px;
+        }
+        
+        .success {
+            color: #2ed573;
+        }
+        
+        .error {
+            color: #ff4757;
+        }
+        
+        .info {
+            color: #667eea;
+        }
+        
+        #restart-btn {
+            display: none;
+        }
+        
+        @media (max-width: 600px) {
+            #color-grid {
+                grid-template-columns: repeat(2, 120px);
+                grid-template-rows: repeat(2, 120px);
+                gap: 10px;
+            }
+            
+            #game-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <h1>🌈 Color Sequence Game 🎨</h1>
+        
+        <div id="info-panel">
+            <div>Level: <span id="level">1</span></div>
+            <div>Score: <span id="score">0</span></div>
+        </div>
+        
+        <div id="color-grid">
+            <button class="color-button dim" id="red" data-color="red"></button>
+            <button class="color-button dim" id="green" data-color="green"></button>
+            <button class="color-button dim" id="blue" data-color="blue"></button>
+            <button class="color-button dim" id="yellow" data-color="yellow"></button>
+        </div>
+        
+        <div id="message" class="info">Watch and remember the pattern!</div>
+        
+        <button id="start-btn">Start Game</button>
+        <button id="restart-btn">Play Again</button>
+    </div>
+
+    <script>
+        let sequence = [];
+        let playerSequence = [];
+        let level = 1;
+        let score = 0;
+        let isPlaying = false;
+        let isShowingSequence = false;
+        
+        const colors = ['red', 'green', 'blue', 'yellow'];
+        const buttons = document.querySelectorAll('.color-button');
+        const startBtn = document.getElementById('start-btn');
+        const restartBtn = document.getElementById('restart-btn');
+        const messageEl = document.getElementById('message');
+        const levelEl = document.getElementById('level');
+        const scoreEl = document.getElementById('score');
+        
+        // Sound effects using Web Audio API
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        
+        const colorFrequencies = {
+            red: 261.63,
+            green: 293.66,
+            blue: 329.63,
+            yellow: 349.23
+        };
+        
+        function playSound(color) {
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+            
+            oscillator.frequency.value = colorFrequencies[color];
+            oscillator.type = 'sine';
+            
+            gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+            
+            oscillator.start(audioContext.currentTime);
+            oscillator.stop(audioContext.currentTime + 0.3);
+        }
+        
+        function flashButton(color) {
+            const button = document.getElementById(color);
+            button.classList.remove('dim');
+            button.classList.add('active');
+            playSound(color);
+            
+            setTimeout(() => {
+                button.classList.remove('active');
+                button.classList.add('dim');
+            }, 400);
+        }
+        
+        function showSequence() {
+            isShowingSequence = true;
+            messageEl.textContent = '👀 Watch carefully!';
+            messageEl.className = 'info';
+            disableButtons();
+            
+            let i = 0;
+            const interval = setInterval(() => {
+                if (i < sequence.length) {
+                    flashButton(sequence[i]);
+                    i++;
+                } else {
+                    clearInterval(interval);
+                    isShowingSequence = false;
+                    messageEl.textContent = '✨ Your turn! Repeat the pattern!';
+                    enableButtons();
+                }
+            }, 700);
+        }
+        
+        function addToSequence() {
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            sequence.push(randomColor);
+        }
+        
+        function handleButtonClick(color) {
+            if (isShowingSequence || !isPlaying) return;
+            
+            flashButton(color);
+            playerSequence.push(color);
+            
+            const currentIndex = playerSequence.length - 1;
+            
+            if (playerSequence[currentIndex] !== sequence[currentIndex]) {
+                // Wrong!
+                gameOver();
+                return;
+            }
+            
+            if (playerSequence.length === sequence.length) {
+                // Level complete!
+                levelComplete();
+            }
+        }
+        
+        function levelComplete() {
+            isPlaying = false;
+            score += level * 10;
+            scoreEl.textContent = score;
+            messageEl.textContent = `🎉 Level ${level} Complete!`;
+            messageEl.className = 'success';
+            
+            setTimeout(() => {
+                level++;
+                levelEl.textContent = level;
+                nextRound();
+            }, 1500);
+        }
+        
+        function gameOver() {
+            isPlaying = false;
+            messageEl.textContent = `💔 Game Over! Final Score: ${score}`;
+            messageEl.className = 'error';
+            
+            buttons.forEach(btn => {
+                btn.classList.add('dim');
+            });
+            
+            startBtn.style.display = 'none';
+            restartBtn.style.display = 'inline-block';
+        }
+        
+        function nextRound() {
+            playerSequence = [];
+            addToSequence();
+            isPlaying = true;
+            showSequence();
+        }
+        
+        function startGame() {
+            sequence = [];
+            playerSequence = [];
+            level = 1;
+            score = 0;
+            levelEl.textContent = level;
+            scoreEl.textContent = score;
+            
+            startBtn.style.display = 'none';
+            restartBtn.style.display = 'none';
+            
+            nextRound();
+        }
+        
+        function disableButtons() {
+            buttons.forEach(btn => {
+                btn.style.pointerEvents = 'none';
+            });
+        }
+        
+        function enableButtons() {
+            buttons.forEach(btn => {
+                btn.style.pointerEvents = 'auto';
+                btn.classList.remove('dim');
+            });
+        }
+        
+        // Event listeners
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                handleButtonClick(btn.dataset.color);
+            });
+        });
+        
+        startBtn.addEventListener('click', startGame);
+        restartBtn.addEventListener('click', () => {
+            restartBtn.style.display = 'none';
+            startGame();
+        });
+        
+        // Initialize
+        disableButtons();
+    </script>
+</body>
+</html>
+
