@@ -6,16 +6,20 @@
   {% assign title = post.title %}
 {% endif %}
 
+{% if post.link %}
+  {% assign card_url = post.link %}
+{% else %}
+  {% assign card_url = base_path | append: post.url %}
+{% endif %}
+
 <div class="playground-grid__item">
-  <article class="playground__item" itemscope itemtype="http://schema.org/CreativeWork">
-    <div class="playground__item-teaser-placeholder">
-      <span class="playground__item-title-overlay" itemprop="headline">
-        {% if post.link %}
-          <a href="{{ post.link }}">{{ title }}</a>
-        {% else %}
-          <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
-        {% endif %}
-      </span>
-    </div>
-  </article>
+  <a href="{{ card_url }}" rel="permalink" class="playground__item-link">
+    <article class="playground__item" itemscope itemtype="http://schema.org/CreativeWork">
+      <div class="playground__item-teaser-placeholder">
+        <span class="playground__item-title-overlay" itemprop="headline">
+          {{ title }}
+        </span>
+      </div>
+    </article>
+  </a>
 </div>

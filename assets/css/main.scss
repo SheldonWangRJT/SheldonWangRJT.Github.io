@@ -93,6 +93,14 @@
   flex-direction: column;
 }
 
+.playground__item-link {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
 .playground__item {
   flex: 1;
   display: flex;
@@ -104,42 +112,49 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   position: relative;
-  
-  &:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
-    
-    .playground__item-teaser-placeholder {
-      &:before {
-        transform: scale(1.15) rotate(10deg);
-        opacity: 0.8;
-      }
-    }
-    
-    .playground__item-title-overlay {
-      background: rgba(0, 0, 0, 0.75);
-    }
-  }
+}
+
+.playground__item-link:hover .playground__item {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+.playground__item-link:hover .playground__item-teaser-placeholder:before {
+  transform: scale(1.15) rotate(10deg);
+  opacity: 0.8;
+}
+
+.playground__item-link:hover .playground__item-title-overlay {
+  background: rgba(0, 0, 0, 0.75);
+}
   
   /* Beautiful gradient variations for each game */
-  &:nth-child(1) {
+  .playground__item-link:nth-child(1) & {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   }
   
-  &:nth-child(2) {
+  .playground__item-link:nth-child(2) & {
     background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
   }
   
-  &:nth-child(3) {
+  .playground__item-link:nth-child(3) & {
     background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
   }
   
-  &:nth-child(4) {
+  .playground__item-link:nth-child(4) & {
     background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
   }
   
-  &:nth-child(5) {
+  .playground__item-link:nth-child(5) & {
     background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  }
+  
+  .playground__item-link:nth-child(6) & {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  
+  .playground__item-link:nth-child(7) & {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
   }
 }
 
@@ -206,17 +221,10 @@
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   
   a {
-    color: #fff;
-    text-decoration: none;
-    display: block;
-    
-    &:hover {
-      text-decoration: none;
-      opacity: 1;
-      transform: scale(1.05);
-      display: inline-block;
-    }
-  }
+        color: #fff;
+        text-decoration: none;
+        display: block;
+      }
   
   @media screen and (max-width: 600px) {
     font-size: 1em;
