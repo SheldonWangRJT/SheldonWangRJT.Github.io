@@ -50,10 +50,8 @@
 
 .playground-intro {
   text-align: center;
-  margin-bottom: 3em;
-  padding: 2em clamp(16px, 4vw, 36px);
-  position: relative;
-  z-index: 10;
+  margin-bottom: 2em;
+  padding: 1.5em clamp(16px, 4vw, 36px) 0;
   
   p {
     font-size: 1.1em;
@@ -68,10 +66,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.5em;
-  margin-top: 2em;
+  margin-top: 0;
   padding: 0 clamp(16px, 3vw, 24px);
-  position: relative;
-  z-index: 1;
+  clear: both;
   
   @media screen and (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
