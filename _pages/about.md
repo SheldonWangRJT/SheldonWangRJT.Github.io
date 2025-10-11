@@ -6,9 +6,15 @@ author_profile: true
 redirect_from:
   - /about/
   - /about.html
+header:
+  overlay_image: https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80
+  overlay_filter: 0.5
+  caption: "Code. Create. Inspire."
 ---
 
-Welcome to my corner of the internet! 🌐 I'm Sheldon – Staff iOS Engineer at Meta, former Snapchat architect, and your friendly neighborhood tech enthusiast who believes life's too short for boring code and bad coffee. ☕️
+Welcome to my corner of the internet! 🌐 I'm **Sheldon Wang** – Staff iOS Engineer at **Meta** (working on Facebook & Instagram), former **Snapchat** architect (top-20 all-time committer 🏆), and your friendly neighborhood tech enthusiast who believes life's too short for boring code and bad coffee. ☕️
+
+With **10+ years** building iOS apps for **800+ million users**, I've learned a thing or two about mobile development, system architecture, and what it takes to ship world-class products. But this site isn't just about tech – it's about sharing everything I'm learning along the way.
 
 ## 🗺️ What You'll Find Here
 
@@ -29,22 +35,76 @@ Explore all content organized by topics and themes. Perfect for finding posts on
 
 ## 🎯 Who Am I?
 
-**In the professional world:** I build mobile experiences that reach hundreds of millions of users. At Meta, I work on Facebook's ads and AI systems. Before that, I was deep in Snapchat's iOS codebase (fun fact: I'm a top-20 all-time committer there 🏆).
+### **The Professional Side** 💼
 
-**In the real world:** I'm the guy who gets genuinely excited about elegant code architecture, spends too much time optimizing workflows, and thinks the best conversations happen over good food and bad puns.
+**Current Role:** Staff iOS Engineer at **Meta** (June 2025 - Present)
+- Working on Facebook & Instagram iOS apps
+- Focus: Feed Ads, Development Efficiency with AI, Cross-platform initiatives
+- Building features used by billions daily
 
-**My superpower:** Taking complex technical concepts and making them actually understandable. Whether that's explaining iOS memory management or why your portfolio allocation might be all wrong.
+**Previous:** iOS Lead at **Snap Inc.** (March 2019 - June 2025)
+- Led Memories Team serving 100M daily users
+- Managed 10+ engineers, coordinated with 30+ teams
+- Won Technical Excellence Award for company-wide impact
+- Reduced video latency by 60%, boosted engagement significantly
+- Led 200K+ line architecture refactor (Matcha project)
 
-## 🚀 Latest & Greatest
+**Before That:** Senior iOS Engineer at BMW, Citi Mobile, and more
+- Built connected car experiences for BMW & MINI
+- Developed banking features for millions of Citi customers
+- Always pushing boundaries of what mobile can do
 
-Recently shipped: Evidence-based guide to slowing hair graying (because apparently stress *does* cause gray hair, and I have the papers to prove it), deep dives into Swift concurrency patterns, and some questionable takes on market dynamics.
+### **The Real Me** 🌟
+
+I'm the guy who:
+- Gets genuinely excited about elegant code architecture 🏗️
+- Spends too much time optimizing workflows (guilty!) ⚡
+- Thinks the best conversations happen over good food and bad puns 🍜
+- Believes in sharing knowledge – hence this site! 📚
+
+### **My Superpower** 🦸
+
+Taking complex technical concepts and making them **actually understandable**. Whether that's explaining iOS memory management, system design patterns, or why your investment portfolio allocation might need rethinking.
+
+I write code that scales to millions, and content that helps people level up. That's the goal here.
+
+## 🚀 What I've Been Up To
+
+**Recent Highlights:**
+- 🧠 Exploring AI-powered development workflows (Cursor CLI + Xcode integration)
+- ⚛️ Following fusion energy breakthroughs (Princeton's AI solving plasma control!)
+- 💰 Analyzing October 2025 market volatility and investment strategies
+- ⌚ Deep-diving into wearable health tech (Apple Watch, Oura Ring optimization)
+- 🏀 Making bold NBA predictions (Celtics vs Nuggets Finals, anyone?)
+
+**Fun Stats:**
+- 📝 **41,000+ words** published just this month
+- 🎮 **7 interactive games** built for the playground
+- 📊 Top-20 all-time Snapchat iOS contributor
+- 🏆 Meta Staff Engineer level achieved
 
 ## 💬 Let's Connect
 
-Found something useful? Disagree with my investment thesis? Built something cool inspired by a post? I'd love to hear about it! Check out my [resume](/cv/) for the formal stuff, or just browse around and see what catches your eye.
+Found something useful? Disagree with my investment thesis? Built something cool inspired by a post? I'd love to hear about it!
 
-Thanks for stopping by – enjoy exploring! 🎉
+**Where to find me:**
+- 📧 Email: [sheldon.wang7@yahoo.com](mailto:sheldon.wang7@yahoo.com)
+- 💼 LinkedIn: [linkedin.com/in/sheldonengineering](https://linkedin.com/in/sheldonengineering)
+- 💻 GitHub: [github.com/sheldonwangrjt](https://github.com/sheldonwangrjt)
+- 🎥 YouTube: [@iOSeTutorials](https://www.youtube.com/@iOSeTutorials)
+- 📄 [Full Resume/CV](/cv/) - All the formal details
+
+## 📊 By The Numbers
+
+- **10+ years** iOS development experience
+- **800M+ users** reached through apps I've built
+- **4+ years** leading engineering teams (up to 10 engineers)
+- **200K+ lines** refactored in major architecture projects
+- **60% reduction** in video latency (Snapchat Memories)
+- **100M daily users** served by features I've led
 
 ---
+
+**Thanks for stopping by – enjoy exploring!** 🎉
 
 *P.S. If you're wondering about the emojis everywhere: life's more fun with a little visual flair. Fight me. 😄*
