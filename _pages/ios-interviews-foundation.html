@@ -1,0 +1,84 @@
+---
+layout: archive
+title: "📚 iOS Foundation Questions"
+permalink: /ios-interviews/foundation/
+author_profile: true
+---
+
+{% include base_path %}
+
+<style>
+.foundation-intro {
+  text-align: center;
+  padding: 30px;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 15px;
+  margin-bottom: 40px;
+}
+
+.foundation-intro h2 {
+  color: #667eea;
+  margin-top: 0;
+}
+
+.foundation-intro p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1em;
+  line-height: 1.7;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #667eea;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-link:hover {
+  color: #764ba2;
+}
+
+.protected-content {
+  display: none;
+}
+
+.protected-content.unlocked {
+  display: block;
+}
+</style>
+
+<div id="protected-content" class="protected-content">
+  <a href="{{ base_path }}/ios-interviews/" class="back-link">← Back to Interview Hub</a>
+
+  <div class="foundation-intro">
+    <h2>📚 iOS Foundation Question Sets</h2>
+    <p>
+      10 comprehensive question sets covering everything from Swift basics to advanced iOS concepts. Each set contains 20-30 questions with detailed answers. Perfect for building a strong foundation before system design rounds.
+    </p>
+  </div>
+
+  {% if site.interviews %}
+    {% assign foundation_posts = site.interviews | where: "category", "foundation" | sort: "date" | reverse %}
+    {% for post in foundation_posts %}
+      {% include archive-single.html %}
+    {% endfor %}
+  {% else %}
+    <p style="text-align: center; color: rgba(255,255,255,0.7); padding: 40px;">
+      No questions available yet. Check back soon!
+    </p>
+  {% endif %}
+</div>
+
+<script>
+// Check authentication
+window.addEventListener('DOMContentLoaded', function() {
+  if (sessionStorage.getItem('ios-interviews-unlocked') === 'true') {
+    document.getElementById('protected-content').classList.add('unlocked');
+  } else {
+    // Redirect to main hub if not authenticated
+    window.location.href = '{{ base_path }}/ios-interviews/';
+  }
+});
+</script>
+

@@ -23,6 +23,10 @@ main:
   - title: "🛝 Playground"
     url: /playground/
 
+  # iOS interviews (password protected)
+  - title: "🎯 iOS Interviews"
+    url: /ios-interviews/
+
   # - title: "Publications"
   #   url: /publications/
 

@@ -1,0 +1,388 @@
+---
+layout: archive
+title: "🎯 iOS Interview Prep Hub"
+permalink: /ios-interviews/
+author_profile: true
+header:
+  overlay_image: https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80
+  overlay_filter: 0.5
+  caption: "Your complete iOS interview preparation resource"
+---
+
+{% include base_path %}
+
+<style>
+.interview-lock-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+.interview-lock-icon {
+  font-size: 4em;
+  margin-bottom: 20px;
+  color: #667eea;
+  animation: lock-pulse 2s ease-in-out infinite;
+}
+
+@keyframes lock-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.interview-lock-title {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.interview-lock-subtitle {
+  font-size: 1.1em;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.password-form {
+  margin: 30px 0;
+}
+
+.password-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 15px 20px;
+  font-size: 1.1em;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  margin-bottom: 20px;
+  transition: all 0.3s;
+}
+
+.password-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+}
+
+.password-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.unlock-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 15px 50px;
+  font-size: 1.2em;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: all 0.3s;
+}
+
+.unlock-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.teaser-content {
+  margin-top: 40px;
+  text-align: left;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 15px;
+  border-left: 4px solid #667eea;
+}
+
+.teaser-content h3 {
+  color: #667eea;
+  margin-top: 0;
+}
+
+.teaser-content ul {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.8;
+}
+
+.interview-hub {
+  display: none;
+}
+
+.interview-hub.unlocked {
+  display: block;
+}
+
+.hub-intro {
+  text-align: center;
+  padding: 40px 30px;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+
+.hub-intro h2 {
+  color: #667eea;
+  margin: 0 0 15px 0;
+  font-size: 2em;
+}
+
+.hub-intro p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.15em;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.category-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 35px 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transition: all 0.3s;
+  text-align: center;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.category-icon {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.category-card h3 {
+  color: #fff;
+  font-size: 1.6em;
+  margin: 0 0 15px 0;
+}
+
+.category-card p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.05em;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.category-stats {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.85em;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 5px;
+}
+
+.category-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 12px 30px;
+  font-size: 1.1em;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.category-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: white;
+  transform: scale(1.05);
+}
+</style>
+
+<div id="lock-screen" class="interview-lock-container">
+  <div class="interview-lock-icon">🔒</div>
+  <h2 class="interview-lock-title">Password Protected Content</h2>
+  <p class="interview-lock-subtitle">
+    Comprehensive iOS interview preparation materials curated from real experiences at <strong>Meta</strong>, <strong>Snap</strong>, <strong>Apple</strong>, and other top tech companies.
+    <br><br>
+    <strong>Want access?</strong> Reach out on <a href="https://linkedin.com/in/sheldonengineering" style="color: #667eea;">LinkedIn</a> or <a href="mailto:sheldon.wang7@yahoo.com" style="color: #667eea;">email me</a>.
+  </p>
+  
+  <form class="password-form" onsubmit="return unlockContent(event);">
+    <input 
+      type="password" 
+      id="password-input" 
+      class="password-input" 
+      placeholder="Enter password to unlock..."
+      required
+      autocomplete="off"
+    >
+    <br>
+    <button type="submit" class="unlock-btn">🔓 Unlock Interview Hub</button>
+  </form>
+  
+  <div class="teaser-content">
+    <h3>📚 What's Inside:</h3>
+    <ul>
+      <li><strong>200+ Foundation Questions:</strong> Swift, UIKit, SwiftUI, memory management, concurrency</li>
+      <li><strong>System Design Deep Dives:</strong> Real-world architecture problems with detailed solutions</li>
+      <li><strong>Behavioral Scenarios:</strong> Manager-style questions, situational responses, leadership examples</li>
+      <li><strong>Code Examples:</strong> Production-quality Swift code you can study</li>
+      <li><strong>Pro Tips:</strong> What interviewers really look for at FAANG companies</li>
+      <li><strong>Real Experience:</strong> Based on actual Meta, Snap, Apple interviews</li>
+    </ul>
+  </div>
+</div>
+
+<div id="interview-hub" class="interview-hub">
+  <div class="hub-intro">
+    <h2>🎓 iOS Interview Prep Hub</h2>
+    <p>
+      Welcome! This is your complete iOS interview preparation resource, organized into three focused sections. Each contains curated questions, detailed solutions, and insights from my experience interviewing at and working for Meta, Snap, and other top companies.
+    </p>
+  </div>
+
+  <div class="categories-grid">
+    
+    <!-- Category 1: Foundation Questions -->
+    <div class="category-card">
+      <span class="category-icon">📚</span>
+      <h3>iOS Foundation Questions</h3>
+      <p>Master the fundamentals with 200+ curated questions covering Swift, UIKit, SwiftUI, memory management, and more.</p>
+      
+      <div class="category-stats">
+        <div class="stat-item">
+          <span class="stat-number">10</span>
+          <span class="stat-label">Question Sets</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">200+</span>
+          <span class="stat-label">Questions</span>
+        </div>
+      </div>
+      
+      <a href="{{ base_path }}/ios-interviews/foundation/" class="category-btn">
+        Explore Questions →
+      </a>
+    </div>
+
+    <!-- Category 2: System Design -->
+    <div class="category-card">
+      <span class="category-icon">🏗️</span>
+      <h3>System Design</h3>
+      <p>Deep dives into real-world iOS architecture problems. Learn to design scalable, performant systems that work at massive scale.</p>
+      
+      <div class="category-stats">
+        <div class="stat-item">
+          <span class="stat-number">15+</span>
+          <span class="stat-label">Problems</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">Detailed</span>
+          <span class="stat-label">Solutions</span>
+        </div>
+      </div>
+      
+      <a href="{{ base_path }}/ios-interviews/system-design/" class="category-btn">
+        View Problems →
+      </a>
+    </div>
+
+    <!-- Category 3: Behavioral Round -->
+    <div class="category-card">
+      <span class="category-icon">💼</span>
+      <h3>Behavioral Round</h3>
+      <p>Navigate behavioral interviews with confidence. Real scenarios, STAR method examples, and what different companies actually ask.</p>
+      
+      <div class="category-stats">
+        <div class="stat-item">
+          <span class="stat-number">50+</span>
+          <span class="stat-label">Scenarios</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">STAR</span>
+          <span class="stat-label">Format</span>
+        </div>
+      </div>
+      
+      <a href="{{ base_path }}/ios-interviews/behavioral/" class="category-btn">
+        Prepare Answers →
+      </a>
+    </div>
+
+  </div>
+
+  <div style="text-align: center; margin-top: 50px; padding: 30px; background: rgba(255,255,255,0.03); border-radius: 15px;">
+    <p style="color: rgba(255,255,255,0.7); font-size: 1.05em;">
+      💡 <strong>Pro Tip:</strong> Start with Foundation Questions to build confidence, then tackle System Design problems, and finally practice Behavioral responses. This mirrors the actual interview flow at most companies.
+    </p>
+  </div>
+</div>
+
+<script>
+function unlockContent(event) {
+  event.preventDefault();
+  
+  const password = document.getElementById('password-input').value;
+  
+  // Check password
+  if (password === 'iOSMaster2025!') {
+    // Success!
+    document.getElementById('lock-screen').style.display = 'none';
+    document.getElementById('interview-hub').classList.add('unlocked');
+    
+    // Store in session
+    sessionStorage.setItem('ios-interviews-unlocked', 'true');
+  } else {
+    alert('❌ Incorrect password! Please contact me for access.');
+  }
+  
+  return false;
+}
+
+// Check if already unlocked in this session
+window.addEventListener('DOMContentLoaded', function() {
+  if (sessionStorage.getItem('ios-interviews-unlocked') === 'true') {
+    document.getElementById('lock-screen').style.display = 'none';
+    document.getElementById('interview-hub').classList.add('unlocked');
+  }
+});
+</script>

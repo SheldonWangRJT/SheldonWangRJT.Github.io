@@ -1,0 +1,84 @@
+---
+layout: archive
+title: "🏗️ iOS System Design Problems"
+permalink: /ios-interviews/system-design/
+author_profile: true
+---
+
+{% include base_path %}
+
+<style>
+.systemdesign-intro {
+  text-align: center;
+  padding: 30px;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 15px;
+  margin-bottom: 40px;
+}
+
+.systemdesign-intro h2 {
+  color: #667eea;
+  margin-top: 0;
+}
+
+.systemdesign-intro p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1em;
+  line-height: 1.7;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #667eea;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-link:hover {
+  color: #764ba2;
+}
+
+.protected-content {
+  display: none;
+}
+
+.protected-content.unlocked {
+  display: block;
+}
+</style>
+
+<div id="protected-content" class="protected-content">
+  <a href="{{ base_path }}/ios-interviews/" class="back-link">← Back to Interview Hub</a>
+
+  <div class="systemdesign-intro">
+    <h2>🏗️ iOS System Design Problems</h2>
+    <p>
+      Real-world system design questions asked at Meta, Snap, Apple, and other top companies. Each problem includes architectural diagrams, code examples, trade-off discussions, and what interviewers want to hear.
+    </p>
+  </div>
+
+  {% if site.interviews %}
+    {% assign systemdesign_posts = site.interviews | where: "category", "system-design" | sort: "date" | reverse %}
+    {% for post in systemdesign_posts %}
+      {% include archive-single.html %}
+    {% endfor %}
+  {% else %}
+    <p style="text-align: center; color: rgba(255,255,255,0.7); padding: 40px;">
+      No problems available yet. Check back soon!
+    </p>
+  {% endif %}
+</div>
+
+<script>
+// Check authentication
+window.addEventListener('DOMContentLoaded', function() {
+  if (sessionStorage.getItem('ios-interviews-unlocked') === 'true') {
+    document.getElementById('protected-content').classList.add('unlocked');
+  } else {
+    // Redirect to main hub if not authenticated
+    window.location.href = '{{ base_path }}/ios-interviews/';
+  }
+});
+</script>
+
