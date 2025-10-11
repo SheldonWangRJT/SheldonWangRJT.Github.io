@@ -127,35 +127,34 @@
 .playground__item-link:hover .playground__item-title-overlay {
   background: rgba(0, 0, 0, 0.75);
 }
-  
-  /* Beautiful gradient variations for each game */
-  .playground__item-link:nth-child(1) & {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  }
-  
-  .playground__item-link:nth-child(2) & {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  }
-  
-  .playground__item-link:nth-child(3) & {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-  }
-  
-  .playground__item-link:nth-child(4) & {
-    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-  }
-  
-  .playground__item-link:nth-child(5) & {
-    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-  }
-  
-  .playground__item-link:nth-child(6) & {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  }
-  
-  .playground__item-link:nth-child(7) & {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  }
+
+/* Beautiful gradient variations for each game */
+.playground__item-link:nth-child(1) .playground__item {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.playground__item-link:nth-child(2) .playground__item {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.playground__item-link:nth-child(3) .playground__item {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.playground__item-link:nth-child(4) .playground__item {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.playground__item-link:nth-child(5) .playground__item {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.playground__item-link:nth-child(6) .playground__item {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.playground__item-link:nth-child(7) .playground__item {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
 }
 
 .playground__item-teaser-placeholder {
