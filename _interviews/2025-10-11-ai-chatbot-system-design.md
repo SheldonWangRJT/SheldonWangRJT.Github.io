@@ -39,38 +39,29 @@ Design an **AI Chat Application** for iOS similar to ChatGPT that supports:
 **In the interview, start by drawing this:**
 
 {% mermaid %}
-graph TB;
-    subgraph "iOS Client Layer";
-        UI[ChatViewController<br/>- MessageList<br/>- InputBar<br/>- TypewriterEffect];
-        VM[ChatViewModel<br/>- @Published messages<br/>- isStreaming state];
-        CM[ConversationManager<br/>- Active chat<br/>- Queue requests<br/>- Context window];
-        SS[StreamingService<br/>- SSE/WebSocket<br/>- Parsing<br/>- Buffering];
-        MS[MediaUploadService<br/>- Image processing<br/>- Compression<br/>- Upload queue];
-        DB[DatabaseManager<br/>- CoreData<br/>- History<br/>- Offline];
-        
-        UI --> VM;
-        VM --> CM;
-        CM --> SS;
-        CM --> MS;
-        CM --> DB;
-    end;
+flowchart TD;
+    UI[ChatViewController] --> VM[ChatViewModel];
+    VM --> CM[ConversationManager];
     
-    subgraph "Backend / Proxy Server";
-        PROXY[API Gateway<br/>- Rate limiting<br/>- API key mgmt<br/>- Request queue<br/>- Error handling];
-    end;
+    CM --> SS[StreamingService];
+    CM --> MS[MediaUploadService];
+    CM --> DB[DatabaseManager];
     
-    subgraph "AI Service Providers";
-        OPENAI[OpenAI API<br/>- GPT-4<br/>- DALL-E<br/>- Vision];
-        CLAUDE[Anthropic<br/>- Claude API];
-        GEMINI[Google AI<br/>- Gemini API];
-    end;
+    SS -->|HTTPS/SSE| PROXY[Backend Proxy];
+    MS -->|Upload Images| PROXY;
     
-    SS -->|HTTPS/SSE| PROXY;
-    MS -->|Upload| PROXY;
-    PROXY --> OPENAI;
-    PROXY --> CLAUDE;
-    PROXY --> GEMINI;
+    PROXY --> OPENAI[OpenAI GPT-4];
+    PROXY --> CLAUDE[Anthropic Claude];
+    PROXY --> GEMINI[Google Gemini];
 {% endmermaid %}
+
+**Architecture Layers:**
+- **View Layer**: ChatViewController handles UI
+- **ViewModel**: Manages state with @Published properties
+- **Manager Layer**: ConversationManager coordinates services
+- **Services**: Streaming (SSE), Media Upload, Database (CoreData)
+- **Backend Proxy**: Rate limiting, API key management, error handling
+- **AI Providers**: OpenAI, Anthropic, Google (pluggable)
 
 **Key Components:**
 - **ChatView**: UIKit/SwiftUI interface with message bubbles

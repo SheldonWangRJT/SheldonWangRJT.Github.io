@@ -40,47 +40,34 @@ Design a **Short Video App** for iOS (TikTok/Instagram Reels/Sora-style) that su
 **In the interview, start by drawing this:**
 
 {% mermaid %}
-graph TB;
-    subgraph "iOS Client";
-        UI[VideoFeedViewController<br/>- UICollectionView<br/>- Custom Cells];
-        VM[VideoFeedViewModel<br/>- @Published feed<br/>- Pagination state];
-        PM[PlayerManager<br/>- AVPlayer pool<br/>- Prefetch queue];
-        UM[UploadManager<br/>- Compression<br/>- Queue];
-        AI[AI VideoGenerator<br/>- Sora integration<br/>- Progress tracking];
-        CM[CacheManager<br/>- NSCache videos<br/>- Disk storage];
-        
-        UI --> VM;
-        VM --> PM;
-        VM --> UM;
-        VM --> AI;
-        PM --> CM;
-    end;
+flowchart TD;
+    UI[VideoFeedViewController] --> VM[VideoFeedViewModel];
+    VM --> PM[PlayerManager];
+    VM --> UM[UploadManager];
+    VM --> AI[AI VideoGenerator];
+    PM --> CM[CacheManager];
     
-    subgraph "Backend Services";
-        API[API Gateway<br/>- Auth<br/>- Rate limit];
-        VIDEO[Video Service<br/>- Transcoding<br/>- Thumbnails];
-        REC[Recommendation<br/>Engine<br/>- ML-based];
-        SORA[Sora Service<br/>- Text-to-video<br/>- Queue management];
-    end;
-    
-    subgraph "Storage & CDN";
-        S3[Object Storage<br/>- S3/CloudFront];
-        CDN[Video CDN<br/>- HLS streams<br/>- Edge caching];
-        DB[(Database<br/>- Video metadata<br/>- User data)];
-    end;
-    
-    VM -->|HTTPS| API;
+    VM -->|HTTPS| API[API Gateway];
     UM -->|Upload| API;
     AI -->|Generate| API;
-    API --> VIDEO;
-    API --> REC;
-    API --> SORA;
-    VIDEO --> S3;
-    S3 --> CDN;
-    PM -->|Stream| CDN;
-    VIDEO --> DB;
+    
+    API --> VIDEO[Video Service];
+    API --> REC[Recommendation Engine];
+    API --> SORA[Sora Service];
+    
+    VIDEO --> S3[S3 Storage];
+    S3 --> CDN[CloudFront CDN];
+    PM -->|Stream HLS| CDN;
+    
+    VIDEO --> DB[(Database)];
     REC --> DB;
 {% endmermaid %}
+
+**Architecture Layers:**
+- **Client Layer**: ViewController → ViewModel → Services
+- **Backend**: API Gateway → Video/Sora/Recommendation services
+- **Storage**: S3 → CloudFront CDN for delivery
+- **Data**: PostgreSQL for metadata
 
 **💬 What to say while drawing:**
 > "I'll use MVVM with a specialized PlayerManager that pools AVPlayer instances for memory efficiency. The UploadManager handles compression before upload. For AI generation, we integrate with OpenAI Sora via a backend service. Videos are stored in S3 and delivered via CloudFront CDN with HLS adaptive streaming."
@@ -92,30 +79,22 @@ graph TB;
 **This is the MOST CRITICAL part of the interview!**
 
 {% mermaid %}
-graph LR;
-    subgraph "Player Pool System";
-        POOL[AVPlayer Pool<br/>3-5 instances];
-        VISIBLE[Visible Video<br/>Currently playing];
-        NEXT[Next Video<br/>Preloaded];
-        PREV[Previous Video<br/>Cached];
-    end;
+flowchart LR;
+    POOL[AVPlayer Pool<br/>3-5 instances] --> VISIBLE[Visible Video];
+    POOL --> NEXT[Next Video Preloaded];
+    POOL --> PREV[Previous Video Cached];
     
-    subgraph "Video States";
-        LOADING[Loading<br/>Downloading];
-        READY[Ready<br/>Can play];
-        PLAYING[Playing<br/>Active];
-        PAUSED[Paused<br/>Buffering];
-        ENDED[Ended<br/>Loop/Next];
-    end;
-    
-    POOL --> VISIBLE;
-    POOL --> NEXT;
-    POOL --> PREV;
-    
-    VISIBLE --> PLAYING;
-    NEXT --> READY;
-    PREV --> READY;
+    VISIBLE --> PLAYING[Playing State];
+    NEXT --> READY1[Ready State];
+    PREV --> READY2[Ready State];
 {% endmermaid %}
+
+**Player States:**
+- **Loading**: Downloading from CDN
+- **Ready**: Buffered and can play
+- **Playing**: Currently active
+- **Paused**: Buffering more data
+- **Ended**: Loop back or load next
 
 ### **Implementation: AVPlayer Pooling**
 
@@ -518,23 +497,28 @@ enum SoraError: Error {
 **Challenge:** Raw iPhone video is 20-50MB. How to upload efficiently?
 
 {% mermaid %}
-graph TD;
+flowchart TD;
     A[User finishes recording] --> B{Check video size};
-    B -->|< 10MB| C[Upload directly];
+    B -->|Less than 10MB| C[Upload directly];
     B -->|10-50MB| D[Compress video];
-    B -->|> 50MB| E[Reject/Trim];
+    B -->|Over 50MB| E[Reject or Trim];
     
-    D --> F[Compress to H.264<br/>1080p, 30fps];
+    D --> F[Compress to H264];
     F --> G[Generate thumbnail];
     G --> H[Get presigned URL];
     H --> I[Upload to S3];
     I --> J[Backend transcoding];
-    J --> K[Multiple qualities:<br/>360p, 720p, 1080p];
-    K --> L[HLS manifest];
-    L --> M[Published!];
+    J --> K[Generate HLS];
+    K --> L[Published];
     
     C --> H;
 {% endmermaid %}
+
+**Upload Flow:**
+1. Check size: < 10MB upload as-is, 10-50MB compress, > 50MB reject
+2. Compress to H.264, 1080p, 30fps
+3. Backend transcodes to multiple qualities (360p, 720p, 1080p)
+4. Generate HLS manifest for adaptive streaming
 
 ### **Implementation: Video Compression**
 
@@ -880,60 +864,36 @@ class NetworkOptimizer {
 ## 🌐 Backend Architecture (Brief)
 
 {% mermaid %}
-graph TB;
-    subgraph "Frontend";
-        APP[iOS App];
-    end;
+flowchart TB;
+    APP[iOS App] --> GATEWAY[API Gateway];
     
-    subgraph "API Layer";
-        GATEWAY[API Gateway<br/>Kong/AWS];
-        AUTH[Auth Service];
-        RATE[Rate Limiter];
-    end;
+    GATEWAY --> AUTH[Auth Service];
+    GATEWAY --> RATE[Rate Limiter];
     
-    subgraph "Services";
-        VIDEO[Video Service<br/>Upload/Metadata];
-        TRANSCODE[Transcoding<br/>FFmpeg/AWS Elemental];
-        REC[Recommendation<br/>ML Model];
-        SORA[Sora Proxy<br/>OpenAI Integration];
-        SOCIAL[Social Service<br/>Likes/Comments];
-    end;
+    RATE --> VIDEO[Video Service];
+    RATE --> REC[Recommendation];
+    RATE --> SORA[Sora Proxy];
+    RATE --> SOCIAL[Social Service];
     
-    subgraph "Data";
-        POSTGRES[(PostgreSQL<br/>Metadata)];
-        REDIS[(Redis<br/>Cache)];
-        ES[(Elasticsearch<br/>Search)];
-    end;
+    VIDEO --> TRANSCODE[Transcoding Service];
+    VIDEO --> POSTGRES[(PostgreSQL)];
+    VIDEO --> S3[S3 Storage];
     
-    subgraph "Storage";
-        S3[S3<br/>Raw Videos];
-        CDN[CloudFront<br/>HLS Delivery];
-    end;
+    TRANSCODE --> CDN[CloudFront CDN];
     
-    subgraph "ML";
-        MLMODEL[Recommendation<br/>Model];
-        FEATURES[Feature Store];
-    end;
-    
-    APP --> GATEWAY;
-    GATEWAY --> AUTH;
-    GATEWAY --> RATE;
-    RATE --> VIDEO;
-    RATE --> REC;
-    RATE --> SORA;
-    RATE --> SOCIAL;
-    
-    VIDEO --> TRANSCODE;
-    VIDEO --> POSTGRES;
-    VIDEO --> S3;
-    TRANSCODE --> CDN;
-    
-    REC --> MLMODEL;
-    REC --> FEATURES;
-    REC --> REDIS;
+    REC --> MLMODEL[ML Model];
+    REC --> REDIS[(Redis Cache)];
     
     SORA --> REDIS;
 {% endmermaid %}
+
+**Backend Components:**
+- **API Gateway**: Authentication, rate limiting, routing
+- **Video Service**: Upload handling, metadata storage
+- **Transcoding**: FFmpeg/AWS Elemental for multi-quality
+- **Recommendation**: ML-based feed personalization
+- **Sora Proxy**: OpenAI video generation integration
+- **Storage**: S3 for raw, CloudFront for delivery
 
 ---
 
