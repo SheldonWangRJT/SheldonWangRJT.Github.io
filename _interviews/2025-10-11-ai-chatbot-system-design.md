@@ -139,121 +139,43 @@ flowchart TD;
 
 **Draw the main interaction flows:**
 
-```
-┌─────────────────┐
-│ USER SENDS MSG  │
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐        ┌──────────────┐
-│ Check Type?     │───────▶│ TEXT ONLY    │
-│ Text/Image/Both │        │ Go to Flow A │
-└────────┬────────┘        └──────────────┘
-         │ Image/Video
-         ▼
-┌─────────────────┐
-│ FLOW B:         │
-│ Multimodal      │
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│ 1. Show upload  │
-│    progress     │
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐        ┌──────────────┐
-│ 2. Compress     │───────▶│ WebP/HEVC    │
-│    media        │        │ reduction    │
-└────────┬────────┘        └──────────────┘
-         │
-         ▼
-┌─────────────────┐
-│ 3. Upload to    │
-│    backend      │
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│ 4. Get media URL│
-└────────┬────────┘
-         │
-         ▼
+{% mermaid %}
+flowchart TD;
+    START[User Sends Message] --> CHECK{Message Type?};
+    
+    CHECK -->|Text Only| FLOW_A[Text Streaming Flow];
+    CHECK -->|Has Image/Video| FLOW_B[Multimodal Flow];
+    
+    FLOW_B --> UPLOAD1[Show Upload Progress];
+    UPLOAD1 --> COMPRESS[Compress Media];
+    COMPRESS --> UPLOAD2[Upload to Backend];
+    UPLOAD2 --> GET_URL[Get Media URL];
+    GET_URL --> FLOW_A;
+    
+    FLOW_A --> OPEN_SSE[Open SSE Connection];
+    OPEN_SSE --> SEND_REQ[Send Request with Context];
+    SEND_REQ --> TYPING[Show Typing Indicator];
+    TYPING --> RECEIVE[Receive SSE Chunks];
+    RECEIVE --> APPEND[Append with Animation];
+    APPEND --> MORE{More Chunks?};
+    MORE -->|Yes| RECEIVE;
+    MORE -->|No DONE| SAVE[Save to Database];
+    SAVE --> CLOSE[Close SSE];
+{% endmermaid %}
 
-FLOW A: TEXT STREAMING
-┌─────────────────┐
-│ 1. Open SSE     │
-│    connection   │
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐        ┌──────────────┐
-│ 2. Send request │───────▶│ POST /chat   │
-│    with context │        │ + media URL  │
-└────────┬────────┘        └──────────────┘
-         │
-         ▼
-┌─────────────────┐
-│ 3. Show typing  │
-│    indicator    │
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐        ┌──────────────┐
-│ 4. Receive SSE  │───────▶│ data: chunk  │
-│    chunks       │        │ data: chunk  │
-└────────┬────────┘        └──────────────┘
-         │
-         ▼
-┌─────────────────┐
-│ 5. Append to    │
-│    message with │
-│    animation    │
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│ 6. Stream done  │
-│    (data:[DONE])│
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│ 7. Save to DB   │
-│    Close SSE    │
-└─────────────────┘
+**Edge Case: User Switches Chat While Streaming**
 
-EDGE CASE: USER SWITCHES CHAT WHILE STREAMING
-┌─────────────────┐
-│ Streaming       │
-│ message 50%     │
-└────────┬────────┘
-         │ User taps different conversation
-         ▼
-┌─────────────────┐
-│ Cancel current  │
-│ SSE connection  │
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│ Save partial    │
-│ response to DB  │
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│ Load new chat   │
-│ context         │
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│ Ready for new   │
-│ message         │
-└─────────────────┘
-```
+{% mermaid %}
+flowchart TD;
+    STREAMING[Streaming Message 50%] --> SWITCH{User Switches Chat?};
+    SWITCH -->|Yes| CANCEL[Cancel SSE Connection];
+    CANCEL --> SAVE_PARTIAL[Save Partial Response];
+    SAVE_PARTIAL --> LOAD_NEW[Load New Chat Context];
+    LOAD_NEW --> READY[Ready for New Message];
+    
+    SWITCH -->|No| CONTINUE[Continue Streaming];
+    CONTINUE --> STREAMING;
+{% endmermaid %}
 
 **💬 What to say while drawing:**
 > "For text-only messages, we open an SSE connection and stream chunks. For images, we compress first, upload to backend, get a URL, then include it in the API request. If user switches conversations mid-stream, we cancel the connection, save partial response, and load new context. This prevents mixing responses from different chats."
