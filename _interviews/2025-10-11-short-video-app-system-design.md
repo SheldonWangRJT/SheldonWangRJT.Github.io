@@ -14,6 +14,65 @@ difficulty: Hard
 excerpt: "Design a TikTok-style short video app with AI video generation (OpenAI Sora), infinite scrolling feed, video player pooling, upload optimization, and content delivery that scales to millions of users."
 ---
 
+<style>
+/* Improve text readability */
+.page__content {
+  background-color: rgba(255, 255, 255, 0.98);
+  padding: 2em;
+  border-radius: 8px;
+  color: #333;
+}
+
+.page__content h2, 
+.page__content h3, 
+.page__content h4 {
+  color: #2c3e50;
+  margin-top: 1.5em;
+}
+
+.page__content code {
+  background-color: #f4f4f4;
+  color: #d63384;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+.page__content pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 1em;
+}
+
+.page__content pre code {
+  background-color: transparent;
+  color: #333;
+  padding: 0;
+}
+
+.page__content blockquote {
+  background-color: #e8f4f8;
+  border-left: 4px solid #0066cc;
+  padding: 1em;
+  margin: 1em 0;
+  color: #2c3e50;
+}
+
+.page__content table {
+  background-color: white;
+  border: 1px solid #ddd;
+}
+
+.page__content th {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.page__content td {
+  color: #555;
+}
+</style>
+
 ## 🎯 Problem Statement
 
 Design a **Short Video App** for iOS (TikTok/Instagram Reels/Sora-style) that supports:
