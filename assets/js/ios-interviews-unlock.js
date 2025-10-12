@@ -82,3 +82,37 @@ window.addEventListener('load', function() {
   }
 });
 
+// ============================================
+// CATEGORY PAGE PROTECTION
+// ============================================
+
+function checkCategoryPageAuth() {
+  const isUnlocked = sessionStorage.getItem('ios-interviews-unlocked');
+  const protectedContent = document.getElementById('protected-content');
+  
+  console.log('Category page - checking auth:', isUnlocked);
+  
+  if (isUnlocked === 'true') {
+    console.log('Authenticated - showing content');
+    if (protectedContent) {
+      protectedContent.classList.add('unlocked');
+      protectedContent.style.display = 'block';
+    }
+  } else {
+    console.log('Not authenticated - redirecting to hub');
+    // Get base path from current URL
+    const pathParts = window.location.pathname.split('/');
+    const basePath = pathParts.slice(0, pathParts.indexOf('ios-interviews')).join('/');
+    window.location.href = basePath + '/ios-interviews/';
+  }
+}
+
+// Run category auth check if on category page
+if (window.location.pathname.includes('/ios-interviews/foundation/') ||
+    window.location.pathname.includes('/ios-interviews/system-design/') ||
+    window.location.pathname.includes('/ios-interviews/behavioral/')) {
+  
+  document.addEventListener('DOMContentLoaded', checkCategoryPageAuth);
+  window.addEventListener('load', checkCategoryPageAuth);
+}
+
