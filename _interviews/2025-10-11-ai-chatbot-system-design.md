@@ -196,6 +196,40 @@ flowchart TD;
 
 **Critical decision: How to handle real-time streaming?**
 
+### **🤔 Fun Fact: Why "Completions"?**
+
+**Ever wonder why it's called `/chat/completions` not `/chat/responses`?**
+
+**Historical reason:**
+
+Early language models (GPT-2, GPT-3) were designed for **text completion** - you give them a prompt, they complete it:
+
+```
+Prompt: "The quick brown fox"
+Completion: "jumps over the lazy dog"
+
+Prompt: "import UIKit\nclass ViewController"
+Completion: ": UIViewController {\n    override func viewDidLoad() {"
+```
+
+**It was literally completing your text!**
+
+When OpenAI added chat functionality (ChatGPT), they kept the term "completions" because technically:
+- You provide: conversation history (messages)
+- Model provides: **completion** of that conversation (next message)
+
+**So `/chat/completions` means:**
+> "Given this conversation so far, complete it with the next message"
+
+**Why not rename it?**
+- Backwards compatibility (millions of apps using it)
+- Technically accurate (it IS completing the conversation)
+- Developer familiarity
+
+**Interview tip:** If interviewer asks "why completions?", showing you understand the historical context impresses them! 🎯
+
+---
+
 ### **Option 1: Server-Sent Events (SSE)** ✅ RECOMMENDED
 
 {% mermaid %}
