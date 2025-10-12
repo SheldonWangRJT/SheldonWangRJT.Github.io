@@ -91,18 +91,31 @@ excerpt: "Design a TikTok-style short video app with AI video generation (OpenAI
   font-size: 0.9em;
 }
 
-/* Code blocks */
+/* Code blocks - override ALL color styles */
 .page__content pre {
   background-color: #f6f8fa !important;
   color: #24292e !important;
-  border: 1px solid #e1e4e8;
-  padding: 1em;
+  border: 1px solid #e1e4e8 !important;
+  padding: 1em !important;
 }
 
-.page__content pre code {
+.page__content pre code,
+.page__content pre code span,
+.page__content pre * {
   color: #24292e !important;
   background-color: transparent !important;
   padding: 0 !important;
+}
+
+/* Syntax highlighting overrides */
+.page__content .highlight pre,
+.page__content .highlight code {
+  background-color: #f6f8fa !important;
+  color: #24292e !important;
+}
+
+.page__content .highlight {
+  background-color: #f6f8fa !important;
 }
 
 /* Ensure all text is dark and readable */
