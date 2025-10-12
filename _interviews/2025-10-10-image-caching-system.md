@@ -206,7 +206,7 @@ private func downloadImage(url: URL, size: CGSize?, cacheKey: String, completion
 
 **Problem:** Multiple cells request same image simultaneously
 
-**Solution:** Track in-flight requests
+**Solution A: Callback-based (Traditional)**
 
 ```swift
 class ImageCache {
@@ -244,6 +244,122 @@ class ImageCache {
     }
 }
 ```
+
+**Why the lock?**
+> The lock protects the `inFlightRequests` dictionary from concurrent access. Without it, multiple threads could corrupt the dictionary causing crashes.
+
+---
+
+**Solution B: Modern Async/Await with Actor** ✅ RECOMMENDED for 2025
+
+```swift
+actor ImageCache {
+    // Actor provides automatic thread-safety - no locks needed!
+    private var memoryCache: [String: UIImage] = [:]
+    private var inFlightTasks: [String: Task<UIImage?, Never>] = [:]
+    
+    func loadImage(url: URL, size: CGSize? = nil) async -> UIImage? {
+        let cacheKey = generateCacheKey(url: url, size: size)
+        
+        // 1. Check memory cache
+        if let cached = memoryCache[cacheKey] {
+            return cached
+        }
+        
+        // 2. Check if already downloading
+        if let existingTask = inFlightTasks[cacheKey] {
+            // Multiple callers await the SAME task - no duplicate downloads!
+            return await existingTask.value
+        }
+        
+        // 3. Start new download task
+        let downloadTask = Task<UIImage?, Never> {
+            // Download from network
+            guard let data = try? await URLSession.shared.data(from: url).0,
+                  var image = UIImage(data: data) else {
+                return nil
+            }
+            
+            // Resize if needed
+            if let targetSize = size {
+                image = await resize(image, to: targetSize)
+            }
+            
+            // Cache it
+            await cacheImage(image, forKey: cacheKey)
+            
+            // Clean up in-flight tracking
+            await removeTask(forKey: cacheKey)
+            
+            return image
+        }
+        
+        // Track the task
+        inFlightTasks[cacheKey] = downloadTask
+        
+        // Await result
+        return await downloadTask.value
+    }
+    
+    private func cacheImage(_ image: UIImage, forKey key: String) {
+        memoryCache[key] = image
+        
+        // Also save to disk
+        Task.detached {
+            await self.saveToDisk(image, key: key)
+        }
+    }
+    
+    private func removeTask(forKey key: String) {
+        inFlightTasks.removeValue(forKey: key)
+    }
+    
+    private func resize(_ image: UIImage, to size: CGSize) async -> UIImage {
+        // Resize on background
+        await Task.detached(priority: .userInitiated) {
+            // UIGraphics resize code
+            return resizedImage
+        }.value
+    }
+    
+    private func saveToDisk(_ image: UIImage, key: String) async {
+        // Disk caching implementation
+    }
+    
+    private func generateCacheKey(url: URL, size: CGSize?) -> String {
+        if let size = size {
+            return "\(url.absoluteString)-\(Int(size.width))x\(Int(size.height))"
+        }
+        return url.absoluteString
+    }
+}
+```
+
+**How it works:**
+
+```swift
+// Cell 1 requests image
+let image1 = await imageCache.loadImage(url: url)  // Creates Task, starts download
+
+// Cell 2 requests SAME image (while downloading)
+let image2 = await imageCache.loadImage(url: url)  // Gets SAME Task, waits
+
+// Cell 3 requests SAME image
+let image3 = await imageCache.loadImage(url: url)  // Gets SAME Task, waits
+
+// All 3 await the single download!
+// Only ONE network request made
+```
+
+**Benefits:**
+- ✅ **No manual locks** - Actor handles thread-safety
+- ✅ **Cleaner code** - No callback arrays
+- ✅ **Type-safe** - Compiler prevents data races
+- ✅ **Modern Swift** - Shows you know Swift 6 concurrency
+- ✅ **Single download** - Multiple callers share same Task
+
+**Interview tip:** Mention both approaches:
+> "Traditionally we'd use callbacks with NSLock for thread-safety. With Swift's modern concurrency, an Actor is cleaner - it automatically serializes access to inFlightTasks, preventing race conditions without manual locks."
 
 ### **4. Image Format Optimization**
 
