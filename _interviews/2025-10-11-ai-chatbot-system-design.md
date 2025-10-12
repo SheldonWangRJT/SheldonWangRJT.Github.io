@@ -38,7 +38,7 @@ Design an **AI Chat Application** for iOS similar to ChatGPT that supports:
 
 **In the interview, start by drawing this:**
 
-```mermaid
+{% mermaid %}
 graph TB
     subgraph "iOS Client Layer"
         UI[ChatViewController<br/>- MessageList<br/>- InputBar<br/>- TypewriterEffect]
@@ -70,7 +70,7 @@ graph TB
     PROXY --> OPENAI
     PROXY --> CLAUDE
     PROXY --> GEMINI
-```
+{% endmermaid %}
 
 **Key Components:**
 - **ChatView**: UIKit/SwiftUI interface with message bubbles
@@ -216,7 +216,7 @@ EDGE CASE: USER SWITCHES CHAT WHILE STREAMING
 
 ### **Option 1: Server-Sent Events (SSE)** ✅ RECOMMENDED
 
-```mermaid
+{% mermaid %}
 sequenceDiagram
     participant App as iOS App
     participant Proxy as Backend Proxy
@@ -237,7 +237,7 @@ sequenceDiagram
     Proxy-->>App: data: [DONE]
     
     Note over App,Proxy: Connection closes
-```
+{% endmermaid %}
 
 **Implementation:**
 ```swift

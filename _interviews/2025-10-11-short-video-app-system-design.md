@@ -39,7 +39,7 @@ Design a **Short Video App** for iOS (TikTok/Instagram Reels/Sora-style) that su
 
 **In the interview, start by drawing this:**
 
-```mermaid
+{% mermaid %}
 graph TB
     subgraph "iOS Client"
         UI[VideoFeedViewController<br/>- UICollectionView<br/>- Custom Cells]
@@ -80,7 +80,7 @@ graph TB
     PM -->|Stream| CDN
     VIDEO --> DB
     REC --> DB
-```
+{% endmermaid %}
 
 **💬 What to say while drawing:**
 > "I'll use MVVM with a specialized PlayerManager that pools AVPlayer instances for memory efficiency. The UploadManager handles compression before upload. For AI generation, we integrate with OpenAI Sora via a backend service. Videos are stored in S3 and delivered via CloudFront CDN with HLS adaptive streaming."
@@ -91,7 +91,7 @@ graph TB
 
 **This is the MOST CRITICAL part of the interview!**
 
-```mermaid
+{% mermaid %}
 graph LR
     subgraph "Player Pool System"
         POOL[AVPlayer Pool<br/>3-5 instances]
@@ -115,7 +115,7 @@ graph LR
     VISIBLE --> PLAYING
     NEXT --> READY
     PREV --> READY
-```
+{% endmermaid %}
 
 ### **Implementation: AVPlayer Pooling**
 
@@ -271,7 +271,7 @@ class VideoPlayerManager {
 
 ## 👤 STEP 3: User Flow Diagram
 
-```mermaid
+{% mermaid %}
 stateDiagram-v2
     [*] --> AppLaunch
     
@@ -344,7 +344,7 @@ stateDiagram-v2
 
 **Sora is OpenAI's text-to-video model (launched Dec 2024)**
 
-```mermaid
+{% mermaid %}
 sequenceDiagram
     participant User
     participant App
@@ -387,7 +387,7 @@ sequenceDiagram
     else User regenerates
         App->>Backend: POST /generate/video<br/>{ refined_prompt }
     end
-```
+{% endmermaid %}
 
 ### **Implementation: Sora Integration**
 
@@ -517,7 +517,7 @@ enum SoraError: Error {
 
 **Challenge:** Raw iPhone video is 20-50MB. How to upload efficiently?
 
-```mermaid
+{% mermaid %}
 graph TD
     A[User finishes recording] --> B{Check video size}
     B -->|< 10MB| C[Upload directly]
@@ -534,7 +534,7 @@ graph TD
     L --> M[Published!]
     
     C --> H
-```
+{% endmermaid %}
 
 ### **Implementation: Video Compression**
 
@@ -879,7 +879,7 @@ class NetworkOptimizer {
 
 ## 🌐 Backend Architecture (Brief)
 
-```mermaid
+{% mermaid %}
 graph TB
     subgraph "Frontend"
         APP[iOS App]
@@ -933,7 +933,7 @@ graph TB
     REC --> REDIS
     
     SORA --> REDIS
-```
+{% endmermaid %}
 
 ---
 
