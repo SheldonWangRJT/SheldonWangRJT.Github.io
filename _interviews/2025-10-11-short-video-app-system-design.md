@@ -310,67 +310,40 @@ class VideoPlayerManager {
 ## 👤 STEP 3: User Flow Diagram
 
 {% mermaid %}
-stateDiagram-v2;
-    [*] --> AppLaunch;
+flowchart TD;
+    START[User Opens App] --> CHECK{Has Cached Videos?};
+    CHECK -->|Yes| SHOW_CACHED[Show Cached Feed];
+    CHECK -->|No| SHOW_LOADING[Show Loading];
     
-    AppLaunch --> LoadFeed: User opens app;
+    SHOW_CACHED --> FETCH_BG[Fetch Fresh in Background];
+    SHOW_LOADING --> FETCH_API[API: GET /feed];
     
-    LoadFeed --> CheckCache: Fetch videos;
-    CheckCache --> ShowCached: Has cache;
-    CheckCache --> ShowLoading: No cache;
+    FETCH_API --> DISPLAY[Display Videos];
+    FETCH_BG --> DISPLAY;
     
-    ShowCached --> FetchFresh: Background refresh;
-    ShowLoading --> FetchAPI: GET /feed;
-    FetchAPI --> DisplayVideos;
-    FetchFresh --> DisplayVideos;
+    DISPLAY --> PLAY[Auto-play First Video];
     
-    DisplayVideos --> PlayVideo: Auto-play first;
+    PLAY --> SCROLL{User Scrolls?};
+    SCROLL -->|Swipe Up/Down| NEXT_VIDEO[Load Next Video];
+    NEXT_VIDEO --> PLAY;
     
-    PlayVideo --> BufferingState: Network slow;
-    BufferingState --> PlayVideo: Buffer ready;
+    SCROLL -->|Near End| PAGINATE[Fetch Next Page];
+    PAGINATE --> DISPLAY;
     
-    PlayVideo --> UserScrolls: Swipe up/down;
+    PLAY --> RECORD{Tap Record?};
+    RECORD -->|Yes| REC_FLOW[Recording Flow];
     
-    UserScrolls --> PauseCurrentScroll;
-    PauseCurrentScroll --> LoadNextVideo;
-    LoadNextVideo --> PlayVideo;
+    PLAY --> AI_GEN{Tap AI Generate?};
+    AI_GEN -->|Yes| AI_FLOW[Sora Generation];
     
-    UserScrolls --> PaginationCheck: Near end?;
-    PaginationCheck --> FetchMore: Load page 2;
-    FetchMore --> DisplayVideos;
+    REC_FLOW --> COMPRESS[Compress Video];
+    COMPRESS --> UPLOAD[Upload to S3];
+    UPLOAD --> PUBLISHED[Published to Feed];
     
-    PlayVideo --> UserRecord: Tap record button;
-    UserRecord --> RecordingFlow;
-    
-    PlayVideo --> UserGenerateAI: Tap AI generate;
-    UserGenerateAI --> AIGenerationFlow;
-    
-    RecordingFlow --> UploadFlow;
-    AIGenerationFlow --> AIWaitingFlow;
-    AIWaitingFlow --> DisplayVideos;
-    UploadFlow --> DisplayVideos;
-    
-    state RecordingFlow {
-        [*] --> ShowCamera;
-        ShowCamera --> Recording: Tap record;
-        Recording --> Preview: Tap stop;
-        Preview --> ApplyEffects;
-        ApplyEffects --> [*];
-    };
-    
-    state UploadFlow {
-        [*] --> Compress;
-        Compress --> Upload;
-        Upload --> Transcoding;
-        Transcoding --> [*]: Published;
-    };
-    
-    state AIGenerationFlow {
-        [*] --> ShowPrompt;
-        ShowPrompt --> SubmitToSora;
-        SubmitToSora --> QueueJob;
-        QueueJob --> [*];
-    };
+    AI_FLOW --> QUEUE[Queue Sora Job];
+    QUEUE --> WAIT[Wait 1-3 min];
+    WAIT --> PREVIEW[Show Preview];
+    PREVIEW --> PUBLISHED;
 {% endmermaid %}
 
 **💬 What to say while drawing:**
@@ -388,43 +361,26 @@ sequenceDiagram;
     participant App;
     participant Backend;
     participant Sora;
-    participant CDN;
     
-    User->>App: Enter prompt<br/>"Sunset over ocean";
-    App->>Backend: POST /generate/video<br/>{ prompt, duration, style };
+    User->>App: Enter prompt;
+    App->>Backend: POST /generate/video;
+    Backend->>Sora: Submit job;
+    Sora-->>Backend: job_id;
+    Backend-->>App: Status queued;
+    App->>User: Show progress ETA 2min;
     
-    Backend->>Sora: Submit generation job;
-    Sora-->>Backend: job_id, estimated_time;
-    Backend-->>App: { job_id, status: "queued" };
-    
-    App->>User: Show "Generating...<br/>ETA: 2 minutes";
-    
-    loop Poll Status;
-        App->>Backend: GET /generate/status/{job_id};
-        Backend->>Sora: Check status;
-        Sora-->>Backend: status: "processing", progress: 45%;
-        Backend-->>App: { status, progress };
-        App->>User: Update progress bar;
+    loop Poll every 5s;
+        App->>Backend: GET /status/{job_id};
+        Backend-->>App: Progress 45%;
+        App->>User: Update bar;
     end;
     
-    Sora->>Sora: Generate video<br/>(GPU intensive);
-    
-    Sora->>Backend: Video ready!<br/>temp_url;
-    Backend->>CDN: Upload to CDN;
-    CDN-->>Backend: permanent_url;
-    
-    Backend->>App: Push notification<br/>"Video ready!";
+    Sora-->>Backend: Video ready;
+    Backend->>App: Push notification;
     App->>User: Show preview;
-    
-    User->>App: Publish or regenerate;
-    
-    alt User publishes;
-        App->>Backend: POST /videos/publish;
-        Backend->>App: video_id;
-        App->>User: Added to feed;
-    else User regenerates;
-        App->>Backend: POST /generate/video<br/>{ refined_prompt };
-    end;
+    User->>App: Publish;
+    App->>Backend: POST /publish;
+    Backend-->>App: Success;
 {% endmermaid %}
 
 ### **Implementation: Sora Integration**
