@@ -359,30 +359,79 @@ header:
 
 <script>
 function unlockContent(event) {
-  event.preventDefault();
+  if (event) {
+    event.preventDefault();
+  }
   
-  const password = document.getElementById('password-input').value;
+  const password = document.getElementById('password-input').value.trim();
+  const lockScreen = document.getElementById('lock-screen');
+  const hub = document.getElementById('interview-hub');
+  
+  console.log('Password entered:', password);  // Debug
   
   // Check password
   if (password === 'iOSMaster2025!') {
-    // Success!
-    document.getElementById('lock-screen').style.display = 'none';
-    document.getElementById('interview-hub').classList.add('unlocked');
+    console.log('Password correct! Unlocking...');  // Debug
+    
+    // Hide lock screen
+    if (lockScreen) {
+      lockScreen.style.display = 'none';
+    }
+    
+    // Show hub
+    if (hub) {
+      hub.classList.add('unlocked');
+      hub.style.display = 'block';
+    }
     
     // Store in session
     sessionStorage.setItem('ios-interviews-unlocked', 'true');
+    
+    console.log('Unlocked successfully!');  // Debug
   } else {
-    alert('❌ Incorrect password! Please contact me for access.');
+    console.log('Password incorrect:', password);  // Debug
+    alert('❌ Incorrect password!\n\nPassword is case-sensitive.\nTry: iOSMaster2025!');
   }
   
   return false;
 }
 
 // Check if already unlocked in this session
-window.addEventListener('DOMContentLoaded', function() {
-  if (sessionStorage.getItem('ios-interviews-unlocked') === 'true') {
-    document.getElementById('lock-screen').style.display = 'none';
-    document.getElementById('interview-hub').classList.add('unlocked');
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('Page loaded, checking session...');  // Debug
+  
+  const isUnlocked = sessionStorage.getItem('ios-interviews-unlocked');
+  console.log('Session storage:', isUnlocked);  // Debug
+  
+  if (isUnlocked === 'true') {
+    console.log('Already unlocked in session, showing hub...');  // Debug
+    
+    const lockScreen = document.getElementById('lock-screen');
+    const hub = document.getElementById('interview-hub');
+    
+    if (lockScreen) {
+      lockScreen.style.display = 'none';
+    }
+    
+    if (hub) {
+      hub.classList.add('unlocked');
+      hub.style.display = 'block';
+    }
+  }
+});
+
+// Also try window.addEventListener as fallback
+window.addEventListener('load', function() {
+  const isUnlocked = sessionStorage.getItem('ios-interviews-unlocked');
+  if (isUnlocked === 'true') {
+    const lockScreen = document.getElementById('lock-screen');
+    const hub = document.getElementById('interview-hub');
+    
+    if (lockScreen) lockScreen.style.display = 'none';
+    if (hub) {
+      hub.classList.add('unlocked');
+      hub.style.display = 'block';
+    }
   }
 });
 </script>
