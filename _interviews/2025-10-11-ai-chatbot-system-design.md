@@ -39,37 +39,37 @@ Design an **AI Chat Application** for iOS similar to ChatGPT that supports:
 **In the interview, start by drawing this:**
 
 {% mermaid %}
-graph TB
-    subgraph "iOS Client Layer"
-        UI[ChatViewController<br/>- MessageList<br/>- InputBar<br/>- TypewriterEffect]
-        VM[ChatViewModel<br/>- @Published messages<br/>- isStreaming state]
-        CM[ConversationManager<br/>- Active chat<br/>- Queue requests<br/>- Context window]
-        SS[StreamingService<br/>- SSE/WebSocket<br/>- Parsing<br/>- Buffering]
-        MS[MediaUploadService<br/>- Image processing<br/>- Compression<br/>- Upload queue]
-        DB[DatabaseManager<br/>- CoreData<br/>- History<br/>- Offline]
+graph TB;
+    subgraph "iOS Client Layer";
+        UI[ChatViewController<br/>- MessageList<br/>- InputBar<br/>- TypewriterEffect];
+        VM[ChatViewModel<br/>- @Published messages<br/>- isStreaming state];
+        CM[ConversationManager<br/>- Active chat<br/>- Queue requests<br/>- Context window];
+        SS[StreamingService<br/>- SSE/WebSocket<br/>- Parsing<br/>- Buffering];
+        MS[MediaUploadService<br/>- Image processing<br/>- Compression<br/>- Upload queue];
+        DB[DatabaseManager<br/>- CoreData<br/>- History<br/>- Offline];
         
-        UI --> VM
-        VM --> CM
-        CM --> SS
-        CM --> MS
-        CM --> DB
-    end
+        UI --> VM;
+        VM --> CM;
+        CM --> SS;
+        CM --> MS;
+        CM --> DB;
+    end;
     
-    subgraph "Backend / Proxy Server"
-        PROXY[API Gateway<br/>- Rate limiting<br/>- API key mgmt<br/>- Request queue<br/>- Error handling]
-    end
+    subgraph "Backend / Proxy Server";
+        PROXY[API Gateway<br/>- Rate limiting<br/>- API key mgmt<br/>- Request queue<br/>- Error handling];
+    end;
     
-    subgraph "AI Service Providers"
-        OPENAI[OpenAI API<br/>- GPT-4<br/>- DALL-E<br/>- Vision]
-        CLAUDE[Anthropic<br/>- Claude API]
-        GEMINI[Google AI<br/>- Gemini API]
-    end
+    subgraph "AI Service Providers";
+        OPENAI[OpenAI API<br/>- GPT-4<br/>- DALL-E<br/>- Vision];
+        CLAUDE[Anthropic<br/>- Claude API];
+        GEMINI[Google AI<br/>- Gemini API];
+    end;
     
-    SS -->|HTTPS/SSE| PROXY
-    MS -->|Upload| PROXY
-    PROXY --> OPENAI
-    PROXY --> CLAUDE
-    PROXY --> GEMINI
+    SS -->|HTTPS/SSE| PROXY;
+    MS -->|Upload| PROXY;
+    PROXY --> OPENAI;
+    PROXY --> CLAUDE;
+    PROXY --> GEMINI;
 {% endmermaid %}
 
 **Key Components:**
@@ -217,26 +217,26 @@ EDGE CASE: USER SWITCHES CHAT WHILE STREAMING
 ### **Option 1: Server-Sent Events (SSE)** ✅ RECOMMENDED
 
 {% mermaid %}
-sequenceDiagram
-    participant App as iOS App
-    participant Proxy as Backend Proxy
-    participant OpenAI as OpenAI API
+sequenceDiagram;
+    participant App as iOS App;
+    participant Proxy as Backend Proxy;
+    participant OpenAI as OpenAI API;
     
-    App->>Proxy: GET /stream?message=...<br/>Accept: text/event-stream
-    Proxy->>OpenAI: POST /chat/completions<br/>stream: true
+    App->>Proxy: GET /stream?message=...<br/>Accept: text/event-stream;
+    Proxy->>OpenAI: POST /chat/completions<br/>stream: true;
     
-    loop Streaming chunks
-        OpenAI-->>Proxy: data: {"choices":[{"delta":{"content":"Hello"}}]}
-        Proxy-->>App: Forward chunk
+    loop Streaming chunks;
+        OpenAI-->>Proxy: data: {"choices":[{"delta":{"content":"Hello"}}]};
+        Proxy-->>App: Forward chunk;
         
-        OpenAI-->>Proxy: data: {"choices":[{"delta":{"content":" world"}}]}
-        Proxy-->>App: Forward chunk
-    end
+        OpenAI-->>Proxy: data: {"choices":[{"delta":{"content":" world"}}]};
+        Proxy-->>App: Forward chunk;
+    end;
     
-    OpenAI-->>Proxy: data: [DONE]
-    Proxy-->>App: data: [DONE]
+    OpenAI-->>Proxy: data: [DONE];
+    Proxy-->>App: data: [DONE];
     
-    Note over App,Proxy: Connection closes
+    Note over App,Proxy: Connection closes;
 {% endmermaid %}
 
 **Implementation:**
