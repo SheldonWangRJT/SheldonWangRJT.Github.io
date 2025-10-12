@@ -65,11 +65,21 @@ excerpt: "Design a TikTok-style short video app with AI video generation (OpenAI
 
 .page__content th {
   background-color: #f0f0f0;
-  color: #333;
+  color: #333 !important;
+  font-weight: bold;
 }
 
 .page__content td {
-  color: #555;
+  color: #555 !important;
+  background-color: white;
+}
+
+.page__content tr {
+  background-color: white;
+}
+
+.page__content tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
 }
 </style>
 

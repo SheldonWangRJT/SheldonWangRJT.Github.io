@@ -65,11 +65,21 @@ excerpt: "Design an AI chatbot like ChatGPT for iOS: streaming vs traditional so
 
 .page__content th {
   background-color: #f0f0f0;
-  color: #333;
+  color: #333 !important;
+  font-weight: bold;
 }
 
 .page__content td {
-  color: #555;
+  color: #555 !important;
+  background-color: white;
+}
+
+.page__content tr {
+  background-color: white;
+}
+
+.page__content tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
 }
 </style>
 
@@ -285,28 +295,31 @@ struct StreamChunk: Codable {
 
 ### **Option 2: WebSocket**
 
-```
-iOS App                     Backend                   OpenAI API
-   │                              │                         │
-   │ WS Connect                   │                         │
-   │─────────────────────────────▶│                         │
-   │                              │                         │
-   │ {"type":"message","text":"..."}                       │
-   │─────────────────────────────▶│                         │
-   │                              │ POST /chat/completions  │
-   │                              │────────────────────────▶│
-   │                              │                         │
-   │◀─────────────────────────────│◀────────────────────────│
-   │ {"type":"chunk","content":"Hello"}                    │
-   │                              │                         │
-   │◀─────────────────────────────│◀────────────────────────│
-   │ {"type":"chunk","content":" world"}                   │
-   │                              │                         │
-   │◀─────────────────────────────│◀────────────────────────│
-   │ {"type":"done"}              │                         │
-   │                              │                         │
-   │ WS stays open for next msg   │                         │
-```
+{% mermaid %}
+sequenceDiagram;
+    participant App as iOS App;
+    participant Backend;
+    participant OpenAI as OpenAI API;
+    
+    App->>Backend: WS Connect;
+    Backend-->>App: Connected;
+    
+    App->>Backend: Send message JSON;
+    Backend->>OpenAI: POST /chat/completions;
+    
+    loop Streaming chunks;
+        OpenAI-->>Backend: chunk: Hello;
+        Backend-->>App: Forward chunk;
+        
+        OpenAI-->>Backend: chunk: world;
+        Backend-->>App: Forward chunk;
+    end;
+    
+    OpenAI-->>Backend: done;
+    Backend-->>App: Stream complete;
+    
+    Note over App,Backend: WS stays open for next message;
+{% endmermaid %}
 
 **Implementation:**
 ```swift
