@@ -82,16 +82,27 @@ excerpt: "Design an AI chatbot like ChatGPT for iOS: streaming vs traditional so
   background-color: #f9f9f9;
 }
 
-/* Fix pre/code blocks to be readable */
-.page__content pre code {
-  color: #24292e !important;
-  background-color: transparent !important;
+/* Fix inline code - was white, now dark for white background */
+.page__content code {
+  background-color: #f4f4f4 !important;
+  color: #d63384 !important;
+  padding: 0.2em 0.4em !important;
+  border-radius: 3px;
+  font-size: 0.9em;
 }
 
+/* Code blocks */
 .page__content pre {
   background-color: #f6f8fa !important;
   color: #24292e !important;
   border: 1px solid #e1e4e8;
+  padding: 1em;
+}
+
+.page__content pre code {
+  color: #24292e !important;
+  background-color: transparent !important;
+  padding: 0 !important;
 }
 
 /* Ensure all text is dark and readable */
@@ -102,10 +113,9 @@ excerpt: "Design an AI chatbot like ChatGPT for iOS: streaming vs traditional so
   color: #333 !important;
 }
 
-/* Fix code in lists */
-.page__content li code {
-  background-color: #f4f4f4 !important;
-  color: #d63384 !important;
+/* Blockquotes */
+.page__content blockquote p {
+  color: #2c3e50 !important;
 }
 </style>
 
