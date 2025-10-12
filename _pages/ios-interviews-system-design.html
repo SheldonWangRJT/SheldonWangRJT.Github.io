@@ -13,31 +13,13 @@ excerpt: "Real-world iOS architecture problems with Mermaid diagrams, production
 {% include base_path %}
 
 <style>
-.systemdesign-intro {
-  text-align: center;
-  padding: 30px;
-  background: rgba(102, 126, 234, 0.1);
-  border-radius: 15px;
-  margin-bottom: 40px;
-}
-
-.systemdesign-intro h2 {
-  color: #667eea;
-  margin-top: 0;
-}
-
-.systemdesign-intro p {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 1.1em;
-  line-height: 1.7;
-}
-
 .back-link {
   display: inline-block;
   margin-bottom: 20px;
   color: #667eea;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1.1em;
 }
 
 .back-link:hover {
@@ -55,13 +37,6 @@ excerpt: "Real-world iOS architecture problems with Mermaid diagrams, production
 
 <div id="protected-content" class="protected-content">
   <a href="{{ base_path }}/ios-interviews/" class="back-link">← Back to Interview Hub</a>
-
-  <div class="systemdesign-intro">
-    <h2>🏗️ iOS System Design Problems</h2>
-    <p>
-      Real-world system design questions asked at Meta, Snap, Apple, and other top companies. Each problem includes architectural diagrams, code examples, trade-off discussions, and what interviewers want to hear.
-    </p>
-  </div>
 
   {% if site.interviews %}
     {% assign systemdesign_posts = site.interviews | where: "category", "system-design" | sort: "date" | reverse %}
