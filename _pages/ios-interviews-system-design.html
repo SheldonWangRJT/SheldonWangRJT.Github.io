@@ -70,15 +70,5 @@ author_profile: true
   {% endif %}
 </div>
 
-<script>
-// Check authentication
-window.addEventListener('DOMContentLoaded', function() {
-  if (sessionStorage.getItem('ios-interviews-unlocked') === 'true') {
-    document.getElementById('protected-content').classList.add('unlocked');
-  } else {
-    // Redirect to main hub if not authenticated
-    window.location.href = '{{ base_path }}/ios-interviews/';
-  }
-});
-</script>
+<script src="{{ base_path }}/assets/js/ios-interviews-unlock.js"></script>
 

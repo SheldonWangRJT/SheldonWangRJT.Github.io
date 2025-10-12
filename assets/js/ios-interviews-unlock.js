@@ -1,6 +1,10 @@
 // iOS Interviews Password Unlock
 // This is client-side only - not truly secure, just a gentle barrier
 
+// ============================================
+// MAIN HUB UNLOCK
+// ============================================
+
 function unlockContent(event) {
   if (event) {
     event.preventDefault();
