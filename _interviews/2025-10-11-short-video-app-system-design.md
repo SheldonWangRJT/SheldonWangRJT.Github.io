@@ -333,7 +333,7 @@ stateDiagram-v2
         SubmitToSora --> QueueJob
         QueueJob --> [*]
     }
-```
+{% endmermaid %}
 
 **💬 What to say while drawing:**
 > "When user opens app, we check cache first for instant display, then fetch fresh data. Videos auto-play as user scrolls. When nearing the end of the feed, we trigger pagination. For recording, we show camera, let user record, apply effects, compress, and upload. For AI generation with Sora, we submit a prompt, queue the job, and notify user when ready."
