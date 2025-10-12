@@ -81,6 +81,32 @@ excerpt: "Design an AI chatbot like ChatGPT for iOS: streaming vs traditional so
 .page__content tbody tr:nth-child(even) {
   background-color: #f9f9f9;
 }
+
+/* Fix pre/code blocks to be readable */
+.page__content pre code {
+  color: #24292e !important;
+  background-color: transparent !important;
+}
+
+.page__content pre {
+  background-color: #f6f8fa !important;
+  color: #24292e !important;
+  border: 1px solid #e1e4e8;
+}
+
+/* Ensure all text is dark and readable */
+.page__content p,
+.page__content li,
+.page__content strong,
+.page__content em {
+  color: #333 !important;
+}
+
+/* Fix code in lists */
+.page__content li code {
+  background-color: #f4f4f4 !important;
+  color: #d63384 !important;
+}
 </style>
 
 ## 🎯 Problem Statement
