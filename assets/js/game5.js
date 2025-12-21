@@ -149,10 +149,25 @@ document.addEventListener('DOMContentLoaded', () => {
     leftBtn.addEventListener('click', () => movePlayer(-1, 0));
     rightBtn.addEventListener('click', () => movePlayer(1, 0));
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowUp') movePlayer(0, -1);
-        if (e.key === 'ArrowDown') movePlayer(0, 1);
-        if (e.key === 'ArrowLeft') movePlayer(-1, 0);
-        if (e.key === 'ArrowRight') movePlayer(1, 0);
+        // Only handle arrow keys when game is active
+        if (!gameContainer.classList.contains('hidden')) {
+            if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                movePlayer(0, -1);
+            }
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                movePlayer(0, 1);
+            }
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                movePlayer(-1, 0);
+            }
+            if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                movePlayer(1, 0);
+            }
+        }
     });
 
     // --- Game Initialization ---
