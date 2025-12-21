@@ -173,6 +173,7 @@ exclude:
   - package.json
   - tmp
   - vendor
+  - "_collections/TEMPLATE-*.md"
 keep_files:
   - .git
   - .svn
