@@ -223,6 +223,9 @@ collections:
   interviews:
     output: true
     permalink: /:collection/:path/
+  collections:
+    output: true
+    permalink: /:collection/:path/
 
 # Defaults
 defaults:
@@ -305,6 +308,15 @@ defaults:
       author_profile: true
       share: true
       comments: false
+  # _collections
+  - scope:
+      path: ""
+      type: collections
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
 
 # Sass/SCSS
 sass:

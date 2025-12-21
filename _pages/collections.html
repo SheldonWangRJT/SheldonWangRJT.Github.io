@@ -1,0 +1,16 @@
+---
+layout: archive
+title: "Collections"
+description: "Sneaker reviews, collectibles, and product reviews. Detailed analysis of sneakers, their design, comfort, value, and style."
+permalink: /collections/
+author_profile: true
+---
+
+{% include base_path %}
+
+
+{% for post in site.collections reversed%}
+  {% include archive-single.html %}
+{% endfor %}
+
+

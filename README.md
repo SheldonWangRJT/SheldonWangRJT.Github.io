@@ -38,6 +38,27 @@ If you use `chruby`, install via Homebrew and select a Ruby version, then run th
 
 Linux prerequisites: `sudo apt install build-essential gcc make`
 
+# 📝 Publishing New Content
+
+**👉 IMPORTANT: Before creating any new blog posts, reviews, or content, read the [BLOG_PUBLISHING_GUIDE.md](BLOG_PUBLISHING_GUIDE.md)!**
+
+The publishing guide contains:
+- Complete workflow for publishing new content
+- Collection descriptions (Tech Blog, Finance, Life, Collections, etc.)
+- Front matter templates for each content type
+- File naming conventions
+- Best practices and content guidelines
+
+**Quick Reference:**
+- Tech posts → `_posts/`
+- Finance/Investment → `_portfolio/`
+- Life/Personal → `_life/`
+- Sneaker Reviews → `_collections/` 🆕
+- Games/Demos → `_playground/`
+- Interview Prep → `_interviews/`
+
+See [BLOG_PUBLISHING_GUIDE.md](BLOG_PUBLISHING_GUIDE.md) for complete details.
+
 # Maintenance 
 
 My Personal fork will **not** accept any contributions.

@@ -12,6 +12,10 @@ main:
   - title: "🎮 Life & Interests"
     url: /life/
 
+  # sneaker reviews and collections
+  - title: "👟 Collections"
+    url: /collections/
+
   # my youtube tutorials
   # - title: "👨🏻‍🏫 Tutorials"
   #   url: /teaching/    
