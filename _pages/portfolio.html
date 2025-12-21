@@ -8,8 +8,17 @@ author_profile: true
 
 {% include base_path %}
 
+{% comment %} Separate pinned and regular posts {% endcomment %}
+{% assign pinned_posts = site.portfolio | where: "pinned", true | sort: "date" | reverse %}
+{% assign regular_posts = site.portfolio | where_exp: "post", "post.pinned != true" | sort: "date" | reverse %}
 
-{% for post in site.portfolio reversed%}
+{% comment %} Display pinned posts first {% endcomment %}
+{% for post in pinned_posts %}
+  {% include archive-single.html %}
+{% endfor %}
+
+{% comment %} Then display regular posts {% endcomment %}
+{% for post in regular_posts %}
   {% include archive-single.html %}
 {% endfor %}
 
