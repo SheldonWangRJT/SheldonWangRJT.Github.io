@@ -1,0 +1,224 @@
+:root {
+  --g8-bg: #0b1020;
+  --g8-panel: rgba(255, 255, 255, 0.06);
+  --g8-panel-2: rgba(255, 255, 255, 0.10);
+  --g8-text: rgba(255, 255, 255, 0.92);
+  --g8-muted: rgba(255, 255, 255, 0.65);
+  --g8-accent: #77e3ff;
+  --g8-danger: #ff5b6a;
+  --g8-border: rgba(255, 255, 255, 0.14);
+}
+
+html, body {
+  background: radial-gradient(1200px 600px at 20% 0%, rgba(119, 227, 255, 0.20), transparent 55%),
+              radial-gradient(900px 600px at 80% 10%, rgba(255, 91, 106, 0.14), transparent 55%),
+              var(--g8-bg);
+  color: var(--g8-text);
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+#main-content {
+  padding: 24px 12px 40px;
+}
+
+.g8-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.g8-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 10px 18px;
+}
+
+.g8-title {
+  margin: 0;
+  letter-spacing: -0.02em;
+  font-size: 28px;
+}
+
+.g8-subtitle {
+  margin: 8px 0 0;
+  color: var(--g8-muted);
+  font-size: 14px;
+}
+
+.g8-stats {
+  display: flex;
+  gap: 10px;
+}
+
+.g8-stat {
+  background: var(--g8-panel);
+  border: 1px solid var(--g8-border);
+  border-radius: 12px;
+  padding: 8px 10px;
+  min-width: 84px;
+}
+
+.g8-k {
+  display: block;
+  font-size: 11px;
+  color: var(--g8-muted);
+}
+
+.g8-v {
+  display: block;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.g8-main {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 16px;
+  align-items: start;
+  padding: 0 10px;
+}
+
+@media (max-width: 980px) {
+  .g8-main {
+    grid-template-columns: 1fr;
+  }
+  .g8-stats {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+}
+
+.g8-canvas-wrap {
+  position: relative;
+  background: var(--g8-panel);
+  border: 1px solid var(--g8-border);
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 10px;
+}
+
+canvas#g8-canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: rgba(0, 0, 0, 0.20);
+  border-radius: 12px;
+  touch-action: none; /* prevent scroll on swipe */
+}
+
+.g8-side {
+  display: grid;
+  gap: 12px;
+}
+
+.g8-panel {
+  background: var(--g8-panel);
+  border: 1px solid var(--g8-border);
+  border-radius: 16px;
+  padding: 14px 14px 12px;
+}
+
+.g8-panel h3 {
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+
+.g8-panel ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--g8-muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.g8-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 10px 0;
+  color: var(--g8-muted);
+  font-size: 13px;
+}
+
+.g8-row input[type="range"] {
+  width: 170px;
+}
+
+.g8-row select {
+  width: 170px;
+  padding: 6px 8px;
+  border-radius: 10px;
+  border: 1px solid var(--g8-border);
+  background: rgba(0,0,0,0.25);
+  color: var(--g8-text);
+}
+
+.g8-btn {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(119, 227, 255, 0.14);
+  color: var(--g8-text);
+  padding: 10px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.g8-btn:hover {
+  background: rgba(119, 227, 255, 0.20);
+}
+
+.g8-btn:active {
+  transform: translateY(1px);
+}
+
+.g8-btn-secondary {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.g8-overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+}
+
+.g8-overlay.hidden {
+  display: none;
+}
+
+.g8-overlay-card {
+  width: min(420px, calc(100% - 24px));
+  background: rgba(15, 20, 34, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 16px;
+  padding: 16px 16px 14px;
+}
+
+.g8-overlay-title {
+  margin: 0 0 8px;
+}
+
+.g8-overlay-msg {
+  margin: 0 0 14px;
+  color: var(--g8-muted);
+}
+
+.g8-overlay-actions {
+  display: grid;
+  gap: 10px;
+}
+
+.g8-overlay-hint {
+  margin: 12px 0 0;
+  color: rgba(255,255,255,0.55);
+  font-size: 12px;
+  text-align: center;
+}
+
+

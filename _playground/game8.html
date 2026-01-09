@@ -1,0 +1,87 @@
+---
+title: "512 Merge Snake 🐍➕"
+date: 2025-12-24
+permalink: /playground/game8/
+---
+
+A viral-style mini game mashup: **snake + merging numbers**. Start at **512**, eat smaller numbers, and your tail can **merge (2048-style)** when adjacent segments match.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>512 Merge Snake</title>
+  <link rel="stylesheet" href="{{ base_path }}/assets/css/game8.css" />
+</head>
+<body>
+  <div id="main-content">
+    <div class="g8-shell">
+      <header class="g8-header">
+        <div>
+          <h1 class="g8-title">512 Merge Snake</h1>
+          <p class="g8-subtitle">Arena mode: bots roam the grid. Eat letters, upgrade your head, and hunt smaller snakes.</p>
+        </div>
+        <div class="g8-stats" aria-live="polite">
+          <div class="g8-stat"><span class="g8-k">Score</span><span id="g8-score" class="g8-v">0</span></div>
+          <div class="g8-stat"><span class="g8-k">Head</span><span id="g8-max" class="g8-v">A</span></div>
+          <div class="g8-stat"><span class="g8-k">Len</span><span id="g8-len" class="g8-v">1</span></div>
+          <div class="g8-stat"><span class="g8-k">Bots</span><span id="g8-bots" class="g8-v">0</span></div>
+        </div>
+      </header>
+
+      <main class="g8-main">
+        <div class="g8-canvas-wrap">
+          <canvas id="g8-canvas" width="640" height="640"></canvas>
+          <div id="g8-overlay" class="g8-overlay hidden" role="dialog" aria-modal="true">
+            <div class="g8-overlay-card">
+              <h2 id="g8-overlay-title" class="g8-overlay-title">Game Over</h2>
+              <p id="g8-overlay-msg" class="g8-overlay-msg">You crashed.</p>
+              <div class="g8-overlay-actions">
+                <button id="g8-restart" class="g8-btn">Restart</button>
+              </div>
+              <p class="g8-overlay-hint">Controls: Arrow keys / WASD / swipe</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="g8-side">
+          <div class="g8-panel">
+            <h3>Rules</h3>
+            <ul>
+              <li>You start with head value <strong>A</strong>.</li>
+              <li>Food spawns as letters (mostly <strong>A</strong>, sometimes higher).</li>
+              <li><strong>Upgrade</strong>: if your head eats the <strong>same letter</strong>, your head upgrades: <strong>A + A → B</strong>, …, <strong>Z + Z → AA</strong>, <strong>AA + AA → BB</strong>, etc.</li>
+              <li><strong>Storage</strong>: if your head eats a <strong>smaller</strong> letter, it becomes a <strong>tail segment</strong> (head stays the same).</li>
+              <li><strong>Tail merge</strong>: adjacent equal tail segments merge into the next letter.</li>
+              <li><strong>Combat</strong>: if your head hits an enemy segment with a <strong>smaller</strong> letter, you eat it. If it’s equal or bigger, you die.</li>
+              <li>Walls and self-collisions end your run.</li>
+            </ul>
+          </div>
+
+          <div class="g8-panel">
+            <h3>Settings</h3>
+            <label class="g8-row">
+              <span>Max speed</span>
+              <input id="g8-speed" type="range" min="6" max="30" step="1" value="10" />
+            </label>
+            <label class="g8-row">
+              <span>Grid</span>
+              <select id="g8-grid">
+                <option value="22">22×22 (easy)</option>
+                <option value="26" selected>26×26 (normal)</option>
+                <option value="32">32×32 (hard)</option>
+              </select>
+            </label>
+            <button id="g8-new" class="g8-btn g8-btn-secondary">New Run</button>
+          </div>
+        </aside>
+      </main>
+    </div>
+  </div>
+
+  <script src="{{ base_path }}/assets/js/game8.js"></script>
+</body>
+</html>
+
+
