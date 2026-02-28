@@ -20,3 +20,8 @@ Apply when topic is backend/API/distributed systems/database/devops.
    - avoid vague "best practice" language without context and caveats.
 5. Code amount guidance:
    - code snippets are optional; diagrams and interface contracts can be primary artifacts.
+6. Depth and structure:
+   - target 1400+ words for major backend/system design posts unless user asks brief.
+   - include architecture options table, failure mode analysis, rollout plan, and operational metrics section.
+7. Mermaid compatibility:
+   - diagrams should use `{% mermaid %}` blocks with semicolon-terminated statements.

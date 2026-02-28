@@ -1,0 +1,15 @@
+---
+description: Mermaid rendering compatibility for this site
+globs: _posts/**/*.md
+alwaysApply: false
+---
+
+# Mermaid Rendering Compatibility
+
+For Mermaid diagrams in posts:
+
+1. Use Liquid Mermaid blocks:
+   - `{% mermaid %}` ... `{% endmermaid %}`
+2. End each Mermaid statement line with `;`.
+3. Validate diagram renders on local Jekyll preview before finalizing.
+4. Prefer readable graph labels and avoid oversized single diagrams; split large flows.

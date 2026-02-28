@@ -61,7 +61,7 @@ header:
 |--------|------|------|----------|
 
 ## System Diagram
-```mermaid
+{% mermaid %}
 flowchart TD;
     Client-->API;
     API-->Cache;
@@ -69,7 +69,7 @@ flowchart TD;
     Service-->DB;
     Service-->Queue;
     Queue-->Worker;
-```
+{% endmermaid %}
 
 ## Interface Contracts (Optional)
 - API request/response shape
@@ -77,6 +77,8 @@ flowchart TD;
 - storage/index strategy
 
 ## Failure Modes and Mitigations
+
+## Rollout and Rollback Plan
 
 ## Production Checklist
 - [ ] Observability metrics defined
@@ -100,7 +102,11 @@ flowchart TD;
 # prompt/eval/inference pipeline snippet
 ```
 
+## Decision Tradeoffs
+
 ## Risks and Limitations
+
+## Rollout Guardrails
 
 ## Freshness and Sources
 Last verified: YYYY-MM-DD

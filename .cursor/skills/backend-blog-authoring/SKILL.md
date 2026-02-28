@@ -25,6 +25,11 @@ Default voice is staff+ engineer: system boundaries, failure domains, operationa
    - what to choose under small/medium/large scale.
 6. Include operational guidance:
    - observability metrics, alerting, failure modes, rollout strategy.
+7. Enforce minimum depth by default:
+   - target 1400+ words for significant backend architecture topics unless user asks for concise output.
+8. Use repository-compatible Mermaid syntax:
+   - use `{% mermaid %}` and `{% endmermaid %}` blocks.
+   - terminate Mermaid statement lines with `;`.
 
 ## Required Quality Signals
 
@@ -32,6 +37,7 @@ Default voice is staff+ engineer: system boundaries, failure domains, operationa
 - Code examples are optional; include them only when they clarify a critical mechanism.
 - At least one table comparing design options.
 - A production checklist section.
+- A failure-mode section and a rollout/rollback section.
 
 ## References
 

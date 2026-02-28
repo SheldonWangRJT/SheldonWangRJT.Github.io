@@ -13,3 +13,6 @@ package-lock.json
 
 # Ignore bundler vendor directory
 vendor/bundle/
+
+# Ignore Sass/Jekyll build cache
+.sass-cache/

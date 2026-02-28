@@ -22,12 +22,17 @@ Create AI posts that remain credible in a fast-moving landscape by combining pra
    - link sources near claims
 5. If facts conflict:
    - state uncertainty and avoid absolute conclusions.
+6. Enforce depth for technical credibility:
+   - target 1400+ words for major AI architecture/platform posts unless user asks brief.
+7. Cover decision quality, not just features:
+   - include alternatives, tradeoffs, risks, and rollout guidance.
 
 ## Required Quality Signals
 
 - Practical implementation examples (prompt pattern, eval setup, pipeline pattern, or integration snippet).
 - Clear "when to use / when not to use" guidance.
 - A risk/limitations section.
+- A decision table and an operational checklist section.
 
 ## References
 

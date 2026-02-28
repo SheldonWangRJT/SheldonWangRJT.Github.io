@@ -15,9 +15,12 @@ When editing files in `_posts/**/*.md`, enforce:
 3. Reader value baseline:
    - Avoid generic-only content.
    - Include implementation detail (code examples or concrete workflows) where relevant.
+   - Target staff+ depth: include decisions, tradeoffs, constraints, failure modes, and operational rollout guidance.
 4. Structure baseline:
    - Include `<!--more-->`
    - Use scannable sections (`##`, `###`), tables/checklists when useful.
+   - Default depth target for technical posts: 1200+ words unless user explicitly asks for brief.
+   - Include at least: one decision table, one checklist, one tradeoff section, and one failure/risk section.
 5. Consistency:
    - Keep categories/tags aligned with existing repo style.
 6. Specialized topic routing:
@@ -25,3 +28,6 @@ When editing files in `_posts/**/*.md`, enforce:
    - AI posts should follow `.cursor/skills/ai-blog-authoring/SKILL.md`.
 7. AI freshness strictness:
    - For AI posts with fast-moving claims, require real-time verification, source links, and `Last verified: YYYY-MM-DD`.
+8. Mermaid compatibility:
+   - Use `{% mermaid %}` ... `{% endmermaid %}` blocks (not fenced ```mermaid) for maximum site compatibility.
+   - End each Mermaid statement line with `;` to match repository render/deploy behavior.
