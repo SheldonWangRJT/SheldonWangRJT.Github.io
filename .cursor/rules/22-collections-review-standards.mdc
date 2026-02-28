@@ -1,0 +1,18 @@
+---
+description: Standards for Collections review posts
+globs: _collections/**/*.md
+alwaysApply: false
+---
+
+# Collections Standards
+
+For `_collections` content:
+
+1. Follow sneaker/product review format:
+   - Overview, design, comfort/fit, value assessment, final verdict.
+2. Front matter baseline:
+   - `title`, `description`, `date`, `permalink`, `tags`
+3. URL/permalink:
+   - Must use `/collections/.../`
+4. Reader value:
+   - Include specification table and explicit pros/cons.

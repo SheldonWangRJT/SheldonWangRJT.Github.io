@@ -40,7 +40,7 @@ Linux prerequisites: `sudo apt install build-essential gcc make`
 
 # 📝 Publishing New Content
 
-**👉 IMPORTANT: Before creating any new blog posts, reviews, or content, read the [BLOG_PUBLISHING_GUIDE.md](BLOG_PUBLISHING_GUIDE.md)!**
+**👉 IMPORTANT: Before creating any new blog posts, reviews, or content, read the [Blog Publishing Guide](.cursor/guidance/blog-publishing-guide.md)!**
 
 The publishing guide contains:
 - Complete workflow for publishing new content
@@ -57,7 +57,7 @@ The publishing guide contains:
 - Games/Demos → `_playground/`
 - Interview Prep → `_interviews/`
 
-See [BLOG_PUBLISHING_GUIDE.md](BLOG_PUBLISHING_GUIDE.md) for complete details.
+See [Blog Publishing Guide](.cursor/guidance/blog-publishing-guide.md) for complete details.
 
 # Maintenance 
 

@@ -1,0 +1,30 @@
+---
+description: Repo-wide blog publishing operating rules
+alwaysApply: true
+---
+
+# Repo Blog System (Always Apply)
+
+This repository has a dedicated blog workflow. For any request related to writing, editing, reviewing, or publishing content, follow these rules:
+
+1. Treat this repository's blog standard as authoritative:
+   - Read `.cursor/guidance/blog-publishing-guide.md` before creating or modifying blog content.
+2. Use the project skill:
+   - Read `.cursor/skills/blog-authoring/SKILL.md` and follow its workflow/checklists.
+3. Keep guidance repo-local:
+   - Prefer `.cursor/guidance/*` and `.cursor/skills/*` in this repo, not user-global guidance.
+4. Enforce collection correctness:
+   - Tech posts go to `_posts/`
+   - Use the correct folder for non-tech content as defined in the publishing guide.
+5. Enforce date and filename validity:
+   - Filename format: `YYYY-MM-DD-slug.md`
+   - Date must not be in the future unless explicitly requested.
+6. Enforce quality:
+   - Include concrete value for readers (examples, practical steps, checklists, and implementation-level detail).
+7. Respect navigation tab mapping:
+   - `📔 Tech Blog Posts` (`/year-archive/`) -> `_posts/`
+   - `💸 Investment & Finance` (`/portfolio/`) -> `_portfolio/`
+   - `🎮 Life & Interests` (`/life/`) -> `_life/`
+   - `👟 Collections` (`/collections/`) -> `_collections/`
+   - `🛝 Playground` (`/playground/`) -> `_playground/`
+   - `🎯 iOS Interviews` (`/ios-interviews/`) -> `_interviews/` + related page wiring

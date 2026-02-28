@@ -1,0 +1,16 @@
+---
+description: Guardrails for ios-interviews page wiring
+globs: _pages/ios-interviews.html
+alwaysApply: false
+---
+
+# iOS Interviews Page Wiring
+
+When editing `_pages/ios-interviews.html`:
+
+1. Preserve unlock flow behavior and encrypted payload usage.
+2. Avoid introducing plaintext protected content.
+3. Keep UX stable:
+   - lock screen prompt
+   - unlock action
+   - post-unlock content rendering

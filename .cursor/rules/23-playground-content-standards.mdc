@@ -1,0 +1,18 @@
+---
+description: Standards for Playground game/demo content
+globs: _playground/**
+alwaysApply: false
+---
+
+# Playground Standards
+
+For `_playground` entries:
+
+1. Preserve front matter in game files:
+   - `title`, `date`, `permalink`
+2. URL/permalink:
+   - Must use `/playground/.../`
+3. Technical integrity:
+   - Keep asset paths compatible with Jekyll base path usage.
+4. UX quality:
+   - Include concise description of gameplay/features near top.

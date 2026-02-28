@@ -1,0 +1,22 @@
+---
+description: Enforce _posts frontmatter and post value
+globs: _posts/**/*.md
+alwaysApply: false
+---
+
+# _posts Standards
+
+When editing files in `_posts/**/*.md`, enforce:
+
+1. Required front matter keys:
+   - `layout`, `title`, `description`, `date`, `categories`, `tags`, `excerpt`
+2. Date format:
+   - `YYYY-MM-DD HH:MM:SS -0700` preferred when time is present.
+3. Reader value baseline:
+   - Avoid generic-only content.
+   - Include implementation detail (code examples or concrete workflows) where relevant.
+4. Structure baseline:
+   - Include `<!--more-->`
+   - Use scannable sections (`##`, `###`), tables/checklists when useful.
+5. Consistency:
+   - Keep categories/tags aligned with existing repo style.

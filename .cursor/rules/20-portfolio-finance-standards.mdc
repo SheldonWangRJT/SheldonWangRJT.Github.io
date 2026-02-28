@@ -1,0 +1,19 @@
+---
+description: Standards for Investment and Finance posts
+globs: _portfolio/**/*.md
+alwaysApply: false
+---
+
+# Portfolio Content Standards
+
+For `_portfolio` content:
+
+1. Front matter baseline:
+   - `title`, `description`, `date`, `permalink`, `tags`
+2. URL/permalink:
+   - Must use `/portfolio/.../`
+3. Content quality:
+   - Include scenario analysis, assumptions, and risk caveats.
+   - Prefer tables/checklists for allocation and action plans.
+4. Safety:
+   - Include a non-advisory disclaimer for market/investment strategy content.

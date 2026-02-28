@@ -1,0 +1,19 @@
+---
+description: Standards for Life and Interests posts
+globs: _life/**/*.md
+alwaysApply: false
+---
+
+# Life Content Standards
+
+For `_life` posts:
+
+1. Front matter baseline:
+   - `title`, `description`, `date`, `permalink`, `tags`
+2. URL/permalink:
+   - Must use `/life/.../`
+3. Writing quality:
+   - Provide practical takeaways, not only storytelling.
+   - Use clear sections and actionable bullet points.
+4. Privacy:
+   - Avoid exposing sensitive personal data.

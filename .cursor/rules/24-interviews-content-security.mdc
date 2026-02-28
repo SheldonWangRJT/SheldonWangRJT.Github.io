@@ -1,0 +1,17 @@
+---
+description: Standards for iOS interviews content and protection workflow
+globs: _interviews/**/*.md
+alwaysApply: false
+---
+
+# iOS Interviews Standards
+
+For `_interviews` content:
+
+1. Keep this section access-controlled and reputation-focused.
+2. Do not expose or rotate real passwords in public guidance content.
+3. If workflow changes affect encryption or access:
+   - Validate `_interviews/encrypt.js` update flow still works.
+   - Verify `/ios-interviews/` page wiring remains consistent.
+4. Keep content structured for interview prep:
+   - clear problem, tradeoffs, and solution breakdowns.
