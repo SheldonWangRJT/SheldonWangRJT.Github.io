@@ -25,7 +25,7 @@ header:
 
 ## Technical Post Body Skeleton
 
-```markdown
+~~~markdown
 <!--more-->
 
 ## Why This Matters
@@ -44,7 +44,71 @@ header:
 - [ ] Item 2
 
 ## Final Takeaway
+~~~
+
+## Backend Technical Skeleton (`_posts/`)
+
+~~~markdown
+<!--more-->
+
+## Problem and Constraints
+- traffic / QPS
+- latency SLO
+- consistency and cost limits
+
+## Architecture Options
+| Option | Pros | Cons | Best For |
+|--------|------|------|----------|
+
+## System Diagram
+```mermaid
+flowchart TD;
+    Client-->API;
+    API-->Cache;
+    API-->Service;
+    Service-->DB;
+    Service-->Queue;
+    Queue-->Worker;
 ```
+
+## Interface Contracts (Optional)
+- API request/response shape
+- event schema
+- storage/index strategy
+
+## Failure Modes and Mitigations
+
+## Production Checklist
+- [ ] Observability metrics defined
+- [ ] Retry/idempotency behavior documented
+- [ ] Rollout/rollback plan ready
+~~~
+
+## AI Technical Skeleton (`_posts/`)
+
+~~~markdown
+<!--more-->
+
+## Problem and Success Criteria
+
+## Candidate Approaches (Model/Tool Options)
+| Option | Strength | Weakness | Cost/Latency Notes |
+|--------|----------|----------|--------------------|
+
+## Implementation Pattern
+```python
+# prompt/eval/inference pipeline snippet
+```
+
+## Risks and Limitations
+
+## Freshness and Sources
+Last verified: YYYY-MM-DD
+
+Sources:
+- https://example.com/official-source-1
+- https://example.com/official-source-2
+~~~
 
 ## Investment/Finance Post (`_portfolio/`) Front Matter
 

@@ -11,6 +11,8 @@ This repository has a dedicated blog workflow. For any request related to writin
    - Read `.cursor/guidance/blog-publishing-guide.md` before creating or modifying blog content.
 2. Use the project skill:
    - Read `.cursor/skills/blog-authoring/SKILL.md` and follow its workflow/checklists.
+   - If topic is backend/system/api/infrastructure focused, also use `.cursor/skills/backend-blog-authoring/SKILL.md`.
+   - If topic is AI/LLM/agent/model/tooling focused, also use `.cursor/skills/ai-blog-authoring/SKILL.md`.
 3. Keep guidance repo-local:
    - Prefer `.cursor/guidance/*` and `.cursor/skills/*` in this repo, not user-global guidance.
 4. Enforce collection correctness:
@@ -30,3 +32,5 @@ This repository has a dedicated blog workflow. For any request related to writin
    - `🎯 iOS Interviews` (`/ios-interviews/`) -> `_interviews/` + related page wiring
 8. Enforce freshness for time-sensitive content:
    - For volatile claims (pricing, releases, market/policy data, "latest/current"), run real-time verification and include source links or "Last verified" notes.
+9. Enforce seniority perspective:
+   - Write from a staff+ engineer angle: decision quality, tradeoffs, constraints, operations, and long-term maintainability.

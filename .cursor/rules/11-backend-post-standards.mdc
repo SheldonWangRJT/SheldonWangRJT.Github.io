@@ -1,0 +1,22 @@
+---
+description: Standards for backend-focused posts in _posts
+globs: _posts/**/*.md
+alwaysApply: false
+---
+
+# Backend Post Standards
+
+Apply when topic is backend/API/distributed systems/database/devops.
+
+1. Reader value must be implementation-first:
+   - architecture diagram explanation, endpoint/data model examples, and operational tradeoffs.
+   - perspective should reflect staff+ engineering decision-making.
+2. Include concrete backend artifacts when relevant:
+   - schema snippets, API contract examples, queue/retry behavior, caching strategy, failure modes.
+   - for non-trivial systems, include at least one architecture/sequence/state diagram.
+3. Mention reliability and operations:
+   - observability, error handling, rollout plan, and performance constraints.
+4. Keep claims practical:
+   - avoid vague "best practice" language without context and caveats.
+5. Code amount guidance:
+   - code snippets are optional; diagrams and interface contracts can be primary artifacts.

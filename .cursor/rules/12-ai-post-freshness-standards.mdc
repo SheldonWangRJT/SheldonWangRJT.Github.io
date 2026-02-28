@@ -1,0 +1,21 @@
+---
+description: Strict freshness and sourcing standards for AI-focused posts
+globs: _posts/**/*.md
+alwaysApply: false
+---
+
+# AI Post Freshness Standards
+
+Apply when topic is AI/LLM/agent/model/tooling/evaluation.
+
+1. Freshness is mandatory:
+   - run real-time verification for model capabilities, pricing, release dates, benchmarks, and product availability.
+2. Source quality:
+   - prefer primary sources (official docs, release notes, provider announcements, research papers).
+3. Source count:
+   - use at least 2 independent sources for high-impact claims.
+4. Disclosure:
+   - add `Last verified: YYYY-MM-DD` in volatile sections.
+   - include source links near critical factual claims.
+5. Uncertainty handling:
+   - if facts conflict or cannot be confirmed, explicitly mark uncertainty and avoid hard claims.

@@ -20,3 +20,8 @@ When editing files in `_posts/**/*.md`, enforce:
    - Use scannable sections (`##`, `###`), tables/checklists when useful.
 5. Consistency:
    - Keep categories/tags aligned with existing repo style.
+6. Specialized topic routing:
+   - Backend posts should follow `.cursor/skills/backend-blog-authoring/SKILL.md`.
+   - AI posts should follow `.cursor/skills/ai-blog-authoring/SKILL.md`.
+7. AI freshness strictness:
+   - For AI posts with fast-moving claims, require real-time verification, source links, and `Last verified: YYYY-MM-DD`.

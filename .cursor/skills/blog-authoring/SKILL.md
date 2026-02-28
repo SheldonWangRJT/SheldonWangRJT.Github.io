@@ -42,6 +42,7 @@ If the user does not provide these, infer from repo patterns and request.
 ## Output Standards
 
 - Keep tone practical and direct.
+- Write from a staff+ engineer perspective (architecture decisions, tradeoffs, constraints, and risk management).
 - Prioritize "how to apply this" over broad theory.
 - Use tables/checklists where they improve clarity.
 - Keep examples realistic and copy-adaptable.
@@ -54,3 +55,8 @@ For reusable templates and checklist, see:
 - [templates.md](templates.md)
 - [quality-checklist.md](quality-checklist.md)
 - [freshness-policy.md](freshness-policy.md)
+
+## Specialized Skills
+
+- For backend-focused technical posts, also use `../backend-blog-authoring/SKILL.md`.
+- For AI-focused technical posts, also use `../ai-blog-authoring/SKILL.md` (freshness-first).
