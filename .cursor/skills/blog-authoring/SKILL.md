@@ -29,7 +29,11 @@ If the user does not provide these, infer from repo patterns and request.
    - actionable steps/checklists
    - concrete scenarios; avoid generic filler
 6. For technical content, include implementation-level code examples when useful.
-7. Run a quick quality pass:
+7. Run a freshness gate for time-sensitive claims:
+   - If topic includes "latest/current/new", pricing, release dates, market data, policy/regulation, product feature comparisons, or trend claims, run real-time web checks.
+   - Prefer primary sources (official docs, release notes, company blogs, standards bodies) before secondary commentary.
+   - If claims cannot be verified, avoid exact numbers/dates and label as directional.
+8. Run a quick quality pass:
    - not future-dated (unless requested)
    - structure is scannable
    - no prompts for comments section
@@ -41,9 +45,12 @@ If the user does not provide these, infer from repo patterns and request.
 - Prioritize "how to apply this" over broad theory.
 - Use tables/checklists where they improve clarity.
 - Keep examples realistic and copy-adaptable.
+- For time-sensitive sections, include a short "Last verified: YYYY-MM-DD" note.
+- If external facts drive recommendations, include source links in-content.
 
 ## Quick Templates
 
 For reusable templates and checklist, see:
 - [templates.md](templates.md)
 - [quality-checklist.md](quality-checklist.md)
+- [freshness-policy.md](freshness-policy.md)

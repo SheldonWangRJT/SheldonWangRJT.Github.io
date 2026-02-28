@@ -28,3 +28,5 @@ This repository has a dedicated blog workflow. For any request related to writin
    - `👟 Collections` (`/collections/`) -> `_collections/`
    - `🛝 Playground` (`/playground/`) -> `_playground/`
    - `🎯 iOS Interviews` (`/ios-interviews/`) -> `_interviews/` + related page wiring
+8. Enforce freshness for time-sensitive content:
+   - For volatile claims (pricing, releases, market/policy data, "latest/current"), run real-time verification and include source links or "Last verified" notes.
