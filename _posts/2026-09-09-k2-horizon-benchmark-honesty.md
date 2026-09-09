@@ -15,6 +15,8 @@ tags:
 excerpt: "A 3.37-point self-reported correction on TerminalBench 2.1 is bigger than the gap between most models in the table — and it's the most important number in the K2 Horizon release."
 ---
 
+> [中文版 Chinese version](/ai%20engineering/llms/k2-horizon-benchmark-honesty-zh/)
+
 On September 3, IFM — the AI institute inside Abu Dhabi's MBZUAI, founded by Eric Xing — released K2 Horizon: six models from 0.9B to 375B parameters, Apache 2.0, with training data, training code, intermediate checkpoints, fine-grained logs, and data-construction recipes. By any measure, the most comprehensive open model release to date.
 
 But the most important number in the release isn't a benchmark score. It's a correction: **70.2 → 66.9.**
