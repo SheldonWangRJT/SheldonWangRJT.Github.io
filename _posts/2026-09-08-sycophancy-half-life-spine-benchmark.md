@@ -2,7 +2,7 @@
 layout: single
 title: "Sycophancy Has a Half-Life: What 25 Turns of Pressure Does to Frontier Models"
 description: "The new SPINE benchmark shows frontier models increasingly concede under sustained disagreement — often while their reasoning traces still hold the correct answer."
-date: 2026-09-08 21:20:00 -0700
+date: 2026-09-08 21:05:00 -0700
 categories:
   - AI Engineering
   - LLMs
