@@ -16,6 +16,8 @@ excerpt: "Same GPT-6 Astra weights, 62.7% vs 99.9% — the 37-point gap is the h
 
 > [中文版 Chinese version](/ai%20engineering/llms/astra-arc-agi-3-harness-zh/)
 
+The benchmark that scores your AI is probably rigged — and the receipts are public: on ARC-AGI-3, the same GPT-6 Astra weights scored **62.7%** in one harness and **99.9%** in another.
+
 On September 3, 2026, OpenAI launched GPT-6 Astra and led with a headline number: **99.9% on ARC-AGI-3** — a benchmark purpose-built to resist saturation. The same day, the independent benchmark operator, ARC Prize, published its own evaluation of the same model: **62.7%**.
 
 Same weights. Same week. A 37.2-point gap. The difference is not the model. It is the harness.
