@@ -17,6 +17,8 @@ excerpt: "同一份 GPT-6 Astra 权重，62.7% 对 99.9%——37 分的差距来
 
 > [English version](/ai%20engineering/llms/astra-arc-agi-3-harness/)
 
+给你家 AI 打分的 benchmark，很可能被动了手脚——而且证据是公开的：同一份 GPT-6 Astra 权重，在 ARC-AGI-3 上一套 harness 跑出 **62.7%**，另一套跑出 **99.9%**。
+
 2026 年 9 月 3 日，OpenAI 发布 GPT-6 Astra，发布材料里最显眼的数字是：**ARC-AGI-3 上 99.9%**——一个以"极难饱和"著称的 benchmark。同日，独立的 benchmark 运营方 ARC Prize 公布了它自己对同一模型的测评：**62.7%**。
 
 同一组权重。同一个星期。37.2 个百分点的差距。差别不在模型，在 **harness（评测脚手架）**。
