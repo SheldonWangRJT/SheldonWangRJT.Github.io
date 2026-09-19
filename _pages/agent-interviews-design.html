@@ -1,0 +1,53 @@
+---
+layout: archive
+title: "🏗️ Agent System Design Problems"
+permalink: /agent-interviews/design/
+author_profile: true
+header:
+  overlay_image: https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+  overlay_filter: 0.5
+  caption: "Design rounds, the way they actually run"
+excerpt: "5 open-ended agent system design problems from real production work — code migration agents, support agents, eval harnesses, agent platforms — each with constraints and a discussion framework."
+---
+
+{% include base_path %}
+
+<style>
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #667eea;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.back-link:hover {
+  color: #764ba2;
+}
+
+.protected-content {
+  display: none;
+}
+
+.protected-content.unlocked {
+  display: block;
+}
+</style>
+
+<div id="protected-content" class="protected-content">
+  <a href="{{ base_path }}/agent-interviews/" class="back-link">← Back to Interview Hub</a>
+
+  {% if site.agent_interviews %}
+    {% assign design_posts = site.agent_interviews | where: "category", "design" | sort: "date" | reverse %}
+    {% for post in design_posts %}
+      {% include archive-single.html %}
+    {% endfor %}
+  {% else %}
+    <p style="text-align: center; color: rgba(255,255,255,0.7); padding: 40px;">
+      No problems available yet. Check back soon!
+    </p>
+  {% endif %}
+</div>
+
+<script src="{{ base_path }}/assets/js/agent-interviews-unlock.js"></script>
