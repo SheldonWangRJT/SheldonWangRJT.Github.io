@@ -25,6 +25,37 @@ Design an **agent system to migrate 2M lines of Objective-C to Swift** across 50
 - **Parallel development**: humans keep merging; the migration must not constantly conflict.
 - **Measurable**: leadership wants a dashboard, not vibes.
 
+## 📐 Architecture
+
+{% mermaid %}
+flowchart TD;
+    Queue["Module priority queue"]-->Coord["Coordinator"];
+    Coord-->State["Module state store"];
+    Coord-->Conv["Converter agent (per module, bounded)"];
+    Conv-->Build["Build gate"];
+    Build-->|fail|Conv;
+    Build-->|pass|Tests["Unit tests"];
+    Tests-->|fail|Conv;
+    Tests-->|pass|Behav["Behavioral diff (old vs new)"];
+    Behav-->|mismatch|Conv;
+    Behav-->|match|Summ["Review summarizer"];
+    Summ-->Human["Human review"];
+    Human-->|changes requested|Conv;
+    Human-->|approved|Merge["Merge"];
+    Merge-->Dash["Metrics dashboard"];
+    Merge-->State;
+{% endmermaid %}
+
+*The verifier is the product; the converter is interchangeable. Every loop back to the converter is cheap because verification is automated.*
+
+{% mermaid %}
+flowchart LR;
+    A["Phase 1: Pilot (2-3 representative modules)"]-->B["Phase 2: Scale (module-by-module queue)"];
+    B-->C["Phase 3: Sustain (standing process for new ObjC)"];
+    A-->D["Calibrate verifier, review burden, metrics"];
+    D-->B;
+{% endmermaid %}
+
 ## 🧭 Discussion Framework
 
 A strong answer walks through these areas in order:
