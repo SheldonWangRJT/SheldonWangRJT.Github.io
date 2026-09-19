@@ -1,0 +1,340 @@
+---
+layout: archive
+title: "🧠 Agent Interview Prep Hub"
+permalink: /agent-interviews/
+author_profile: true
+header:
+  overlay_image: https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+  overlay_filter: 0.5
+  caption: "Agents, evals, and system design — interview prep for the agent era"
+excerpt: "Concept questions and system design problems for AI agent interviews: ReAct, tool use, MCP, RAG, multi-agent orchestration, evals, reliability, and cost. Built from production experience."
+---
+
+{% include base_path %}
+
+<style>
+.interview-lock-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+.interview-lock-icon {
+  font-size: 4em;
+  margin-bottom: 20px;
+  color: #667eea;
+  animation: lock-pulse 2s ease-in-out infinite;
+}
+
+@keyframes lock-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.interview-lock-title {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.interview-lock-subtitle {
+  font-size: 1.1em;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.password-form {
+  margin: 30px 0;
+}
+
+.password-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 15px 20px;
+  font-size: 1.1em;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  margin-bottom: 20px;
+  transition: all 0.3s;
+}
+
+.password-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+}
+
+.password-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.unlock-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 15px 50px;
+  font-size: 1.2em;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: all 0.3s;
+}
+
+.unlock-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.teaser-content {
+  margin-top: 40px;
+  text-align: left;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 15px;
+  border-left: 4px solid #667eea;
+}
+
+.teaser-content h3 {
+  color: #667eea;
+  margin-top: 0;
+}
+
+.teaser-content ul {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.8;
+}
+
+.interview-hub {
+  display: none;
+}
+
+.interview-hub.unlocked {
+  display: block;
+}
+
+.hub-intro {
+  text-align: center;
+  padding: 40px 30px;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+
+.hub-intro h2 {
+  color: #667eea;
+  margin: 0 0 15px 0;
+  font-size: 2em;
+}
+
+.hub-intro p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.15em;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.category-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 35px 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transition: all 0.3s;
+  text-align: center;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.category-icon {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.category-card h3 {
+  color: #fff;
+  font-size: 1.6em;
+  margin: 0 0 15px 0;
+}
+
+.category-card p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.05em;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.category-stats {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.85em;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 5px;
+}
+
+.category-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 12px 30px;
+  font-size: 1.1em;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.category-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: white;
+  transform: scale(1.05);
+}
+</style>
+
+<div id="lock-screen" class="interview-lock-container">
+  <div class="interview-lock-icon">🔒</div>
+  <h2 class="interview-lock-title">Password Protected Content</h2>
+  <p class="interview-lock-subtitle">
+    Personal AI agent interview preparation materials compiled from my own study, production experience building agent systems at Meta, publicly available resources, and general industry knowledge.
+    <br><br>
+    <strong>Note:</strong> This is my personal learning resource. All content is based on publicly available information, common interview patterns, and my own technical expertise - nothing proprietary or under NDA.
+    <br><br>
+    <strong>Want access?</strong> Reach out on <a href="https://linkedin.com/in/sheldonengineering" style="color: #667eea;">LinkedIn</a> or <a href="mailto:sheldon.wang777@gmail.com" style="color: #667eea;">email me</a>.
+  </p>
+
+  <form class="password-form" onsubmit="return unlockContent(event);">
+    <input
+      type="password"
+      id="password-input"
+      class="password-input"
+      placeholder="Enter password to unlock..."
+      required
+      autocomplete="off"
+    >
+    <br>
+    <button type="submit" class="unlock-btn">🔓 Unlock Interview Hub</button>
+  </form>
+
+  <div class="teaser-content">
+    <h3>📚 What's Inside:</h3>
+    <ul>
+      <li><strong>35+ Concept Questions:</strong> ReAct, tool use & MCP, context engineering, RAG, multi-agent orchestration, evals</li>
+      <li><strong>5 System Design Problems:</strong> code migration agents, support agents, eval harnesses, agent platforms — with discussion frameworks</li>
+      <li><strong>Answer Outlines:</strong> key points an interviewer wants to hear, not essays</li>
+      <li><strong>Follow-ups:</strong> the "and then what?" questions that separate Staff-level answers</li>
+      <li><strong>Production Lens:</strong> reliability, cost, and eval tradeoffs from real agent systems</li>
+    </ul>
+  </div>
+</div>
+
+<div id="interview-hub" class="interview-hub">
+  <div class="hub-intro">
+    <h2>🎓 Agent Interview Prep Hub</h2>
+    <p>
+      Welcome! This is my personal AI agent interview preparation resource, organized into two focused sections: <strong>concepts</strong> (what interviewers probe in technical rounds) and <strong>system design</strong> (the open-ended "design an agent system" rounds). All content is compiled from publicly available materials, common interview questions, production experience, and my own technical study.
+    </p>
+  </div>
+
+  <div class="categories-grid">
+
+    <!-- Category 1: Concept Questions -->
+    <div class="category-card">
+      <span class="category-icon">📚</span>
+      <h3>Agent Concept Questions</h3>
+      <p>Master the fundamentals interviewers actually probe: agent architectures, tool use, MCP, context & memory, RAG, multi-agent patterns, evals, and reliability.</p>
+
+      <div class="category-stats">
+        <div class="stat-item">
+          <span class="stat-number">6</span>
+          <span class="stat-label">Topic Sets</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">35+</span>
+          <span class="stat-label">Questions</span>
+        </div>
+      </div>
+
+      <a href="{{ base_path }}/agent-interviews/concepts/" class="category-btn">
+        Explore Questions →
+      </a>
+    </div>
+
+    <!-- Category 2: System Design -->
+    <div class="category-card">
+      <span class="category-icon">🏗️</span>
+      <h3>Agent System Design</h3>
+      <p>Open-ended design problems from real production work: migration agents, support agents, eval harnesses, agent platforms. Each with constraints and a discussion framework.</p>
+
+      <div class="category-stats">
+        <div class="stat-item">
+          <span class="stat-number">5</span>
+          <span class="stat-label">Problems</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">Staff</span>
+          <span class="stat-label">Level Depth</span>
+        </div>
+      </div>
+
+      <a href="{{ base_path }}/agent-interviews/design/" class="category-btn">
+        View Problems →
+      </a>
+    </div>
+
+  </div>
+
+  <div style="text-align: center; margin-top: 50px; padding: 30px; background: rgba(255,255,255,0.03); border-radius: 15px;">
+    <p style="color: rgba(255,255,255,0.7); font-size: 1.05em;">
+      💡 <strong>Pro Tip:</strong> Start with Concepts to build vocabulary, then tackle System Design problems out loud — narrate tradeoffs the way you would in a real round. Interviewers score your reasoning path, not just the final architecture.
+    </p>
+  </div>
+</div>
+
+<script src="{{ base_path }}/assets/js/agent-interviews-unlock.js"></script>
