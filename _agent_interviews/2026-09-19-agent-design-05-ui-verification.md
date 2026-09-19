@@ -24,6 +24,28 @@ Design a **multi-agent pipeline that verifies mobile UI reimplementations agains
 - **Flakiness kills trust**: one flaky failure and teams ignore the whole system.
 - **Must integrate into CI** with bounded runtime.
 
+## 📐 Architecture
+
+{% mermaid %}
+flowchart LR;
+    Spec["Design spec"]-->Comp["Layer 1: Spec compiler"];
+    Comp-->|"typed assertions"|Nav["Layer 2: Navigator"];
+    Nav-->|"screenshots + action trace"|Cmp["Layer 3: Comparator"];
+    Cmp-->|"structured verdict"|CI["CI gate (pass/fail)"];
+    Nav-->Farm["Device farm (config matrix)"];
+{% endmermaid %}
+
+*Deterministic orchestration where you need trust, bounded autonomy where you need adaptability. Handoffs are typed and independently testable.*
+
+{% mermaid %}
+flowchart TD;
+    Shot["Screenshot captured"]-->PDiff["Perceptual diff (not pixel diff)"];
+    PDiff-->Tol["Tolerance bands (calibrated on known-good runs)"];
+    Tol-->|within band|Pass["Pass"];
+    Tol-->|real difference|Fail["Fail: real regression"];
+    Tol-->|ambiguous|Quar["Quarantine (tracked, never silently dropped)"];
+{% endmermaid %}
+
 ## 🧭 Discussion Framework
 
 **1. The 3-layer architecture**
