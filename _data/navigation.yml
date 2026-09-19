@@ -35,6 +35,10 @@ main:
   - title: "🎯 iOS Interviews"
     url: /ios-interviews/
 
+  # agent interviews (password protected)
+  - title: "🧠 Agent Interviews"
+    url: /agent-interviews/
+
   # - title: "Publications"
   #   url: /publications/
 
