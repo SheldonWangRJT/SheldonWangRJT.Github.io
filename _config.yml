@@ -224,6 +224,9 @@ collections:
   interviews:
     output: true
     permalink: /:collection/:path/
+  agent_interviews:
+    output: true
+    permalink: /:collection/:path/
   collections:
     output: true
     permalink: /:collection/:path/
