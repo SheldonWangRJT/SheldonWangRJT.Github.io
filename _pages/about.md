@@ -12,14 +12,16 @@ header:
   caption: "Code. Create. Inspire."
 ---
 
-Welcome to my corner of the internet! 🌐 I'm **Sheldon Wang** – Staff Software Engineer at **Meta** (Tech Lead, Facebook Monetization), former **Snapchat** iOS Lead (top-10 all-time committer 🏆). These days I build **production AI agent systems at Meta scale** – multi-agent architectures, self-improving feedback loops, and the infrastructure that keeps them reliable.
+Welcome to my corner of the internet! 🌐 I'm **Sheldon Wang** — I build **production AI agent systems at Meta scale**. (Staff Engineer, Tech Lead @ Facebook Monetization; ex-Snapchat iOS Lead, top-10 all-time committer 🏆)
 
-With **12+ years** of engineering across iOS, Android, web, and backend for products reaching **3+ billion users**, I've gone from shipping pixels to shipping agents. But this site isn't just about tech – it's about sharing everything I'm learning along the way.
+**$5M+/yr** saved by agents I've shipped · **top 3 of 700+** engineers org-wide in coding contribution · **12+ years** across iOS, Android, web & backend for 3B+ users.
+
+This site is where I share what I'm learning — bilingual deep-dives on LLMs & agents 3×/week, investment notes, and life experiments.
 
 ## 🗺️ What You'll Find Here
 
 ### 📔 [**Tech Blog Posts**](/year-archive/) 
-Deep dives into AI agents, system design, iOS development, and the art of building software that millions love. From multi-agent orchestration patterns to performance optimization tips that actually work. Perfect for when you want to level up your engineering game!
+Deep dives into AI agents, system design, iOS development, and the art of building software that millions love. From multi-agent orchestration patterns to performance optimization tips that actually work. New to the AI series? Start with the [🤖 AI & Agents collection](/categories/#ai-engineering).
 
 ### 💸 [**Investment & Finance**](/portfolio/) 
 My thoughts on markets, money, and making sense of the economic chaos around us. Expect data-driven analysis mixed with just enough skepticism to keep things interesting. Warning: may contain unpopular opinions about crypto. 😏
