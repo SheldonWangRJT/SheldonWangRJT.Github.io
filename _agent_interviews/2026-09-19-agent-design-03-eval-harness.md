@@ -24,6 +24,28 @@ excerpt: "100+ engineers, daily agent changes, <15 min evals: golden task sets, 
 - **Cost budget**: evals run hundreds of times a day; $/run matters.
 - **Ownership**: each team owns its agents; the platform team owns the harness.
 
+## 📐 Architecture
+
+{% mermaid %}
+flowchart LR;
+    Diff["Code diff"]-->Smoke["Smoke: 20 tasks, 2 min (blocking)"];
+    Smoke-->|pass|Full["Full: 200 tasks, 15 min (blocks merge)"];
+    Full-->|pass|Merge["Merge to main"];
+    Merge-->Night["Nightly deep: 2k tasks + adversarial (advisory)"];
+    Night-->Ticket["File tasks on regression"];
+{% endmermaid %}
+
+*Blocking policy is tiered: fast signal blocks fast, deep signal advises. Decided in advance, not on Friday at 5pm.*
+
+{% mermaid %}
+flowchart TD;
+    Gold["Golden task set (human-verified)"]-->Judge["LLM judge scores"];
+    Judge-->Agree["Judge-vs-human agreement metric"];
+    Agree-->|drift|Calib["Tighten rubric, add few-shot examples"];
+    Calib-->Judge;
+    Agree-->|healthy|Trust["Trusted in CI gates"];
+{% endmermaid %}
+
 ## 🧭 Discussion Framework
 
 **1. What's in the harness**
