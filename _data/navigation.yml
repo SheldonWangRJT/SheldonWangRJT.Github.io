@@ -3,6 +3,10 @@ main:
   # pure tech blog
   - title: "📔 Tech Blog Posts"
     url: /year-archive/
+
+  # AI agents & LLM deep-dives (3x/week bilingual series)
+  - title: "🤖 AI & Agents"
+    url: /categories/#ai-engineering
   
   # my investment strategy and suggestions (including sneakers)
   - title: "💸 Investment & Finance"
