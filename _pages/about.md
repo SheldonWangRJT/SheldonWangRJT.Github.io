@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: "👋 Hey there! Welcome to The Sheldon Wang Site"
-description: "Personal site of Sheldon Wang - Staff iOS Engineer at Meta, ex-Snapchat. Tech blog posts, investment insights, and life experiences from a seasoned software engineer."
+description: "Personal site of Sheldon Wang — Staff Software Engineer (Agentic Systems & AI Infrastructure) at Meta, ex-Snapchat. Tech blog posts, investment insights, and life experiments from an engineer building production AI agents."
 author_profile: true
 redirect_from:
   - /about/
@@ -12,14 +12,14 @@ header:
   caption: "Code. Create. Inspire."
 ---
 
-Welcome to my corner of the internet! 🌐 I'm **Sheldon Wang** – Staff iOS Engineer at **Meta** (working on Facebook & Instagram), former **Snapchat** architect (top-20 all-time committer 🏆), and your friendly neighborhood tech enthusiast who believes life's too short for boring code and bad coffee. ☕️
+Welcome to my corner of the internet! 🌐 I'm **Sheldon Wang** – Staff Software Engineer at **Meta** (Tech Lead, Facebook Monetization), former **Snapchat** iOS Lead (top-10 all-time committer 🏆). These days I build **production AI agent systems at Meta scale** – multi-agent architectures, self-improving feedback loops, and the infrastructure that keeps them reliable.
 
-With **10+ years** building iOS apps for **800+ million users**, I've learned a thing or two about mobile development, system architecture, and what it takes to ship world-class products. But this site isn't just about tech – it's about sharing everything I'm learning along the way.
+With **12+ years** of engineering across iOS, Android, web, and backend for products reaching **3+ billion users**, I've gone from shipping pixels to shipping agents. But this site isn't just about tech – it's about sharing everything I'm learning along the way.
 
 ## 🗺️ What You'll Find Here
 
 ### 📔 [**Tech Blog Posts**](/year-archive/) 
-Deep dives into iOS development, system design, and the art of building apps that millions love. From Swift concurrency patterns to performance optimization tips that actually work. Perfect for when you want to level up your mobile game!
+Deep dives into AI agents, system design, iOS development, and the art of building software that millions love. From multi-agent orchestration patterns to performance optimization tips that actually work. Perfect for when you want to level up your engineering game!
 
 ### 💸 [**Investment & Finance**](/portfolio/) 
 My thoughts on markets, money, and making sense of the economic chaos around us. Expect data-driven analysis mixed with just enough skepticism to keep things interesting. Warning: may contain unpopular opinions about crypto. 😏
@@ -31,77 +31,75 @@ The fun stuff! Productivity hacks that don't suck, life experiments worth trying
 Interactive demos and experiments – because sometimes you need to see code in action rather than just read about it. Come here when you want to break things in a safe environment.
 
 ### 🏷️ [**Browse Posts by Tags**](/tags/)
-Explore all content organized by topics and themes. Perfect for finding posts on specific subjects like iOS development, finance strategies, or productivity tips.
+Explore all content organized by topics and themes. Perfect for finding posts on specific subjects like AI agents, iOS development, finance strategies, or productivity tips.
 
 ## 🎯 Who Am I?
 
 ### **The Professional Side** 💼
 
-**Current Role:** Staff iOS Engineer at **Meta** (June 2025 - Present)
-- Working on Facebook & Instagram iOS apps
-- Focus: Feed Ads, Development Efficiency with AI, Cross-platform initiatives
-- Building features used by billions daily
+**Current Role:** Staff Software Engineer, Tech Lead at **Meta** (June 2025 - Present) — Facebook Monetization
+- Building **production AI agent systems**: self-evolving multi-agent pipelines, schema-constrained handoffs, node/graph-based agent architectures supporting 100+ engineers
+- Applied impact: AI exploration agent driving **0.01%+ revenue lift** · deadcode codemod agent saving **$5M+/yr** · ObjC→Swift migration codemod (30k+ LOC in 3 months)
+- Rated **Greatly Exceeds**; ranked **top 3 of 700+** engineers org-wide in coding contribution
+- Led ads post-rendering reliability (**$20–40M** revenue protected); drove org Swift adoption from 5% to 50% of new code
 
 **Previous:** iOS Lead at **Snap Inc.** (March 2019 - June 2025)
-- Led Memories Team serving 100M daily users
-- Managed 10+ engineers, coordinated with 30+ teams
-- Won Technical Excellence Award for company-wide impact
-- Reduced video latency by 60%, boosted engagement significantly
-- Led 200K+ line architecture refactor (Matcha project)
+- Led Memories team serving **150M+ iOS daily users**
+- Backup stack rewrite → **$10M+/yr** infra savings; cut P90 image latency 40%, video latency 60%
+- Led Matcha: **200K-line** architecture refactor (10 engineers, 30+ teams)
+- **Technical Excellence Award** (company-wide); mentored 5+ engineers to E5 promotion
 
-**Before That:** Senior iOS Engineer at BMW, Citi Mobile, and more
-- Built connected car experiences for BMW & MINI
-- Developed banking features for millions of Citi customers
-- Always pushing boundaries of what mobile can do
+**Earlier:** Senior iOS Engineer at **BMW** (connected car platform) and **Citi Mobile** (banking)
+- Shipped connected-car experiences, cross-platform features, and banking apps for millions
 
 ### **The Real Me** 🌟
 
 I'm the guy who:
-- Gets genuinely excited about elegant code architecture 🏗️
+- Gets genuinely excited about elegant system architecture 🏗️
 - Spends too much time optimizing workflows (guilty!) ⚡
 - Thinks the best conversations happen over good food and bad puns 🍜
 - Believes in sharing knowledge – hence this site! 📚
 
 ### **My Superpower** 🦸
 
-Taking complex technical concepts and making them **actually understandable**. Whether that's explaining iOS memory management, system design patterns, or why your investment portfolio allocation might need rethinking.
+Taking complex technical concepts and making them **actually understandable**. Whether that's multi-agent orchestration, iOS memory management, or why your investment portfolio allocation might need rethinking.
 
-I write code that scales to millions, and content that helps people level up. That's the goal here.
+I build systems that scale to billions, and write content that helps people level up. That's the goal here.
 
 ## 🚀 What I've Been Up To
 
 **Recent Highlights:**
-- 🧠 Exploring AI-powered development workflows (Cursor CLI + Xcode integration)
-- ⚛️ Following fusion energy breakthroughs (Princeton's AI solving plasma control!)
-- 💰 Analyzing October 2025 market volatility and investment strategies
-- ⌚ Deep-diving into wearable health tech (Apple Watch, Oura Ring optimization)
-- 🏀 Making bold NBA predictions (Celtics vs Nuggets Finals, anyone?)
+- 🤖 Building production multi-agent systems at Meta (self-improving agent loops, agent infra & CI reliability)
+- ✍️ Publishing bilingual deep-dives on LLMs & AI agents 3×/week (LinkedIn + this blog)
+- 📊 Tracking AI infrastructure & datacenter trends (the 800V DC rabbit hole runs deep)
+- 🏋️ Training 4×/week, cutting toward 175 lbs – the cut is documented, the snacks are not
 
 **Fun Stats:**
-- 📝 **41,000+ words** published just this month
-- 🎮 **7 interactive games** built for the playground
-- 📊 Top-20 all-time Snapchat iOS contributor
-- 🏆 Meta Staff Engineer level achieved
+- 🤖 **Production agent systems** supporting 100+ engineers' workflows
+- 💰 **$5M+/yr** saved by a single codemod agent I built
+- 🧪 **150+ A/B tests** led (up to 200k LOC in a single test)
+- 📊 **Top-10** all-time Snapchat iOS committer · **Top 3 of 700+** engineers org-wide at Meta
+- 👥 **5+ engineers** mentored to E5 promotion
 
 ## 💬 Let's Connect
 
 Found something useful? Disagree with my investment thesis? Built something cool inspired by a post? I'd love to hear about it!
 
 **Where to find me:**
-- 📧 Email: [sheldon.wang7@yahoo.com](mailto:sheldon.wang7@yahoo.com)
+- 📧 Email: [sheldon.wang777@gmail.com](mailto:sheldon.wang777@gmail.com)
 - 💼 LinkedIn: [linkedin.com/in/sheldonengineering](https://linkedin.com/in/sheldonengineering)
 - 💻 GitHub: [github.com/sheldonwangrjt](https://github.com/sheldonwangrjt)
 - 🎥 YouTube: [@iOSeTutorials](https://www.youtube.com/@iOSeTutorials)
-- 📄 [Full Resume/CV](/cv/) or <a href="/files/Sheldon_Wang_Resume_2025.docx" download>download DOCX</a>
+- 📄 [Full Resume/CV](/cv/) or <a href="/files/Sheldon_Wang_Resume_2026.9.pdf" download>download PDF</a>
 
 ## 📊 By The Numbers
 
-- **10+ years** iOS development experience
-- **800M+ users** reached through apps I've built
-- **4+ years** leading engineering teams (up to 10 engineers)
+- **12+ years** software engineering (iOS depth, now agents & AI infrastructure)
+- **3B+ users** reached through products I've built
+- **$5M+/yr saved** · **0.01%+ revenue lift** from agent systems I've shipped
 - **200K+ lines** refactored in major architecture projects
 - **60% reduction** in video latency (Snapchat Memories)
-- **100M daily users** served by features I've led
+- **150M+ daily users** served by features I've led
 
 ---
 
