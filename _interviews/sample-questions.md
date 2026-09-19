@@ -178,7 +178,7 @@ This is the raw content that will be encrypted. You can edit this file with your
     <li>And more!</li>
   </ul>
   <p style="color: rgba(255,255,255,0.6); margin-top: 30px;">
-    <strong>Have suggestions?</strong> <a href="mailto:sheldon.wang7@yahoo.com" style="color: #667eea;">Email me</a> with topics you'd like covered!
+    <strong>Have suggestions?</strong> <a href="mailto:sheldon.wang777@gmail.com" style="color: #667eea;">Email me</a> with topics you'd like covered!
   </p>
 </div>
 
