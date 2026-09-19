@@ -24,6 +24,29 @@ Build an **internal agent platform**: teams publish **versioned agents, skills, 
 - **Security review**: a malicious or careless published skill is a supply-chain attack.
 - **Discoverability**: 500 engineers can't use what they can't find.
 
+## 📐 Architecture
+
+{% mermaid %}
+flowchart TD;
+    Pub["Team publishes skill"]-->SecPipe["Security pipeline (static analysis, permission review)"];
+    SecPipe-->Reg["Versioned registry (semver + eval results)"];
+    Reg-->Dep["Dependency resolver (lockfiles)"];
+    Dep-->Roll["Staged rollout (canary, gradual, full)"];
+    Roll-->Cons["Consumer agents (pinned versions)"];
+    Roll-->|regression|Kill["Kill switch and rollback"];
+    Reg-->Market["Marketplace (search, ratings, examples)"];
+{% endmermaid %}
+
+*Prompts and skills are software artifacts: versioned, tested, rolled out, deprecated — not magic strings.*
+
+{% mermaid %}
+flowchart TD;
+    Change["Publisher ships v2"]-->Check["Dependent eval runs (automatic)"];
+    Check-->|pass|Ship["Ship as MINOR or PATCH"];
+    Check-->|fail|Major["Ship as MAJOR + migration guide"];
+    Major-->Notice["Deprecation notice with N-month window"];
+{% endmermaid %}
+
 ## 🧭 Discussion Framework
 
 **1. Versioning: semver for the non-deterministic**
