@@ -312,6 +312,15 @@ defaults:
       author_profile: true
       share: true
       comments: false
+  # _agent_interviews
+  - scope:
+      path: ""
+      type: agent_interviews
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: false
   # _collections
   - scope:
       path: ""
