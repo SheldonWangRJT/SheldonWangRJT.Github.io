@@ -11,6 +11,8 @@ tags:
 excerpt: "The Supreme x Nike Air Max DN8 in black landed — a look at the shoe, the co-branded box, and the Banner Mini."
 ---
 
+> [中文版 Chinese version](/life/supreme-nike-air-max-dn8-black-zh/)
+
 My latest Supreme pickup just landed: the **Supreme x Nike Air Max DN8 in black**, plus a Banner Mini that came with the order.
 
 ## The Shoe
@@ -25,11 +27,17 @@ What sold me on the Supreme version:
 - **The oversized outlined "SUP" on the lateral panel.** Supreme's collabs with Nike work best when the branding is loud but the colorway stays wearable — this one nails that balance.
 - **The box.** Matte black Nike box with the red Supreme bogo sticker on the side. Small detail, but the co-branded packaging is half the fun of a Supreme Nike drop.
 
-## The Banner Mini
+## On Feet & Styling
+
+Honest note: this collab is fresh enough that on-feet galleries of the exact pair are basically nonexistent online right now. The closest reference is the same silhouette — [on-feet look at the DN8 'Black Volt'](https://www.youtube.com/watch?v=oJWsSHzpmaw) gives a good sense of how the DN8 wears: chunky but not clownish, sits low to the ground despite the tech.
+
+Styling-wise, all-black does the heavy lifting. Black jeans or cargos, any dark top, done. The outlined "SUP" is the only loud element, and it reads more as a graphic than branding noise — it doesn't fight the rest of the fit.
+
+## The Banner Mini (a.k.a. My Award)
 
 ![Supreme Banner Mini with gold tassels](/assets/images/life/2026-09-20-supreme-banner-mini.jpg)
 
-A mini replica of the Supreme store banner — red satin with the white logo and gold tassel fringe. It ships in a plastic sleeve and is honestly one of those Supreme accessories that has zero practical purpose and I bought anyway. It'll hang somewhere in the office.
+The order came with a free gift: a **Banner Mini** — a shrunken replica of the Supreme store banner in red satin with gold tassel fringe. And I have to say it: this thing looks *exactly* like a Chinese 锦旗 — the honorary silk banners handed out in China for everything from "Model Citizen" to "Best Delivery Driver." Supreme accidentally made the most Chinese accessory possible. It's hanging in the office now, and I'm choosing to believe it was awarded to me for outstanding sneaker purchasing.
 
 ## Why This Pair
 
