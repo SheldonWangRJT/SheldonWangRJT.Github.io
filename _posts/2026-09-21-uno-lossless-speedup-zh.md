@@ -19,7 +19,7 @@ excerpt: "Draft model 是累赘：Uno 用 0.35B 扩散适配器在所有 batch �
 
 论文是 9 月 3 日发的。我现在写，是因为这个 release 这周变成了"可生产"的形状：权重开源、代码开源，第三方 coverage 也在报 serving 框架的支持。一个能真正部署的推理论文，和只能欣赏的推理论文，是两种东西。
 
-[论文 arXiv:2609.04010](https://arxiv.org/abs/2609.04010) · [代码和权重](https://ssahoo.com/uno) · 作者来自 Institute of Foundation Models（就是发 K2 Horizon 的那个实验室）
+[论文 arXiv:2609.04010](https://arxiv.org/abs/2609.04010) · [代码和权重](https://s-sahoo.github.io/uno/) · 作者来自 Institute of Foundation Models（就是发 K2 Horizon 的那个实验室）
 
 ## 背景：串行税为什么还没交完
 
