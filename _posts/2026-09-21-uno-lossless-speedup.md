@@ -18,7 +18,7 @@ excerpt: "The draft model is dead weight: Uno's 0.35B diffusion adapter beats pu
 
 The paper is from September 3. I'm writing about it now because the release went production-shaped this week: open weights, open code, and third-party coverage reporting serving-stack support. That timing matters — an inference paper you can actually deploy is a different object than an inference paper you can only admire.
 
-[Paper: arXiv:2609.04010](https://arxiv.org/abs/2609.04010) · [Code and checkpoints](https://ssahoo.com/uno) · from the Institute of Foundation Models (the K2 Horizon lab)
+[Paper: arXiv:2609.04010](https://arxiv.org/abs/2609.04010) · [Code and checkpoints](https://s-sahoo.github.io/uno/) · from the Institute of Foundation Models (the K2 Horizon lab)
 
 ## The setup: why the sequential tax still matters
 
