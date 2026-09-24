@@ -26,6 +26,8 @@ One clarification before we start, because the industry deliberately blurs these
 
 They don't compete with each other nearly as much as the marketing suggests. Buy the category first, then the product.
 
+> **A note on prices:** Every price below was checked on September 24, 2026 — but prices in this industry move constantly (flash sales, memory-cost hikes, regional taxes), so treat them as a snapshot, not a quote. Check the product page before you buy.
+
 ## The two launches that changed everything
 
 ![Meta VR Glasses, official Meta render](/assets/images/life/2026-09-24-glasses/meta-vr-glasses.webp)
@@ -50,7 +52,7 @@ Note the price collision: Meta VR Glasses ($1,299.99) vs. Steam Frame 1TB ($1,29
 - **Meta Quest 3** — **$599.99** (512GB; the 128GB model was discontinued after an April 2026 price hike blamed on memory costs). 2064×2208 per-eye LCD pancake, ~25 PPD, XR2 Gen 2, 515g. Still the default all-rounder: standalone gaming plus good-enough color mixed reality, and the largest app library.
 - **Meta Quest 3S** — **$349.99** (128GB) / **$449.99** (256GB). Quest 2-era Fresnel lenses, 1832×1920, 96° FOV, same XR2 Gen 2 chip. The cheapest way into real VR — and there's a **Quest 3S Xbox Edition ($399)** bundling an Xbox controller and 3 months of Game Pass Ultimate.
 - **Apple Vision Pro** — now **$3,699** (256GB; Apple raised it from $3,499 in June 2026 in a memory-crisis price bump). The expected M4 refresh never happened — Apple skipped straight to **M5** (Oct 2025). Dual 4K micro-OLED, ~34 PPD, up to 100Hz, 600–650g plus a 353g external battery. Eye + hand tracking, no controllers, Optic ID. It's the best virtual cinema money can buy and the most polished spatial computer — at a price and weight that keep it a niche device. A cheaper "Vision Air" is rumored for 2027, unconfirmed.
-- **Sony PSVR2** — **$399.99** (permanently cut from $549.99 in March 2025). 2000×2040 per-eye OLED HDR, 90/120Hz, ~560g, eye tracking, and the excellent Sense controllers with haptics and adaptive triggers. If you own a PS5, this is still the best value in VR gaming. A **$59.99 official PC adapter** opens up SteamVR on Windows — though you lose HDR, eye tracking, headset haptics and adaptive triggers in the process.
+- **Sony PSVR2** — **$399.99** (permanently cut from $549.99 in March 2025). 2000×2040 per-eye OLED HDR, 90/120Hz, ~560g, eye tracking, and the excellent Sense controllers with haptics and adaptive triggers. If you own a PS5, this is still the best value in VR gaming. A **$59.99 official PC adapter** opens up SteamVR on Windows — though you lose HDR, eye tracking, headset haptics and adaptive triggers in the process. **Availability heads-up (Sept 2026):** PlayStation Direct US lists it as "Currently Unavailable" — new units at $399.99 are hard to find in the US right now.
 - **Samsung Galaxy XR** (ex-Project Moohan) — **$1,799.99**. The first Android XR device (launched Oct 2025, US/Korea). 3552×3840 per-eye micro-OLED, 109° FOV, Snapdragon XR2+ Gen 2, Gemini AI, 545g with an external pocket battery (~2–2.5h). Motion controllers are a **$249.99 add-on** — none in the box. The direct Vision Pro competitor for the Android world, and it supports PCVR streaming.
 - **Pico 4 Ultra** — **$599**. 2160×2160 per-eye AMOLED, 90Hz, XR2 Gen 2, 586g, 12GB RAM (vs. Quest 3's 8GB), Wi-Fi 7, ringless controllers with haptics. Strong standalone rival to the Quest 3 where it's sold. (Pico 5 was reportedly canceled; the 2026 project is the rumored "Project Swan" with custom ~40-PPD micro-OLED.)
 - **HTC Vive Focus Vision** — **$999**. 2448×2448 per-eye LCD, 120° FOV, built-in eye tracking, **DisplayPort wired PCVR**, hot-swap batteries, 615g. An enterprise/training play that also works as a PCVR headset — but the older XR2 Gen 1 chip at this price is a tough sell for consumers.
@@ -101,7 +103,7 @@ No cameras, no AI, no spatial computing — just a huge private monitor you wear
 
 - **XREAL One Pro — $549** (was $649). The benchmark: Sony 0.55" micro-OLED, 57° FOV (171" screen at 4m), 87g, 1080p 120Hz, electrochromic dimming, Bose audio, X1 chip, 3DoF (6DoF with a $99 add-on). **XREAL One — $399**: 50° FOV (147"), 82g, same 1080p/120Hz. There's also a budget **X by Xreal a01 at $299** (62g).
 - **VITURE Pro XR — $459** (was $549). 46° FOV (135"), 77g, 4,000-nit peak brightness, Harman audio, electrochromic dimming — and the killer feature for glasses wearers: **built-in myopia adjustment dials (0 to −5.0D)**, no prescription inserts needed.
-- **RayNeo Air 3s — $269** (€299). The value pick: 46° FOV (201" screen), 76g, 1080p 120Hz, quad speakers with Whisper Mode 2.0. A **3s Pro ($349)** adds an AI assistant and 12MP camera.
+- **RayNeo Air 3s — $269** (€299). The value pick: 46° FOV (201" screen), 76g, 1080p 120Hz, quad speakers with Whisper Mode 2.0. A **3s Pro ($299)** adds an AI assistant and 12MP camera (currently on sale at $279).
 - **Meizu StarV View — ¥2,799 (~$399)**. Sony micro-OLED, 1080p per eye at 120Hz, 51 PPD, 74g, 188" screen at 6m, myopia adjustment to 600°. Works with phones, drones, Switch, PS5 and Steam Deck over USB-C. China-first, expanding to 30+ countries.
 
 If you watch movies on planes or want a private monitor in a café: XREAL One Pro for the biggest screen, VITURE Pro XR if you wear glasses, RayNeo Air 3s if you're price-sensitive.
@@ -136,7 +138,7 @@ This is the category that actually sells in volume — because they're just… g
 - **Even Realities G2 — $599**. The privacy-maximalist pick: **no camera, no speakers** (audio via mics only), 36g, binocular green micro-LED HUD for translations and a teleprompter, 2-day battery, IP67. An optional $249 R1 ring adds health tracking (HR/HRV/SpO2/sleep).
 - **Rokid Glasses — $599**. The translator's pick: dual monochrome micro-LED waveguide display, 49g, 12MP camera, GPT-5 + DeepSeek AI, **89-language translation**, teleprompter, navigation. Launched July 2026.
 - **Rokid Style — $299**. Audio-only AI glasses: 38.5g, 12MP camera, 12h battery, ChatGPT + DeepSeek, prescription-ready. On sale globally since January.
-- **RayNeo iO — $449**. Camera-free like the G2 but with a binocular green micro-LED display (23.5°), 33g — the lightest display glasses on this list — with **55-language dialogue translation** and live captions.
+- **RayNeo iO — $449** (MSRP $499). Camera-free like the G2 but with a binocular green micro-LED display (23.5°), 33g — the lightest display glasses on this list — with **55-language dialogue translation** and live captions.
 
 ## China's AI glasses wave
 
@@ -146,8 +148,8 @@ This is the category that actually sells in volume — because they're just… g
 Here's the part of the market Western coverage under-reports: China shipped an entire *generation* of AI glasses in 2026, at prices that make Western products look indulgent — and almost all of them are **China-only**.
 
 - **Xiaomi AI Glasses — ¥1,999 (~$275)**; electrochromic versions ¥2,699/2,999. Screenless camera glasses (a direct Ray-Ban Meta rival): 12MP Sony IMX681, 2K30 video, Snapdragon AR1, Xiao AI, 10+ language translation, IP54, 40g. China only; a global version is rumored but unconfirmed.
-- **Huawei AI Glasses (2026) — ¥2,499 (~$366)**; silver ¥2,899. First HarmonyOS glasses with a camera: 12MP, Xiaoyi AI with **42-language translation** and visual Q&A, dual-engine AI chip, 64GB storage, claimed 12h battery, **35.5g** titanium — the lightest camera glasses on the market. China only.
-- **Alibaba Quark G1 — ¥1,899 (~$268)** / **S1 — ¥3,799 (~$537)**. Qwen AI with Alipay/Taobao integration — scan a product, see the price, pay with your face's glasses. The S1 adds micro-OLED displays; dual-battery design claims ~24h. China only.
+- **Huawei AI Glasses (2026) — from ¥2,499 (~$366)**. First HarmonyOS glasses with a camera: 12MP, Xiaoyi AI with **42-language translation** and visual Q&A, dual-engine AI chip, 64GB storage, claimed 12h battery, **35.5g** titanium — the lightest camera glasses on the market. China only.
+- **Alibaba 千问 (Qwen) AI Glasses — G1 ¥1,899 (~$268)** / **S1 — ¥3,799 (~$537)** (rebranded from the "Quark" line in 2026). Qwen AI with Alipay/Taobao integration — scan a product, see the price, pay with your face's glasses. The S1 adds micro-OLED displays; dual-battery design claims ~24h. China only.
 - **Meizu StarV View — ¥2,799 (~$399)**, covered above in display glasses, is the one Chinese product seriously expanding to 30+ countries.
 
 The pattern: Chinese giants treat AI glasses as an **ecosystem accessory** (payments, shopping, translation, HarmonyOS/Android integration) at half the Western price, while Western brands sell them as **fashion + AI assistant** devices. The technology gap is closed; the availability gap is the whole story. If you live outside China, your practical options remain Meta, Snap, XREAL, VITURE, Rokid, RayNeo and Even Realities.
