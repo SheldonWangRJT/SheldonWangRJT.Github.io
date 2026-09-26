@@ -1,5 +1,12 @@
 console.log('Net Worth Charts script loaded');
 
+// PRIVACY NOTE: this file is public. It contains ONLY normalized data —
+// allocation percentages (each month sums to 100) and the net-worth index.
+// It must NEVER contain dollar amounts, raw category amounts, or any anchor
+// that would let someone reverse-engineer absolute values. Category amounts
+// are computed privately from the NW Tracking sheet and only the resulting
+// percentages are published here.
+
 // Wait for DOM to be ready before initializing charts
 function initCharts() {
 console.log('Starting chart script...');
@@ -18,32 +25,34 @@ return;
 }
 console.log('Chart.js is available, creating charts...');
 
-// Raw data (in $ thousands; Dec 2024 = 100 baseline anchor, no dollar amounts shown on page)
-// Format: [Cash, Stocks, 401k, HSA, Crypto, Real Estate, 529]
+// Allocation percentages by month. Format per month: [Cash, Stocks, 401k, HSA, Crypto, Real Estate, 529].
 // Cash = non-HSA cash; Stocks = brokerage; 401k = employer plans; HSA = all HSA accounts;
 // Crypto = all crypto; Real Estate = home equity + vehicles; 529 = education savings.
 // Dec 2024 - Dec 2025: as originally published. From Jan 2026: sourced from the NW Tracking
 // sheet (last snapshot of each month; no snapshot exists for Mar 2026).
-const dec2024Data = [91.500, 530.700, 230.000, 36.000, 12.900, 851.000, 0.000];
-const aug2025Data = [65.000, 709.200, 285.500, 41.400, 18.600, 731.000, 0.000];
-const sep2025Data = [73.500, 686.400, 297.600, 43.900, 17.600, 751.000, 5.700];
-const oct2025Data = [76.500, 701.700, 316.100, 42.900, 55.800, 737.900, 5.900];
-const nov2025Data = [56.804, 629.030, 306.191, 40.820, 44.833, 843.640, 5.991];
-const dec2025Data = [56.310, 637.062, 309.744, 41.526, 43.153, 847.565, 5.967];
-const jan2026Data = [58.063, 720.075, 359.095, 51.685, 17.648, 865.878, 6.681];
-const feb2026Data = [47.033, 729.732, 372.762, 52.147, 14.541, 848.728, 6.758];
-const apr2026Data = [47.039, 774.190, 409.388, 55.479, 32.514, 844.121, 6.934];
-const may2026Data = [46.496, 847.707, 432.595, 61.924, 30.491, 899.441, 7.204];
-const jun2026Data = [47.129, 842.555, 436.530, 59.168, 30.642, 904.903, 7.314];
-const jul2026Data = [42.684, 834.735, 437.013, 60.019, 26.105, 858.099, 7.293];
-const aug2026Data = [75.127, 870.278, 449.054, 62.264, 27.568, 834.551, 12.186];
-const sep2026Data = [52.856, 900.662, 443.783, 61.797, 31.000, 865.358, 12.062];
-
+// September 2026 reflects the 9/25/2026 snapshot (latest in-month).
 const monthLabels = ['December 2024', 'August 2025', 'September 2025', 'October 2025', 'November 2025', 'December 2025', 'January 2026', 'February 2026', 'April 2026', 'May 2026', 'June 2026', 'July 2026', 'August 2026', 'September 2026'];
 
-// Net Worth Index (Dec 2024 = 100). 2024-2025 values from the chart data above;
+const pctSeries = [
+[5.22, 30.29, 13.13, 2.05, 0.74, 48.57, 0.00],
+[3.51, 38.32, 15.43, 2.24, 1.01, 39.50, 0.00],
+[3.92, 36.59, 15.87, 2.34, 0.94, 40.04, 0.30],
+[3.95, 36.23, 16.32, 2.21, 2.88, 38.10, 0.30],
+[2.95, 32.64, 15.89, 2.12, 2.33, 43.77, 0.31],
+[2.90, 32.82, 15.96, 2.14, 2.22, 43.66, 0.31],
+[2.79, 34.63, 17.27, 2.49, 0.85, 41.65, 0.32],
+[2.27, 35.22, 17.99, 2.52, 0.70, 40.97, 0.33],
+[2.17, 35.68, 18.87, 2.56, 1.50, 38.91, 0.32],
+[2.00, 36.45, 18.60, 2.66, 1.31, 38.67, 0.31],
+[2.02, 36.19, 18.75, 2.54, 1.32, 38.87, 0.31],
+[1.88, 36.84, 19.29, 2.65, 1.15, 37.87, 0.32],
+[3.22, 37.33, 19.26, 2.67, 1.18, 35.80, 0.52],
+[2.46, 38.49, 18.68, 2.63, 1.37, 35.87, 0.50],
+];
+
+// Net Worth Index (Dec 2024 = 100).
 // 2026+ values are the true net-worth index anchored at Dec 2025 = 110.8.
-const nwIndex = [100.0, 105.6, 107.1, 110.5, 110.0, 110.8, 112.0, 111.2, 117.4, 125.9, 126.3, 122.4, 126.6, 128.5];
+const nwIndex = [100.0, 105.6, 107.1, 110.5, 110.0, 110.8, 112.0, 111.2, 117.4, 125.9, 126.3, 122.4, 126.6, 129.7];
 
 // BAR CHART
 const barCanvas = document.getElementById('barChart');
@@ -85,13 +94,7 @@ if (lineCanvas) {
 console.log('Line canvas found, creating line chart...');
 try {
 const categories = ['Cash', 'Stocks', '401k', 'HSA', 'Crypto', 'Real Estate', '529'];
-const allData = [dec2024Data, aug2025Data, sep2025Data, oct2025Data, nov2025Data, dec2025Data, jan2026Data, feb2026Data, apr2026Data, may2026Data, jun2026Data, jul2026Data, aug2026Data, sep2026Data];
-const calcPercentages = (data) => {
-const total = data.reduce((a, b) => a + b, 0);
-return data.map(val => ((val / total) * 100).toFixed(2));
-};
-const pctSeries = allData.map(calcPercentages);
-console.log('Percentage data calculated:', pctSeries);
+console.log('Percentage data loaded:', pctSeries);
 const lineCtx = lineCanvas.getContext('2d');
 new Chart(lineCtx, {
 type: 'line',
