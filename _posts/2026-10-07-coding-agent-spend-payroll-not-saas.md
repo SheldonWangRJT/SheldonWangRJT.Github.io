@@ -64,3 +64,4 @@ My lean: mandate the default, keep a paid escape hatch for hard tasks. Defaults 
 - PYMNTS, Oct 5 2026, relaying WSJ on forecasting difficulty and the 6,800+ task study: https://www.pymnts.com/news/artificial-intelligence/2026/businesses-finding-it-harder-to-predict-ai-spending/
 - WSJ, Oct 5 2026, on AI spending forecasting (11% of nearly 400 businesses; 32% of 6,800+ tasks): https://www.wsj.com/tech/personal-tech/ai-token-spending-businesses-431ee94a
 - Ramp AI Index July 2026 data (43.5% Anthropic, 39.7% OpenAI), published Aug 12, as reported Aug 20: https://www.unite.ai/openai-closes-on-anthropic-in-ramps-business-spending-data/
+
