@@ -34,12 +34,20 @@ excerpt: "先说结论：完全被 Karina 圈粉，原因特别朴素——尾�
 
 老歌一首没落下，新专辑的歌占了一半以上，solo 舞台又给了每个人单独发光的时间——这个编排对"路人粉"非常友好，你不需要做任何功课就能跟上。
 
+## 一个意外：Giselle 只唱了开头几首
+
+这场有个让人揪心的插曲：**Giselle 只出现在开头几首歌，之后就退场了，再也没有回来。**
+
+据 SM Entertainment 演出当晚的声明：Giselle 当天早上出现感冒症状，接受治疗后情况好转，坚持按计划上了台；但开场表演之后病情明显加重，经医疗团队与现场工作人员商议，决定她不再参加本场剩余演出，包括之后的 Hi-Bye 和 Send-Off。后半程和结尾环节都由 Karina、Winter、Ningning 三个人撑完——她的个人舞台《BYEB4HELLO》和与 Ningning 的小分队《Lollipop》也因此没能如常呈现，上面那份标准曲目单要打个折扣。
+
+这也是为什么这篇文章里**没有一张 Giselle 的现场照片**：我位置再好，也拍不到一个只唱了开头几首就离场的人。三个人把场子完整唱下来的职业程度值得尊敬，但还是希望她好好休息，早日康复。
+
 ## Karina：她向我挥手了
 
 ![Karina 向我挥手，自拍](/assets/images/life/2026-10-10-aespa/karina-wave.jpg)
 *决定性的一张：尾声环节，Karina 对着我们这一侧挥手——本人自拍，2026-10-09 摄于 Climate Pledge Arena*
 
-就是这一张。晚上 10 点过后，尾声环节，四个人换上宽松的卫衣运动装走延伸台，跟开场那个"金属女战士"的造型判若两人。Karina 走到我们这一侧，笑着朝这边挥手——座位离得近，近到你会产生"她就是在对我挥手"的错觉（好吧，我不管，我就当是了）。K-pop 演唱会卖的不只是歌舞，还有这种被单独击中的瞬间，贵就贵在这里。
+就是这一张。晚上 10 点过后，尾声环节，三位成员换上宽松的卫衣运动装走延伸台，跟开场那个"金属女战士"的造型判若两人。Karina 走到我们这一侧，笑着朝这边挥手——座位离得近，近到你会产生"她就是在对我挥手"的错觉（好吧，我不管，我就当是了）。K-pop 演唱会卖的不只是歌舞，还有这种被单独击中的瞬间，贵就贵在这里。
 
 ![Karina 拿着麦克风比 V，自拍](/assets/images/life/2026-10-10-aespa/karina-peace.jpg)
 *拿着麦克风找镜头比 V，营业状态拉满——本人自拍*
@@ -61,12 +69,12 @@ excerpt: "先说结论：完全被 Karina 圈粉，原因特别朴素——尾�
 
 Ningning 的现场状态好得出乎意料，个人舞台《I Love You but I Gotta Let You Go》的声压很扎实，是四个人里最"歌手"的一个。
 
-## Winter 与 Giselle：座位比想象中近得多
+## Winter：座位比想象中近得多
 
-![Winter 与 Giselle 走过延伸台，自拍](/assets/images/life/2026-10-10-aespa/winter-giselle-catwalk.jpg)
-*金色头发的 Winter 走过延伸台，Giselle 紧随其后，背景是还没散的观众席——本人自拍*
+![Winter 走过延伸台，自拍](/assets/images/life/2026-10-10-aespa/winter-catwalk.jpg)
+*金色头发的 Winter 走过延伸台，背景是还没散的观众席——本人自拍*
 
-Winter 的金发在紫色灯光下辨识度无敌，Giselle 的 rap 段落咬字干脆利落。四个人四种完全不同的台风，这大概是四人团最大的优势——总有一款能把你锤进坑里，我这款显然是 Karina。
+Winter 的金发在紫色灯光下辨识度无敌，《Saddle Up》的个人舞台利落又松弛。四个人四种完全不同的台风，这大概是四人团最大的优势——哪怕这晚后半程只剩三个人，也总有一款能把你锤进坑里，我这款显然是 Karina。
 
 ## 写在最后
 
@@ -81,6 +89,7 @@ Winter 的金发在紫色灯光下辨识度无敌，Giselle 的 rap 段落咬字
 ## 来源与图片致谢
 
 - 演出信息：[Ticketmaster — aespa LIVE TOUR - SYNK : COMPLæXITY in SEATTLE](https://www.ticketmaster.com/aespa-tickets/artist/2887549)（2026-10-09，Climate Pledge Arena）
+- Giselle 健康状况与退场说明：[Soompi — SM Shares Update On aespa's Giselle's Health After She Leaves Stage Mid-Concert](https://www.soompi.com/article/1876760wpp/sm-shares-update-on-aespas-giselles-health-after-she-leaves-stage-mid-concert)（转述 SM Entertainment 声明）
 - 巡演公告：[Pollstar — Global K-pop Foursome aespa Unveil Upcoming 2026-2027 World Tour](https://news.pollstar.com/2026/04/27/global-k-pop-foursome-aespa-unveil-upcoming-2026-2027-world-tour/)
 - 曲目参考：[SeatGeek — What to expect at aespa's SYNK : COMPLæXITY](https://seatgeek.com/blog/what-to-expect-at-aespas-synk-complaexity-setlist-start-time-and-more)；[Ticketmaster Blog — aespa Setlist](https://blog.ticketmaster.com/aespa-setlist/)
 - 官方海报：SM Entertainment / Live Nation（via VIP Nation）；Karina 预告图：SM Entertainment（via Soompi）
