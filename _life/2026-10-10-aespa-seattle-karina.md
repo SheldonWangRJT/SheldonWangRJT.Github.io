@@ -33,12 +33,20 @@ The setlist (North American leg, including solo and unit stages) ran roughly lik
 
 All the big catalog hits are there, more than half the show is new material, and the solo stages give every member a moment to own the stage alone. For a casual fan, it's a very friendly format — no homework required.
 
+## One sad note: Giselle only sang the first few songs
+
+There was a worrying twist to this show: **Giselle appeared only in the first few songs, then left the stage and never came back.**
+
+According to SM Entertainment's statement that night, she had woken up with cold symptoms that morning, received treatment, felt better, and chose to perform as planned. But her condition worsened significantly after the opening, and after discussions with the medical team and on-site staff, it was decided she would sit out the rest of the show, including the Hi-Bye and Send-Off. Karina, Winter, and Ningning carried the entire remainder as a trio — which means her solo "BYEB4HELLO" and her unit song "Lollipop" with Ningning didn't happen as listed, so take the standard setlist above with that asterisk.
+
+It's also why **there is not a single photo of Giselle in this post**: no seat is close enough to photograph someone who left after the opening songs. The three members finishing the show at full quality deserves real respect — and I hope she gets proper rest and recovers soon.
+
 ## Karina: she waved at me
 
 ![Karina waving at me, my photo](/assets/images/life/2026-10-10-aespa/karina-wave.jpg)
 *The decisive photo: Karina waving toward our side during the encore — my photo, Oct 9, 2026, Climate Pledge Arena*
 
-This is the photo. Past 10 p.m., the four of them had changed into oversized hoodies and sweats for the encore segment and were walking the catwalk — a completely different energy from the metallic-warrior opening looks. Karina came over to our side, smiled, and waved right at us. Our seats were close — close enough to fully believe she was waving at *me* specifically (and I'm keeping that belief, thank you very much). This is what a K-pop concert actually sells: not just songs and choreography, but that one moment where you feel personally singled out. That's the expensive part, and it's worth it.
+This is the photo. Past 10 p.m., the three remaining members had changed into oversized hoodies and sweats for the encore segment and were walking the catwalk — a completely different energy from the metallic-warrior opening looks. Karina came over to our side, smiled, and waved right at us. Our seats were close — close enough to fully believe she was waving at *me* specifically (and I'm keeping that belief, thank you very much). This is what a K-pop concert actually sells: not just songs and choreography, but that one moment where you feel personally singled out. That's the expensive part, and it's worth it.
 
 ![Karina with her mic, flashing a V sign, my photo](/assets/images/life/2026-10-10-aespa/karina-peace.jpg)
 *Finding the cameras with a V sign, mic in hand — my photo*
@@ -60,12 +68,12 @@ This might be the most striking frame of the night: Ningning's close-up filling 
 
 Ningning's live condition was better than I expected. Her solo, "I Love You but I Gotta Let You Go," had real vocal weight behind it — she's the most "singer" of the four.
 
-## Winter & Giselle: closer than expected
+## Winter: closer than expected
 
-![Winter and Giselle on the catwalk, my photo](/assets/images/life/2026-10-10-aespa/winter-giselle-catwalk.jpg)
-*Winter (blond hair) crossing the catwalk with Giselle right behind her, crowd still in their seats behind them — my photo*
+![Winter on the catwalk, my photo](/assets/images/life/2026-10-10-aespa/winter-catwalk.jpg)
+*Winter (blond hair) crossing the catwalk, crowd still in their seats behind her — my photo*
 
-Winter's blond hair is unmissable under the purple lights, and Giselle's rap verses are crisp and precise. Four members, four completely different stage energies — that's the real advantage of a four-member group. One of them will get you eventually. Mine, evidently, is Karina.
+Winter's blond hair is unmissable under the purple lights, and her solo "Saddle Up" was sharp and relaxed at the same time. Four members, four completely different stage energies — that's the real advantage of a four-member group, and even with only three of them for most of this night, one of them will get you eventually. Mine, evidently, is Karina.
 
 ## Final thoughts
 
@@ -80,6 +88,7 @@ As for me: my camera roll is now full of Karina photos, and a few songs I used t
 ## Sources & image credits
 
 - Event info: [Ticketmaster — aespa LIVE TOUR - SYNK : COMPLæXITY in SEATTLE](https://www.ticketmaster.com/aespa-tickets/artist/2887549) (Oct 9, 2026, Climate Pledge Arena)
+- Giselle's health and early exit: [Soompi — SM Shares Update On aespa's Giselle's Health After She Leaves Stage Mid-Concert](https://www.soompi.com/article/1876760wpp/sm-shares-update-on-aespas-giselles-health-after-she-leaves-stage-mid-concert) (reporting SM Entertainment's statement)
 - Tour announcement: [Pollstar — Global K-pop Foursome aespa Unveil Upcoming 2026-2027 World Tour](https://news.pollstar.com/2026/04/27/global-k-pop-foursome-aespa-unveil-upcoming-2026-2027-world-tour/)
 - Setlist references: [SeatGeek — What to expect at aespa's SYNK : COMPLæXITY](https://seatgeek.com/blog/what-to-expect-at-aespas-synk-complaexity-setlist-start-time-and-more); [Ticketmaster Blog — aespa Setlist](https://blog.ticketmaster.com/aespa-setlist/)
 - Official poster: SM Entertainment / Live Nation (via VIP Nation); Karina teaser: SM Entertainment (via Soompi)
