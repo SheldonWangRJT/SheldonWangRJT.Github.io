@@ -171,6 +171,12 @@ Also remember street prices: Echo Shows go on sale constantly (Show 8 hit $125, 
 
 My own read: HomeView is a beautiful, privacy-first Gen-1 product with a real video hole and an unpriced AI future. The Echo Show is the boring, practical, ad-supported answer that already does the kitchen-video job. Apple is betting the home screen is about *who's looking at it*; Amazon is betting it's about *what's playing on it*. For most kitchens in 2026, what's playing still wins.
 
+## Postscript: the iPad-on-a-stand test
+
+After publishing, the sharpest reaction to this review was the simplest one: *just put an iPad on a stand.* And honestly, for the screen job, that's the right call — even the iPad Pro I bought ten years ago beats both of these at it. A 12.9-inch (or 9.7-inch) 2015/2016 iPad Pro has a bigger screen, a full App Store with native YouTube and Netflix, and Safari as a fallback for everything else. A spare iPad you already own plus a $20–40 stand is a ~$30 kitchen screen that out-videos a $299 HomeView.
+
+What the iPad doesn't replace is the *command center* job: it can't be an Apple Home hub, it has no far-field voice array, no presence-aware ambient UI, no face-gated profiles, no 9-camera dashboard, no smoke/CO alarm detection. So the sharpened verdict: **if the job is "kitchen screen," use the iPad you already own. These two devices only earn their price if you want the always-on shared command center.**
+
 ## Sources
 
 - Apple Newsroom: [Meet Apple HomeView](https://www.apple.com/newsroom/2026/10/meet-apple-homeview-a-new-way-to-enjoy-entertainment-and-manage-the-home/) (Oct 13, 2026) — specs, pricing, Siri AI footnote on daily limits + future fee
