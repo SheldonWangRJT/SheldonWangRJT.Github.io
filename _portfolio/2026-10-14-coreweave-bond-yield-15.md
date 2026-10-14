@@ -11,6 +11,8 @@ tags:
 excerpt: "A 15% bond yield is the credit market repricing CoreWeave's entire funding model. Here's the math behind it — and why it's a verdict on the balance sheet, not on AI demand."
 ---
 
+> [中文版 Chinese version](/portfolio/coreweave-bond-yield-15-zh/)
+
 *Prices and yields below are a snapshot from October 13–14, 2026 reporting (CNBC, Barron's, Financial Times) and move fast. This is interpretation, not financial advice.*
 
 ## What happened
