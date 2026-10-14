@@ -172,6 +172,12 @@ Echo Show 则是一块广告屏。WSJ 的 Nicole Nguyen 天天用，她写道自
 
 我自己的判断：HomeView 是漂亮、隐私优先、带真实视频短板和未定价 AI 未来的第一代产品。Echo Show 是无聊、实用、带广告、已经能干好厨房视频活的答案。Apple 赌的是家庭屏的核心是*谁在看它*；Amazon 赌的是*上面在放什么*。对 2026 年的大多数厨房来说，在放什么仍然赢。
 
+## 后记：iPad + 支架测试
+
+文章发出来后，最犀利的反应也是最简单的：*拿个 iPad 放支架上不就行了。* 说实话，就"屏幕"这份工作而言，这话是对的——**我十年前买的 iPad Pro 都比这两台能打**。2015/2016 年的 iPad Pro（12.9 英寸或 9.7 英寸）屏幕更大，有完整的 App Store（原生 YouTube、Netflix），还有 Safari 兜底一切。家里吃灰的旧 iPad 加一个二三十美元的支架，就是一块约 30 美元的厨房屏，视频体验碾压 299 美元的 HomeView。
+
+iPad 补不上的是"指挥台"那份工作：它当不了 Apple Home 中枢，没有远场语音阵列，没有感应人走近的 ambient 界面，没有人脸门禁的个人主页，没有 9 路摄像头仪表盘，没有烟雾/一氧化碳报警监听。所以结论可以再精确一点：**如果需求只是"厨房屏"，用你已有的 iPad。这两台只有在你想要"常开的共享指挥台"时才值回票价。**
+
 ## 来源
 
 - Apple Newsroom：[Meet Apple HomeView](https://www.apple.com/newsroom/2026/10/meet-apple-homeview-a-new-way-to-enjoy-entertainment-and-manage-the-home/)（2026-10-13）——规格、定价、Siri AI 每日限制 + 未来收费脚注
