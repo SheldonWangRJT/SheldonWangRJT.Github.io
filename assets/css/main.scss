@@ -45,45 +45,415 @@
 @import "print";
 
 /* ==========================================================================
-   PLAYGROUND GRID STYLES - Enhanced Modern Card Layout
+   墨金 RESTYLE — quiet premium, 2026-10-14
+   Three colors only: ink black, warm paper white, one muted gold accent.
+   No gradients on cards, no glass blur, no glow, no float/lift animation.
+   Surfaces are flat ink with 1px hairlines; hierarchy comes from type,
+   spacing, and the single gold accent — nothing else competes.
    ========================================================================== */
+
+:root {
+  --ink-0: #0b0b0d;        /* page background */
+  --ink-1: #131316;        /* cards / surfaces */
+  --ink-2: #1b1b1e;        /* raised surfaces */
+  --paper: #edeae2;        /* primary text — warm paper white */
+  --paper-dim: rgba(237, 234, 226, 0.68);
+  --paper-faint: rgba(237, 234, 226, 0.42);
+  --gold: #c2a15a;         /* the one accent — muted gold */
+  --gold-bright: #d8bc7e;  /* accent hover */
+  --gold-line: rgba(194, 161, 90, 0.35);
+  --line: rgba(237, 234, 226, 0.1); /* neutral hairline */
+}
+
+/* --- Base: flat ink, one faint warm light at the very top, nothing else --- */
+
+html,
+body {
+  min-height: 100%;
+  background: var(--ink-0);
+}
+
+body {
+  color: var(--paper);
+  background:
+    radial-gradient(60% 28% at 50% 0%, rgba(194, 161, 90, 0.06), transparent 70%),
+    linear-gradient(180deg, #0e0e10 0%, #0b0b0d 55%, #08080a 100%);
+}
+
+body::before,
+body::after {
+  content: none; /* no blur wash, no grain — flat */
+}
+
+/* --- Links: gold, nothing else --- */
+
+a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--gold-bright);
+  text-decoration: underline;
+}
+
+/* --- Surfaces: flat ink + hairline. No blur, no shadow, no glass. --- */
+
+.masthead,
+.page,
+.page__inner-wrap,
+.page__content,
+.archive,
+.sidebar,
+.footer,
+.greedy-nav,
+.nav__list,
+.site-nav {
+  background-color: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: none;
+  box-shadow: none;
+}
+
+.page,
+.archive,
+.sidebar {
+  border-radius: 0; /* square corners — editorial, not bubbly */
+}
+
+/* Cards / teasers: one flat surface, one hairline, hover only recolors the border */
+.archive .list__item,
+.archive .grid__item,
+.archive .teaser {
+  background-color: var(--ink-1);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(14px, 3vw, 22px);
+  margin-block: clamp(10px, 1.5vw, 18px);
+  transition: border-color 0.2s ease;
+}
+
+.archive .list__item:hover,
+.archive .grid__item:hover,
+.archive .teaser:hover {
+  border-color: var(--gold-line);
+}
+
+.archive {
+  padding-top: clamp(12px, 2.5vw, 24px);
+  padding-bottom: clamp(16px, 4vw, 40px);
+  padding-inline: clamp(12px, 3vw, 28px);
+}
+
+.archive .page__title,
+.archive h1.page__title {
+  margin-bottom: clamp(12px, 2.5vw, 28px);
+}
+
+/* Inner wrap: no double surface */
+.page__inner-wrap {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Content breathing room */
+.page__inner-wrap,
+.page__content {
+  padding-inline: clamp(24px, 4.5vw, 36px);
+  padding-block: clamp(16px, 3vw, 28px);
+}
+
+@media screen and (max-width: 767px) {
+  .page__inner-wrap {
+    padding-inline: 0 !important;
+  }
+}
+
+/* Override Susy grid constraints to make page use more width */
+@media screen and (min-width: 64em) {
+  .page {
+    width: calc(100% - 300px) !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+.sidebar {
+  padding: clamp(12px, 3vw, 22px);
+}
+
+/* Headings + paragraphs: comfortable, quiet spacing */
+.page__content h1,
+.page__content h2,
+.page__content h3,
+.page__content h4,
+.page__content h5,
+.page__content h6 {
+  margin-top: 1.25em;
+  margin-bottom: 0.5em;
+  color: var(--paper);
+}
+
+.page__content p,
+.page__content ul,
+.page__content ol,
+.page__content pre,
+.page__content blockquote {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+
+.page__content p,
+.page__content li {
+  color: var(--paper-dim);
+}
+
+.page__content img,
+.archive .teaser img {
+  border-radius: 8px;
+}
+
+/* --- Code: neutral dark, no color noise --- */
+
+pre,
+code,
+kbd,
+samp {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.08);
+  color: var(--paper);
+}
+
+.page__content p code,
+.page__content li code,
+.archive .teaser p code,
+.archive .list__item p code,
+.archive .list__item li code {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--paper);
+  font-weight: 600;
+  padding: 0.15em 0.35em;
+  border-radius: 4px;
+}
+
+.page__content pre,
+.page__content pre code,
+.archive .teaser pre,
+.archive .teaser pre code {
+  color: #e8e4da;
+}
+
+/* --- Tables: neutral --- */
+
+table {
+  background-color: transparent;
+  color: var(--paper-dim) !important;
+}
+
+thead th {
+  background-color: var(--ink-2);
+  color: var(--paper) !important;
+  border-bottom: 1px solid var(--line);
+}
+
+tbody td {
+  color: var(--paper-dim) !important;
+  border-bottom: 1px solid var(--line);
+}
+
+/* --- Sidebar: sticky, flat, quiet --- */
+
+@media screen and (min-width: 768px) {
+  .sidebar {
+    position: sticky;
+    top: 72px;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+}
+
+.sidebar .author__urls .fa-building-columns,
+.sidebar .social-icons .fa-github {
+  color: var(--paper) !important;
+}
+
+.sidebar .social-icons a:hover .fa-github {
+  color: var(--gold) !important;
+}
+
+/* Mobile: author header in one row */
+@media screen and (max-width: 767px) {
+  .author__avatar,
+  .author__content,
+  .author__urls-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .author__avatar,
+  .author__content,
+  .author__urls-wrapper {
+    flex: 0 0 auto;
+  }
+
+  .author__content {
+    flex: 1 1 auto;
+    min-width: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+
+  .author__urls-wrapper {
+    justify-content: flex-end;
+  }
+
+  [itemscope][itemtype="http://schema.org/Person"] {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+/* --- Masthead / nav: flat text links. No pills, no hover lift, no glow.
+       Hover = gold text. Active = gold text + gold underline. --- */
+
+.masthead {
+  border-bottom: 1px solid var(--line);
+}
+
+.greedy-nav button {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.greedy-nav .navicon,
+.greedy-nav .navicon::before,
+.greedy-nav .navicon::after {
+  background: var(--paper) !important;
+}
+
+.greedy-nav a,
+.masthead__menu-item a,
+.nav__list a {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 10px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: 0.2px;
+  color: var(--paper-dim);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.greedy-nav a:hover,
+.masthead__menu-item a:hover,
+.nav__list a:hover {
+  color: var(--gold);
+  text-decoration: none;
+  background: none;
+  box-shadow: none;
+  transform: none;
+}
+
+.masthead__menu-item--active > a,
+.nav__list .current > a,
+.greedy-nav .active > a {
+  color: var(--gold);
+  border-bottom: 2px solid var(--gold);
+}
+
+@media screen and (max-width: 767px) {
+  .masthead__menu .masthead__menu-item--lg > a {
+    font-size: clamp(14px, 4vw, 20px);
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    color: var(--paper) !important;
+    text-decoration: none;
+    text-shadow: none;
+    line-height: 1.2;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .masthead__menu .masthead__menu-item--lg {
+    flex: 1 1 auto;
+    min-width: 0;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Hidden links dropdown (mobile nav): flat ink, hairline */
+.hidden-links {
+  background: var(--ink-1) !important;
+  border: 1px solid var(--line) !important;
+  backdrop-filter: none;
+  box-shadow: none !important;
+}
+
+.hidden-links a {
+  color: var(--paper-dim) !important;
+  text-decoration: none;
+}
+
+.hidden-links a:hover {
+  color: var(--gold) !important;
+  background: none !important;
+}
+
+/* --- Playground: flat ink cards. No gradients, no float, no scale. --- */
 
 .playground-intro {
   text-align: center;
   margin-bottom: 2em;
-  margin-left: 0;
-  margin-right: 0;
   padding: 1.5em clamp(16px, 4vw, 36px) 0 clamp(16px, 4vw, 36px);
-  
-  p {
-    font-size: 1.1em;
-    color: rgba(245, 247, 250, 0.85);
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.6;
-  }
+}
+
+.playground-intro p {
+  font-size: 1.05em;
+  color: var(--paper-dim);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
 .playground-grid__wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5em;
+  gap: 1.25em;
   margin-top: 0;
   padding: 0 clamp(16px, 3vw, 24px);
   clear: both;
-  
-  @media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 768px) {
+  .playground-grid__wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
-  
-  @media screen and (min-width: 1024px) {
+}
+
+@media screen and (min-width: 1024px) {
+  .playground-grid__wrapper {
     grid-template-columns: repeat(3, 1fr);
-    gap: 2em;
+    gap: 1.5em;
   }
-  
-  @media screen and (max-width: 600px) {
+}
+
+@media screen and (max-width: 600px) {
+  .playground-grid__wrapper {
     grid-template-columns: 1fr;
-    gap: 1.2em;
+    gap: 1em;
   }
 }
 
@@ -106,55 +476,19 @@
   display: flex;
   flex-direction: column;
   min-height: 220px;
-  border-radius: 16px;
+  border-radius: 8px;
   overflow: hidden;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background: var(--ink-1);
+  border: 1px solid var(--line);
+  box-shadow: none;
+  transition: border-color 0.2s ease;
   position: relative;
 }
 
 .playground__item-link:hover .playground__item {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
-}
-
-.playground__item-link:hover .playground__item-teaser-placeholder:before {
-  transform: scale(1.15) rotate(10deg);
-  opacity: 0.8;
-}
-
-.playground__item-link:hover .playground__item-title-overlay {
-  background: rgba(0, 0, 0, 0.75);
-}
-
-/* Beautiful gradient variations for each game */
-.playground__item-link:nth-child(1) .playground__item {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-.playground__item-link:nth-child(2) .playground__item {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-}
-
-.playground__item-link:nth-child(3) .playground__item {
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-}
-
-.playground__item-link:nth-child(4) .playground__item {
-  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-}
-
-.playground__item-link:nth-child(5) .playground__item {
-  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-}
-
-.playground__item-link:nth-child(6) .playground__item {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-.playground__item-link:nth-child(7) .playground__item {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  transform: none;
+  border-color: var(--gold-line);
+  box-shadow: none;
 }
 
 .playground__item-teaser-placeholder {
@@ -165,39 +499,10 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  
-  /* Animated floating shapes background */
-  &:before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    right: -50%;
-    bottom: -50%;
-    background: 
-      radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
-      radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.12) 0%, transparent 50%),
-      radial-gradient(circle at 40% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 40%);
-    animation: playgroundFloat 8s ease-in-out infinite;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-  
-  @keyframes playgroundFloat {
-    0%, 100% {
-      transform: translate(0, 0) rotate(0deg);
-    }
-    25% {
-      transform: translate(10px, -10px) rotate(5deg);
-    }
-    50% {
-      transform: translate(-5px, 10px) rotate(-5deg);
-    }
-    75% {
-      transform: translate(5px, 5px) rotate(3deg);
-    }
-  }
-  
-  @media screen and (max-width: 600px) {
+}
+
+@media screen and (max-width: 600px) {
+  .playground__item-teaser-placeholder {
     min-height: 180px;
   }
 }
@@ -205,484 +510,37 @@
 .playground__item-title-overlay {
   position: relative;
   z-index: 2;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  color: #fff;
-  padding: 1.5em 1.2em;
+  background: transparent;
+  color: var(--paper);
+  padding: 1.25em 1.2em;
   text-align: center;
   width: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 1.15em;
+  font-size: 1.1em;
   font-weight: 700;
   line-height: 1.4;
-  transition: all 0.3s ease;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  
-  a {
-        color: #fff;
-        text-decoration: none;
-        display: block;
-      }
-  
-  @media screen and (max-width: 600px) {
+  transition: color 0.2s ease;
+}
+
+.playground__item-title-overlay a {
+  color: var(--paper);
+  text-decoration: none;
+  display: block;
+}
+
+.playground__item-link:hover .playground__item-title-overlay,
+.playground__item-link:hover .playground__item-title-overlay a {
+  color: var(--gold);
+}
+
+@media screen and (max-width: 600px) {
+  .playground__item-title-overlay {
     font-size: 1em;
     padding: 1.2em 1em;
   }
 }
 
+/* --- Footer: plain, hairline rule, text links. No pills. --- */
 
-/*
- * Global curvy gradient background + frosted glass (lock screen style)
- * - Background: animated layered radial gradients, heavy blur
- * - Foreground: semi-transparent surfaces with backdrop-filter blur
- */
-
-html, body {
-  min-height: 100%;
-  background: transparent !important;
-}
-
-/* Global sizing variables */
-:root {
-  --masthead-offset: 64px; /* approximate masthead height on desktop */
-}
-
-@media screen and (min-width: 1024px) {
-  :root { --masthead-offset: 72px; }
-}
-
-/* Calm single-hue background: no side glows — one faint top light over a dark base */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-  background:
-    radial-gradient(60% 40% at 50% 0%, rgba(88, 101, 242, 0.12), transparent 65%),
-    linear-gradient(180deg, #0e1428 0%, #0b101f 55%, #090d18 100%);
-  /* Static background - no animation */
-  filter: blur(32px) saturate(110%);
-  transform: translateZ(0);
-}
-
-/* Removed site-bg-move animation - background is now completely static */
-
-/* Removed breathing animation - keeping static light appearance */
-
-/* Optional subtle grain for texture */
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity="0.02"/></svg>');
-  background-size: 240px 240px;
-}
-
-/* Glass surfaces: apply to key theme containers */
-.masthead,
-.page,
-.page__inner-wrap,
-.page__content,
-.archive,
-.sidebar,
-.footer,
-.greedy-nav, /* top nav */
-.nav__list,
-.site-nav {
-  background-color: rgba(10, 13, 24, 0.66);
-  backdrop-filter: blur(18px) saturate(120%);
-  -webkit-backdrop-filter: blur(18px) saturate(120%);
-  border: 1px solid rgba(148, 163, 255, 0.10);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-}
-
-/* Round corners where appropriate, but not for full-width bars */
-.page,
-.page__inner-wrap,
-.archive,
-.sidebar {
-  border-radius: 16px;
-}
-
-/* Make default white backgrounds transparent so the backdrop shows through */
-.page,
-.page__content,
-.archive,
-.sidebar,
-.masthead,
-.footer {
-  background-clip: padding-box;
-}
-
-/* Improve text contrast on darker glass */
-body {
-  color: rgba(245, 247, 250, 0.92);
-}
-
-a { color: #8ab4ff; }
-a:hover { color: #b3c8ff; }
-
-/* Code blocks readable on glass */
-pre, code, kbd, samp {
-  background-color: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Increase contrast for inline code in paragraphs and lists */
-.page__content p code,
-.page__content li code,
-.archive .teaser p code,
-.archive .list__item p code,
-.archive .list__item li code {
-  background-color: rgba(255, 255, 255, 0.15);
-  color: #ffffff;
-  font-weight: 600;
-  padding: 0.15em 0.35em;
-  border-radius: 6px;
-}
-
-/* Ensure fenced code blocks stay high-contrast */
-.page__content pre,
-.page__content pre code,
-.archive .teaser pre,
-.archive .teaser pre code {
-  color: #e9eefc;
-}
-
-/* Tables */
-table {
-  background-color: rgba(255, 255, 255, 0.04);
-  color: #ffffff !important;
-}
-thead th {
-  background-color: rgba(0, 0, 0, 0.4);
-  color: #ffffff !important;
-}
-tbody td {
-  color: #ffffff !important;
-}
-th, td {
-  color: #ffffff !important;
-}
-
-/* Cards/teasers from theme */
-.archive .list__item,
-.archive .grid__item,
-.archive .teaser {
-  background-color: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(148, 163, 255, 0.10);
-  border-radius: 12px;
-  /* add breathing gap between items */
-  margin-block: clamp(8px, 1.5vw, 16px);
-}
-
-/* Add comfortable bottom space below the last item */
-.archive {
-  padding-bottom: clamp(16px, 4vw, 40px);
-}
-
-/* Archive (posts list) spacing: title vs container and side padding */
-.archive {
-  /* Ensure the archive container has inner padding per design */
-  padding-top: clamp(12px, 2.5vw, 24px);
-  /* Add symmetric horizontal padding so items don't touch right edge */
-  padding-inline: clamp(12px, 3vw, 28px);
-}
-
-.archive .page__title,
-.archive h1.page__title {
-  /* Add transparent spacing beneath the page title so it breathes from the list */
-  margin-bottom: clamp(12px, 2.5vw, 28px);
-}
-
-/* Fallback for browsers without backdrop-filter: use more opaque bg */
-@supports not ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
-  .masthead,
-  .page,
-  .page__inner-wrap,
-  .page__content,
-  .archive,
-  .sidebar,
-  .footer,
-  .greedy-nav,
-  .nav__list,
-  .site-nav {
-    background-color: rgba(16, 18, 28, 0.85);
-  }
-}
-
-/* Make inner wrap transparent (no blur/glass) */
-.page__inner-wrap {
-  background-color: transparent !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-
-/*
- * Content breathing room
- * Add safe, responsive padding so text never touches container edges
- */
-.page__inner-wrap,
-.page__content {
-  padding-inline: clamp(24px, 4.5vw, 36px);
-  padding-block: clamp(16px, 3vw, 28px);
-}
-
-/* Mobile: remove page__inner-wrap padding for detail pages to maximize width */
-@media screen and (max-width: 767px) {
-  .page__inner-wrap {
-    padding-inline: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-}
-
-/* Override Susy grid constraints to make page use more width */
-@media screen and (min-width: 64em) {
-  .page {
-    width: calc(100% - 300px) !important; /* Reserve space for sidebar */
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-}
-
-.archive .list__item,
-.archive .grid__item,
-.archive .teaser {
-  padding: clamp(12px, 3vw, 22px);
-}
-
-.sidebar {
-  padding: clamp(12px, 3vw, 22px);
-}
-
-/* Ensure headings and paragraphs have comfortable spacing */
-.page__content h1,
-.page__content h2,
-.page__content h3,
-.page__content h4,
-.page__content h5,
-.page__content h6 {
-  margin-top: 1.25em;
-  margin-bottom: 0.5em;
-}
-
-.page__content p,
-.page__content ul,
-.page__content ol,
-.page__content pre,
-.page__content blockquote {
-  margin-top: 0.8em;
-  margin-bottom: 0.8em;
-}
-
-/* Keep images from touching edges inside glass cards */
-.page__content img,
-.archive .teaser img {
-  border-radius: 10px;
-}
-
-/* Mobile: author header in one row with flexible spacing */
-@media screen and (max-width: 767px) {
-  .author__avatar,
-  .author__content,
-  .author__urls-wrapper {
-    display: flex;
-    align-items: center;
-  }
-
-  /* Put them on a single row */
-  .author__avatar,
-  .author__content,
-  .author__urls-wrapper {
-    flex: 0 0 auto;
-  }
-
-  /* Let content take remaining space to push urls to the right */
-  .author__content {
-    flex: 1 1 auto;
-    min-width: 0;
-    flex-direction: column;       /* name first row, bio second row */
-    align-items: flex-start;
-    gap: 2px;
-  }
-  .author__urls-wrapper { justify-content: flex-end; }
-
-  /* Ensure the container is a row flexbox */
-  [itemscope][itemtype="http://schema.org/Person"] {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 8px;
-  }
-}
-
-/* Sidebar icons: only adjust building (company) and GitHub icons */
-.sidebar .author__urls .fa-building-columns,
-.sidebar .social-icons .fa-github {
-  color: rgba(245, 247, 250, 0.92) !important;
-}
-
-.sidebar .social-icons a:hover .fa-github {
-  color: #b3c8ff !important;
-}
-
-/* Sidebar: sticky + transparent on non-mobile */
-@media screen and (min-width: 768px) {
-  .sidebar {
-    position: sticky;
-    top: calc(var(--masthead-offset) + env(safe-area-inset-top) + 8px);
-    background-color: transparent !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    border: none !important;
-    box-shadow: none !important;
-  }
-}
-
-/* Masthead menu: clear background on non-mobile */
-@media screen and (min-width: 768px) {
-  .masthead__menu,
-  .greedy-nav,
-  .nav__list,
-  .site-nav {
-    background-color: transparent !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    border: none !important;
-    box-shadow: none !important;
-  }
-}
-
-/* Mobile hamburger toggle: transparent instead of the theme's gray slab */
-.greedy-nav button {
-  background-color: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-.greedy-nav .navicon,
-.greedy-nav .navicon::before,
-.greedy-nav .navicon::after {
-  background: rgba(245, 247, 250, 0.92) !important;
-}
-
-/* Masthead menu: clear background on mobile */
-@media screen and (max-width: 767px) {
-  .masthead__menu {
-    background-color: transparent !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    border: none !important;
-    box-shadow: none !important;
-  }
-
-  /* Also clear greedy-nav on mobile */
-  .greedy-nav {
-    background-color: transparent !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    border: none !important;
-    box-shadow: none !important;
-  }
-}
-
-/* Nav links: visual enhancements (pills, spacing, hover) */
-@media screen and (min-width: 768px) {
-  .greedy-nav .visible-links > li {
-    margin-inline: 4px;
-  }
-
-  .greedy-nav a,
-  .masthead__menu-item a,
-  .nav__list a {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5ch; /* space between emoji/icon and text */
-    padding: 8px 12px;
-    border-radius: 12px;
-    font-weight: 600;
-    letter-spacing: 0.2px;
-    color: rgba(245, 247, 250, 0.92);
-    text-decoration: none;
-    transition: color .2s ease, background-color .2s ease, box-shadow .2s ease, transform .15s ease;
-  }
-
-  .greedy-nav a:hover,
-  .masthead__menu-item a:hover,
-  .nav__list a:hover {
-    background-color: rgba(255, 255, 255, 0.08);
-    color: #b3c8ff;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-    transform: translateY(-1px);
-  }
-
-  .greedy-nav a:active,
-  .masthead__menu-item a:active,
-  .nav__list a:active {
-    transform: translateY(0);
-  }
-
-  /* Active/current page state */
-  .masthead__menu-item--active > a,
-  .nav__list .current > a,
-  .greedy-nav .active > a {
-    background-color: rgba(138, 180, 255, 0.12);
-    color: #8ab4ff;
-  }
-}
-
-/* Mobile navbar title: make it pop */
-@media screen and (max-width: 767px) {
-  /* Minimal Mistakes uses a large menu item as the title on mobile */
-  .masthead__menu .masthead__menu-item--lg > a {
-    font-size: clamp(14px, 4vw, 20px);
-    font-weight: 800;
-    letter-spacing: 0.3px;
-    color: #eaf2ff !important;
-    text-decoration: none;
-    text-shadow: 0 2px 16px rgba(138, 180, 255, 0.35), 0 0 6px rgba(180, 200, 255, 0.25);
-    line-height: 1.2;
-    min-height: 44px;
-    display: flex;
-    align-items: center;
-  }
-
-  /* Ensure title occupies space so it doesn't collide with toggle */
-  .masthead__menu .masthead__menu-item--lg { 
-    flex: 1 1 auto; 
-    min-width: 0; 
-    min-height: 44px;
-    display: flex;
-    align-items: center;
-  }
-}
-
-/* Hidden links dropdown for mobile navigation */
-.hidden-links {
-  background: rgba(20, 25, 45, 0.95) !important;
-  border: 1px solid rgba(255, 255, 255, 0.15) !important;
-  backdrop-filter: blur(12px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
-}
-
-.hidden-links a {
-  color: rgba(255, 255, 255, 0.9) !important;
-  text-decoration: none;
-}
-
-.hidden-links a:hover {
-  color: #8ab4ff !important;
-  background-color: rgba(255, 255, 255, 0.08) !important;
-}
-
-/* Footer: cleaner, minimal, glass-friendly */
 .page__footer {
   position: relative;
   background: transparent !important;
@@ -699,7 +557,7 @@ th, td {
   right: 0;
   top: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+  background: var(--line);
 }
 
 .page__footer-follow {
@@ -712,38 +570,42 @@ th, td {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 12px;
+  gap: 8px 16px;
   padding: 0;
   margin: 0;
 }
 
-.page__footer-follow strong { display: none; }
+.page__footer-follow strong {
+  display: none;
+}
 
 .page__footer-follow .social-icons a {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 6px 10px;
-  border-radius: 10px;
-  color: rgba(245, 247, 250, 0.85);
-  background-color: rgba(255, 255, 255, 0.06);
+  padding: 0;
+  border-radius: 0;
+  color: var(--paper-faint);
+  background: none;
   text-decoration: none;
-  transition: color .2s ease, background-color .2s ease, box-shadow .2s ease, transform .15s ease;
+  transition: color 0.2s ease;
 }
 
 .page__footer-follow .social-icons a:hover {
-  color: #b3c8ff;
-  background-color: rgba(255, 255, 255, 0.12);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
-  transform: translateY(-1px);
+  color: var(--gold);
+  background: none;
+  box-shadow: none;
+  transform: none;
 }
 
 .page__footer-follow .social-icons i,
-.page__footer-follow .social-icons svg { color: currentColor; fill: currentColor; }
+.page__footer-follow .social-icons svg {
+  color: currentColor;
+  fill: currentColor;
+}
 
 .page__footer-copyright {
   text-align: center;
-  color: rgba(245, 247, 250, 0.6);
-  font-size: 0.92rem;
+  color: var(--paper-faint);
+  font-size: 0.9rem;
 }
-
