@@ -627,3 +627,130 @@ tbody td {
   color: var(--paper-faint);
   font-size: 0.9rem;
 }
+
+/* --- Editorial rhythm: break up long articles WITHOUT emoji or icons.
+       Separation comes from type, space, and hairlines — the devices
+       serious editorial sites use. CSS-only, so every existing article
+       gets it automatically, no per-post edits needed. --- */
+
+/* Lede: first paragraph slightly larger, full paper color — sets the
+   entry point apart from the body that follows. */
+.page__content > p:first-of-type {
+  font-size: 1.12em;
+  line-height: 1.75;
+  color: var(--paper);
+}
+
+/* H2: a short gold tick + hairline above, generous air before it.
+   The eye lands on a clear section break, not a wall of text. */
+.page__content h2 {
+  margin-top: 2.5em;
+  padding-top: 1.25em;
+  border-top: 1px solid var(--line);
+  position: relative;
+}
+
+.page__content h2::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 2.5rem;
+  height: 2px;
+  background: var(--gold);
+}
+
+/* H3: more air, no decoration — hierarchy by space, not noise. */
+.page__content h3 {
+  margin-top: 2em;
+}
+
+/* List items: breathing room so lists don't clump into a block. */
+.page__content li {
+  margin-bottom: 0.4em;
+}
+
+/* HR: a hairline with a single small gold diamond at center —
+   the quietest possible section ornament. */
+.page__content hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--line), transparent);
+  margin: 2.5em auto;
+  position: relative;
+  overflow: visible;
+}
+
+.page__content hr::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -2.5px;
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+/* Blockquote = pull quote: flat surface, gold left edge, larger type.
+   In markdown, `> quote` now renders as a visual pause in the article. */
+.page__content blockquote {
+  background: var(--ink-1);
+  border-left: 2px solid var(--gold);
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  padding: 1em 1.25em;
+  margin: 1.75em 0;
+  font-size: 1.05em;
+  line-height: 1.7;
+  color: var(--paper);
+}
+
+.page__content blockquote p {
+  color: var(--paper);
+  margin: 0.4em 0;
+}
+
+/* Notices / callouts: one neutral treatment for all variants.
+   No colored backgrounds — a callout is a pause, not a billboard. */
+.page__content .notice,
+.page__content .notice--primary,
+.page__content .notice--info,
+.page__content .notice--warning,
+.page__content .notice--success,
+.page__content .notice--danger {
+  background: var(--ink-1) !important;
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--gold);
+  box-shadow: none;
+  color: var(--paper-dim);
+}
+
+.page__content .notice h1,
+.page__content .notice h2,
+.page__content .notice h3,
+.page__content .notice h4 {
+  color: var(--paper);
+}
+
+/* Table of contents: hairline box, small-caps gold title. */
+.toc {
+  background: var(--ink-1);
+  border: 1px solid var(--line);
+}
+
+.toc .nav__title {
+  color: var(--gold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+/* Figure captions: small, faint, letterspaced — clearly subordinate. */
+.page__content figcaption {
+  color: var(--paper-faint);
+  font-size: 0.85em;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
