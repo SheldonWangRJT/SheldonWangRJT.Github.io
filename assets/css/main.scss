@@ -647,6 +647,7 @@ tbody td {
   margin-top: 2.5em;
   padding-top: 1.25em;
   border-top: 1px solid var(--line);
+  border-bottom: none; /* theme draws a white rule under every H2 — kill it, the gold tick above is the separator */
   position: relative;
 }
 
