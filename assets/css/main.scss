@@ -59,9 +59,10 @@
   --paper: #edeae2;        /* primary text — warm paper white */
   --paper-dim: rgba(237, 234, 226, 0.68);
   --paper-faint: rgba(237, 234, 226, 0.42);
-  --gold: #c2a15a;         /* the one accent — muted gold */
+  --gold: #c2a15a;         /* the primary accent — muted gold */
   --gold-bright: #d8bc7e;  /* accent hover */
   --gold-line: rgba(194, 161, 90, 0.35);
+  --steel: #8ba0c4;         /* secondary accent — muted steel blue, used sparingly (tags only) */
   --line: rgba(237, 234, 226, 0.1); /* neutral hairline */
 }
 
@@ -76,7 +77,8 @@ body {
 body {
   color: var(--paper);
   background:
-    radial-gradient(60% 28% at 50% 0%, rgba(194, 161, 90, 0.06), transparent 70%),
+    radial-gradient(60% 28% at 50% 0%, rgba(194, 161, 90, 0.07), transparent 70%),
+    radial-gradient(45% 22% at 85% 0%, rgba(139, 160, 196, 0.05), transparent 70%),
     linear-gradient(180deg, #0e0e10 0%, #0b0b0d 55%, #08080a 100%);
 }
 
@@ -324,8 +326,11 @@ tbody td {
 /* --- Masthead / nav: flat text links. No pills, no hover lift, no glow.
        Hover = gold text. Active = gold text + gold underline. --- */
 
+/* Masthead must be SOLID: it is sticky, and a transparent bar lets page
+   content show through it while scrolling. */
 .masthead {
-  border-bottom: 1px solid var(--line);
+  background-color: var(--ink-0);
+  border-bottom: 1px solid var(--gold-line);
 }
 
 .greedy-nav button {
@@ -369,6 +374,19 @@ tbody td {
 .greedy-nav .active > a {
   color: var(--gold);
   border-bottom: 2px solid var(--gold);
+}
+
+/* Tags / taxonomy: the one secondary accent — muted steel blue.
+   Gold stays the primary accent; steel appears only here, so the page
+   gets a second note without slipping back to rainbow. */
+.page__taxonomy-item a {
+  color: var(--steel);
+  border-color: rgba(139, 160, 196, 0.35);
+}
+
+.page__taxonomy-item a:hover {
+  color: var(--gold);
+  border-color: var(--gold-line);
 }
 
 @media screen and (max-width: 767px) {
