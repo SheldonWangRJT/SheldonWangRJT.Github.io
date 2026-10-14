@@ -1,42 +1,42 @@
 # main links links
 main:
   # pure tech blog
-  - title: "📔 Tech Blog Posts"
+  - title: "Tech Blog Posts"
     url: /year-archive/
 
   # AI agents & LLM deep-dives (3x/week bilingual series)
-  - title: "🤖 AI & Agents"
+  - title: "AI & Agents"
     url: /categories/#ai-engineering
   
   # my investment strategy and suggestions (including sneakers)
-  - title: "💸 Investment & Finance"
+  - title: "Investment & Finance"
     url: /portfolio/
 
   # life tricks, games, sports etc
-  - title: "🎮 Life & Interests"
+  - title: "Life & Interests"
     url: /life/
 
   # sneaker reviews and collections
-  - title: "👟 Collections"
+  - title: "Collections"
     url: /collections/
 
   # my youtube tutorials
-  # - title: "👨🏻‍🏫 Tutorials"
+  # - title: "Tutorials"
   #   url: /teaching/    
 
-  - title: "📨 Resume"
+  - title: "Resume"
     url: /cv/
 
   # playground
-  - title: "🛝 Playground"
+  - title: "Playground"
     url: /playground/
 
   # iOS interviews (password protected)
-  - title: "🎯 iOS Interviews"
+  - title: "iOS Interviews"
     url: /ios-interviews/
 
   # agent interviews (password protected)
-  - title: "🧠 Agent Interviews"
+  - title: "Agent Interviews"
     url: /agent-interviews/
 
   # - title: "Publications"
