@@ -754,3 +754,68 @@ tbody td {
   letter-spacing: 0.02em;
   text-align: left;
 }
+
+/* --- Follow dropdown (mobile author links): the theme renders this panel
+       from the LIGHT skin — white card, washed-out text, brand-colored
+       icons — so on this dark site it reads as a white box floating over
+       the bio, with the Follow button colliding into it. Fix: dark panel,
+       paper text, monochrome icons, anchored below the button. --- */
+
+/* Desktop sidebar: brand icons monochrome (no blue LinkedIn / red YouTube). */
+.sidebar .author__urls i,
+.sidebar .author__urls svg {
+  color: var(--paper-dim) !important;
+  fill: currentColor;
+}
+
+.sidebar .author__urls a:hover i,
+.sidebar .author__urls a:hover svg {
+  color: var(--gold) !important;
+}
+
+@media screen and (max-width: 1023px) {
+  .author__urls {
+    top: 100%; /* open directly below the Follow button, not over the bio */
+    margin-top: 10px;
+    padding: 8px 4px;
+    background: var(--ink-1);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Arrow triangles above the panel: recolor to the dark panel. */
+  .author__urls::before {
+    border-color: var(--line) transparent;
+  }
+
+  .author__urls::after {
+    border-color: var(--ink-1) transparent;
+  }
+
+  .author__urls a {
+    color: var(--paper-dim);
+    padding: 8px 12px;
+    margin-bottom: 0;
+    border-radius: 6px;
+  }
+
+  .author__urls a:hover {
+    color: var(--gold);
+    text-decoration: none;
+    background: rgba(194, 161, 90, 0.08);
+  }
+
+  /* Follow button: flat ink, gold hairline, paper text. */
+  .author__urls-wrapper button {
+    background: var(--ink-2) !important;
+    border: 1px solid var(--gold-line) !important;
+    color: var(--paper) !important;
+    box-shadow: none !important;
+    border-radius: 8px;
+  }
+
+  .author__urls-wrapper button:hover {
+    border-color: var(--gold) !important;
+  }
+}
