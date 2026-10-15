@@ -58,18 +58,18 @@ The DNS blackout window alone — roughly 15:50 to 21:20 UTC — is about five a
 Here is the fault-propagation chain, from the maintenance command to a global disappearance:
 
 {% mermaid %}
-graph TD
-    A["Routine maintenance command"] -->|"assess backbone capacity"| B["Backbone capacity system"]
-    B -->|"audit tool bug, no block"| C["All backbone connections withdrawn"]
-    C --> D["Data centers mutually disconnected"]
-    D --> E["Edge DNS servers cannot reach data centers"]
-    E -->|"health check, withdraw BGP"| F["All DNS BGP advertisements withdrawn"]
-    F --> G["Internet cannot find Meta servers"]
-    G --> H["Apps retry, 30x DNS query surge"]
-    C --> I["Primary and out-of-band access down"]
-    I --> J["Engineers dispatched onsite"]
-    J -->|"physical security slows entry"| K["Backbone restored"]
-    K -->|"staged restore, power and cache risk"| L["Services return over hours"]
+graph TD;
+    A["Routine maintenance command"] -->|"assess backbone capacity"| B["Backbone capacity system"];
+    B -->|"audit tool bug, no block"| C["All backbone connections withdrawn"];
+    C --> D["Data centers mutually disconnected"];
+    D --> E["Edge DNS servers cannot reach data centers"];
+    E -->|"health check, withdraw BGP"| F["All DNS BGP advertisements withdrawn"];
+    F --> G["Internet cannot find Meta servers"];
+    G --> H["Apps retry, 30x DNS query surge"];
+    C --> I["Primary and out-of-band access down"];
+    I --> J["Engineers dispatched onsite"];
+    J -->|"physical security slows entry"| K["Backbone restored"];
+    K -->|"staged restore, power and cache risk"| L["Services return over hours"];
 {% endmermaid %}
 
 Each arrow in that diagram is a mechanism worth understanding, because the timeline alone makes the outage look like bad luck. It was not bad luck. It was coupling.
