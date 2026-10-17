@@ -30,8 +30,8 @@ console.log('Chart.js is available, creating charts...');
 // Crypto = all crypto; Real Estate = home equity + vehicles; 529 = education savings.
 // Dec 2024 - Dec 2025: as originally published. From Jan 2026: sourced from the NW Tracking
 // sheet (last snapshot of each month; no snapshot exists for Mar 2026).
-// September 2026 reflects the 9/25/2026 snapshot (latest in-month).
-const monthLabels = ['December 2024', 'August 2025', 'September 2025', 'October 2025', 'November 2025', 'December 2025', 'January 2026', 'February 2026', 'April 2026', 'May 2026', 'June 2026', 'July 2026', 'August 2026', 'September 2026'];
+// September 2026 reflects the 9/25/2026 snapshot; October 2026 reflects the 10/10/2026 snapshot (latest in-month).
+const monthLabels = ['December 2024', 'August 2025', 'September 2025', 'October 2025', 'November 2025', 'December 2025', 'January 2026', 'February 2026', 'April 2026', 'May 2026', 'June 2026', 'July 2026', 'August 2026', 'September 2026', 'October 2026'];
 
 const pctSeries = [
 [5.22, 30.29, 13.13, 2.05, 0.74, 48.57, 0.00],
@@ -48,11 +48,12 @@ const pctSeries = [
 [1.88, 36.84, 19.29, 2.65, 1.15, 37.87, 0.32],
 [3.22, 37.33, 19.26, 2.67, 1.18, 35.80, 0.52],
 [2.46, 38.49, 18.68, 2.63, 1.37, 35.87, 0.50],
+[2.49, 38.76, 18.64, 2.65, 1.34, 35.62, 0.50],
 ];
 
 // Net Worth Index (Dec 2024 = 100).
 // 2026+ values are the true net-worth index anchored at Dec 2025 = 110.8.
-const nwIndex = [100.0, 105.6, 107.1, 110.5, 110.0, 110.8, 112.0, 111.2, 117.4, 125.9, 126.3, 122.4, 126.6, 129.7];
+const nwIndex = [100.0, 105.6, 107.1, 110.5, 110.0, 110.8, 112.0, 111.2, 117.4, 125.9, 126.3, 122.4, 126.6, 129.7, 129.8];
 
 // BAR CHART
 const barCanvas = document.getElementById('barChart');
