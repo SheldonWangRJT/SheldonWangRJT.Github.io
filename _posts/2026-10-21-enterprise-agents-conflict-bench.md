@@ -88,3 +88,4 @@ One more number worth stealing: on recognising that a question cannot be answere
 Most enterprise RAG budgets are allocated backwards: the money goes to finding more evidence, while the failures come from adjudicating between evidence that was already found. Until an agent can show which version it believed and why, a larger context window is just a larger pile of contradictions.
 
 Sources: MMEnterprise-Bench paper and project page (arXiv:2610.27911, released October 20–21, 2026).
+
