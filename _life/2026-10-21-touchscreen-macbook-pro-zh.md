@@ -1,5 +1,5 @@
 ---
-title: ""手臂会累断的"：苹果正在造乔布斯说永远不会做的触屏 Mac"
+title: '"手臂会累断的"：苹果正在造乔布斯说永远不会做的触屏 Mac'
 description: "苹果已确认 10 月 28 日在洛杉矶办 'Pro and tell' 发布会，而所有可信报道都指向同一个主角：第一台触屏 OLED MacBook Pro——在乔布斯称垂直触控'人体工学上糟糕透顶'的十六年之后。从乔布斯到 Schiller 到 Federighi 的完整教条阶梯、据报要发布的东西（以及奇怪的 M5 对 M6 芯片反转）、苹果为什么现在回头，以及这台机器的设计如何悄悄承认乔布斯可能是对的。"
 date: 2026-10-21
 permalink: /life/touchscreen-macbook-pro-apple-reversal-zh/
