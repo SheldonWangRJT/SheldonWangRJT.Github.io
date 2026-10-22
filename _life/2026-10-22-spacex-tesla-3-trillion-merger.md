@@ -66,3 +66,4 @@ The governance question — should that combination be executed in the one struc
 Nothing is agreed, no vote is scheduled, and Tesla's annual-meeting deadline of December 6 is the next date that matters: a proposal that misses it likely waits six to twelve months. Until terms exist, the honest description is the one Musk himself gave it — a good idea, being danced around by the only people allowed to decide it, while the man who wants it watches from outside the room he built.
 
 *Sources: SpaceX and Tesla Q3 2026 earnings calls and reports (Oct 20–21, 2026); Barchart and Reuters/ANSA coverage of the committee announcement and SpaceX results; Barclays analyst note via The Wealth Advisor (Oct 16, 2026); Tesla Q2 2026 10-Q disclosure of its $2B SpaceX stake; Visible Alpha estimates via ANSA. Prediction-market odds are sentiment gauges, not facts, and are labeled as such above.*
+
