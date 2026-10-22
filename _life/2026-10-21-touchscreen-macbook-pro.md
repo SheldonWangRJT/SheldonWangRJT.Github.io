@@ -1,5 +1,5 @@
 ---
-title: ""Your Arm Wants to Fall Off": Apple Is Building the Touchscreen Mac Steve Jobs Said Would Never Work"
+title: '"Your Arm Wants to Fall Off": Apple Is Building the Touchscreen Mac Steve Jobs Said Would Never Work'
 description: "Apple has confirmed an October 28 'Pro and tell' event in Los Angeles, and every credible report says the star is the first touchscreen OLED MacBook Pro — sixteen years after Steve Jobs called vertical touch 'ergonomically terrible.' The full doctrine ladder from Jobs to Schiller to Federighi, what is reportedly launching (and the strange M5-vs-M6 chip twist), why Apple is reversing now, and why the design quietly concedes Jobs may have been right."
 date: 2026-10-21
 permalink: /life/touchscreen-macbook-pro-apple-reversal/
