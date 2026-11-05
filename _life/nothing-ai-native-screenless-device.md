@@ -1,6 +1,6 @@
 ---
 title: "Nothing's First AI-Native Device Ships in December: No Screen, No Price, No Specs, No Name"
-description: 'On November 4, 2026, Nothing CEO Carl Pei announced on X that the company's first AI-native product ships in December: a productivity tool with "no new screen" that "couldn''t have been an app." Beyond that there is no name, no price, and no spec — and the AI hardware graveyard already holds the Humane AI Pin and the Rabbit R1.'
+description: "On November 4, 2026, Nothing CEO Carl Pei announced on X that the first AI-native product from the company ships in December: a productivity tool with no new screen that could not have been an app. Beyond that there is no name, no price, and no spec — and the AI hardware graveyard already holds the Humane AI Pin and the Rabbit R1."
 date: 2026-11-05
 permalink: /life/nothing-ai-native-screenless-device/
 tags:
@@ -8,7 +8,7 @@ tags:
   - AI Hardware
   - Carl Pei
   - Hardware
-excerpt: 'Pei says Nothing''s AI device "couldn''t have been an app" — but beyond a December ship date and no screen, he said nothing at all. The last batch of AI hardware that talked like this is in the graveyard.'
+excerpt: 'Pei says the Nothing AI device could not have been an app — but beyond a December ship date and no screen, he said nothing at all. The last batch of AI hardware that talked like this is in the graveyard.'
 ---
 
 > [中文版 Chinese version](/life/nothing-ai-native-screenless-device-zh/)
