@@ -33,7 +33,7 @@ That gives you the three builds, in Nike's words:
 
 The heritage play is deliberate. In the late '80s and early '90s, Force, Flight and Uptempo were how Nike sorted its basketball line — different tools for different games. The G.T. series then revived the *idea* of building around a philosophy rather than a single star. This announcement fuses the two eras: the old names, the new foam, and a system that extends across the whole lineup rather than sitting on top of it as a separate collection.
 
-That last part matters more than it sounds. The three builds are the foundation for *all* Nike Basketball footwear now, including signatures. Nike says its signature shoes are informed by the same builds, then tuned to each athlete. So the LeBron 24 is a Flight-family shoe. A'ja Wilson's A'Two and Giannis Antetokounmpo's Freak 8 sit in Force. Caitlin Clark's Caitlin 1, Sabrina Ionescu's Sabrina 4, Devin Booker's Book 2 and Kevin Durant's KD 19 are Uptempo-family shoes. If you already own one of those, you already have a rough sense of which build fits you — and Nike is betting that makes the new trio easier to shop than a wall of unrelated models.
+That last part matters more than it sounds. The three builds are the foundation for *all* Nike Basketball footwear now, including signatures. Nike says its signature shoes are informed by the same builds, then tuned to each athlete. So the LeBron 24 is a Flight-family shoe. A'ja Wilson's A'Two and Giannis Antetokounmpo's Freak line sit in Force. Caitlin Clark's Caitlin 1, Sabrina Ionescu's Sabrina line, Devin Booker's Book 2 and Kevin Durant's KD 19 are Uptempo-family shoes. If you already own one of those, you already have a rough sense of which build fits you — and Nike is betting that makes the new trio easier to shop than a wall of unrelated models.
 
 ## The three builds at a glance
 
@@ -114,13 +114,13 @@ Forget positions. Answer these three questions instead:
 - **Do you win by going through?** If you play bully ball, set the tone physically, guard multiple positions and need your shoe to hold its shape when you plant at full force, start with the **Force**. Try the high-top first if you want maximum containment; the low-top if you want the look and the ZoomX without the collar.
 - **Do you win by going first?** If your game is first-step quickness, change of direction, creating separation in a step and feeling the floor under you, start with the **Uptempo**. It is the lowest, lightest and most complete tech stack of the three, and the early favorite for a reason.
 
-And if you already own a signature shoe, Nike has done the mapping for you: LeBron 24 or Ja 4 means you are already a Flight player; Freak 8 or A'Two means Force; Book 2, KD 19, Sabrina 4 or Caitlin 1 means Uptempo. That is not marketing fluff — it is the most useful shortcut in the whole announcement.
+And if you already own a signature shoe, Nike has done the mapping for you: LeBron 24 or Ja 4 means you are already a Flight player; the Freak line or A'Two means Force; Book 2, KD 19, the Sabrina line or Caitlin 1 means Uptempo. That is not marketing fluff — it is the most useful shortcut in the whole announcement.
 
 ## What could go wrong
 
 A long first look should end with the open questions, not bury them:
 
-1. **Prices.** Nike has not announced any. The $200 Uptempo figure is tentative, from secondary sources. If the Flight or Force land above $200, the value conversation changes completely — especially against the G.T. Cut 4 at $210 and the rest of a crowded $130–$210 market.
+1. **Prices.** Nike has not announced any. The $200 Uptempo figure is tentative, from secondary sources. If the Flight or Force land above $200, the value conversation changes completely — especially against the G.T. Cut 4 at $200–$210 and the rest of a crowded $130–$210 market.
 2. **No wear tests yet.** Everything above about feel, weight, durability and traction is inferred from spec sheets and photos. The Force's ZoomX durability, the Flight's metallic shell comfort, the Uptempo's support for heavier players — all untested until February.
 3. **The Force's design problem is real.** The early reaction says it plainly: the armored high-top looks derivative to a lot of people. Nike is betting performance buyers will not care. That bet has failed before — the Hyperdunk era is full of great shoes people didn't buy because they didn't love looking at them.
 4. **Sizing and fit.** A textile bootie (Flight), an armor upper (Force) and an engineered mesh upper (Uptempo) will fit three different ways. Expect the usual Nike advice to apply — try them on, and don't assume your G.T. Cut size carries over — until real fit reports exist.
