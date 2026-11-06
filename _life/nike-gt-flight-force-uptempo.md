@@ -19,6 +19,9 @@ That is the sentence to hold onto, because everything else in this article hangs
 
 One honest note before the hype: these shoes are not out yet. They go on sale February 11, 2027 in North America at nike.com and select retailers, with a global launch to follow. Nobody outside Nike has wear-tested a retail pair, and Nike has not published prices. So this is not a wear-test review — it is a long first look at the system, the tech, the design and the early reaction, with the claims that can be checked separated from the ones that cannot. When real reviews land after February, the verdicts below are the ones to test.
 
+![Nike G.T. Flight, G.T. Force and G.T. Uptempo — "Choose Your Advantage"](/images/nike-gt-trio.webp)
+*The full trio: Flight (explosive lift), Force (dynamic power), Uptempo (reactive speed). Image: Nike official press image, via Sole Retriever.*
+
 ## Why three shoes, and why now
 
 Nike's own framing, from its November 5 newsroom announcement, is that the modern game stopped respecting positions. A center brings the ball up; a guard posts up; everybody switches everything. So instead of designing by position — guard shoe, forward shoe, big shoe — Nike designed by *movement*: how a player jumps, how a player absorbs contact, how a player changes direction.
@@ -54,6 +57,9 @@ The price row deserves a pause. Nike has not published prices for any of the thr
 
 Flight is the showpiece. It is the shoe for players whose games depend on vertical movement — attacking the basket, rising for rebounds, making plays above the rim — and Nike gave it a visual identity to match: a low-cut model with a sculpted metallic shell that reads, at a glance, like something built for speed in the air rather than on the floor. The early photos show a dark, almost armored look, with the metallic finish doing most of the talking.
 
+![Nike G.T. Flight — sculpted metallic shell](/images/nike-gt-flight.webp)
+*G.T. Flight: the metallic shell is the story. Image: Nike official press image, via Sneaker News.*
+
 Underneath, the cushioning stack is the interesting choice. A full-length Zoom Strobel — a full-length Air Zoom unit stitched into the strobel board, directly underfoot — sits on Cushlon 3.0 foam. That is a different philosophy from the other two shoes, which both use ZoomX 3.0. Cushlon is Nike's workhorse foam: softer, more forgiving, better at soaking up repeated landings. Zoom Strobel adds the pop. The combination says: this shoe is about going up and coming down, over and over, without your knees filing a complaint.
 
 The upper is a textile bootie with a TPU cage and a sock liner, plus a rubber traction outsole. No heavy armor here — the containment comes from the cage, not from a rigid shell, which should keep the shoe lighter than it looks.
@@ -65,6 +71,9 @@ The open question is the one no photo can answer: how does a sculpted metallic s
 ## G.T. Force: the bully-ball shoe, and the most argued-about
 
 If Flight is the showpiece, Force is the argument. It is engineered for players who rely on physicality, strength and sustained power — the players who win possessions by being immovable, then win the next one by being explosive anyway. It comes in both high-top and low-top versions, which already tells you Nike expects it to sell to two different buyers: the player who wants maximum containment, and the player who wants the Force look without the high collar.
+
+![Nike G.T. Force — synthetic armor upper, silver toe cap](/images/nike-gt-force.webp)
+*G.T. Force: quilted armor upper, TPU window and shank, rubber cup sole. Image: Nike official press image, via Sole Retriever.*
 
 The tech is the most premium-sounding of the three on first read: ZoomX 3.0 foam — Nike's racing foam, the stuff from its marathon super-shoes, now in its third basketball generation — under a synthetic armor upper, with a TPU window and shank and a rubber cup sole. The armor upper is the point: it is meant to contain the foot when a 250-pound player plants, pivots and absorbs contact. The cup sole adds stability. Everything about the spec sheet says "this shoe holds its shape so you don't have to."
 
@@ -78,7 +87,12 @@ The other honest caveat: ZoomX is a wonderful foam and a fragile one. It is soft
 
 The Uptempo is the crowd favorite, and it is not close. It is the lightweight, low-to-the-ground shoe for quickness, precision and court feel — the guard's shoe in a lineup that claims to have moved past positions — and it has two advantages the other two don't: it has already been seen on court, and it looks the most like a shoe people already know they like.
 
-Dylan Harper has been wearing the Uptempo throughout the 2026–27 season with the Spurs, including the "Metallic Silver/Black" pair (IR2018-002). That matters, because it means the Uptempo is the only one of the three with any real on-court mileage in public before launch — not a formal review, but a season of NBA games is a better preview than a studio photo. The design fits closer to the classic G.T. Cut look: a one-piece upper, a streamlined shape, a low-profile cut, a woven texture with a glossy midfoot accent. It looks fast standing still, which is exactly what Nike's copy promises: "both looks and feels fast."
+Dylan Harper has been wearing the Uptempo throughout the 2026–27 season with the Spurs, including the "Metallic Silver/Black" pair (IR2018-002).
+
+![Nike G.T. Uptempo — engineered mesh, low and light](/images/nike-gt-uptempo.webp)
+*G.T. Uptempo: woven texture, glossy midfoot accent, visible Air Zoom. Image: Nike official press image, via Sole Retriever.*
+
+That matters, because it means the Uptempo is the only one of the three with any real on-court mileage in public before launch — not a formal review, but a season of NBA games is a better preview than a studio photo. The design fits closer to the classic G.T. Cut look: a one-piece upper, a streamlined shape, a low-profile cut, a woven texture with a glossy midfoot accent. It looks fast standing still, which is exactly what Nike's copy promises: "both looks and feels fast."
 
 The tech stack is the most complete of the three. ZoomX 3.0 foam, an Air Zoom Strobel, *and* an additional Air Zoom unit in the heel, on a Cushlon carrier, with an engineered mesh upper, a TPU window and shank, and a rubber outsole. That is three layers of cushioning technology doing three different jobs: ZoomX for energy return, the Strobel for underfoot responsiveness, the heel Air Zoom for impact on hard plants and stops. Nike pitches it as the best court feel of the three, and on paper that is the easiest claim to believe — the stack is built low, so you sit closer to the floor, and the mesh upper keeps weight down.
 
