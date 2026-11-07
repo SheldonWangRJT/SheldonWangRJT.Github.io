@@ -13,6 +13,10 @@ excerpt: '标题是 80 倍算力，细则是 2029 年、估算值，以及一颗
 
 > [English version](/life/tesla-si6-roadmap-80x/)
 
+![特斯拉 Dojo 超级计算机晶圆片](/assets/images/life/2026-11-07-tesla-si6-roadmap-80x/dojo-tile.jpg)
+
+*特斯拉 Dojo 超级计算机晶圆片——单块晶圆级芯片上集成 25 颗 D1 芯片。Dojo 3 放弃的正是这个设计。图片：Wikimedia Commons。*
+
 ## 特斯拉公布了什么
 
 特斯拉发布了修订版的 AI 加速器路线图，而最显眼的变化根本不是技术：芯片不再叫 AI4、AI5、AI6，改叫 SI4、SI5、SI6——"SI"即"Super Intelligence（超级智能）"，这是特朗普总统力推用来替代"人工智能"的说法。马斯克已确认 SpaceX 的 AI 部门也做同样的改名，变成 SpaceXSI。
@@ -25,11 +29,19 @@ excerpt: '标题是 80 倍算力，细则是 2029 年、估算值，以及一颗
 
 所以诚实的表述是：特斯拉公布的是一个方向，不是一个产品。验证点在 2029 年左右，从现在到那时的一切，都是一颗尚不存在的芯片的宣称。
 
+![SI6 算力目标与 AI5 内存削减](/assets/images/life/2026-11-07-tesla-si6-roadmap-80x/si6-zh.png)
+
+*左：SI6 的 80 倍算力目标，对照估算的 SI4 基线（对数轴）。右：AI5 规划内存，一个月内被砍两次。图表：本站据特斯拉路线图材料（Tom's Hardware 报道）制作。*
+
 ## Dojo 3 改主意了
 
 路线图里更有意思的部分，是特斯拉自研训练加速器 Dojo 的回归——而它回来时已是一台不同的机器。第三代 D3 放弃了定义前两代产品的晶圆级集成与分布式片上 SRAM 架构，转而采用 chiplet（小芯片）设计，配合 2.5D 与 3D 封装及堆叠式 HBM 内存。
 
 这是一次真正的掉头。晶圆级集成曾是 Dojo 的身份标识——赌的是一整块晶圆的算力胜过许多小芯片连在一起。D3 承认了业界几年前就已定论的观点：小芯片加堆叠内存赢了。特斯拉没有披露 D3 的算力、内存、工艺或时间表，所以这次让步的规模仍不清楚。但方向毫不含糊，而且与 Dojo 最初的卖点正好相反。
+
+![Dojo 原始架构：从 D1 芯片到 ExaPOD](/assets/images/life/2026-11-07-tesla-si6-roadmap-80x/dojo-architecture.png)
+
+*Dojo 原始架构，从单颗 D1 芯片到 ExaPOD——晶圆级集成与分布式片上 SRAM。D3 把这两点都放弃了。图示：Wikimedia Commons。*
 
 ## 内存的讽刺
 
