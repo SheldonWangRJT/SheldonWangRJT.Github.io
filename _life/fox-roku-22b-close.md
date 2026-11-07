@@ -13,6 +13,10 @@ excerpt: 'The last big open TV platform now has an owner — and the owner is on
 
 > [中文版 Chinese version](/life/fox-roku-22b-close-zh/)
 
+![A Roku Streaming Stick 4K](/assets/images/life/2026-11-07-fox-roku-22b-close/roku-stick.jpg)
+
+*A Roku Streaming Stick 4K. Fox did not pay $22 billion for the hardware — but the stick is still the front door to the living room. Photo: Wikimedia Commons.*
+
 ## What closed
 
 Fox Corporation completed its $22 billion acquisition of Roku on Friday, November 6, 2026 — less than five months after the deal was announced in June, and well ahead of the first-half-2027 timetable the companies had originally projected. Roku shares stopped trading on the Nasdaq the same day.
@@ -32,6 +36,10 @@ The antitrust review was the part everyone watched. The Justice Department issue
 Roku is not a hardware story anymore, and Fox did not pay $22 billion for plastic remotes. Roku's third-quarter 2026 results, reported November 2, show the shape of the business Fox actually bought: total revenue of $1.5 billion, up 24 percent year over year, with platform revenue of $1.3 billion, up 23 percent, and net income of $183 million. The money is in the platform — advertising, subscriptions and the cut of transactions that flow through the home screen.
 
 For Fox, the deal fills the hole in its own strategy. Tubi is a strong free streaming service, Fox One is its paid bet, but neither owned the front door to the living room. Roku is the front door. Owning it means Fox no longer pays rent to reach its own audience, and it gets a say in what every other streamer pays too.
+
+![Fox-Roku deal: ownership and Roku Q3 revenue](/assets/images/life/2026-11-07-fox-roku-22b-close/roku-deal-en.png)
+
+*Left: ownership of the combined company. Right: Roku's third-quarter 2026 revenue — the platform is the business Fox bought. Chart: this site, from Fox and Roku's Q3 2026 results.*
 
 ## The judgment
 
