@@ -1,44 +1,46 @@
 ---
-title: '福克斯 220 亿美元拿下 Roku——以及一亿家庭的电视'
-description: '福克斯 11 月 6 日完成对 Roku 的 220 亿美元收购，比原计划提前数月，拿下了最后一个大型开放电视平台。承诺是 Roku 至少三年内继续对竞争对手内容开放。考验在于：一个内容方能不能运营一个中立平台。'
+title: 'Tesla Promises an 80x Chip — in 2029. The Rebrand Is the Real News'
+description: 'Tesla renamed its AI chips SI4, SI5 and SI6 under a "Super Intelligence" banner and put a target on the sixth generation: 80 times the compute of the current chip, arriving 2029–2030. The numbers are estimates on an estimated baseline, and the bigger shift is Dojo 3 abandoning wafer-scale design.'
 date: 2026-11-07
-permalink: /life/fox-roku-22b-close-zh/
+permalink: /life/tesla-si6-roadmap-80x/
 tags:
-  - Fox
-  - Roku
-  - Streaming
-  - Television
-excerpt: '最后一个大型开放电视平台如今有了主人——而主人正是平台上的一个频道。'
+  - Tesla
+  - Chips
+  - AI
+  - Dojo
+excerpt: 'The headline is 80 times the compute. The fine print is 2029, estimated, and a training chip that just changed its mind about everything.'
 ---
 
-> [English version](/life/fox-roku-22b-close/)
+> [中文版 Chinese version](/life/tesla-si6-roadmap-80x-zh/)
 
-## 交割了什么
+## What Tesla disclosed
 
-福克斯公司于 2026 年 11 月 6 日周五完成对 Roku 的 220 亿美元收购——距离 6 月宣布交易不到五个月，远早于双方最初预计的 2027 年上半年时间表。Roku 股票当天起停止在纳斯达克交易。
+Tesla has published a revised roadmap for its AI accelerators, and the most visible change is not technical at all: the chips are no longer called AI4, AI5 and AI6. They are SI4, SI5 and SI6 — "SI" for "Super Intelligence," the term President Trump has pushed as a replacement for "artificial intelligence." Musk has confirmed the same rebrand for SpaceX's AI arm, which becomes SpaceXSI.
 
-这笔交易让福克斯拥有了超过一亿美国家庭电视上的操作系统，按福克斯自己的说法，合并后的公司按收视量已是全美第三大电视业务。它也把一家以直播新闻与体育起家的公司，变成了一家同时拥有内容与发行渠道的流媒体与联网电视运营商。
+The headline number belongs to the sixth generation. Tesla says the SI6 inference chip will deliver 80 times the compute of the current fourth-generation chip, SI4, and nine times the memory. On an estimated baseline of 216 to 576 TOPS for the SI4, that works out to roughly 17,280 to 46,080 TOPS — 17 to 46 POPS — with about 144GB of memory, built by Samsung Foundry on a 2nm-class process. The chip is due in 2029–2030, and Tesla has signed an agreement with Samsung to build it through 2033.
 
-## 交易条款
+## The asterisks
 
-Roku 股东每持有一股，可获得 95.30 美元现金加 0.9799 股福克斯 A 类普通股——按宣布时的价格，合计约每股 160 美元。福克斯股东持有合并后公司约 74% 的股份，原 Roku 股东约占 26%。
+Read the numbers carefully, because Tesla itself invites it. The 80x multiple comes from Tesla's presentation materials. The absolute figures are estimates derived from an estimated SI4 baseline, and Tesla has not disclosed which data formats the SI6 supports — the format is what decides whether a TOPS number means anything in practice. Tesla does not officially disclose absolute compute, memory capacity or power consumption for these chips at all.
 
-Roku 创始人 Anthony Wood 加入福克斯董事会，并出任新成立的 Fox Digital Platforms 部门联席主席，与联席主席兼 CEO Paul Cheesbrough 搭档。该部门整合 Roku、Tubi、Fox One 与 Red Seat Ventures。福克斯预计两年内实现约 4 亿美元的年度成本协同，并称交易将在交割后第二个完整年度开始增厚每股自由现金流。
+So the honest way to state it: Tesla has published a direction, not a product. The validation point is around 2029, and everything between now and then is a claim about a chip that does not exist yet.
 
-反垄断审查是所有人盯着的部分。司法部 9 月发出了第二次信息索取，随后在交易交割当天结束了审查。福克斯向监管方作出行为承诺：至少三年内保持 Roku 对竞争对手媒体公司的内容开放，不歧视使用该平台的竞争者。
+## Dojo 3 changes its mind
 
-## 福克斯为什么出这个价
+The more interesting part of the roadmap is the return of Dojo, Tesla's in-house training accelerator — and it returns as a different machine. The third generation, D3, abandons the wafer-scale integration and distributed on-chip SRAM architecture that defined the first two generations, shifting instead to a chiplet-based design with 2.5D and 3D packaging and stacked HBM memory.
 
-Roku 早已不是硬件故事，福克斯花的 220 亿美元也不是买塑料遥控器。Roku 11 月 2 日发布的 2026 年第三季度财报，揭示了福克斯真正买下的业务形态：总营收 15 亿美元，同比增长 24%，其中平台营收 13 亿美元，增长 23%，净利润 1.83 亿美元。钱在平台上——广告、订阅，以及流经主屏幕的交易抽成。
+That is a genuine U-turn. Wafer-scale integration was Dojo's identity — the bet that one giant wafer of compute beats many small chips wired together. D3 concedes the point the rest of the industry settled years ago: chiplets and stacked memory win. Tesla disclosed no compute, memory, process or schedule for D3, so the scale of the concession is still unknown. But the direction is unmistakable, and it is the opposite of the original Dojo pitch.
 
-对福克斯来说，这笔交易补上了自身战略的缺口。Tubi 是不错的免费流媒体服务，Fox One 是它的付费赌注，但两者都不拥有客厅的前门。Roku 就是那扇前门。拥有它意味着福克斯不再需要付租金去触达自己的观众，同时对其他流媒体要付多少钱也有了话语权。
+## The memory irony
 
-## 判断
+There is a tension inside Tesla's own roadmap that the company did not volunteer. Just last month, Musk cut the planned memory on the AI5 chip from 144GB to 72GB, then to 96GB, to secure enough chip supply for volume Optimus production — a public, real-time negotiation with the memory shortage that is squeezing the whole industry. AI5 is in trial production at Samsung's Taylor, Texas facility, with larger-scale production targeted for 2027 and Optimus integration around April 2027.
 
-这笔交易的官方叙事很干净：Roku 保持开放，福克斯获得规模，大家的 App 都还在。而三年开放平台承诺是这套叙事的承重墙——它是一个承诺，不是一道结构。它会过期，执行它的监管者到时早已去忙别的案子，而激励方向恰恰相反：福克斯在主屏幕上每给自家服务多一分曝光，就是对如今依赖竞争对手平台的对手多一分杠杆。
+In other words: the chip Tesla can actually ship next is the one whose memory it just cut twice, while the chip with nine times the memory is a 2029–2030 target. Roadmaps are cheap. Memory supply is not.
 
-这就是要盯的张力。第一场考验会很小、很好否认——主屏幕上的位置、对竞争 App 的条款、Tubi 与 Fox One 如何与别人打包。第二场考验是那 4 亿美元协同：如果来自重复的人力成本，没问题；如果来自挤压平台的经济模型，"开放"的承诺就会变得很贵。
+## The judgment
 
-福克斯买下了电视领域最后一块大型中立地盘。它能不能保持中立，如今系于一个为期三年、挂在 220 亿美元资产上的承诺。承诺会过期，资产不会。
+The SI6 announcement is best read as three separate stories. The rebrand is politics, and it is already done — "Super Intelligence" is now the house style across Musk's companies. The Dojo 3 pivot is engineering, and it is the most honest part of the roadmap: Tesla admitting its signature architecture lost. The 80x is marketing, and it will stay marketing until a real chip exists to measure.
 
-*本文交易数字来自福克斯、Roku、TechCrunch、Goodwin 与 Deadline 对 2026 年 11 月 6 日交割的报道。*
+None of that makes the roadmap meaningless. A car company that designs its own training and inference silicon, with a Samsung foundry agreement running to 2033, is a serious vertical bet — the same bet that underpins the robotaxi and Optimus programs. But the number to remember is not 80. It is 2029. Until then, Tesla's chip story is a promise competing with a memory market that just forced it to cut its next chip in half.
+
+*Roadmap figures in this post are from Tesla presentation materials as reported by Tom's Hardware, November 6, 2026; absolute compute figures are estimates derived from the SI4 baseline, as the underlying reporting notes.*
