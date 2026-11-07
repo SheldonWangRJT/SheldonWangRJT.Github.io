@@ -1,46 +1,44 @@
 ---
-title: '选民刚刚对数据中心投了反对票'
-description: '11 月 3 日中期选举把 AI 基建变成了选票议题：近 80% 的选民反对在自家附近建数据中心，地方限制措施几乎走到哪赢到哪，全国性暂停新建数据中心的提案如今已是国会里的 live 议题。'
+title: 'Fox Now Owns Roku — and the TV in 100 Million Homes'
+description: 'Fox closed its $22 billion acquisition of Roku on November 6, months ahead of schedule, taking control of the last big open TV platform. The promise is that Roku stays open to rival content for at least three years. The test is whether a content owner can run a neutral platform.'
 date: 2026-11-07
-permalink: /life/data-center-backlash-midterms-zh/
+permalink: /life/fox-roku-22b-close/
 tags:
-  - Data Centers
-  - AI
-  - Politics
-  - Energy
-excerpt: 'AI 基建刚刚撞上了它的第一个真正约束——不是芯片，也不是电力，是选民。'
+  - Fox
+  - Roku
+  - Streaming
+  - Television
+excerpt: 'The last big open TV platform now has an owner — and the owner is one of the channels on it.'
 ---
 
-> [English version](/life/data-center-backlash-midterms/)
+> [中文版 Chinese version](/life/fox-roku-22b-close-zh/)
 
-## 周二发生了什么
+## What closed
 
-11 月 3 日中期选举，民主党拿下国会两院，共和党保住白宫。这本身已是科技政策的大事。但这次选举更大的信号在于 AI 的物理足迹：数据中心成了一个选票议题，而选民正在投反对票。
+Fox Corporation completed its $22 billion acquisition of Roku on Friday, November 6, 2026 — less than five months after the deal was announced in June, and well ahead of the first-half-2027 timetable the companies had originally projected. Roku shares stopped trading on the Nasdaq the same day.
 
-NBC 的出口民调显示，近 80% 的选民反对在自家附近建数据中心，超过一半的人认为 AI 弊大于利，近 60% 的人说数据中心是他们投票时关键或重要的考量因素。ABC 新闻、华盛顿邮报与 Ipsos 的民调则显示，72% 的美国人反对在自己社区新建数据中心。
+The deal makes Fox the owner of the operating system on the TV in more than 100 million US households, and, by Fox's own account, the third-largest television business in the country by viewership. It also turns a company built on live news and sports into a scaled streaming and connected-TV operator that owns both the content and the distribution.
 
-地方层面的结果与民调一致。据一项统计，10 个州共有 41 项与数据中心相关的议案上了选票，选民除了其中一项之外，全部站在了反对基建扩张的一边。高盛警告，暂停令最终可能波及全美 45% 的规划数据中心产能。
+## The terms
 
-## 主战场：俄亥俄与得州
+Roku stockholders received $95.30 in cash plus 0.9799 shares of Fox Class A common stock for each Roku share — about $160 per share in total at announcement. Fox stockholders own roughly 74 percent of the combined company; former Roku stockholders own about 26 percent.
 
-俄亥俄是反弹最具体的地方。在 Piqua，选民罢免了支持 Meta 10 亿美元园区的市长和两名市政委员，并通过了大型数据中心禁令。在 Meta 原计划建设 70 万平方英尺设施的县，选民同样通过了禁令。而这正是 OpenAI 计划建设 5000 亿美元数据中心项目、背后有英伟达超 1000 亿美元融资支持的州。摩根士丹利分析师警告，支持有条件暂停令（要求开发商承担 100% 公用事业成本）的民主党州长当选人 Amy Acton，将对该州的基建扩张构成重大风险。
+Roku founder Anthony Wood joins Fox's board and becomes co-chair of a newly formed division, Fox Digital Platforms, alongside Paul Cheesbrough as co-chair and CEO. The division folds together Roku, Tubi, Fox One and Red Seat Ventures. Fox expects about $400 million of run-rate cost synergies within two years, and says the deal should be accretive to free cash flow per share by the second full year after closing.
 
-得州是另一条战线。州长当选人 Gina Hinojosa 在竞选中支持全州暂停令，而得州占全美规划数据中心产能的约 27%，据富国银行。高盛预计，得州与佐治亚的建设将因此延误；此外，在缅因、密歇根、内华达、佐治亚和南卡，持反对快速扩张立场的候选人也都赢了。
+The antitrust review was the part everyone watched. The Justice Department issued a second request for information in September, then closed its review on the same day the deal closed. Fox gave behavioral undertakings to regulators: keep Roku open to rival media companies' content for at least three years, and do not discriminate against competitors using the platform.
 
-地方上的不满很具体，不是抽象的：电费上涨、水资源紧张、废气排放。在南孟菲斯，居民就住在为 xAI 超级计算机供电的燃气轮机旁边；Color of Change 的负责人把这次选举称为一场关于"经济是为谁服务的"公投。
+## Why Fox paid
 
-## 华盛顿的回应
+Roku is not a hardware story anymore, and Fox did not pay $22 billion for plastic remotes. Roku's third-quarter 2026 results, reported November 2, show the shape of the business Fox actually bought: total revenue of $1.5 billion, up 24 percent year over year, with platform revenue of $1.3 billion, up 23 percent, and net income of $183 million. The money is in the platform — advertising, subscriptions and the cut of transactions that flow through the home screen.
 
-参议员 Bernie Sanders 在结果出炉后于 X 上发文："现在就要全国数据中心暂停令"，并称美国人不想让"科技寡头破坏环境"。他与众议员 Alexandria Ocasio-Cortez 已提出议案，要求在国会就电费、环境损害与社区同意设立保障措施之前，全国暂停新建数据中心。参议员 Martin Heinrich 的《GRID Savings Act》则要求不把电网升级成本转嫁给附近社区。
+For Fox, the deal fills the hole in its own strategy. Tubi is a strong free streaming service, Fox One is its paid bet, but neither owned the front door to the living room. Roku is the front door. Owning it means Fox no longer pays rent to reach its own audience, and it gets a say in what every other streamer pays too.
 
-行业的第一个回应来得很快。11 月 6 日，OpenAI 表示将不再与政府官员就数据中心项目签署保密协议，仅保留对安全信息与商业机密的有限保护。亚马逊在 10 月做了类似的表态。信号很明确：围绕这些项目的保密，已经成了一种政治负债。
+## The judgment
 
-## 判断
+The deal's official story is clean: Roku stays open, Fox gets scale, everyone keeps their apps. The three-year open-platform commitment is the load-bearing piece of that story, and it is a promise, not a structure. It expires. It is enforced by regulators who will have moved on to other fights. And the incentives run the other way: every dollar of prominence Fox gives its own services on the home screen is a dollar of leverage over rivals who now depend on a competitor's platform.
 
-过去两年，AI 基建的约束在供给端：芯片、电力、内存。这周，约束移到了政治上。全国暂停令法案仍面临总统否决的可能，民主党内部对一刀切冻结也有分歧——但地方禁令、州长选举与出口民调是否决不掉的。它们在一些地方已经是法律，而且还会扩散到更多地方。
+That is the tension to watch. The first test will be small and deniable — placement on the home screen, terms for rival apps, how Tubi and Fox One are bundled against everyone else. The second test is the $400 million in synergies: if they come from duplicated headcount, fine; if they come from squeezing the platform's economics, the "open" promise gets expensive to keep.
 
-市场已经为一阶效应定过价：11 月 5 日周四，纳指跌 5.52%，约 2 万亿美元市值蒸发，本站已有报道。周五科技股反弹，只收回了一小部分。反弹并没有回答问题，它只说明市场还没想清楚，这是一次延误，还是一次脱轨。
+Fox bought the last big neutral ground in television. Whether it stays neutral is now a three-year promise attached to a $22 billion asset. Promises expire. Assets do not.
 
-盯三件事。第一，有没有哪个州的暂停令从竞选承诺变成签署生效的法律。第二，OpenAI 的透明化举动会不会成为行业标准，还是只是一次性的姿态。第三，下一轮芯片厂商财报与数据中心资本开支指引是守住还是松动。如果钱和进度都守住了，这周就是一次回调；如果任何一边松动，这场选举就是 AI 繁荣撞上政治问题的时刻——而这个问题是工程手段解决不了的。
-
-*本文数字来自 NBC、ABC 新闻/华盛顿邮报/Ipsos、高盛、摩根士丹利与富国银行对 2026 年 11 月 3–6 日选举结果的报道。*
+*Deal figures in this post are from Fox, Roku, TechCrunch, Goodwin and Deadline reporting on the November 6, 2026 closing.*
