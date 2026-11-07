@@ -13,6 +13,10 @@ excerpt: 'The AI buildout just met its first real constraint, and it is not chip
 
 > [中文版 Chinese version](/life/data-center-backlash-midterms-zh/)
 
+![Google's data center in The Dalles, Oregon](/assets/images/life/2026-11-07-data-center-backlash-midterms/dc-google.jpg)
+
+*Google's data center in The Dalles, Oregon, with its electrical substation in the foreground — power sits at the center of the local grievances. Photo: Wikimedia Commons.*
+
 ## What happened on Tuesday
 
 The November 3 midterm elections handed Democrats full control of Congress, with Republicans keeping the White House. That alone would be a big week for tech policy. What made it bigger is what the vote said about the physical footprint of AI: the data center has become a ballot-box issue, and voters are voting against it.
@@ -21,7 +25,15 @@ An NBC exit poll found nearly 80 percent of voters oppose a data center being bu
 
 The local results matched the polling. One count put it at 41 data-center measures on ballots across 10 states, with voters rebuffing the buildout in all but one of them. Goldman Sachs warned that moratoria could eventually touch 45 percent of planned US data-center capacity.
 
+![Polling on data centers near home](/assets/images/life/2026-11-07-data-center-backlash-midterms/polls-en.png)
+
+*Opposition to data centers near home, November 2026. Chart: this site, from NBC and ABC News / Washington Post / Ipsos polling.*
+
 ## The map: Ohio and Texas are the front line
+
+![Map of US data center infrastructure, 2025](/assets/images/life/2026-11-07-data-center-backlash-midterms/dc-map-nrel.jpg)
+
+*Data center infrastructure in the United States, 2025 — operating, under-construction and proposed sites, with transmission lines and fiber routes. Map: National Renewable Energy Laboratory (NREL), via Wikimedia Commons.*
 
 Ohio is where the backlash got concrete. In Piqua, voters recalled the mayor and two commissioners who had backed a $1 billion Meta campus, and passed a ban on large data centers. In the county where Meta had planned a 700,000-square-foot facility, voters passed a ban too. This is the same state where OpenAI has eyed a $500 billion data-center project backed by more than $100 billion in Nvidia financing. Morgan Stanley analysts now warn that Democratic governor-elect Amy Acton, who supports a conditional moratorium requiring developers to cover 100 percent of utility costs, poses a major risk to the state's buildout.
 
