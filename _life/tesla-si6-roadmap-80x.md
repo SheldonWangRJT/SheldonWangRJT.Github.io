@@ -13,6 +13,10 @@ excerpt: 'The headline is 80 times the compute. The fine print is 2029, estimate
 
 > [中文版 Chinese version](/life/tesla-si6-roadmap-80x-zh/)
 
+![Tesla's Dojo supercomputer tile](/assets/images/life/2026-11-07-tesla-si6-roadmap-80x/dojo-tile.jpg)
+
+*Tesla's Dojo supercomputer tile — 25 D1 chips on a single wafer-scale tile. Dojo 3 abandons exactly this design. Photo: Wikimedia Commons.*
+
 ## What Tesla disclosed
 
 Tesla has published a revised roadmap for its AI accelerators, and the most visible change is not technical at all: the chips are no longer called AI4, AI5 and AI6. They are SI4, SI5 and SI6 — "SI" for "Super Intelligence," the term President Trump has pushed as a replacement for "artificial intelligence." Musk has confirmed the same rebrand for SpaceX's AI arm, which becomes SpaceXSI.
@@ -25,11 +29,19 @@ Read the numbers carefully, because Tesla itself invites it. The 80x multiple co
 
 So the honest way to state it: Tesla has published a direction, not a product. The validation point is around 2029, and everything between now and then is a claim about a chip that does not exist yet.
 
+![SI6 compute target and AI5 memory cuts](/assets/images/life/2026-11-07-tesla-si6-roadmap-80x/si6-en.png)
+
+*Left: SI6's 80× compute target against the estimated SI4 baseline (log scale). Right: AI5's planned memory, cut twice in a month. Chart: this site, from Tesla's roadmap materials as reported by Tom's Hardware.*
+
 ## Dojo 3 changes its mind
 
 The more interesting part of the roadmap is the return of Dojo, Tesla's in-house training accelerator — and it returns as a different machine. The third generation, D3, abandons the wafer-scale integration and distributed on-chip SRAM architecture that defined the first two generations, shifting instead to a chiplet-based design with 2.5D and 3D packaging and stacked HBM memory.
 
 That is a genuine U-turn. Wafer-scale integration was Dojo's identity — the bet that one giant wafer of compute beats many small chips wired together. D3 concedes the point the rest of the industry settled years ago: chiplets and stacked memory win. Tesla disclosed no compute, memory, process or schedule for D3, so the scale of the concession is still unknown. But the direction is unmistakable, and it is the opposite of the original Dojo pitch.
+
+![The original Dojo architecture: D1 chip to ExaPOD](/assets/images/life/2026-11-07-tesla-si6-roadmap-80x/dojo-architecture.png)
+
+*The original Dojo architecture, from a single D1 chip up to an ExaPOD — wafer-scale integration and distributed on-chip SRAM. D3 drops both. Diagram: Wikimedia Commons.*
 
 ## The memory irony
 
