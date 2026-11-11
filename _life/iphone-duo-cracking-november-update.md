@@ -64,3 +64,4 @@ So the practical advice from October 27 stands, with one addition. If you own a 
 - Android Authority survey via en.sedaily.com, November 5, 2026 (39.7% of 2,093 readers dropped purchase plans; survey limited to the outlet's own readers).
 - Last30Days, November 3, 2026 (75,001-fold crack; CNET 200,000+ folds; Gizmodo 121,000 folds; TrendForce delivery dates slipping to January 2027).
 - Our October 27 report, "Three Days, Fewer Than 20 Folds" (launch-week cases; Apple statement; iFixit support-bar theory; $999 out-of-warranty repair).
+
