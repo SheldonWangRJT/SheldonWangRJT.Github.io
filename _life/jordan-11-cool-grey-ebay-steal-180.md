@@ -67,8 +67,41 @@ The Cool Grey is not the end of the 11 hunt — it is the warm-up. Jordan Brand 
 
 The concept is the film itself, told three ways. The Magic Ball is the glowing basketball the Monstars used to steal NBA talent — an iridescent upper that shifts between green, gold, copper, and bronze. The Green Screen is the green screen suits the actors wore while filming MJ playing against the Monstars — an all-green suede upper, mudguard and collar in fine nubuck, a milky translucent outsole with solid orange, and an insole of MJ's wide-stretched dunk over the Monstars. The OG Space Jam is the shoe itself, back for the first time since 2016.
 
+### "Magic Ball" — November 11, $235
+
+![Air Jordan 11 Retro "Magic Ball" — the iridescent pair, three-quarter view](/assets/images/life/2026-11-10-jordan-11-cool-grey-ebay-steal-180/magic-ball-pair.jpg)
+*The "Magic Ball" 11 — an iridescent upper shifting between green, gold, copper, and bronze. Image: Sneaker News.*
+
+![Air Jordan 11 Retro "Magic Ball" — lateral profile, copper Jumpman](/assets/images/life/2026-11-10-jordan-11-cool-grey-ebay-steal-180/magic-ball-lateral.jpg)
+*Lateral profile — the color shift runs green to copper across the upper, with a copper Jumpman on the heel. Image: Sneaker News.*
+
+![Air Jordan 11 Retro "Magic Ball" — heel and outsole detail, gold Jumpman](/assets/images/life/2026-11-10-jordan-11-cool-grey-ebay-steal-180/magic-ball-heel.jpg)
+*Heel detail — gold Jumpman and the icy translucent outsole with its herringbone traction. Image: Sneaker News.*
+
+### "Green Screen" — November 14, $255
+
 ![Air Jordan 11 Retro "Green Screen" — the all-green suede pair landing November 14](/assets/images/life/2026-11-10-jordan-11-cool-grey-ebay-steal-180/green-screen.jpg)
 *The "Green Screen" 11 — all-green suede, orange and milky outsole — landing Saturday, November 14. Image: Sole Retriever.*
+
+![Air Jordan 11 Retro "Green Screen" — Nike official lateral profile](/assets/images/life/2026-11-10-jordan-11-cool-grey-ebay-steal-180/green-screen-nike.png)
+*Nike's official lateral shot — the all-green suede upper on a milky translucent outsole. Image: Nike.*
+
+![Air Jordan 11 Retro "Green Screen" — in-hand pair](/assets/images/life/2026-11-10-jordan-11-cool-grey-ebay-steal-180/green-screen-inhand.jpg)
+*In hand — the green reads brighter in person than in the studio shots. Image: Sneaker News.*
+
+![Air Jordan 11 Retro "Green Screen" — stacked pair](/assets/images/life/2026-11-10-jordan-11-cool-grey-ebay-steal-180/green-screen-pair.jpg)
+*Stacked pair — suede mudguard and collar, tonal Jumpman on the heel. Image: Sneaker News.*
+
+### "Space Jam" OG — December 12, $235
+
+![Air Jordan 11 Retro "Space Jam" (2026) — pair, top-down view](/assets/images/life/2026-11-10-jordan-11-cool-grey-ebay-steal-180/space-jam-pair.jpg)
+*The OG "Space Jam" — black patent, white midsole, icy outsole, "Jumpman Jam" tongue label. Image: Sneaker News.*
+
+![Air Jordan 11 Retro "Space Jam" (2026) — in-hand pair](/assets/images/life/2026-11-10-jordan-11-cool-grey-ebay-steal-180/space-jam-stool.jpg)
+*In hand — the patent catches green and blue reflections under the lights. Image: Sneaker News.*
+
+![Air Jordan 11 Retro "Space Jam" (2026) — official pair shot](/assets/images/life/2026-11-10-jordan-11-cool-grey-ebay-steal-180/space-jam-official.jpg)
+*Official pair shot — black mesh and patent, blue Jumpman, white midsole. Image: Sneaker News.*
 
 I am in for the Magic Ball and the Green Screen. The OG Space Jam I am passing on this time — the December 11 I actually wanted this year was the Cool Grey, and it is already on my shelf.
 
