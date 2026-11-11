@@ -67,8 +67,41 @@ Cool Grey 不是 11 代狩猎的终点，是热身。Jordan Brand 正在为《Sp
 
 这个系列的概念就是电影本身，分三个角度讲。Magic Ball 是电影里 Monstars 用来吸走 NBA 球员天赋的那颗发光篮球——鞋面是四向变色的虹彩材质，在绿、金、铜、棕之间变幻。Green Screen 是拍摄时演员穿的绿幕服——全绿麂皮鞋面，泥挡和鞋领是细麂皮，大底是乳白半透明加实心橙色，鞋垫上是 MJ 隔扣 Monstars 的宽幅扣篮。OG Space Jam 就是电影里那双鞋本身，2016 年之后第一次回归。
 
+### "Magic Ball"——11 月 11 日，$235
+
+![Air Jordan 11 Retro "Magic Ball"——虹彩鞋面，三 quarter 视角](/assets/images/life/2026-11-10-jordan-11-cool-grey-ebay-steal-180/magic-ball-pair.jpg)
+*"Magic Ball" 11 代——虹彩鞋面，在绿、金、铜、棕之间变幻。图片：Sneaker News。*
+
+![Air Jordan 11 Retro "Magic Ball"——侧面，铜色 Jumpman](/assets/images/life/2026-11-10-jordan-11-cool-grey-ebay-steal-180/magic-ball-lateral.jpg)
+*侧面——颜色从绿过渡到铜，鞋跟是铜色 Jumpman。图片：Sneaker News。*
+
+![Air Jordan 11 Retro "Magic Ball"——后跟与大底细节，金色 Jumpman](/assets/images/life/2026-11-10-jordan-11-cool-grey-ebay-steal-180/magic-ball-heel.jpg)
+*后跟细节——金色 Jumpman，冰蓝半透明大底配人字纹。图片：Sneaker News。*
+
+### "Green Screen"——11 月 14 日，$255
+
 ![Air Jordan 11 Retro "Green Screen"——11 月 14 日发售的全绿麂皮版本](/assets/images/life/2026-11-10-jordan-11-cool-grey-ebay-steal-180/green-screen.jpg)
 *"Green Screen" 11 代——全绿麂皮、橙色加乳白大底，11 月 14 日周六发售。图片：Sole Retriever。*
+
+![Air Jordan 11 Retro "Green Screen"——Nike 官方侧面图](/assets/images/life/2026-11-10-jordan-11-cool-grey-ebay-steal-180/green-screen-nike.png)
+*Nike 官方侧面图——全绿麂皮鞋面，乳白半透明大底。图片：Nike。*
+
+![Air Jordan 11 Retro "Green Screen"——实物上手](/assets/images/life/2026-11-10-jordan-11-cool-grey-ebay-steal-180/green-screen-inhand.jpg)
+*实物上手——绿色比官图更亮。图片：Sneaker News。*
+
+![Air Jordan 11 Retro "Green Screen"——叠放的一双](/assets/images/life/2026-11-10-jordan-11-cool-grey-ebay-steal-180/green-screen-pair.jpg)
+*叠放的一双——麂皮泥挡与鞋领，鞋跟同色 Jumpman。图片：Sneaker News。*
+
+### "Space Jam" OG——12 月 12 日，$235
+
+![Air Jordan 11 Retro "Space Jam"（2026）——双鞋俯视](/assets/images/life/2026-11-10-jordan-11-cool-grey-ebay-steal-180/space-jam-pair.jpg)
+*OG "Space Jam"——黑漆皮、白中底、冰蓝大底，"Jumpman Jam" 鞋舌标。图片：Sneaker News。*
+
+![Air Jordan 11 Retro "Space Jam"（2026）——实物上手](/assets/images/life/2026-11-10-jordan-11-cool-grey-ebay-steal-180/space-jam-stool.jpg)
+*实物上手——灯光下漆皮泛出绿蓝反光。图片：Sneaker News。*
+
+![Air Jordan 11 Retro "Space Jam"（2026）——官方双鞋图](/assets/images/life/2026-11-10-jordan-11-cool-grey-ebay-steal-180/space-jam-official.jpg)
+*官方双鞋图——黑网布配漆皮、蓝色 Jumpman、白色中底。图片：Sneaker News。*
 
 Magic Ball 和 Green Screen 我都要。OG Space Jam 这次我 pass——今年 12 月真正想要的 11 代是 Cool Grey，它已经在我的鞋架上了。
 
