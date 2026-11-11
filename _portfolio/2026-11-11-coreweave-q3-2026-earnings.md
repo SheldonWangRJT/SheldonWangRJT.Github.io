@@ -120,3 +120,5 @@ The +26% is best read as a repricing of survival risk, not a verdict on long-ter
 ---
 
 **Sources:** CoreWeave Q3 2026 earnings release (Business Wire / CoreWeave IR, Nov 10, 2026); CoreWeave Q3 2026 Form 10-Q (SEC); CoreWeave Q3 2026 earnings call transcript (Motley Fool, Nov 10, 2026); Reuters coverage of the Q3 results and October credit selloff; Finnhub market data (prices as of 12:59 PM EST, Nov 11, 2026); NVIDIA 800V DC power architecture materials (NVIDIA technical blog, May 2025; Open Compute Project); hyperscaler capex guidance per company filings and earnings releases; Goldman Sachs 2027 capex estimates as reported. *This post is analysis of public information, not investment advice.*
+
+<!-- rebuild trigger 2026-11-11: force Pages rebuild after rapid pushes -->
