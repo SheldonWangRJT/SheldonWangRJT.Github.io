@@ -52,3 +52,5 @@ The open question is whether the vertical-integration playbook that worked for r
 - Reuters via WNCY, November 12, 2026 (Arizona campus needs Cochise County approval; 2,400-signature petition; December public hearing; Starbase tax abatement vote December 9; AI segment generated more than half of Q3 revenue; company went public in June).
 - Tom's Hardware / SemiAnalysis, November 11, 2026, via Data Center Dynamics and Stocktwits (Kessel: custom Vera Rubin NVL72 variant, 36 Vera CPUs, 72 Rubin GPUs, nine NVLink switch trays, 84-layer M10 PCB midplane; buy chips from Nvidia, source the rest directly; 2027 capacity target ~13 GW, 3.6 GW under construction; no public comment from SpaceX or Nvidia).
 - Benzinga via TradingView, November 12, 2026 (Dan Ives: Musk needs an "olive branch" in Texas after Democrat election wins; "I still believe SpaceX acquires Tesla").
+
+<!-- rebuild trigger 2026-11-12 -->
