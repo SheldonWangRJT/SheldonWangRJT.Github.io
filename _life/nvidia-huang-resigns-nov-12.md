@@ -54,3 +54,5 @@ Three things to watch now:
 The uncomfortable part of this story is that the board's own investigation has produced no public findings, and may never. The resignation ends the governance crisis without resolving the questions behind it: whether any Nvidia technology reached China through the channels U.S. authorities described, and whether the board's November 8 statement of confidence was premature. Those questions now belong to investigators and Congress, not to an earnings call. What the earnings call has to answer is simpler and harder: whether the machine Huang built keeps running without him.
 
 *All figures are a snapshot of reporting as of the morning of November 13, 2026 (PT), and are subject to change. Allegations in this post are attributed to their sources (The New York Times, Bloomberg, The Wall Street Journal, USA TODAY); Nvidia's own filing and announcement state no reason for the resignation.*
+
+<!-- rebuild trigger 2026-11-13 -->
