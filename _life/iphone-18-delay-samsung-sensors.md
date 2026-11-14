@@ -47,3 +47,5 @@ The Texas angle is what makes this more than a supply-chain footnote. Apple and 
 For buyers, the practical effect is simple. The iPhone 18 Pro models and the Duo are already on sale; the standard iPhone 18 is now a spring 2027 phone, and a staggered launch looks like it is becoming Apple's pattern rather than a one-off. The risk for Apple is the calendar: a spring launch compresses the base model's selling window before the next iPhone cycle begins, and the base model is the volume that pays for everything else. If Samsung's ramp slips again, that window gets shorter still — and the question will stop being why the iPhone 18 is late, and start being whether Apple can still launch its most important phone on time at all.
 
 *This post is based on the Semiconportal report as covered on November 12–13, 2026, and on Sony's confirmed statement that its exclusivity is ending. Apple has not confirmed the reason for the delay; details may change as the spring 2027 launch approaches.*
+
+<!-- rebuild trigger 2026-11-14 -->
