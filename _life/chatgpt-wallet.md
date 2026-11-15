@@ -66,3 +66,5 @@ The design is the right one. A network token plus a per-purchase biometric appro
 But three gaps decide whether Wallet matters. First, the audience: US Pro subscribers only, a rounding error against 1.2 billion weekly users. Second, the door: merchants' own fraud systems and Amazon's wall treat the agent as an intruder, and OpenAI's playbook is a polite request, not a fix. Third, the liability question nobody has answered: when the agent buys the wrong size, the wrong color, or twice, the dispute is still the buyer's — "the agent did it" is not a chargeback reason, and no one has said whose mistake it is when the human approved a screen the agent filled in.
 
 Wallet is worth watching because the checkout is becoming the next platform war. The winner will not be whoever builds the smartest agent. It will be whoever the stores, the networks, and the fraud systems all agree to let through the door. Right now, that agreement does not exist — and the largest store on the internet has already voted no.
+
+<!-- rebuild trigger 2026-11-15 -->
