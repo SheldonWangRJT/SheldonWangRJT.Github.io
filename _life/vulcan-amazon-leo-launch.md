@@ -1,6 +1,6 @@
 ---
 title: "Vulcan's Comeback Failed: ULA Loses 40 Amazon Leo Satellites 10 Minutes Into Flight"
-description: 'ULA's Vulcan rocket lifted off on its third attempt on November 15 after a nine-month grounding — then suffered an anomaly about 10 minutes into flight and failed to deliver 40 Amazon Leo satellites to orbit. The booster nozzles everyone was watching worked fine; the failure came later, and its cause is unknown.'
+description: 'ULA''s Vulcan rocket lifted off on its third attempt on November 15 after a nine-month grounding — then suffered an anomaly about 10 minutes into flight and failed to deliver 40 Amazon Leo satellites to orbit. The booster nozzles everyone was watching worked fine; the failure came later, and its cause is unknown.'
 date: 2026-11-15
 permalink: /life/vulcan-amazon-leo-launch/
 tags:
@@ -9,7 +9,7 @@ tags:
   - Amazon Leo
   - Vulcan
   - Satellites
-excerpt: 'The nozzles everyone was watching worked. The rocket failed anyway, ten minutes in, in the upper-stage phase — and ULA does not yet know why. Amazon's satellite schedule just lost its most important flight.'
+excerpt: 'The nozzles everyone was watching worked. The rocket failed anyway, ten minutes in, in the upper-stage phase — and ULA does not yet know why. Amazon''s satellite schedule just lost its most important flight.'
 ---
 
 > [中文版 Chinese version](/life/vulcan-amazon-leo-launch-zh/)
