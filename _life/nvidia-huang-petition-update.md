@@ -67,3 +67,5 @@ Strip away the counter and the petition is not a vote — it is a pressure instr
 But the board's file has a second half that the petition does not answer. The Reuters account of Huang misleading his own general counsel, the class action, and the December 10 hearing all point in the opposite direction — and none of them is resolved by signatures. The decision point is the outside investigation led by former acting US attorney Joon H. Kim, retained November 10: if it clears the national-security question, the board has room to maneuver; if it does not, no petition will matter.
 
 The next hard deadline is Tuesday, November 17, when Nvidia reports earnings — the first numbers of the post-Huang era, delivered by an interim CEO, to a market that has already erased hundreds of billions on this story. That report, not the counter, is what the board is really waiting for.
+
+<!-- rebuild trigger 2026-11-15b -->
