@@ -1,6 +1,6 @@
 ---
 title: "Update: 117,000 People Want Jensen Huang Back — Musk Signed, Two Big Investors Wrote, the Board Hasn't Answered"
-description: 'Two days after Jensen Huang resigned, a "Stand with Jensen" petition passed 117,000 signatures, Elon Musk signed it, and two major shareholders asked Nvidia's board to leave the door open. The board still has not answered — and Washington is moving faster than the CEO search.'
+description: 'Two days after Jensen Huang resigned, a "Stand with Jensen" petition passed 117,000 signatures, Elon Musk signed it, and two major shareholders asked Nvidia''s board to leave the door open. The board still has not answered — and Washington is moving faster than the CEO search.'
 date: 2026-11-15
 permalink: /life/nvidia-huang-petition-update/
 tags:
