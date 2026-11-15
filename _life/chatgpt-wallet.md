@@ -9,7 +9,7 @@ tags:
   - AI Agents
   - Payments
   - E-commerce
-excerpt: 'OpenAI's ChatGPT Wallet lets its dots agents pay for things with a network token after you approve with Face ID. The design is sound; the open question is whether stores will let the agent through the door — Amazon already will not.'
+excerpt: 'OpenAI''s ChatGPT Wallet lets its dots agents pay for things with a network token after you approve with Face ID. The design is sound; the open question is whether stores will let the agent through the door — Amazon already will not.'
 ---
 
 > [中文版 Chinese version](/life/chatgpt-wallet-zh/)
