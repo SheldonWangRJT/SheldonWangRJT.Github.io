@@ -71,3 +71,5 @@ Amazon Leo — the constellation Amazon spent six years calling Project Kuiper b
 A scrub is a delay. This is worse: a failure on the comeback flight, in a phase that was not the one under suspicion, with no known cause. ULA's investigation now has to answer a question it did not expect to be asking — what failed in Centaur's phase — while the original nozzle question, the one the nine-month grounding was about, is still technically open too, because a single clean separation does not close an investigation.
 
 For Amazon, the arithmetic is unforgiving. Even at two Vulcan launches a month — a cadence ULA has never sustained — 37 more Vulcan flights plus the rest of the manifest would need to run almost perfectly to hit 3,232 satellites by July 2029, and the FCC's spectrum-priority penalty is the price of falling short. The LV-02 vehicle was already being processed; whether it flies on anything like its schedule now depends on what the investigation finds, and how fast. Vulcan's return to flight was necessary. It was never sufficient. And today it did not even happen.
+
+<!-- rebuild trigger 2026-11-15 -->
