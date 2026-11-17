@@ -31,6 +31,10 @@ The hinge supply chain, as reported by Japanese and Taiwanese outlets: two main 
 
 **The counter-analysis.** iFixit's teardown analysis — the most complete so far — points the other way. Its finding is that the cracks are *not* concentrated at the usual stress point where the display cable passes through the hinge, but slightly lower, in the transition zone where the gap between the crossing cables leads into the central hinge support. That is a design-and-manufacturing signature, iFixit argues, not a single bad part. Kang's material theory and iFixit's design theory cannot both be the whole story.
 
+## Seven years of foldables, and the same lesson every time
+
+Apple is not the first company to learn that a hinge is the hardest part of a phone. It is, in fact, the last major manufacturer to learn it in public. Samsung launched the original Galaxy Fold in 2019 as the world's first mainstream foldable phone, and within days of review units shipping, screens were failing: dust and debris entered through the gap around the hinge, bubbles and creases appeared under the display, and reviewers' units broke before publication. Samsung recalled the launch, postponed the release from April to September 2019, and redesigned the hinge with shield caps over the display edges. The Z Fold 2 that followed was, by most accounts, a genuinely usable phone — but the lesson stuck: a foldable's hinge is not a component, it is the product, and its failure modes only show up when thousands of real hands fold it in real dust, real pockets, and real drops.
+
 ## The fold-test scoreboard
 
 The durability rigs, meanwhile, keep failing to reproduce the problem at scale — which is itself evidence about what kind of defect this is:
@@ -41,11 +45,23 @@ The durability rigs, meanwhile, keep failing to reproduce the problem at scale �
 
 One lab rig in Louisville cracked at exactly **75,001 folds** — a number that became a meme on r/mildlyinfuriating (85,589 upvotes, top reply: "When the factory only tests to 75,000 folds"). But CNET's livestreamed rig has since passed **200,000 folds** without a repeat failure, Gizmodo's tracker passed **121,000** by October 30, and CNET's first test unit cleared **55,000**. A defect that breaks a minority of units in their first hours and then stops appearing is a batch signature, not a wear-out signature — and the rigs agree with that reading.
 
+## What a batch defect actually means — and what Apple owes
+
+If Kang is right, the story becomes a manufacturing story rather than an engineering one, and the two kinds of story have very different endings. A design defect means every unit is at risk, the fix requires a redesign, and the honest response is a recall or a halt. A batch defect means a specific run of a specific part from a specific supplier was out of specification, the fix is to purge that batch and tighten inspection, and the honest response is to identify the affected units and replace them before they fail. The batch theory is good news for everyone who has not yet received their phone, and bad news for Apple in a different way: if the company can identify the affected batch by serial number, as Kang claims, then every day it does not publish a lookup tool is a day it is choosing silence over a fix it already has.
+
+There is a precedent for how this plays out, and it is not reassuring. Manufacturers facing batch defects almost always prefer the quiet path: replace units that fail, say nothing about the ones that have not failed yet, and let the bad batch age out of the installed base. The logic is commercial — a public list of affected serial numbers is a public admission of scale, and scale is what turns a support issue into a news story. But the quiet path has a cost that shows up later: owners who never hear about the defect keep using a phone that may fail after the replacement programme ends, and the $999 out-of-warranty repair figure becomes their problem instead of Apple's. The free replacement programme is generous as far as it goes; the question is how far it goes, and for how long. Apple has not said when the programme ends, which serial numbers it covers, or what happens to a phone that cracks in month thirteen. Those are the numbers that would turn a goodwill gesture into a policy, and Apple has given none of them.
+
 ## Buyers are voting with their feet — in a survey, at least
 
 Android Authority surveyed **2,093** of its readers after the launch and reported on November 5 that **39.7%** had dropped plans to buy a Duo because screen damage and durability issues had eroded their confidence. The caveat matters: that is a survey of Android Authority's own readers, not a representative sample of buyers. But the direction is bad news for a $1,999 phone whose whole pitch is a hinge: even an unrepresentative 40% walk-away rate is the kind of number that makes carriers and retailers nervous, and delivery dates are already slipping into January 2027, according to TrendForce.
 
 The replacement picture has improved slightly: iDrop News reports the inner-screen replacement is available even to people without AppleCare+, and Apple's position remains that affected units get a free replacement. The $999 out-of-warranty inner-screen repair figure still stands behind that programme for anything that fails later, outside it.
+
+## What would actually settle this
+
+The original October 27 report named three things that would settle the story: a serial-number lookup from Apple, a second teardown finding the same snapped ring, or a number. Two weeks later, none of the three has arrived — but the update sharpens what each one would prove, and why Apple has given none of them.
+
+Until one of the three arrives, the practical advice is unchanged and worth restating plainly. If you own a Duo, fold it normally and often this week: a bad hinge shows itself early, and a failure inside the replacement window is Apple's problem, not yours. Keep the box, keep the receipt, and photograph the screen now, so that a crack that appears later can be dated. If you are waiting for a January delivery, the batch theory is arguably good news — but only if Apple has actually purged the batch, which is something you cannot verify from the outside. And if you are deciding whether to buy at all, the honest framing is this: you are not buying a phone with a known defect rate. You are buying a phone whose defect rate is unknown, from a company that has chosen not to tell you. That is a different purchase, and it deserves a different price — or a wait.
 
 ## The verdict
 
