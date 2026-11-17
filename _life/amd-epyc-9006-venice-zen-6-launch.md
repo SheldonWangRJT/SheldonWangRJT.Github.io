@@ -33,6 +33,12 @@ The headline numbers, from AMD:
 
 *EPYC Venice vs Turin: how much bigger is Zen 6? Sources: AMD (November 10, 2026), TechSpot, Tom's Hardware. IPC and SPECint figures are AMD claims/estimates; Tom's Hardware independently measured +93% dual-socket SPEC CPU 2026 integer rate.*
 
+## Nine years from nowhere to parity: how AMD got here
+
+Venice looks like a single launch, but it is the sixth step in a climb that started from almost nothing. When AMD shipped the first EPYC generation on Zen in 2017, Intel's Xeon processors had controlled more than 99% of the server CPU market for much of the 2000s and 2010s, generating operating margins estimated at 60–70% and turning the data centre into the most profitable moat in semiconductor history. AMD's server share was in the low single digits, and the company was widely written off as a desktop-and-gaming vendor that had missed the data centre entirely. The climb was methodical: Genoa arrived in late 2022 with up to 96 cores per socket, and Turin — the fifth generation, launched October 10, 2024 on Zen 5 — pushed that to 192 cores, 50% more than Intel's Xeon 6 Granite Rapids at 128 cores, while undercutting it on price. The 192-core EPYC 9965 lists at about $14,813 against $17,800 for Intel's 128-core Xeon 6980P.
+
+The share numbers tell the story of that climb better than any launch slide. According to Mercury Research's Q1 2026 data, AMD's EPYC processors captured 46.2% of server CPU revenue — an all-time record, up from 41.3% the prior quarter — and 33.2% of units. Intel still ships more chips, roughly two for every one of AMD's, but AMD earns more per chip, because its mix skews toward high-core-count parts. AMD's data centre segment reported $5.8 billion in revenue for Q1 2026 alone, up 57% year over year, passing Intel's data-centre business for the first time.
+
 ## The independent numbers hold up
 
 Launch-day benchmarks are usually vendor slides. This time the independent data arrived the same day, and it is strong. Tom's Hardware measured a dual-EPYC 9996 server at **93% faster** than a dual-EPYC 9965 (Turin) on the SPEC CPU 2026 integer-rate test — and the 96-core EPYC 9686F led NVIDIA's new Vera CPU by **17%** on integer performance in the same coverage.
@@ -45,6 +51,12 @@ Supermicro underlined the demand side the next morning, announcing its H15 serve
 
 *EPYC 9006 "Venice" price ladder: $700 to $14,904. Source: AMD list prices as published November 10–11, 2026 (TechSpot; basic-tutorials). Prices are a snapshot, subject to change.*
 
+## The 2nm race: what "first" actually means
+
+The node claim deserves its own examination, because "first on 2nm" is a headline that hides a three-way race. TSMC's N2 is the foundry's first process to drop the FinFET transistor for gate-all-around nanosheet transistors, and it entered high-volume manufacturing in the fourth quarter of 2025, ramping at Hsinchu and Kaohsiung in Taiwan. By the third quarter of 2026 it already made up 8% of TSMC's wafer revenue, up from 3% one quarter earlier, and TSMC says N2 has had the strongest customer adoption of any node, with more than 20 tape-outs received and over 70 in the pipeline as of April 2026. The shipping N2 chips include Apple's A20 Pro in the iPhone 18 Pro, which shipped in September 2026, and AMD's EPYC Venice — AMD taped out Venice as the first high-performance-computing product on N2 in April 2025 and announced its production ramp in May 2026, with plans to ramp later at TSMC's Arizona fab.
+
+So Venice's "first" is genuine in the server category — the first high-performance x86 CPU on a 2nm-class process, and the first HPC product to reach production ramp on N2 — but it is also a statement about who gets TSMC's best node first. Apple gets it for phones, AMD gets it for servers, and the order of that queue is itself a measure of standing: TSMC allocates its scarcest capacity to the customers it trusts to fill it.
+
 ## Why this one matters beyond the spec sheet
 
 Three things make Venice more than a routine server refresh.
@@ -56,6 +68,12 @@ Second, the memory system is the actual product. Sixteen channels and 1.6 TB/s p
 Third, the consumer clock is now ticking audibly. Zen 6 exists only in EPYC silicon today; no consumer Ryzen chip built on it has launched. The successor to the Ryzen 9000 lineup, widely expected to be called Ryzen 10000, is now expected to be announced at CES 2027 with first-half availability. What AMD proved this week is the core and the node; the desktop is next.
 
 AMD also launched the embedded variant, EPYC Embedded 9006 SP7, the same day — up to 256 cores for semiconductor test equipment, storage controllers, and firewalls, with seven-year product longevity. The 128-core SKU ships November 15; the rest by year-end.
+
+## The shortage underneath the launch
+
+There is a second story running underneath the launch-day benchmarks, and it is the one that will decide whether Venice matters in 2027: supply. AMD's EPYC Turin is effectively sold out through the end of 2026, with official lead times quoted at 12–18 weeks but actual delivery windows stretching beyond 30 weeks for most SKUs, according to industry procurement reporting; Intel distributors are fulfilling only about 40% of backlog at 8–22 week leads. The 2026 server CPU shortage is described as the most severe since the 2020–2022 pandemic-era disruption, and the driver is the same one behind the "agentic AI CPU" argument: AMD CEO Lisa Su has cited agentic AI as the primary driver behind doubling the server CPU total-addressable-market forecast to $120 billion, as the CPU-to-GPU ratio in AI racks shifts from one CPU per four to eight GPUs toward one-to-one. Every agent needs a host CPU, and every host CPU is now a bottleneck.
+
+That reframes the launch in an important way. Venice is not entering a market where buyers choose between AMD and Intel on benchmarks; it is entering a market where buyers cannot get either vendor's chips fast enough, and where allocation — who gets the wafers — matters more than the spec sheet.
 
 ## The verdict
 
