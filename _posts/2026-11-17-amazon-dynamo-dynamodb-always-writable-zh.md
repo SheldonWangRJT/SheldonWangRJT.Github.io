@@ -45,14 +45,14 @@ Dynamo 的数据模型刻意极简：二进制对象，通常小于 1 MB，用�
 
 {% mermaid %}
 graph TD;
-    A["Client - shopping cart service"] -->|"PUT key and value"]| B["Coordinator - first healthy node in list"];
-    B -->|"write locally - new vector clock"]| C["Replica 1 - preference list"];
-    B -->|"write to W minus 1 more"]| D["Replica 2 - preference list"];
-    B -->|"node A down - hinted handoff"]| E["Stand-in node - holds hint for A"];
-    E -->|"A recovers - hand back replica"]| F["Node A - intended replica"];
-    B -->|"W acks - write succeeds"]| A;
-    C -->|"Merkle tree compare - background"]| D;
-    D -->|"gossip membership - every second"]| C;
+    A["Client - shopping cart service"] -->|"PUT key and value"| B["Coordinator - first healthy node in list"];
+    B -->|"write locally - new vector clock"| C["Replica 1 - preference list"];
+    B -->|"write to W minus 1 more"| D["Replica 2 - preference list"];
+    B -->|"node A down - hinted handoff"| E["Stand-in node - holds hint for A"];
+    E -->|"A recovers - hand back replica"| F["Node A - intended replica"];
+    B -->|"W acks - write succeeds"| A;
+    C -->|"Merkle tree compare - background"| D;
+    D -->|"gossip membership - every second"| C;
 {% endmermaid %}
 
 整个拓扑就是这样：一个环、一张表、三个数字。下面是机制——每个机制打断一个具体的失效回路，每个机制也都有边界。
@@ -101,15 +101,15 @@ Dynamo 能用了，于是产生了下一个问题。它是单租户的：每个�
 
 {% mermaid %}
 graph TD;
-    A["Client SDK"] -->|"request"]| B["Request router - auth and routing"];
-    B -->|"partition map lookup"]| C["MemDS - metadata in memory"];
-    B -->|"admission tokens"]| D["Global admission control - token buckets"];
-    B -->|"write to leader"]| E["Partition leader - Multi-Paxos"];
-    E -->|"WAL record - quorum persist"]| F["Replica 2 - second AZ"];
-    E -->|"WAL record - quorum persist"]| G["Replica 3 - third AZ"];
-    E -->|"eventual read - any replica"]| F;
-    H["Autoadmin - health and scaling"] -->|"replace unhealthy replica"]| E;
-    E -->|"split when hot or large"]| I["Child partitions - throughput divided"];
+    A["Client SDK"] -->|"request"| B["Request router - auth and routing"];
+    B -->|"partition map lookup"| C["MemDS - metadata in memory"];
+    B -->|"admission tokens"| D["Global admission control - token buckets"];
+    B -->|"write to leader"| E["Partition leader - Multi-Paxos"];
+    E -->|"WAL record - quorum persist"| F["Replica 2 - second AZ"];
+    E -->|"WAL record - quorum persist"| G["Replica 3 - third AZ"];
+    E -->|"eventual read - any replica"| F;
+    H["Autoadmin - health and scaling"] -->|"replace unhealthy replica"| E;
+    E -->|"split when hot or large"| I["Child partitions - throughput divided"];
 {% endmermaid %}
 
 请求路径是围绕 Dynamo 给后台任务用的同一原则建起的第二台机器：**前台必须被保护，不受其他一切影响**。无状态的请求路由器负责每个请求的鉴权、认证和路由，从元数据服务查分区映射。准入控制最初是每节点令牌桶，后来变成**全局准入控制（global admission control）**：一个中心服务跟踪每张表的令牌消耗，每个请求路由器持有本地令牌桶，每隔几秒补充一次。这就是一个租户的突发不会拖垮共享硬件上邻居的原因——多租户服务的核心问题，也是 Dynamo 按实例设计无法直接出租的原因。
