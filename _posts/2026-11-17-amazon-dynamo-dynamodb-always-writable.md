@@ -44,14 +44,14 @@ Every request is coordinated by one node — usually the first healthy node in t
 
 {% mermaid %}
 graph TD;
-    A["Client - shopping cart service"] -->|"PUT key and value"]| B["Coordinator - first healthy node in list"];
-    B -->|"write locally - new vector clock"]| C["Replica 1 - preference list"];
-    B -->|"write to W minus 1 more"]| D["Replica 2 - preference list"];
-    B -->|"node A down - hinted handoff"]| E["Stand-in node - holds hint for A"];
-    E -->|"A recovers - hand back replica"]| F["Node A - intended replica"];
-    B -->|"W acks - write succeeds"]| A;
-    C -->|"Merkle tree compare - background"]| D;
-    D -->|"gossip membership - every second"]| C;
+    A["Client - shopping cart service"] -->|"PUT key and value"| B["Coordinator - first healthy node in list"];
+    B -->|"write locally - new vector clock"| C["Replica 1 - preference list"];
+    B -->|"write to W minus 1 more"| D["Replica 2 - preference list"];
+    B -->|"node A down - hinted handoff"| E["Stand-in node - holds hint for A"];
+    E -->|"A recovers - hand back replica"| F["Node A - intended replica"];
+    B -->|"W acks - write succeeds"| A;
+    C -->|"Merkle tree compare - background"| D;
+    D -->|"gossip membership - every second"| C;
 {% endmermaid %}
 
 That is the whole topology: a ring, a list, three numbers. Now the mechanisms — each one breaks a specific failure loop, and each one has a boundary.
@@ -100,15 +100,15 @@ The rebuild changed the consistency model first. A multi-tenant public service c
 
 {% mermaid %}
 graph TD;
-    A["Client SDK"] -->|"request"]| B["Request router - auth and routing"];
-    B -->|"partition map lookup"]| C["MemDS - metadata in memory"];
-    B -->|"admission tokens"]| D["Global admission control - token buckets"];
-    B -->|"write to leader"]| E["Partition leader - Multi-Paxos"];
-    E -->|"WAL record - quorum persist"]| F["Replica 2 - second AZ"];
-    E -->|"WAL record - quorum persist"]| G["Replica 3 - third AZ"];
-    E -->|"eventual read - any replica"]| F;
-    H["Autoadmin - health and scaling"] -->|"replace unhealthy replica"]| E;
-    E -->|"split when hot or large"]| I["Child partitions - throughput divided"];
+    A["Client SDK"] -->|"request"| B["Request router - auth and routing"];
+    B -->|"partition map lookup"| C["MemDS - metadata in memory"];
+    B -->|"admission tokens"| D["Global admission control - token buckets"];
+    B -->|"write to leader"| E["Partition leader - Multi-Paxos"];
+    E -->|"WAL record - quorum persist"| F["Replica 2 - second AZ"];
+    E -->|"WAL record - quorum persist"| G["Replica 3 - third AZ"];
+    E -->|"eventual read - any replica"| F;
+    H["Autoadmin - health and scaling"] -->|"replace unhealthy replica"| E;
+    E -->|"split when hot or large"| I["Child partitions - throughput divided"];
 {% endmermaid %}
 
 The request path is a second machine built around the same principle Dynamo used for background tasks: **the foreground must be protected from everything else**. Stateless request routers authorize, authenticate, and route each request, looking up the partition map from the metadata service. Admission control, which started as per-node token buckets, became **global admission control**: a central service tracks each table's token consumption, and every request router holds a local token bucket replenished every few seconds. That is what stops one tenant's burst from degrading its neighbors on shared hardware — the central problem of a multi-tenant service, and the reason Dynamo's per-instance design could not simply be rented out.
