@@ -30,11 +30,25 @@ The PS5 is the **fourth PlayStation** to cross 100 million, after the PS2, PS4, 
 
 Sony also put cumulative software sales across PS5 and PS4 at **more than 1.795 billion units**.
 
+## How it got here: the fastest start, then two lost years
+
+The six-year journey to 100 million was not a straight line. It began, improbably, as the fastest start in PlayStation history. The PS5 launched on November 12, 2020, in the middle of the COVID-19 pandemic, and reached 10 million shipments in July 2021 — about eight months after launch, the fastest start to 10 million among the five numbered PlayStation generations. The demand was never the problem. The supply was: for roughly two years, the console was genuinely hard to buy, with shortages driven by the pandemic-era semiconductor crunch, scalpers, and logistics chaos. Analysts who in 2021 and 2022 wrote about a lost generation were not wrong about the shelves. They were wrong about the ending.
+
+The comparison with the PS2 is instructive. The PS2 reached 100 million in five years and nine months, according to Sony's 2005 announcement, and went on to more than 160 million — still the best-selling console of all time. The PS4 crossed the line in about five years and seven months and finished at more than 117 million. By that measure the PS5, at almost six years, is the third-fastest PlayStation to reach the mark — behind both of its predecessors, but ahead of every other console Sony has made, and ahead of the PS3, which finished at 87.4 million and never joined the club at all. The PS5 also passed the PS3's lifetime total during 2025, and at 100 million it trails only the PS2 and PS4 in the franchise's history.
+
 ## Six years, and slightly slower than the PS4
 
 The milestone invites the comparison Sony would rather you make carefully. The PS4 reached 100 million in the April–June 2019 quarter — just over **five and a half years** after its launch. The PS5, released in November 2020, took **about six years**. Slightly slower, and the reasons are not mysterious: a launch into a pandemic, roughly two years of supply shortages that made the console genuinely hard to buy, and mid-generation price increases along the way.
 
 That context is what makes the number interesting rather than merely round. The PS5 cleared 100 million *despite* a start that, in 2021 and 2022, had analysts writing about a lost generation. It did it without a price cut of the kind that powered the PS2 and PS4 late in their lives, and it did it before its biggest system-seller has even arrived.
+
+## The price story no other PlayStation had
+
+There is one respect in which the PS5's journey is genuinely unprecedented, and it is not the pandemic. It is the price. Every prior PlayStation generation saw hardware prices decline over time; the PS5 has moved in the opposite direction twice. The standard PS5 with a disc drive launched at $499.99 in November 2020. Sony raised US prices by $50 in August 2025, and then again — announcing on March 27, 2026, effective April 2 — citing "continued pressures in the global economic landscape." The standard model now costs $649.99 in the United States, the Digital Edition $599.99, and the PS5 Pro $899.99. The standard model's increase from its launch price is $150, or about 30% — an upward pricing trajectory no console in history has followed, let alone a six-year-old one.
+
+The increases come amid an industry-wide shortage of memory and storage components, which Sony has linked to demand from AI data centres: the same memory that goes into a PS5 is being bought in bulk by the companies building AI infrastructure, and research firm Omdia estimated that memory accounted for at least 20% of the base PS5's component bill in mid-2025.
+
+That is the paradox at the heart of the 100-million milestone: Sony is selling fewer consoles, at higher prices, to a market that is still buying — and the milestone arrived anyway, carried by the installed base built in the first five years rather than by current demand. The old console playbook said you cut the price late in the generation to widen the audience; Sony is doing the opposite, and the bet is that software and services revenue per player can grow fast enough to compensate for fewer new players. Whether that bet holds is the real question behind the round number, and the answer will show up first in the holiday quarter: if GTA VI moves hardware at $649.99, the price increases were a masterstroke; if it does not, they were the reason the PS5's sixth year was its slowest.
 
 ## What comes next is the whole story now
 
@@ -43,6 +57,12 @@ The timing is not an accident. **Grand Theft Auto VI launches November 19** for 
 There is a wrinkle, and it is already an argument online: GTA VI is confirmed to target **30fps on PS5, PS5 Pro, and Xbox Series X/S**, with **no 60fps Performance mode on consoles at launch** (Gadgets360). The game is also reported to take up around **210GB of SSD storage**. For a console generation that sold itself on performance modes, a flagship that launches at 30fps is a talking point Sony did not ask for — and a reason some buyers may wait for the inevitable PC version rather than buy hardware now.
 
 The rest of Sony's week points the same direction — toward squeezing the installed base rather than expanding it. The November PlayStation Plus lineup is headlined by **Death Stranding 2: On the Beach** (November 17), **Hell Let Loose** (November 11), and **Dragon Quest III HD-2D Remake** (November 17), ten games in all. And in the same announcement, PlayStation said the **PS Plus PC app will be discontinued on December 10** — the service is, in its own words, leaving PC behind because hardly anyone used it there.
+
+## GTA VI, by the numbers
+
+The game carrying the holiday quarter deserves its own accounting, because the numbers around it are unlike anything the industry has seen. Take-Two, Rockstar's parent company, told investors in its fiscal second-quarter results on November 9 — ten days before launch — that pre-orders were at "unprecedented levels" and that it expected "an historic year." Chairman and CEO Strauss Zelnick said most of the early demand was landing on the $99.99 Ultimate Edition rather than the $79.99 Standard Edition. PlayStation said on November 10 that GTA VI was the most pre-ordered game in the history of the PlayStation Store, and Microsoft said the same about its own store. Take-Two reiterated its fiscal 2027 outlook of $8.0 billion to $8.2 billion in net bookings — a target reachable only because of this one title — and guided the October-to-December quarter, which contains the release, to $3.35 billion to $3.5 billion in net bookings.
+
+The stakes are visible in the comparison with the predecessor. Grand Theft Auto V has sold about 235 million units since 2013, and took three days to pass $1 billion in revenue; GTA VI arrives after two delays — originally slated for fall 2025, pushed to May 2026, then to November 19 — with the weight of a franchise that has had thirteen years to build its audience. The game is also, in a literal sense, the biggest thing the PS5 has ever had to hold: a reported 210GB install, against a console whose usable storage was already a complaint at launch.
 
 ## The verdict
 
