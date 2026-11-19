@@ -18,6 +18,8 @@ excerpt: "Anthropic lists Thursday at $1.5T — 18.5x run-rate sales. The S-1 sh
 
 Anthropic priced its IPO on Wednesday, November 18, at $83 a share and starts trading Thursday, November 19, on Nasdaq as ANT. The final terms: 980 million Class A shares, raising about $81.3 billion — the largest IPO on record, passing SpaceX's $75 billion — for a fully diluted valuation of about $1.5 trillion, against a $965 billion private valuation in May. A $26 billion private placement from Google, Nvidia, AMD, Broadcom, Micron, Microsoft and TSMC runs alongside. The order book was reportedly about 6x oversubscribed.
 
+> **Update — first-day close (Nov 19, 2026):** ANT closed at **$97.17**, up **17.1%** from the $83 IPO price (opened at $111.50).
+
 This is not a post about whether Anthropic is a good company. It is a post about what its own filing says your coding-agent bill is built on — and what to do about it now that the company is public.
 
 ## The price tag: ~18.5x sales, vs Meta at ~6.8x
@@ -72,7 +74,7 @@ But the question for a buyer is different from the question for an investor. An 
 
 ## Caveats
 
-- The IPO priced at $83 a share on November 18; Anthropic begins trading November 19 on Nasdaq as ANT. The first trade had not printed at the time of writing, and no first-day price is quoted in this post.
+- The IPO priced at $83 a share on November 18; Anthropic began trading November 19 on Nasdaq as ANT. First-day close added November 19: $97.17, up 17.1% from the IPO price (open $111.50).
 - The $1.5 trillion is the fully diluted valuation at the $83 IPO price. Damodaran's $1.45 trillion is an independent estimate, not a market price.
 - The order-book oversubscription (~6x) is Bloomberg reporting, not a filing term.
 - Run-rate revenue is Anthropic's own metric (trailing 28 days × 13 + monthly subscriptions × 12), not GAAP revenue and not a forecast. The 2023–2025 and nine-month figures are GAAP; quarterly figures are unaudited.
