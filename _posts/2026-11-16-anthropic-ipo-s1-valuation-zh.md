@@ -93,3 +93,4 @@ Claude Code 是楔子产品，S-1 把它量化了。2026 年 Q3，不用 Claude 
 - Meta 市值 $1.64 万亿、TTM 收入 $2,416 亿、市销率约 6.8 倍（2026 年 11 月 13 日收盘）：[GreekSoup，META fundamentals](https://greeksoup.ai/stocks/us/meta/)。
 - Damodaran 股权价值 $1.45 万亿，2026 年 11 月 3 日：[ExpertBeacon](https://expertbeacon.com/anthropic-ipo-valuation-damodaran/)。
 - 只换 harness、每任务成本最多差 3 倍、分数不变：[我们 2026 年 10 月 26 日的文章](/ai%20engineering/llms/harness-buys-tokens/)，arXiv:2610.04433。
+
