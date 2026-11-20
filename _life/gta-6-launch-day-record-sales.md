@@ -104,3 +104,4 @@ Unresolved: the frame rate. Not because 30fps ruins the game, but because it exp
 Plainly put: *GTA VI*'s launch was the biggest day in entertainment history, the game underneath it is, by the only consensus measure we have, one of the best ever made, and the 30fps fight is a real argument about real trade-offs that the sales figures do not settle and should not be allowed to. The money is settled. The argument is just getting started.
 
 *Prices checked November 20, 2026, subject to change. Sensor Tower sales figures are third-party estimates; Take-Two has not published official launch-day sales. Streams Charts figures are preliminary.*
+<!-- rebuild trigger 2026-11-20 -->
