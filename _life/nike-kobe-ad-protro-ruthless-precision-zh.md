@@ -109,3 +109,4 @@ Kobe A.D. Protro "Ruthless Precision" 是一双罕见的、日期不是营销取
 留下来的问题是贴合度：在实测过这个平台的评测者脚上，它依然偏长、偏窄，尽管 Nike 说加宽了。带着这个认知进去、按建议选码，155 美元换来的就是本季最诚实的一双 Kobe 复刻——一双退役之后的鞋，被给了它自己的第二段生涯。
 
 *价格为 2026 年 11 月 22 日查询的 snapshot，subject to change。来源：Nike 官方产品页（Kobe A.D. Protro，IO8233-001——前掌 ZoomX 泡棉块、React 中底、后跟 Air Zoom、信用卡式稳定片、加宽前掌、更软的后跟 TPU 包边、人字纹抓地、Flywire、低帮鞋领）；Sneaker News（2026 年 11 月 2 日官方图解析与 11 月 22–28 日发售综述——十年日期对称、鸳鸯中底、幻彩后跟杯、155 美元、Nike 与 Foot Locker 渠道）；WearTesters（该型号 2026 年 10 月 23 日配色的 Kobe A.D. Protro 性能评测——抓地与缓震改进、偏长偏窄的楦型、正码且宽脚上半码、支撑配置）；SneakerFiles 与 Sneaker Bar Detroit（发售梳理——普通发售、2016 年 11 月 22 日初代首发、Lunarlon 到 React/ZoomX 的更替）；BecauseSneakers（2026 年 11 月 22 日发售日报道——Nike.com 美西早上 7 点上架、鞋舌内 2026 年织唛细节）。文中引用的性能评测针对的是 Kobe A.D. Protro 平台的先行配色；截至发稿，冷灰配色本身尚无上脚实测。*
+
