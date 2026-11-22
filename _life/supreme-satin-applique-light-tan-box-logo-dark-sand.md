@@ -62,3 +62,4 @@ One honest observation: this colorway is nearly impossible to find in outfit pho
 At Stadium Goods list prices — $247 for the Satin Appliqué, $237 for the Box Logo — both sit above their original retail, as consigned Supreme does. The SUPREME20 code changes the math: **$197.60** and **$189.60** respectively, checked November 21, 2026 (prices are a snapshot and subject to change; the code is a public Stadium Goods promotion).
 
 Pick the Satin Appliqué if you like the joke of it — invisible from the front, unmistakable from behind, and the better party trick of the two. Pick the Dark Sand bogo if you want the one Supreme hoodie that goes with everything you already own and never has to introduce itself. Two hoodies, same palette, opposite theories of what a logo is for.
+
